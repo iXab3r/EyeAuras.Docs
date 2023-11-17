@@ -1,0 +1,82 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../Sources",
+          "files": [
+            "EyeAuras.SDK/bin/BlazorRete.dll",
+            "EyeAuras.SDK/bin/PropertyBinder.dll",
+            "EyeAuras.SDK/bin/EyeAuras*.dll",
+            "EyeAuras.SDK/bin/PoeShared*.dll",
+          ],
+          "exclude": [
+            "**/DirectML.Debug.dll",
+            "**/DirectML.dll",
+            "**/onnxruntime.dll",
+            "**/EyeAuras.Web*.dll",
+            "**/EyeAuras.Kings*.dll",
+          ]
+        }
+      ],
+      "dest": "api",
+      "filter": "api-filter.yml",
+      "memberLayout": "separatePages",
+      "disableGitFeatures": true,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "globalMetadata": {
+      "_appTitle": "EyeAuras Docs",
+      "_appName": "EyeAuras",
+      "_appLogoPath": "images/logo.png",
+      "_appFaviconPath": "images/favicon.png",
+      "_copyrightFooter": "© Xab3r. All rights reserved.",
+      "_enableSearch": true,
+      "_enableNewTab": true
+    },
+    "template": ["default", "templates/singulinkfx"],
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "disableGitFeatures": true,
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false
+  }
+}
