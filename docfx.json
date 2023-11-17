@@ -77,7 +77,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "docs",
     "disableGitFeatures": true,
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
