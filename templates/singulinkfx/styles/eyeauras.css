@@ -1,3 +1,5 @@
-.content > .inheritedMembers {
-    display: none;
+#toc ul.level1 > li > a{
+  font-weight: inherit;
+  margin-bottom: inherit;
+  padding: inherit;
 }

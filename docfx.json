@@ -3,12 +3,12 @@
     {
       "src": [
         {
-          "src": "../../Sources",
+          "src": "../../Sources/bin",
           "files": [
-            "EyeAuras.SDK/bin/BlazorRete.dll",
-            "EyeAuras.SDK/bin/PropertyBinder.dll",
-            "EyeAuras.SDK/bin/EyeAuras*.dll",
-            "EyeAuras.SDK/bin/PoeShared*.dll",
+            "BlazorRete.dll",
+            "PropertyBinder.dll",
+            "PoeShared*.dll",
+            "EyeAuras*.dll",
           ],
           "exclude": [
             "**/DirectML.Debug.dll",
@@ -22,6 +22,7 @@
       "dest": "api",
       "filter": "api-filter.yml",
       "memberLayout": "separatePages",
+      "namespaceLayout": "nested",
       "disableGitFeatures": true,
       "disableDefaultFilter": false
     }

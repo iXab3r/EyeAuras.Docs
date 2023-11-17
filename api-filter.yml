@@ -1,3 +1,25 @@
 apiRules:
 - exclude:
-  uidRegex: DisposableReactiveObject
+    uidRegex: DisposableReactiveObject
+- exclude:
+    uidRegex: Prism.*Module
+    type: class
+- exclude:
+    uidRegex: Prism.*Registrations
+    type: class
+- exclude:
+    uidRegex: PoeShared.Squirrel
+- exclude:
+    uidRegex: PoeShared.Wpf
+- exclude:
+    uidRegex: PoeShared.UI
+- exclude:
+    uidRegex: PoeShared.RegionSelector
+- exclude:
+    uidRegex: PoeShared.Profiler
+- exclude:
+    uidRegex: PoeShared.Modularity
+    type: class
+- exclude:
+    uidRegex: _Imports
+    type: class
