@@ -3,12 +3,18 @@
     {
       "src": [
         {
-          "src": "../../Sources/bin",
+          "src": "../../Sources/EyeAuras.SDK/bin",
           "files": [
             "BlazorRete.dll",
             "PropertyBinder.dll",
             "PoeShared*.dll",
-            "EyeAuras*.dll",
+            "EyeAuras*.Metadata.dll",
+            "EyeAuras.BehaviorTree.dll",
+            "EyeAuras.Blazor*.dll",
+            "EyeAuras.Shared*.dll",
+            "EyeAuras.Loader*.dll",
+            "EyeAuras.Graphics*.dll",
+            "EyeAuras.Scripting.dll",
           ],
           "exclude": [
             "**/DirectML.Debug.dll",

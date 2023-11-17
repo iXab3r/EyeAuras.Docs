@@ -18,7 +18,12 @@ apiRules:
 - exclude:
     uidRegex: PoeShared.Profiler
 - exclude:
+    uidRegex: EyeAuras.UI
+- exclude:
     uidRegex: PoeShared.Modularity
+    type: class
+- exclude:
+    uidRegex: MetadataReplacements
     type: class
 - exclude:
     uidRegex: _Imports
