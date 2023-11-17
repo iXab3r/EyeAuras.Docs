@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Main concept | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Main concept | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles/config.css">
+      <link rel="stylesheet" href="styles/discord.css">
+      <link rel="stylesheet" href="styles/singulink.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/eyeauras.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="index.html">
+              <img src="images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="index.html">
+                          <img src="images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+
+<div class="article">
+<p><img src="/mainfull.png" alt=""></p>
+<p><strong>EyeAuras</strong>  is an automation tool that allows you to model desired behaviour via system of Triggers and Actions. Color search, image search, OCR (text recognition),  global and conditional hotkeys in conjunction with a wide variety of ways to emulate user input bring up an extremely powerful tool to your toolset. And, as a cherry on top, you can always fallback to C# for triggers and actions.</p>
+<p><img src="/eyeauras_tw5l8cdz4c.png" alt=""></p>
+<h2 id="main-concept">Main concept</h2>
+<ul>
+<li><strong>Aura</strong> - combination of Triggers, Actions, Overlays and Enabling conditions. This is what you'll share with others, and this does the actual work.</li>
+<li><a href="/en/enabling-conditions">Enabling conditions</a></li>
+<li><strong>Triggers</strong> - any kind of state which could be described in Active/NotActive terms. This could be Hotkey (pressed/unpressed or toggle),  foreground Window check (active/not active), Image/Text/Color search result(matched/not matched).  Aura Active/NotActive state is a combination of states of her child Triggers. Trigger has three states:
+<ul>
+<li>Active - this means that condition is met, e.g. for WindowIsActive trigger this means that Window with matching title is Active</li>
+<li>Not Active - this means that conditions is not met</li>
+<li>Unknown - this means that for some reason it is not possible to calculate trigger state. For example, if Window specified in ImageSearch is not found that means that corresponding Trigger will have Unknown state as it is not possible to do comparison without any actual image.</li>
+</ul>
+</li>
+<li><strong>Actions</strong> - showing notifications, key/mouse presses, sending Telegram messages  or e-mails - these all is considered an Action and could be used inside Aura. Actions could be assigned to one of 3 groups:
+<ul>
+<li>On Enter -  these are executed when Aura becomes Active</li>
+<li>While Active - these will be executed repeatedly while Auras is Active</li>
+<li>On Exit - these are executed when Aura becomes Not Active</li>
+</ul>
+</li>
+<li><strong>Overlays</strong> - always-on-top overlays which could show text, image, custom UI or anything else. Overlays are a part of Aura and are shown only while Aura is Active</li>
+</ul>
+<h3 id="subsystems">Subsystems</h3>
+<ul>
+<li><a href="/en/export-import">Export/Import</a> - transfer, share, or backup EyeAuras packs across different users or devices</li>
+<li><a href="/en/aura-library">Aura Library</a> - a shared collection of EyeAuras packs, available for users to discover, import, and use</li>
+<li><a href="/en/window-matching-expressions">Window Match Expressions</a> - enabling selection of specific windows using a custom expression</li>
+<li><a href="/en/text-match-expressions">Text Match Expressions</a> - Powerful tool enabling text condition validation through Regex, Text, and Lambda evaluators.</li>
+<li><a href="/en/bindings">Bindings</a> - interconnect properties between triggers, actions, and overlays to allow for easier change of group properties and to open up new capabilities</li>
+<li><a href="/en/default-properties">Default Properties</a></li>
+</ul>
+<h3 id="triggers">Triggers</h3>
+<ul>
+<li><a href="/en/triggers/fixed-value">Fixed Value</a> - the most primitive trigger, you can control it's state by selecting it either manually or by using C# scripts</li>
+<li><a href="/en/triggers/images/color-search">Color Search</a> - active when Average color of a selected region matches with Target color. Similarity threshold could be specified.</li>
+<li><a href="/en/triggers/images/image-search"><strong>Image Search</strong></a> - active when some Image is found with a specified similarity</li>
+<li><a href="/en/triggers/images/ai-search-trigger"><strong>AI/ML Search</strong></a> - machine-learning powered <a href="https://docs.ultralytics.com/tasks/detect/">object detection</a>/<a href="https://docs.ultralytics.com/tasks/segment/">segmentation</a> or <a href="https://docs.ultralytics.com/tasks/classify/">classification</a>, currently supports only <a href="https://docs.ultralytics.com/"><strong>Yolo8</strong></a> <strong>in ONNX format</strong>, may be extended later</li>
+<li><a href="/en/triggers/images/text-search"><strong>Text Search</strong></a> - active when recognized text matches with specified expression. It could be comparison by Contains, regexp or C# Lambda</li>
+<li><a href="/en/triggers/aura-is-active"><strong>Aura Is Active</strong></a> - active when linked Auras have specified state (Active/NotActive)</li>
+<li><a href="/en/triggers/hotkey-is-active"><strong>Hotkey Is Active</strong></a> - active when specified combination of keys is either held down or toggled</li>
+<li><a href="/en/triggers/window-is-active"><strong>Window Is Active</strong></a> - active when window matching specified expression is active (in foreground)</li>
+<li><a href="/en/triggers/window-exists"><strong>Window Exists</strong></a> - active when window matching specified expression exists in the system</li>
+<li><a href="/en/triggers/timer"><strong>Timer</strong></a> - periodically activates itself for specified duration</li>
+<li><a href="/en/triggers/network-message"><strong>Message Subscription</strong></a> - activates/deactivates when specified message is received from EyeAuras webserver. Messages are separated by Channels and could be sent using SendMessage action</li>
+<li><a href="/en/triggers/file-contains-text"><strong>File Contains</strong></a> - activates when specified text is found in specified file</li>
+<li><a href="/en/triggers/telegram-message"><strong>Telegram Subscription</strong></a> - activates/deactivates when specified message is received in Telegram channel</li>
+<li><a href="/en/triggers/volume-level"><strong>Volume Control</strong></a> - activates/deactivates when volume level of specified audio device or process reaches specified threshold</li>
+<li><strong>C# Script</strong> - custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.</li>
+</ul>
+<h3 id="actions">Actions</h3>
+<ul>
+<li><a href="/en/actions/sendinput/options"><strong>Send</strong></a> - emulates user input - mouse movement, clicks, keyboard presses, etc. Supports multiple input methods starting from most basic ones that are used WinAPI and all the way to hardware-level emulation that uses Usb2Kbd physical device.
+<ul>
+<li><a href="/en/actions/sendinput/send-input">Input</a> - generates single keyboard/mouse event</li>
+<li><a href="/en/actions/sendinput/send-text">Text</a> - inputs specified text either via clipboard or by typing each character individually</li>
+<li><a href="/en/actions/sendinput/send-sequence">Sequence</a> - replayed the specified sequence of keyboard presses, mouse clicks and mouse movements</li>
+</ul>
+</li>
+<li><a href="/en/actions/play-sound"><strong>Play Sound</strong></a> - plays specified sound</li>
+<li><a href="/en/actions/win-activate"><strong>Win Activate</strong></a> - activates specified window</li>
+<li><a href="/en/actions/delay"><strong>Delay</strong></a> - waits for some time before proceeding to the next action</li>
+<li><a href="/en/actions/send-telegram-message"><strong>Send To Telegram</strong></a> - sends message to Telegram channel</li>
+<li><a href="/en/actions/send-network-message"><strong>Send Message</strong></a> - sends network message through EyeAuras infrastructure to a specified Channel. All other instances of EyeAuras on other computers can subscribe and process these messages via Message Subscription trigger</li>
+<li><strong>C# Script</strong> - custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.</li>
+</ul>
+<h3 id="overlays">Overlays</h3>
+<ul>
+<li><a href="/en/overlays/text"><strong>Text</strong></a> - shows text, content could be modified either manually or using C# scripts</li>
+<li><a href="/en/overlays/image"><strong>Image</strong></a> - shows an image, animated/transparent GIFs are supported</li>
+<li><a href="/en/overlays/replica"><strong>Replica</strong></a> - created a real-time visual clone of any specified window or its subregion. This allows you to clone parts of UI (e.g. bring cooldowns closer to the middle of you screen) or show downsized version of YouTube player while farming</li>
+<li><a href="/en/overlays/dependencies-viewer"><strong>Dependencies Viewer</strong></a> - debugging tool which could be used to check what states linked Auras have. Very useful for debugging complex models.</li>
+<li><a href="/en/overlays/custom-ui"><strong>Custom UI</strong></a> - allows you to develop a full-blown custom user interface using combination of <a href="https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&amp;tabs=visual-studio">Microsoft Razor Pages</a> (html+css+js) and <strong>C#</strong> to wire it all together inside EyeAuras</li>
+</ul>
+</div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="styles/docfx.js"></script>
+        <script type="text/javascript" src="styles/main.js"></script>
+        <script type="text/javascript" src="styles/singulink.js"></script>    </body>
+</html>

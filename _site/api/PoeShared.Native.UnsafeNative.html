@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class UnsafeNative
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class UnsafeNative
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="PoeShared.Native.UnsafeNative">
+
+
+
+  <h1 id="PoeShared_Native_UnsafeNative" data-uid="PoeShared.Native.UnsafeNative" class="text-break">Class UnsafeNative
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">UnsafeNative</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PoeShared.html">PoeShared</a>.<a class="xref" href="PoeShared.Native.html">Native</a></h6>
+  <h6><strong>Assembly</strong>: PoeShared.Native.dll</h6>
+  <h5 id="PoeShared_Native_UnsafeNative_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UnsafeNative</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative__ctor" data-uid="PoeShared.Native.UnsafeNative.#ctor">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.-ctor.html#PoeShared_Native_UnsafeNative__ctor">UnsafeNative()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_WindowActivationMethod" data-uid="PoeShared.Native.UnsafeNative.WindowActivationMethod">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.WindowActivationMethod.html#PoeShared_Native_UnsafeNative_WindowActivationMethod">WindowActivationMethod</a>
+        </td>
+        <td class="markdown level1 summary"><p>Specifies the method which will be used when calling ActivateWindow</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ActivateKeyboardLayout_System_IntPtr_PoeShared_Native_UnsafeNative_KeyboardLayoutFlags_" data-uid="PoeShared.Native.UnsafeNative.ActivateKeyboardLayout(System.IntPtr,PoeShared.Native.UnsafeNative.KeyboardLayoutFlags)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ActivateKeyboardLayout.html#PoeShared_Native_UnsafeNative_ActivateKeyboardLayout_System_IntPtr_PoeShared_Native_UnsafeNative_KeyboardLayoutFlags_">ActivateKeyboardLayout(nint, KeyboardLayoutFlags)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ActivateWindow.html#PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_">ActivateWindow(IWindowHandle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle,System.TimeSpan)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ActivateWindow.html#PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_">ActivateWindow(IWindowHandle, TimeSpan)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_PoeShared_Logging_IFluentLog_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle,System.TimeSpan,PoeShared.Logging.IFluentLog)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ActivateWindow.html#PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_PoeShared_Logging_IFluentLog_">ActivateWindow(IWindowHandle, TimeSpan, IFluentLog)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ActivateWindow_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ActivateWindow.html#PoeShared_Native_UnsafeNative_ActivateWindow_System_IntPtr_">ActivateWindow(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_AllowSetForegroundWindow" data-uid="PoeShared.Native.UnsafeNative.AllowSetForegroundWindow">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.AllowSetForegroundWindow.html#PoeShared_Native_UnsafeNative_AllowSetForegroundWindow">AllowSetForegroundWindow()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_CommandLineToArgvW_System_String_" data-uid="PoeShared.Native.UnsafeNative.CommandLineToArgvW(System.String)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.CommandLineToArgvW.html#PoeShared_Native_UnsafeNative_CommandLineToArgvW_System_String_">CommandLineToArgvW(string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_CreateHardLink_System_String_System_String_" data-uid="PoeShared.Native.UnsafeNative.CreateHardLink(System.String,System.String)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.CreateHardLink.html#PoeShared_Native_UnsafeNative_CreateHardLink_System_String_System_String_">CreateHardLink(string, string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_DwmGetWindowAttribute_System_IntPtr_PInvoke_DwmApi_DWMWINDOWATTRIBUTE_" data-uid="PoeShared.Native.UnsafeNative.DwmGetWindowAttribute(System.IntPtr,PInvoke.DwmApi.DWMWINDOWATTRIBUTE)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.DwmGetWindowAttribute.html#PoeShared_Native_UnsafeNative_DwmGetWindowAttribute_System_IntPtr_PInvoke_DwmApi_DWMWINDOWATTRIBUTE_">DwmGetWindowAttribute(nint, DWMWINDOWATTRIBUTE)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_DwmGetWindowFrameBounds_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.DwmGetWindowFrameBounds(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.DwmGetWindowFrameBounds.html#PoeShared_Native_UnsafeNative_DwmGetWindowFrameBounds_System_IntPtr_">DwmGetWindowFrameBounds(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_DwmGetWindowFrameBoundsWithinMonitor_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.DwmGetWindowFrameBoundsWithinMonitor(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.DwmGetWindowFrameBoundsWithinMonitor.html#PoeShared_Native_UnsafeNative_DwmGetWindowFrameBoundsWithinMonitor_System_IntPtr_">DwmGetWindowFrameBoundsWithinMonitor(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_DwmIsCompositionEnabled" data-uid="PoeShared.Native.UnsafeNative.DwmIsCompositionEnabled">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.DwmIsCompositionEnabled.html#PoeShared_Native_UnsafeNative_DwmIsCompositionEnabled">DwmIsCompositionEnabled()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_EnableWindow_System_IntPtr_System_Boolean_" data-uid="PoeShared.Native.UnsafeNative.EnableWindow(System.IntPtr,System.Boolean)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.EnableWindow.html#PoeShared_Native_UnsafeNative_EnableWindow_System_IntPtr_System_Boolean_">EnableWindow(nint, bool)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Enables or disables mouse and keyboard input to the specified window or control. When input is disabled, the window does not receive input such as mouse clicks and key presses. When input is enabled, the window receives all input.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetActiveKeyboardLayoutName" data-uid="PoeShared.Native.UnsafeNative.GetActiveKeyboardLayoutName">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetActiveKeyboardLayoutName.html#PoeShared_Native_UnsafeNative_GetActiveKeyboardLayoutName">GetActiveKeyboardLayoutName()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetClassLong_System_IntPtr_PoeShared_Native_UnsafeNative_ClassLong_" data-uid="PoeShared.Native.UnsafeNative.GetClassLong(System.IntPtr,PoeShared.Native.UnsafeNative.ClassLong)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetClassLong.html#PoeShared_Native_UnsafeNative_GetClassLong_System_IntPtr_PoeShared_Native_UnsafeNative_ClassLong_">GetClassLong(nint, ClassLong)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetClientRect_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetClientRect(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetClientRect.html#PoeShared_Native_UnsafeNative_GetClientRect_System_IntPtr_">GetClientRect(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetCommandLine_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.GetCommandLine(System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetCommandLine.html#PoeShared_Native_UnsafeNative_GetCommandLine_System_Int32_">GetCommandLine(int)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Reads command line of a target process
+This is refactored version of code from <a href="https://github.com/VbScrub/ProcessCommandLineDemo">https://github.com/VbScrub/ProcessCommandLineDemo</a></p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetCurrentModifierKeys" data-uid="PoeShared.Native.UnsafeNative.GetCurrentModifierKeys">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetCurrentModifierKeys.html#PoeShared_Native_UnsafeNative_GetCurrentModifierKeys">GetCurrentModifierKeys()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetCurrentObject_System_IntPtr_System_UInt16_" data-uid="PoeShared.Native.UnsafeNative.GetCurrentObject(System.IntPtr,System.UInt16)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetCurrentObject.html#PoeShared_Native_UnsafeNative_GetCurrentObject_System_IntPtr_System_UInt16_">GetCurrentObject(nint, ushort)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopDpi" data-uid="PoeShared.Native.UnsafeNative.GetDesktopDpi">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopDpi.html#PoeShared_Native_UnsafeNative_GetDesktopDpi">GetDesktopDpi()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopDpi_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetDesktopDpi(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopDpi.html#PoeShared_Native_UnsafeNative_GetDesktopDpi_System_IntPtr_">GetDesktopDpi(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopDpiFromPoint_System_Drawing_Point_" data-uid="PoeShared.Native.UnsafeNative.GetDesktopDpiFromPoint(System.Drawing.Point)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopDpiFromPoint.html#PoeShared_Native_UnsafeNative_GetDesktopDpiFromPoint_System_Drawing_Point_">GetDesktopDpiFromPoint(Point)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopDpiFromWindow_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.GetDesktopDpiFromWindow(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopDpiFromWindow.html#PoeShared_Native_UnsafeNative_GetDesktopDpiFromWindow_System_Windows_Window_">GetDesktopDpiFromWindow(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopImageViaCopyFromScreen_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.GetDesktopImageViaCopyFromScreen(System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopImageViaCopyFromScreen.html#PoeShared_Native_UnsafeNative_GetDesktopImageViaCopyFromScreen_System_Drawing_Rectangle_">GetDesktopImageViaCopyFromScreen(Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopMonitorInfo" data-uid="PoeShared.Native.UnsafeNative.GetDesktopMonitorInfo">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopMonitorInfo.html#PoeShared_Native_UnsafeNative_GetDesktopMonitorInfo">GetDesktopMonitorInfo()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDesktopWindow" data-uid="PoeShared.Native.UnsafeNative.GetDesktopWindow">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDesktopWindow.html#PoeShared_Native_UnsafeNative_GetDesktopWindow">GetDesktopWindow()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetDisplayScaleFactor_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetDisplayScaleFactor(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetDisplayScaleFactor.html#PoeShared_Native_UnsafeNative_GetDisplayScaleFactor_System_IntPtr_">GetDisplayScaleFactor(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetForegroundWindow" data-uid="PoeShared.Native.UnsafeNative.GetForegroundWindow">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetForegroundWindow.html#PoeShared_Native_UnsafeNative_GetForegroundWindow">GetForegroundWindow()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetKeyNameText_System_Int32_System_Text_StringBuilder_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.GetKeyNameText(System.Int32,System.Text.StringBuilder,System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetKeyNameText.html#PoeShared_Native_UnsafeNative_GetKeyNameText_System_Int32_System_Text_StringBuilder_System_Int32_">GetKeyNameText(int, StringBuilder, int)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetKeyboardLayout_System_UInt32_" data-uid="PoeShared.Native.UnsafeNative.GetKeyboardLayout(System.UInt32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetKeyboardLayout.html#PoeShared_Native_UnsafeNative_GetKeyboardLayout_System_UInt32_">GetKeyboardLayout(uint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetKeyboardLayoutList" data-uid="PoeShared.Native.UnsafeNative.GetKeyboardLayoutList">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetKeyboardLayoutList.html#PoeShared_Native_UnsafeNative_GetKeyboardLayoutList">GetKeyboardLayoutList()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Retrieves the input locale identifiers (formerly called keyboard layout handles) corresponding to the current set of input locales in the system.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetKeyboardLayoutName_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetKeyboardLayoutName(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetKeyboardLayoutName.html#PoeShared_Native_UnsafeNative_GetKeyboardLayoutName_System_IntPtr_">GetKeyboardLayoutName(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMenu_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetMenu(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMenu.html#PoeShared_Native_UnsafeNative_GetMenu_System_IntPtr_">GetMenu(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorBounds_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorBounds(System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorBounds.html#PoeShared_Native_UnsafeNative_GetMonitorBounds_System_Drawing_Rectangle_">GetMonitorBounds(Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorBounds_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorBounds(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorBounds.html#PoeShared_Native_UnsafeNative_GetMonitorBounds_System_IntPtr_">GetMonitorBounds(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorBounds_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorBounds(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorBounds.html#PoeShared_Native_UnsafeNative_GetMonitorBounds_System_Windows_Window_">GetMonitorBounds(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorFromRect_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorFromRect(System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorFromRect.html#PoeShared_Native_UnsafeNative_GetMonitorFromRect_System_Drawing_Rectangle_">GetMonitorFromRect(Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorInfo_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorInfo(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorInfo.html#PoeShared_Native_UnsafeNative_GetMonitorInfo_System_IntPtr_">GetMonitorInfo(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetMonitorInfo_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.GetMonitorInfo(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetMonitorInfo.html#PoeShared_Native_UnsafeNative_GetMonitorInfo_System_Windows_Window_">GetMonitorInfo(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetParent_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetParent(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetParent.html#PoeShared_Native_UnsafeNative_GetParent_System_IntPtr_">GetParent(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetParentProcessId_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.GetParentProcessId(System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetParentProcessId.html#PoeShared_Native_UnsafeNative_GetParentProcessId_System_Int32_">GetParentProcessId(int)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetPositionAtTheCenter_System_Windows_Rect_System_Windows_Size_" data-uid="PoeShared.Native.UnsafeNative.GetPositionAtTheCenter(System.Windows.Rect,System.Windows.Size)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetPositionAtTheCenter.html#PoeShared_Native_UnsafeNative_GetPositionAtTheCenter_System_Windows_Rect_System_Windows_Size_">GetPositionAtTheCenter(Rect, Size)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetPositionAtTheCenter_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.GetPositionAtTheCenter(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetPositionAtTheCenter.html#PoeShared_Native_UnsafeNative_GetPositionAtTheCenter_System_Windows_Window_">GetPositionAtTheCenter(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetProcAddressOrThrow__1_PInvoke_Kernel32_SafeLibraryHandle_System_String_" data-uid="PoeShared.Native.UnsafeNative.GetProcAddressOrThrow``1(PInvoke.Kernel32.SafeLibraryHandle,System.String)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetProcAddressOrThrow.html#PoeShared_Native_UnsafeNative_GetProcAddressOrThrow__1_PInvoke_Kernel32_SafeLibraryHandle_System_String_">GetProcAddressOrThrow&lt;T&gt;(SafeLibraryHandle, string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetProcessIdByWindowHandle_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetProcessIdByWindowHandle(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetProcessIdByWindowHandle.html#PoeShared_Native_UnsafeNative_GetProcessIdByWindowHandle_System_IntPtr_">GetProcessIdByWindowHandle(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetProcessTimes_System_Int32_System_DateTime__System_DateTime__System_DateTime__System_DateTime__" data-uid="PoeShared.Native.UnsafeNative.GetProcessTimes(System.Int32,System.DateTime@,System.DateTime@,System.DateTime@,System.DateTime@)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetProcessTimes.html#PoeShared_Native_UnsafeNative_GetProcessTimes_System_Int32_System_DateTime__System_DateTime__System_DateTime__System_DateTime__">GetProcessTimes(int, out DateTime, out DateTime, out DateTime, out DateTime)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetScreen_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.GetScreen(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetScreen.html#PoeShared_Native_UnsafeNative_GetScreen_System_Windows_Window_">GetScreen(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetSystemDpi" data-uid="PoeShared.Native.UnsafeNative.GetSystemDpi">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetSystemDpi.html#PoeShared_Native_UnsafeNative_GetSystemDpi">GetSystemDpi()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetTopmostHwnd_System_IntPtr___" data-uid="PoeShared.Native.UnsafeNative.GetTopmostHwnd(System.IntPtr[])">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetTopmostHwnd.html#PoeShared_Native_UnsafeNative_GetTopmostHwnd_System_IntPtr___">GetTopmostHwnd(nint[])</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowBorders_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowBorders(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowBorders.html#PoeShared_Native_UnsafeNative_GetWindowBorders_System_IntPtr_">GetWindowBorders(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowClass_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowClass(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowClass.html#PoeShared_Native_UnsafeNative_GetWindowClass_System_IntPtr_">GetWindowClass(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowImageViaCopyFromScreen_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.GetWindowImageViaCopyFromScreen(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowImageViaCopyFromScreen.html#PoeShared_Native_UnsafeNative_GetWindowImageViaCopyFromScreen_System_IntPtr_System_Drawing_Rectangle_">GetWindowImageViaCopyFromScreen(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowImageViaDeviceContext_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowImageViaDeviceContext(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowImageViaDeviceContext.html#PoeShared_Native_UnsafeNative_GetWindowImageViaDeviceContext_System_IntPtr_">GetWindowImageViaDeviceContext(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowImageViaPrintWindow_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowImageViaPrintWindow(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowImageViaPrintWindow.html#PoeShared_Native_UnsafeNative_GetWindowImageViaPrintWindow_System_IntPtr_">GetWindowImageViaPrintWindow(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowImageViaPrintWindow_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.GetWindowImageViaPrintWindow(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowImageViaPrintWindow.html#PoeShared_Native_UnsafeNative_GetWindowImageViaPrintWindow_System_IntPtr_System_Drawing_Rectangle_">GetWindowImageViaPrintWindow(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowRect_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowRect(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowRect.html#PoeShared_Native_UnsafeNative_GetWindowRect_System_IntPtr_">GetWindowRect(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowThreadProcessId_System_IntPtr_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowThreadProcessId(System.IntPtr,System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowThreadProcessId.html#PoeShared_Native_UnsafeNative_GetWindowThreadProcessId_System_IntPtr_System_IntPtr_">GetWindowThreadProcessId(nint, nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetWindowTitle_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.GetWindowTitle(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetWindowTitle.html#PoeShared_Native_UnsafeNative_GetWindowTitle_System_IntPtr_">GetWindowTitle(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_GetZOrder_System_IntPtr___" data-uid="PoeShared.Native.UnsafeNative.GetZOrder(System.IntPtr[])">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.GetZOrder.html#PoeShared_Native_UnsafeNative_GetZOrder_System_IntPtr___">GetZOrder(params nint[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the z-order for one or more windows atomically with respect to each other. In Windows, smaller z-order is higher. If the window is not top level, the z order is returned as -1.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_HideSystemMenu_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.HideSystemMenu(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.HideSystemMenu.html#PoeShared_Native_UnsafeNative_HideSystemMenu_System_IntPtr_">HideSystemMenu(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_HideWindow_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.HideWindow(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.HideWindow.html#PoeShared_Native_UnsafeNative_HideWindow_System_IntPtr_">HideWindow(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_HideWindow_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.HideWindow(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.HideWindow.html#PoeShared_Native_UnsafeNative_HideWindow_System_Windows_Window_">HideWindow(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsDWMEnabled" data-uid="PoeShared.Native.UnsafeNative.IsDWMEnabled">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsDWMEnabled.html#PoeShared_Native_UnsafeNative_IsDWMEnabled">IsDWMEnabled()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsElevated" data-uid="PoeShared.Native.UnsafeNative.IsElevated">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsElevated.html#PoeShared_Native_UnsafeNative_IsElevated">IsElevated()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Drawing_Rectangle_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.IsOutOfBounds(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsOutOfBounds.html#PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Drawing_Rectangle_System_Drawing_Rectangle_">IsOutOfBounds(Rectangle, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Point_System_Windows_Rect_" data-uid="PoeShared.Native.UnsafeNative.IsOutOfBounds(System.Windows.Point,System.Windows.Rect)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsOutOfBounds.html#PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Point_System_Windows_Rect_">IsOutOfBounds(Point, Rect)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Point_System_Windows_Size_" data-uid="PoeShared.Native.UnsafeNative.IsOutOfBounds(System.Windows.Point,System.Windows.Size)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsOutOfBounds.html#PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Point_System_Windows_Size_">IsOutOfBounds(Point, Size)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Rect_System_Windows_Rect_" data-uid="PoeShared.Native.UnsafeNative.IsOutOfBounds(System.Windows.Rect,System.Windows.Rect)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsOutOfBounds.html#PoeShared_Native_UnsafeNative_IsOutOfBounds_System_Windows_Rect_System_Windows_Rect_">IsOutOfBounds(Rect, Rect)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsTopLevel_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.IsTopLevel(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsTopLevel.html#PoeShared_Native_UnsafeNative_IsTopLevel_System_IntPtr_">IsTopLevel(nint)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Checks whether a window is a top-level window (has no owner nor parent window).</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindows10OrGreater_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.IsWindows10OrGreater(System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindows10OrGreater.html#PoeShared_Native_UnsafeNative_IsWindows10OrGreater_System_Int32_">IsWindows10OrGreater(int)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindows7" data-uid="PoeShared.Native.UnsafeNative.IsWindows7">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindows7.html#PoeShared_Native_UnsafeNative_IsWindows7">IsWindows7()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindows7OrGreater" data-uid="PoeShared.Native.UnsafeNative.IsWindows7OrGreater">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindows7OrGreater.html#PoeShared_Native_UnsafeNative_IsWindows7OrGreater">IsWindows7OrGreater()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindows8" data-uid="PoeShared.Native.UnsafeNative.IsWindows8">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindows8.html#PoeShared_Native_UnsafeNative_IsWindows8">IsWindows8()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindows8OrGreater" data-uid="PoeShared.Native.UnsafeNative.IsWindows8OrGreater">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindows8OrGreater.html#PoeShared_Native_UnsafeNative_IsWindows8OrGreater">IsWindows8OrGreater()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindowsVista" data-uid="PoeShared.Native.UnsafeNative.IsWindowsVista">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindowsVista.html#PoeShared_Native_UnsafeNative_IsWindowsVista">IsWindowsVista()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindowsVistaOrGreater" data-uid="PoeShared.Native.UnsafeNative.IsWindowsVistaOrGreater">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindowsVistaOrGreater.html#PoeShared_Native_UnsafeNative_IsWindowsVistaOrGreater">IsWindowsVistaOrGreater()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindowsXP" data-uid="PoeShared.Native.UnsafeNative.IsWindowsXP">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindowsXP.html#PoeShared_Native_UnsafeNative_IsWindowsXP">IsWindowsXP()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsWindowsXPOrGreater" data-uid="PoeShared.Native.UnsafeNative.IsWindowsXPOrGreater">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsWindowsXPOrGreater.html#PoeShared_Native_UnsafeNative_IsWindowsXPOrGreater">IsWindowsXPOrGreater()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_IsZoomed_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.IsZoomed(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.IsZoomed.html#PoeShared_Native_UnsafeNative_IsZoomed_System_IntPtr_">IsZoomed(nint)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Determines whether a window is maximized.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_LegacyMaximizedWindowFix_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.LegacyMaximizedWindowFix(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.LegacyMaximizedWindowFix.html#PoeShared_Native_UnsafeNative_LegacyMaximizedWindowFix_System_IntPtr_System_Drawing_Rectangle_">LegacyMaximizedWindowFix(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_LoadKeyboardLayout_System_Text_StringBuilder_PoeShared_Native_UnsafeNative_KeyboardLayoutFlags_" data-uid="PoeShared.Native.UnsafeNative.LoadKeyboardLayout(System.Text.StringBuilder,PoeShared.Native.UnsafeNative.KeyboardLayoutFlags)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.LoadKeyboardLayout.html#PoeShared_Native_UnsafeNative_LoadKeyboardLayout_System_Text_StringBuilder_PoeShared_Native_UnsafeNative_KeyboardLayoutFlags_">LoadKeyboardLayout(StringBuilder, KeyboardLayoutFlags)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_MakeLParam_System_Int32_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.MakeLParam(System.Int32,System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.MakeLParam.html#PoeShared_Native_UnsafeNative_MakeLParam_System_Int32_System_Int32_">MakeLParam(int, int)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_QueryFullProcessImageName_System_Int32_" data-uid="PoeShared.Native.UnsafeNative.QueryFullProcessImageName(System.Int32)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.QueryFullProcessImageName.html#PoeShared_Native_UnsafeNative_QueryFullProcessImageName_System_Int32_">QueryFullProcessImageName(int)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ResolveParentForDialogWindow" data-uid="PoeShared.Native.UnsafeNative.ResolveParentForDialogWindow">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ResolveParentForDialogWindow.html#PoeShared_Native_UnsafeNative_ResolveParentForDialogWindow">ResolveParentForDialogWindow()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Resolves the best parent window for Open/Save File, BrowseFolder and other dialogs
+Takes into consideration which thread/dispatcher is currently active</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_RetrieveWindowRectangle_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.RetrieveWindowRectangle(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.RetrieveWindowRectangle.html#PoeShared_Native_UnsafeNative_RetrieveWindowRectangle_System_IntPtr_">RetrieveWindowRectangle(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetFocus_PoeShared_Logging_IFluentLog_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetFocus(PoeShared.Logging.IFluentLog,System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetFocus.html#PoeShared_Native_UnsafeNative_SetFocus_PoeShared_Logging_IFluentLog_System_IntPtr_">SetFocus(IFluentLog, nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetForegroundWindow_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_PoeShared_Native_UnsafeWindowActivationMethod_" data-uid="PoeShared.Native.UnsafeNative.SetForegroundWindow(PoeShared.Logging.IFluentLog,PoeShared.Native.IWindowHandle,PoeShared.Native.UnsafeWindowActivationMethod)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetForegroundWindow.html#PoeShared_Native_UnsafeNative_SetForegroundWindow_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_PoeShared_Native_UnsafeWindowActivationMethod_">SetForegroundWindow(IFluentLog, IWindowHandle, UnsafeWindowActivationMethod)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetForegroundWindow_PoeShared_Native_IWindowHandle_" data-uid="PoeShared.Native.UnsafeNative.SetForegroundWindow(PoeShared.Native.IWindowHandle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetForegroundWindow.html#PoeShared_Native_UnsafeNative_SetForegroundWindow_PoeShared_Native_IWindowHandle_">SetForegroundWindow(IWindowHandle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetForegroundWindow_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetForegroundWindow(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetForegroundWindow.html#PoeShared_Native_UnsafeNative_SetForegroundWindow_System_IntPtr_">SetForegroundWindow(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetForegroundWindowWithAttachInput_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_" data-uid="PoeShared.Native.UnsafeNative.SetForegroundWindowWithAttachInput(PoeShared.Logging.IFluentLog,PoeShared.Native.IWindowHandle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetForegroundWindowWithAttachInput.html#PoeShared_Native_UnsafeNative_SetForegroundWindowWithAttachInput_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_">SetForegroundWindowWithAttachInput(IFluentLog, IWindowHandle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetForegroundWindowWithSendInputHack_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_" data-uid="PoeShared.Native.UnsafeNative.SetForegroundWindowWithSendInputHack(PoeShared.Logging.IFluentLog,PoeShared.Native.IWindowHandle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetForegroundWindowWithSendInputHack.html#PoeShared_Native_UnsafeNative_SetForegroundWindowWithSendInputHack_PoeShared_Logging_IFluentLog_PoeShared_Native_IWindowHandle_">SetForegroundWindowWithSendInputHack(IFluentLog, IWindowHandle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetParent_System_IntPtr_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetParent(System.IntPtr,System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetParent.html#PoeShared_Native_UnsafeNative_SetParent_System_IntPtr_System_IntPtr_">SetParent(nint, nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetParentToMessageOnly_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetParentToMessageOnly(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetParentToMessageOnly.html#PoeShared_Native_UnsafeNative_SetParentToMessageOnly_System_IntPtr_">SetParentToMessageOnly(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowExActivate_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetWindowExActivate(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowExActivate.html#PoeShared_Native_UnsafeNative_SetWindowExActivate_System_IntPtr_">SetWindowExActivate(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowExLayered_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetWindowExLayered(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowExLayered.html#PoeShared_Native_UnsafeNative_SetWindowExLayered_System_IntPtr_">SetWindowExLayered(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowExNoActivate_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetWindowExNoActivate(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowExNoActivate.html#PoeShared_Native_UnsafeNative_SetWindowExNoActivate_System_IntPtr_">SetWindowExNoActivate(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowExTransparent_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.SetWindowExTransparent(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowExTransparent.html#PoeShared_Native_UnsafeNative_SetWindowExTransparent_System_IntPtr_">SetWindowExTransparent(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowLong_System_IntPtr_System_Func_PInvoke_User32_SetWindowLongFlags_PInvoke_User32_SetWindowLongFlags__" data-uid="PoeShared.Native.UnsafeNative.SetWindowLong(System.IntPtr,System.Func{PInvoke.User32.SetWindowLongFlags,PInvoke.User32.SetWindowLongFlags})">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowLong.html#PoeShared_Native_UnsafeNative_SetWindowLong_System_IntPtr_System_Func_PInvoke_User32_SetWindowLongFlags_PInvoke_User32_SetWindowLongFlags__">SetWindowLong(nint, Func&lt;SetWindowLongFlags, SetWindowLongFlags&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowRect_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.SetWindowRect(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowRect.html#PoeShared_Native_UnsafeNative_SetWindowRect_System_IntPtr_System_Drawing_Rectangle_">SetWindowRect(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_SetWindowRgn_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.SetWindowRgn(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.SetWindowRgn.html#PoeShared_Native_UnsafeNative_SetWindowRgn_System_IntPtr_System_Drawing_Rectangle_">SetWindowRgn(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowInactiveTopmost_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.ShowInactiveTopmost(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowInactiveTopmost.html#PoeShared_Native_UnsafeNative_ShowInactiveTopmost_System_IntPtr_">ShowInactiveTopmost(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowInactiveTopmost_System_IntPtr_System_Drawing_Rectangle_" data-uid="PoeShared.Native.UnsafeNative.ShowInactiveTopmost(System.IntPtr,System.Drawing.Rectangle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowInactiveTopmost.html#PoeShared_Native_UnsafeNative_ShowInactiveTopmost_System_IntPtr_System_Drawing_Rectangle_">ShowInactiveTopmost(nint, Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowSystemMenu_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.ShowSystemMenu(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowSystemMenu.html#PoeShared_Native_UnsafeNative_ShowSystemMenu_System_IntPtr_">ShowSystemMenu(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowTopmost_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.ShowTopmost(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowTopmost.html#PoeShared_Native_UnsafeNative_ShowTopmost_System_IntPtr_">ShowTopmost(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowWindow_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.ShowWindow(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowWindow.html#PoeShared_Native_UnsafeNative_ShowWindow_System_IntPtr_">ShowWindow(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowWindow_System_IntPtr_PInvoke_User32_WindowShowStyle_" data-uid="PoeShared.Native.UnsafeNative.ShowWindow(System.IntPtr,PInvoke.User32.WindowShowStyle)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowWindow.html#PoeShared_Native_UnsafeNative_ShowWindow_System_IntPtr_PInvoke_User32_WindowShowStyle_">ShowWindow(nint, WindowShowStyle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_ShowWindow_System_Windows_Window_" data-uid="PoeShared.Native.UnsafeNative.ShowWindow(System.Windows.Window)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.ShowWindow.html#PoeShared_Native_UnsafeNative_ShowWindow_System_Windows_Window_">ShowWindow(Window)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_TryGetDwmWindowFrameBounds_System_IntPtr_System_Drawing_Rectangle__" data-uid="PoeShared.Native.UnsafeNative.TryGetDwmWindowFrameBounds(System.IntPtr,System.Drawing.Rectangle@)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.TryGetDwmWindowFrameBounds.html#PoeShared_Native_UnsafeNative_TryGetDwmWindowFrameBounds_System_IntPtr_System_Drawing_Rectangle__">TryGetDwmWindowFrameBounds(nint, out Rectangle)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_TryGetWindowBorderSize_System_IntPtr_System_Drawing_Size__" data-uid="PoeShared.Native.UnsafeNative.TryGetWindowBorderSize(System.IntPtr,System.Drawing.Size@)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.TryGetWindowBorderSize.html#PoeShared_Native_UnsafeNative_TryGetWindowBorderSize_System_IntPtr_System_Drawing_Size__">TryGetWindowBorderSize(nint, out Size)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_VirtualAlloc_System_IntPtr_System_UInt32_PoeShared_Native_UnsafeNative_AllocationType_PoeShared_Native_UnsafeNative_MemoryProtection_" data-uid="PoeShared.Native.UnsafeNative.VirtualAlloc(System.IntPtr,System.UInt32,PoeShared.Native.UnsafeNative.AllocationType,PoeShared.Native.UnsafeNative.MemoryProtection)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.VirtualAlloc.html#PoeShared_Native_UnsafeNative_VirtualAlloc_System_IntPtr_System_UInt32_PoeShared_Native_UnsafeNative_AllocationType_PoeShared_Native_UnsafeNative_MemoryProtection_">VirtualAlloc(nint, uint, AllocationType, MemoryProtection)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_VirtualFree_System_IntPtr_System_UInt32_PoeShared_Native_UnsafeNative_FreeType_" data-uid="PoeShared.Native.UnsafeNative.VirtualFree(System.IntPtr,System.UInt32,PoeShared.Native.UnsafeNative.FreeType)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.VirtualFree.html#PoeShared_Native_UnsafeNative_VirtualFree_System_IntPtr_System_UInt32_PoeShared_Native_UnsafeNative_FreeType_">VirtualFree(nint, uint, FreeType)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_WindowFromPoint_System_Drawing_Point_" data-uid="PoeShared.Native.UnsafeNative.WindowFromPoint(System.Drawing.Point)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.WindowFromPoint.html#PoeShared_Native_UnsafeNative_WindowFromPoint_System_Drawing_Point_">WindowFromPoint(Point)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Native_UnsafeNative_WindowIsVisible_System_IntPtr_" data-uid="PoeShared.Native.UnsafeNative.WindowIsVisible(System.IntPtr)">
+          <a class="xref" href="PoeShared.Native.UnsafeNative.WindowIsVisible.html#PoeShared_Native_UnsafeNative_WindowIsVisible_System_IntPtr_">WindowIsVisible(nint)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

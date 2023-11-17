@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class AuraEntityEditorViewModel&lt;T, TListEditor&gt;
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class AuraEntityEditorViewModel&lt;T, TListEditor&gt;
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2">
+
+
+
+  <h1 id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2" class="text-break">Class AuraEntityEditorViewModel&lt;T, TListEditor&gt;
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveObject.html">DisposableReactiveObject</a></div>
+    <div class="level2"><span class="xref">AuraEntityEditorViewModel&lt;T, TListEditor&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EyeAuras.Shared.EntityListEditor.IAuraEntityEditorViewModel-2.html">IAuraEntityEditorViewModel</a>&lt;T, TListEditor&gt;</div>
+    <div><a class="xref" href="EyeAuras.Shared.EntityListEditor.IAuraEntityEditorViewModel-1.html">IAuraEntityEditorViewModel</a>&lt;T&gt;</div>
+    <div><a class="xref" href="EyeAuras.Shared.EntityListEditor.IAuraEntityEditorViewModel.html">IAuraEntityEditorViewModel</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.EntityListEditor.IPropertyEditorViewModel.html">IPropertyEditorViewModel</a></div>
+    <div><a class="xref" href="PoeShared.Scaffolding.ICloseable.html">ICloseable</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.ICanSetIndex.html">ICanSetIndex</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasIndex.html">IHasIndex</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.EntityListEditor.html">EntityListEditor</a></h6>
+  <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
+  <h5 id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuraEntityEditorViewModel&lt;T, TListEditor&gt; : DisposableReactiveObject, IAuraEntityEditorViewModel&lt;T, TListEditor&gt;, IAuraEntityEditorViewModel&lt;T&gt;, IAuraEntityEditorViewModel, IDisposable, IPropertyEditorViewModel, ICloseable, ICanSetIndex, IHasIndex, INotifyPropertyChanged where T : IAuraObject where TListEditor : class, IAuraEntityListEditorViewModel&lt;T&gt;, IGenericAuraEntityListEditorViewModel</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TListEditor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2__ctor__1_EyeAuras_Shared_Model_IEntityContainer_DynamicData_ISourceList__0__EyeAuras_Shared_EntityListEditor_IPropertyEditorViewModel_" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.#ctor(`1,EyeAuras.Shared.Model.IEntityContainer,DynamicData.ISourceList{`0},EyeAuras.Shared.EntityListEditor.IPropertyEditorViewModel)">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.-ctor.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2__ctor__1_EyeAuras_Shared_Model_IEntityContainer_DynamicData_ISourceList__0__EyeAuras_Shared_EntityListEditor_IPropertyEditorViewModel_">AuraEntityEditorViewModel(TListEditor, IEntityContainer, ISourceList&lt;T&gt;, IPropertyEditorViewModel)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CanClose" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.CanClose">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.CanClose.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CanClose">CanClose</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CloseCommand" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.CloseCommand">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.CloseCommand.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CloseCommand">CloseCommand</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CloseController" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.CloseController">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.CloseController.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_CloseController">CloseController</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Index" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.Index">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.Index.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Index">Index</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsEnabled" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.IsEnabled">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.IsEnabled.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsEnabled">IsEnabled</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsLoaded" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.IsLoaded">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.IsLoaded.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsLoaded">IsLoaded</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsMouseOver" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.IsMouseOver">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.IsMouseOver.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsMouseOver">IsMouseOver</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsReadOnly" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.IsReadOnly">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.IsReadOnly.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsReadOnly">IsReadOnly</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsVisible" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.IsVisible">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.IsVisible.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_IsVisible">IsVisible</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ItemContainer" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.ItemContainer">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.ItemContainer.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ItemContainer">ItemContainer</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ItemList" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.ItemList">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.ItemList.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ItemList">ItemList</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Owner" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.Owner">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.Owner.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Owner">Owner</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_PropertyEditor" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.PropertyEditor">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.PropertyEditor.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_PropertyEditor">PropertyEditor</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Value" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.Value">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.Value.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_Value">Value</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ValueEditor" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.ValueEditor">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.ValueEditor.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ValueEditor">ValueEditor</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ValueType" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.ValueType">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.ValueType.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_ValueType">ValueType</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_FormatToString_PoeShared_Scaffolding_ToStringBuilder_" data-uid="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel`2.FormatToString(PoeShared.Scaffolding.ToStringBuilder)">
+          <a class="xref" href="EyeAuras.Shared.EntityListEditor.AuraEntityEditorViewModel-2.FormatToString.html#EyeAuras_Shared_EntityListEditor_AuraEntityEditorViewModel_2_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">FormatToString(ToStringBuilder)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

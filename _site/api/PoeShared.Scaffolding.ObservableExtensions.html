@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ObservableExtensions
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ObservableExtensions
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="PoeShared.Scaffolding.ObservableExtensions">
+
+
+
+  <h1 id="PoeShared_Scaffolding_ObservableExtensions" data-uid="PoeShared.Scaffolding.ObservableExtensions" class="text-break">Class ObservableExtensions
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ObservableExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PoeShared.html">PoeShared</a>.<a class="xref" href="PoeShared.Scaffolding.html">Scaffolding</a></h6>
+  <h6><strong>Assembly</strong>: PoeShared.dll</h6>
+  <h5 id="PoeShared_Scaffolding_ObservableExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ObservableExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_DisposePrevious__1_System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.DisposePrevious``1(System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.DisposePrevious.html#PoeShared_Scaffolding_ObservableExtensions_DisposePrevious__1_System_IObservable___0__">DisposePrevious&lt;TSource&gt;(IObservable&lt;TSource&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_DoWithPrevious__1_System_IObservable___0__System_Action___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.DoWithPrevious``1(System.IObservable{``0},System.Action{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.DoWithPrevious.html#PoeShared_Scaffolding_ObservableExtensions_DoWithPrevious__1_System_IObservable___0__System_Action___0__">DoWithPrevious&lt;TSource&gt;(IObservable&lt;TSource&gt;, Action&lt;TSource&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_EnableIf__1_System_IObservable___0__System_IObservable_System_Boolean__" data-uid="PoeShared.Scaffolding.ObservableExtensions.EnableIf``1(System.IObservable{``0},System.IObservable{System.Boolean})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.EnableIf.html#PoeShared_Scaffolding_ObservableExtensions_EnableIf__1_System_IObservable___0__System_IObservable_System_Boolean__">EnableIf&lt;T&gt;(IObservable&lt;T&gt;, IObservable&lt;bool&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_EnableIf__1_System_IObservable___0__System_IObservable_System_Boolean__System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.EnableIf``1(System.IObservable{``0},System.IObservable{System.Boolean},System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.EnableIf.html#PoeShared_Scaffolding_ObservableExtensions_EnableIf__1_System_IObservable___0__System_IObservable_System_Boolean__System_IObservable___0__">EnableIf&lt;T&gt;(IObservable&lt;T&gt;, IObservable&lt;bool&gt;, IObservable&lt;T&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_ObserveLatestOn__1_System_IObservable___0__System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.ObserveLatestOn``1(System.IObservable{``0},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.ObserveLatestOn.html#PoeShared_Scaffolding_ObservableExtensions_ObserveLatestOn__1_System_IObservable___0__System_Reactive_Concurrency_IScheduler_">ObserveLatestOn&lt;T&gt;(IObservable&lt;T&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"><p><a href="https://www.zerobugbuild.com/?p=192">https://www.zerobugbuild.com/?p=192</a>
+This is a problem that comes up when the UI dispatcher can’t keep up with inbound activity.
+the example I saw on a project was a price stream that had to be displayed on the UI that could get very busy.
+If more than one new price arrives on background threads in between dispatcher time slices, there is no point displaying anything but the most recent price – in fact we want the UI to “catch up” by dropping all but the most recent undisplayed price.
+So the operation is like an ObserveOn that drops all but the most recent events. Here’s a picture of what’s happening – notice how price 2 is dropped and how prices are only published during the dispatcher time slice:
+The key idea here is that we keep track of the notification to be pushed on to the target scheduler in pendingNotification – and whenever an event is received, we swap the pendingNotification for the new notification. We ensure the new notification will be scheduled for dispatch on the target scheduler – but we may not need to do this…
+If the previousNotification is null we know that either (a) there was no previous notification as this is the first one or (b) the previousNotification was already dispatched. How to we know this? Because in the scheduler action that does the dispatch we swap the pendingNotification for null! So if previousNotification is null, we know we must schedule a new dispatch action.
+This approach keeps the checks, locks and scheduled actions to a minimum.
+Notes and credits:
+I’ve gone round the houses a few times on this implementation – my own attempts to improve it to use CAS rather than lock ran into bugs, so the code below is largely due to Lee Campbell, and edited for RX 2.0 support by Wilka Hudson. For an interesting discussion on this approach see this thread on the official RX forum.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_RetryWithBackOff__1_System_IObservable___0__System_Func_System_Exception_System_Int32_System_Nullable_System_TimeSpan___" data-uid="PoeShared.Scaffolding.ObservableExtensions.RetryWithBackOff``1(System.IObservable{``0},System.Func{System.Exception,System.Int32,System.Nullable{System.TimeSpan}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.RetryWithBackOff.html#PoeShared_Scaffolding_ObservableExtensions_RetryWithBackOff__1_System_IObservable___0__System_Func_System_Exception_System_Int32_System_Nullable_System_TimeSpan___">RetryWithBackOff&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;Exception, int, TimeSpan?&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_RetryWithDelay__1_System_IObservable___0__System_TimeSpan_" data-uid="PoeShared.Scaffolding.ObservableExtensions.RetryWithDelay``1(System.IObservable{``0},System.TimeSpan)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.RetryWithDelay.html#PoeShared_Scaffolding_ObservableExtensions_RetryWithDelay__1_System_IObservable___0__System_TimeSpan_">RetryWithDelay&lt;T&gt;(IObservable&lt;T&gt;, TimeSpan)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_RetryWithDelay__1_System_IObservable___0__System_TimeSpan_System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.RetryWithDelay``1(System.IObservable{``0},System.TimeSpan,System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.RetryWithDelay.html#PoeShared_Scaffolding_ObservableExtensions_RetryWithDelay__1_System_IObservable___0__System_TimeSpan_System_Reactive_Concurrency_IScheduler_">RetryWithDelay&lt;T&gt;(IObservable&lt;T&gt;, TimeSpan, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectAsync``1(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectAsync.html#PoeShared_Scaffolding_ObservableExtensions_SelectAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_">SelectAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectAsync``2(System.IObservable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectAsync.html#PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task___1___">SelectAsync&lt;T, T1&gt;(IObservable&lt;T&gt;, Func&lt;T, CancellationToken, Task&lt;T1&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectAsync``2(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectAsync.html#PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task___1___">SelectAsync&lt;T, T1&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&lt;T1&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task___1___System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectAsync``2(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task{``1}},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectAsync.html#PoeShared_Scaffolding_ObservableExtensions_SelectAsync__2_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task___1___System_Reactive_Concurrency_IScheduler_">SelectAsync&lt;T, T1&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&lt;T1&gt;&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectSafeOrDefault__2_System_IObservable___0__System_Func___0___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectSafeOrDefault``2(System.IObservable{``0},System.Func{``0,``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectSafeOrDefault.html#PoeShared_Scaffolding_ObservableExtensions_SelectSafeOrDefault__2_System_IObservable___0__System_Func___0___1__">SelectSafeOrDefault&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, TOut&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectSafeOrDefault__2_System_IObservable___0__System_Func___0___1__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectSafeOrDefault``2(System.IObservable{``0},System.Func{``0,``1},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectSafeOrDefault.html#PoeShared_Scaffolding_ObservableExtensions_SelectSafeOrDefault__2_System_IObservable___0__System_Func___0___1__System_Action_System_Exception__">SelectSafeOrDefault&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, TOut&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectSafe__2_System_IObservable___0__System_Func___0___1__System_Func___0_System_Exception___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectSafe``2(System.IObservable{``0},System.Func{``0,``1},System.Func{``0,System.Exception,``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectSafe.html#PoeShared_Scaffolding_ObservableExtensions_SelectSafe__2_System_IObservable___0__System_Func___0___1__System_Func___0_System_Exception___1__">SelectSafe&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, TOut&gt;, Func&lt;TIn, Exception, TOut&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectSafe__3_System_IObservable___0__System_Func___0___1__System_Func___0___2___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectSafe``3(System.IObservable{``0},System.Func{``0,``1},System.Func{``0,``2,``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectSafe.html#PoeShared_Scaffolding_ObservableExtensions_SelectSafe__3_System_IObservable___0__System_Func___0___1__System_Func___0___2___1__">SelectSafe&lt;TIn, TOut, TException&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, TOut&gt;, Func&lt;TIn, TException, TOut&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectSafe__3_System_IObservable___0__System_Func___0___1__System_Func___2___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectSafe``3(System.IObservable{``0},System.Func{``0,``1},System.Func{``2,``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectSafe.html#PoeShared_Scaffolding_ObservableExtensions_SelectSafe__3_System_IObservable___0__System_Func___0___1__System_Func___2___1__">SelectSafe&lt;TIn, TOut, TException&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, TOut&gt;, Func&lt;TException, TOut&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SelectTo__2_System_IObservable___0__System_Func___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SelectTo``2(System.IObservable{``0},System.Func{``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SelectTo.html#PoeShared_Scaffolding_ObservableExtensions_SelectTo__2_System_IObservable___0__System_Func___1__">SelectTo&lt;T, Y&gt;(IObservable&lt;T&gt;, Func&lt;Y&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SkipUntil__1_System_IObservable___0__System_Func___0_System_Boolean__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SkipUntil``1(System.IObservable{``0},System.Func{``0,System.Boolean})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SkipUntil.html#PoeShared_Scaffolding_ObservableExtensions_SkipUntil__1_System_IObservable___0__System_Func___0_System_Boolean__">SkipUntil&lt;TSource&gt;(IObservable&lt;TSource&gt;, Func&lt;TSource, bool&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_StartWithDefault__1_System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.StartWithDefault``1(System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.StartWithDefault.html#PoeShared_Scaffolding_ObservableExtensions_StartWithDefault__1_System_IObservable___0__">StartWithDefault&lt;T&gt;(IObservable&lt;T&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{System.Threading.Tasks.Task})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;Task&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{System.Threading.Tasks.Task},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__System_Action_System_Exception__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;Task&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, CancellationToken, Task&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task__System_Action_System_Exception__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, CancellationToken, Task&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync``1(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeAsync.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeAsync__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Action_System_Exception__">SubscribeAsync&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action_System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe``1(System.IObservable{``0},System.Action,System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action_System_Action_System_Exception__">SubscribeSafe&lt;T&gt;(IObservable&lt;T&gt;, Action, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action___0__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe``1(System.IObservable{``0},System.Action{``0},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action___0__System_Action_System_Exception__">SubscribeSafe&lt;T&gt;(IObservable&lt;T&gt;, Action&lt;T&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action___0__System_Action_System_Exception__System_Action_" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe``1(System.IObservable{``0},System.Action{``0},System.Action{System.Exception},System.Action)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Action___0__System_Action_System_Exception__System_Action_">SubscribeSafe&lt;T&gt;(IObservable&lt;T&gt;, Action&lt;T&gt;, Action&lt;Exception&gt;, Action)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe``1(System.IObservable{``0},System.Func{System.Threading.Tasks.Task},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Func_System_Threading_Tasks_Task__System_Action_System_Exception__">SubscribeSafe&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;Task&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe``1(System.IObservable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeSafe.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeSafe__1_System_IObservable___0__System_Func___0_System_Threading_Tasks_Task__System_Action_System_Exception__">SubscribeSafe&lt;T&gt;(IObservable&lt;T&gt;, Func&lt;T, Task&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SubscribeToErrors__1_System_IObservable___0__System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.SubscribeToErrors``1(System.IObservable{``0},System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SubscribeToErrors.html#PoeShared_Scaffolding_ObservableExtensions_SubscribeToErrors__1_System_IObservable___0__System_Action_System_Exception__">SubscribeToErrors&lt;T&gt;(IObservable&lt;T&gt;, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_Subscribe__1_System_IObservable___0__System_Action_" data-uid="PoeShared.Scaffolding.ObservableExtensions.Subscribe``1(System.IObservable{``0},System.Action)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.Subscribe.html#PoeShared_Scaffolding_ObservableExtensions_Subscribe__1_System_IObservable___0__System_Action_">Subscribe&lt;T&gt;(IObservable&lt;T&gt;, Action)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_Subscribe__1_System_IObservable___0__System_Action_System_Action_System_Exception__" data-uid="PoeShared.Scaffolding.ObservableExtensions.Subscribe``1(System.IObservable{``0},System.Action,System.Action{System.Exception})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.Subscribe.html#PoeShared_Scaffolding_ObservableExtensions_Subscribe__1_System_IObservable___0__System_Action_System_Action_System_Exception__">Subscribe&lt;T&gt;(IObservable&lt;T&gt;, Action, Action&lt;Exception&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SwitchIfNotDefault__2_System_IObservable___0__System_Func___0_System_IObservable___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SwitchIfNotDefault``2(System.IObservable{``0},System.Func{``0,System.IObservable{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SwitchIfNotDefault.html#PoeShared_Scaffolding_ObservableExtensions_SwitchIfNotDefault__2_System_IObservable___0__System_Func___0_System_IObservable___1___">SwitchIfNotDefault&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, IObservable&lt;TOut&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SwitchIfNotDefault__2_System_IObservable___0__System_Func___0_System_IObservable___1___System_Func_System_IObservable___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SwitchIfNotDefault``2(System.IObservable{``0},System.Func{``0,System.IObservable{``1}},System.Func{System.IObservable{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SwitchIfNotDefault.html#PoeShared_Scaffolding_ObservableExtensions_SwitchIfNotDefault__2_System_IObservable___0__System_Func___0_System_IObservable___1___System_Func_System_IObservable___1___">SwitchIfNotDefault&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Func&lt;TIn, IObservable&lt;TOut&gt;&gt;, Func&lt;IObservable&lt;TOut&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SwitchIf__2_System_IObservable___0__System_Predicate___0__System_Func___0_System_IObservable___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SwitchIf``2(System.IObservable{``0},System.Predicate{``0},System.Func{``0,System.IObservable{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SwitchIf.html#PoeShared_Scaffolding_ObservableExtensions_SwitchIf__2_System_IObservable___0__System_Predicate___0__System_Func___0_System_IObservable___1___">SwitchIf&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Predicate&lt;TIn&gt;, Func&lt;TIn, IObservable&lt;TOut&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SwitchIf__2_System_IObservable___0__System_Predicate___0__System_Func___0_System_IObservable___1___System_Func___0_System_IObservable___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SwitchIf``2(System.IObservable{``0},System.Predicate{``0},System.Func{``0,System.IObservable{``1}},System.Func{``0,System.IObservable{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SwitchIf.html#PoeShared_Scaffolding_ObservableExtensions_SwitchIf__2_System_IObservable___0__System_Predicate___0__System_Func___0_System_IObservable___1___System_Func___0_System_IObservable___1___">SwitchIf&lt;TIn, TOut&gt;(IObservable&lt;TIn&gt;, Predicate&lt;TIn&gt;, Func&lt;TIn, IObservable&lt;TOut&gt;&gt;, Func&lt;TIn, IObservable&lt;TOut&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_SwitchLatestAsync__2_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task___1___" data-uid="PoeShared.Scaffolding.ObservableExtensions.SwitchLatestAsync``2(System.IObservable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.SwitchLatestAsync.html#PoeShared_Scaffolding_ObservableExtensions_SwitchLatestAsync__2_System_IObservable___0__System_Func___0_System_Threading_CancellationToken_System_Threading_Tasks_Task___1___">SwitchLatestAsync&lt;TSource, TResult&gt;(IObservable&lt;TSource&gt;, Func&lt;TSource, CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_Synchronize__1_System_IObservable___0__PoeShared_Services_NamedLock_" data-uid="PoeShared.Scaffolding.ObservableExtensions.Synchronize``1(System.IObservable{``0},PoeShared.Services.NamedLock)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.Synchronize.html#PoeShared_Scaffolding_ObservableExtensions_Synchronize__1_System_IObservable___0__PoeShared_Services_NamedLock_">Synchronize&lt;T&gt;(IObservable&lt;T&gt;, NamedLock)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_ToProperty__1_System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.ToProperty``1(System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.ToProperty.html#PoeShared_Scaffolding_ObservableExtensions_ToProperty__1_System_IObservable___0__">ToProperty&lt;TSourceProperty&gt;(IObservable&lt;TSourceProperty&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_ToProperty__2_System_IObservable___1__ReactiveUI_ObservableAsPropertyHelper___1_____0_System_Linq_Expressions_Expression_System_Func___0___1___System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.ToProperty``2(System.IObservable{``1},ReactiveUI.ObservableAsPropertyHelper{``1}@,``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.ToProperty.html#PoeShared_Scaffolding_ObservableExtensions_ToProperty__2_System_IObservable___1__ReactiveUI_ObservableAsPropertyHelper___1_____0_System_Linq_Expressions_Expression_System_Func___0___1___System_Reactive_Concurrency_IScheduler_">ToProperty&lt;TSource, TSourceProperty&gt;(IObservable&lt;TSourceProperty&gt;, out ObservableAsPropertyHelper&lt;TSourceProperty&gt;, TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_ToProperty__2_System_IObservable___1____0_System_Linq_Expressions_Expression_System_Func___0___1___System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.ObservableExtensions.ToProperty``2(System.IObservable{``1},``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.ToProperty.html#PoeShared_Scaffolding_ObservableExtensions_ToProperty__2_System_IObservable___1____0_System_Linq_Expressions_Expression_System_Func___0___1___System_Reactive_Concurrency_IScheduler_">ToProperty&lt;TSource, TSourceProperty&gt;(IObservable&lt;TSourceProperty&gt;, TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_ToUnit__1_System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.ToUnit``1(System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.ToUnit.html#PoeShared_Scaffolding_ObservableExtensions_ToUnit__1_System_IObservable___0__">ToUnit&lt;T&gt;(IObservable&lt;T&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_WithExpirationTime__1_System_IObservable___0__System_TimeSpan_System_Func___0___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.WithExpirationTime``1(System.IObservable{``0},System.TimeSpan,System.Func{``0,``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.WithExpirationTime.html#PoeShared_Scaffolding_ObservableExtensions_WithExpirationTime__1_System_IObservable___0__System_TimeSpan_System_Func___0___0__">WithExpirationTime&lt;T&gt;(IObservable&lt;T&gt;, TimeSpan, Func&lt;T, T&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Allows to attach TTL to each value of the stream. If next value is not produced in expected time slice, fallback value is sent into stream as replacement until next value is propagated.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_WithPrevious__1_System_IObservable___0__" data-uid="PoeShared.Scaffolding.ObservableExtensions.WithPrevious``1(System.IObservable{``0})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.WithPrevious.html#PoeShared_Scaffolding_ObservableExtensions_WithPrevious__1_System_IObservable___0__">WithPrevious&lt;TSource&gt;(IObservable&lt;TSource&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_ObservableExtensions_WithPrevious__2_System_IObservable___0__System_Func___0___0___1__" data-uid="PoeShared.Scaffolding.ObservableExtensions.WithPrevious``2(System.IObservable{``0},System.Func{``0,``0,``1})">
+          <a class="xref" href="PoeShared.Scaffolding.ObservableExtensions.WithPrevious.html#PoeShared_Scaffolding_ObservableExtensions_WithPrevious__2_System_IObservable___0__System_Func___0___0___1__">WithPrevious&lt;TSource, TResult&gt;(IObservable&lt;TSource&gt;, Func&lt;TSource, TSource, TResult&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ComplexAuraAction&lt;TAuraProperties&gt;
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ComplexAuraAction&lt;TAuraProperties&gt;
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1">
+
+
+
+  <h1 id="EyeAuras_Shared_Actions_ComplexAuraAction_1" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1" class="text-break">Class ComplexAuraAction&lt;TAuraProperties&gt;
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveObject.html">DisposableReactiveObject</a></div>
+    <div class="level2"><a class="xref" href="PoeShared.Bindings.BindableReactiveObject.html">BindableReactiveObject</a></div>
+    <div class="level3"><a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.html">AuraObjectBase</a></div>
+    <div class="level4"><a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.html">AuraObjectBase</a>&lt;TAuraProperties&gt;</div>
+    <div class="level5"><a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.html">AuraActionBase</a>&lt;TAuraProperties&gt;</div>
+    <div class="level6"><span class="xref">ComplexAuraAction&lt;TAuraProperties&gt;</span></div>
+      <div class="level7"><a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction.html">ComplexAuraAction</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject</a>&lt;TAuraProperties&gt;</div>
+    <div><a class="xref" href="EyeAuras.Shared.Actions.IComplexAuraAction.html">IComplexAuraAction</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IComplexAuraList-1.html">IComplexAuraList</a>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><a class="xref" href="PoeShared.Scaffolding.ISourceListEx-1.html">ISourceListEx</a>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><span class="xref">ISourceList</span>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><a class="xref" href="PoeShared.Scaffolding.IObservableListEx-1.html">IObservableListEx</a>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><span class="xref">IObservableList</span>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.html">IAuraAction</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IAuraEntity.html">IAuraEntity</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></div>
+    <div><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasContext.html">IHasContext</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasName.html">IHasName</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasDescription.html">IHasDescription</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.Cancel.html#EyeAuras_Shared_Actions_AuraActionBase_1_Cancel">AuraActionBase&lt;TAuraProperties&gt;.Cancel()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.Execute.html#EyeAuras_Shared_Actions_AuraActionBase_1_Execute">AuraActionBase&lt;TAuraProperties&gt;.Execute()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.Execute.html#EyeAuras_Shared_Actions_AuraActionBase_1_Execute_System_Threading_CancellationToken_">AuraActionBase&lt;TAuraProperties&gt;.Execute(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.VisitLoad.html#EyeAuras_Shared_Actions_AuraActionBase_1_VisitLoad__0_">AuraActionBase&lt;TAuraProperties&gt;.VisitLoad(TAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.VisitSave.html#EyeAuras_Shared_Actions_AuraActionBase_1_VisitSave__0_">AuraActionBase&lt;TAuraProperties&gt;.VisitSave(TAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.FormatToString.html#EyeAuras_Shared_Actions_AuraActionBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">AuraActionBase&lt;TAuraProperties&gt;.FormatToString(ToStringBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.NameSuffix.html#EyeAuras_Shared_Actions_AuraActionBase_1_NameSuffix">AuraActionBase&lt;TAuraProperties&gt;.NameSuffix</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.Error.html#EyeAuras_Shared_Actions_AuraActionBase_1_Error">AuraActionBase&lt;TAuraProperties&gt;.Error</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.IsIgnored.html#EyeAuras_Shared_Actions_AuraActionBase_1_IsIgnored">AuraActionBase&lt;TAuraProperties&gt;.IsIgnored</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Actions.AuraActionBase-1.IsBusy.html#EyeAuras_Shared_Actions_AuraActionBase_1_IsBusy">AuraActionBase&lt;TAuraProperties&gt;.IsBusy</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.SaveProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_SaveProperties">AuraObjectBase&lt;TAuraProperties&gt;.SaveProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.LoadProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_LoadProperties_EyeAuras_Shared_IAuraProperties_">AuraObjectBase&lt;TAuraProperties&gt;.LoadProperties(IAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.Properties.html#EyeAuras_Shared_Model_AuraObjectBase_1_Properties">AuraObjectBase&lt;TAuraProperties&gt;.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_DynamicData_IObservableList___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(IObservableList&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_ISourceCache___0___1__">AuraObjectBase.RaisePropertiesWhen&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2___0_">AuraObjectBase.RaisePropertiesWhen&lt;TCollection, T&gt;(TCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_PoeShared_Scaffolding_ObservableCollectionEx___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(ObservableCollectionEx&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_Collections_ObjectModel_ObservableCollection___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(ObservableCollection&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_String__">AuraObjectBase.RaisePropertiesWhen(IObservable&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_String__System_Reactive_Disposables_CompositeDisposable_">AuraObjectBase.RaisePropertiesWhen(IObservable&lt;string&gt;, CompositeDisposable)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_IObservable___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(IObservable&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_IObservable___0____">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(params IObservable&lt;T&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">AuraObjectBase.RaisePropertiesWhenAny&lt;T&gt;(T, params Expression&lt;Func&lt;T, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0____">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(params IAuraObject&lt;T&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.ResolveBinding.html#EyeAuras_Shared_Model_AuraObjectBase_ResolveBinding_System_String_">AuraObjectBase.ResolveBinding(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.AddOrUpdateBinding.html#EyeAuras_Shared_Model_AuraObjectBase_AddOrUpdateBinding_EyeAuras_Shared_Bindings_AuraBindingProperties_">AuraObjectBase.AddOrUpdateBinding(AuraBindingProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.IsLoadingProperties.html#EyeAuras_Shared_Model_AuraObjectBase_IsLoadingProperties">AuraObjectBase.IsLoadingProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.IsSavingProperties.html#EyeAuras_Shared_Model_AuraObjectBase_IsSavingProperties">AuraObjectBase.IsSavingProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Context.html#EyeAuras_Shared_Model_AuraObjectBase_Context">AuraObjectBase.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Id.html#EyeAuras_Shared_Model_AuraObjectBase_Id">AuraObjectBase.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_BindableReactiveObject_RemoveBinding_System_String_">BindableReactiveObject.RemoveBinding(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.ClearBindings.html#PoeShared_Bindings_BindableReactiveObject_ClearBindings">BindableReactiveObject.ClearBindings()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_BindableReactiveObject_AddOrUpdateBinding__1_System_String___0_System_String_">BindableReactiveObject.AddOrUpdateBinding&lt;TSource&gt;(string, TSource, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_BindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IValueProvider_System_String_">BindableReactiveObject.AddOrUpdateBinding(IValueProvider, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_BindableReactiveObject_RemoveBinding_PoeShared_Bindings_IReactiveBinding_">BindableReactiveObject.RemoveBinding(IReactiveBinding)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_BindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IReactiveBinding_">BindableReactiveObject.AddOrUpdateBinding(IReactiveBinding)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.Log.html#PoeShared_Bindings_BindableReactiveObject_Log">BindableReactiveObject.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.ObjectId.html#PoeShared_Bindings_BindableReactiveObject_ObjectId">BindableReactiveObject.ObjectId</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.HasBindings.html#PoeShared_Bindings_BindableReactiveObject_HasBindings">BindableReactiveObject.HasBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.Bindings.html#PoeShared_Bindings_BindableReactiveObject_Bindings">BindableReactiveObject.Bindings</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.BindingsList.html#PoeShared_Bindings_BindableReactiveObject_BindingsList">BindableReactiveObject.BindingsList</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.Actions.html">Actions</a></h6>
+  <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
+  <h5 id="EyeAuras_Shared_Actions_ComplexAuraAction_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ComplexAuraAction&lt;TAuraProperties&gt; : AuraActionBase&lt;TAuraProperties&gt;, IAuraObject&lt;TAuraProperties&gt;, IComplexAuraAction, IComplexAuraList&lt;IAuraAction&gt;, ISourceListEx&lt;IAuraAction&gt;, ISourceList&lt;IAuraAction&gt;, IObservableListEx&lt;IAuraAction&gt;, IObservableList&lt;IAuraAction&gt;, IEnumerable&lt;IAuraAction&gt;, IEnumerable, INotifyCollectionChanged, IAuraAction, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, INotifyPropertyChanged, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription where TAuraProperties : class, IAuraActionProperties, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TAuraProperties</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1__ctor" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.#ctor">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.-ctor.html#EyeAuras_Shared_Actions_ComplexAuraAction_1__ctor">ComplexAuraAction()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Collection" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Collection">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Collection.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Collection">Collection</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Count" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Count">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Count.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Count">Count</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_CountChanged" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.CountChanged">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.CountChanged.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_CountChanged">CountChanged</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Description" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Description">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Description.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Description">Description</a>
+        </td>
+        <td class="markdown level1 summary"><p>Description of an item, could be localized</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Items" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Items">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Items.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Items">Items</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Name" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Name">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Name.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Name">Name</a>
+        </td>
+        <td class="markdown level1 summary"><p>Name of an item(could be filename), usually un-localized and could be used in lookups</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Add_EyeAuras_Shared_Actions_IAuraAction_" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Add(EyeAuras.Shared.Actions.IAuraAction)">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Add.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Add_EyeAuras_Shared_Actions_IAuraAction_">Add(IAuraAction)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Connect_System_Func_EyeAuras_Shared_Actions_IAuraAction_System_Boolean__" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Connect(System.Func{EyeAuras.Shared.Actions.IAuraAction,System.Boolean})">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Connect.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Connect_System_Func_EyeAuras_Shared_Actions_IAuraAction_System_Boolean__">Connect(Func&lt;IAuraAction, bool&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Edit_System_Action_DynamicData_IExtendedList_EyeAuras_Shared_Actions_IAuraAction___" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Edit(System.Action{DynamicData.IExtendedList{EyeAuras.Shared.Actions.IAuraAction}})">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Edit.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Edit_System_Action_DynamicData_IExtendedList_EyeAuras_Shared_Actions_IAuraAction___">Edit(Action&lt;IExtendedList&lt;IAuraAction&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_ExecuteInternal_System_Threading_CancellationToken_" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.ExecuteInternal(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.ExecuteInternal.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_ExecuteInternal_System_Threading_CancellationToken_">ExecuteInternal(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_GetEnumerator" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.GetEnumerator">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.GetEnumerator.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_GetEnumerator">GetEnumerator()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Preview_System_Func_EyeAuras_Shared_Actions_IAuraAction_System_Boolean__" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Preview(System.Func{EyeAuras.Shared.Actions.IAuraAction,System.Boolean})">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Preview.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Preview_System_Func_EyeAuras_Shared_Actions_IAuraAction_System_Boolean__">Preview(Func&lt;IAuraAction, bool&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_Remove_EyeAuras_Shared_Actions_IAuraAction_" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.Remove(EyeAuras.Shared.Actions.IAuraAction)">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.Remove.html#EyeAuras_Shared_Actions_ComplexAuraAction_1_Remove_EyeAuras_Shared_Actions_IAuraAction_">Remove(IAuraAction)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Actions_ComplexAuraAction_1_CollectionChanged" data-uid="EyeAuras.Shared.Actions.ComplexAuraAction`1.CollectionChanged">
+          <a class="xref" href="EyeAuras.Shared.Actions.ComplexAuraAction-1.CollectionChanged.html">CollectionChanged</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

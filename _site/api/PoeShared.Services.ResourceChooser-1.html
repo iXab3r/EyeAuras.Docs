@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ResourceChooser&lt;T&gt;
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ResourceChooser&lt;T&gt;
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+              <span class="brand-title">EyeAuras</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
+                          <span class="brand-title">EyeAuras</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="PoeShared.Services.ResourceChooser`1">
+
+
+
+  <h1 id="PoeShared_Services_ResourceChooser_1" data-uid="PoeShared.Services.ResourceChooser`1" class="text-break">Class ResourceChooser&lt;T&gt;
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ResourceChooser&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PoeShared.html">PoeShared</a>.<a class="xref" href="PoeShared.Services.html">Services</a></h6>
+  <h6><strong>Assembly</strong>: PoeShared.dll</h6>
+  <h5 id="PoeShared_Services_ResourceChooser_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ResourceChooser&lt;T&gt; : IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1__ctor" data-uid="PoeShared.Services.ResourceChooser`1.#ctor">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.-ctor.html#PoeShared_Services_ResourceChooser_1__ctor">ResourceChooser()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="PoeShared.Services.ResourceChooser`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.-ctor.html#PoeShared_Services_ResourceChooser_1__ctor_System_Collections_Generic_IEnumerable__0__">ResourceChooser(IEnumerable&lt;T&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_Add__0_" data-uid="PoeShared.Services.ResourceChooser`1.Add(`0)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.Add.html#PoeShared_Services_ResourceChooser_1_Add__0_">Add(T)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_Clear" data-uid="PoeShared.Services.ResourceChooser`1.Clear">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.Clear.html#PoeShared_Services_ResourceChooser_1_Clear">Clear()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_GetAlive" data-uid="PoeShared.Services.ResourceChooser`1.GetAlive">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.GetAlive.html#PoeShared_Services_ResourceChooser_1_GetAlive">GetAlive()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_GetEnumerator" data-uid="PoeShared.Services.ResourceChooser`1.GetEnumerator">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.GetEnumerator.html#PoeShared_Services_ResourceChooser_1_GetEnumerator">GetEnumerator()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_Remove__0_" data-uid="PoeShared.Services.ResourceChooser`1.Remove(`0)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.Remove.html#PoeShared_Services_ResourceChooser_1_Remove__0_">Remove(T)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_Report__0_System_Boolean_" data-uid="PoeShared.Services.ResourceChooser`1.Report(`0,System.Boolean)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.Report.html#PoeShared_Services_ResourceChooser_1_Report__0_System_Boolean_">Report(T, bool)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_ReportAlive__0_" data-uid="PoeShared.Services.ResourceChooser`1.ReportAlive(`0)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.ReportAlive.html#PoeShared_Services_ResourceChooser_1_ReportAlive__0_">ReportAlive(T)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_ReportBroken__0_" data-uid="PoeShared.Services.ResourceChooser`1.ReportBroken(`0)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.ReportBroken.html#PoeShared_Services_ResourceChooser_1_ReportBroken__0_">ReportBroken(T)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Services_ResourceChooser_1_TryGetAlive__0__" data-uid="PoeShared.Services.ResourceChooser`1.TryGetAlive(`0@)">
+          <a class="xref" href="PoeShared.Services.ResourceChooser-1.TryGetAlive.html#PoeShared_Services_ResourceChooser_1_TryGetAlive__0__">TryGetAlive(out T)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.AsSourceListEx.html#PoeShared_Scaffolding_ChangeSetExtensions_AsSourceListEx__1_System_Collections_Generic_IEnumerable___0__">ChangeSetExtensions.AsSourceListEx&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ToSourceList.html#PoeShared_Scaffolding_ChangeSetExtensions_ToSourceList__1_System_Collections_Generic_IEnumerable___0__">ChangeSetExtensions.ToSourceList&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.EmptyIfNull.html#PoeShared_Scaffolding_EnumerableExtensions_EmptyIfNull__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.EmptyIfNull&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ForEachAsync.html#PoeShared_Scaffolding_EnumerableExtensions_ForEachAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__">EnumerableExtensions.ForEachAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ForEach.html#PoeShared_Scaffolding_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__">EnumerableExtensions.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.Intersperse.html#PoeShared_Scaffolding_EnumerableExtensions_Intersperse__1_System_Collections_Generic_IEnumerable___0__System_Func___0___0__">EnumerableExtensions.Intersperse&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.Intersperse.html#PoeShared_Scaffolding_EnumerableExtensions_Intersperse__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableExtensions.Intersperse&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.IsEmpty.html#PoeShared_Scaffolding_EnumerableExtensions_IsEmpty__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.IsUnique.html#PoeShared_Scaffolding_EnumerableExtensions_IsUnique__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.IsUnique&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.PickRandom.html#PoeShared_Scaffolding_EnumerableExtensions_PickRandom__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.PickRandom&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.Randomize.html#PoeShared_Scaffolding_EnumerableExtensions_Randomize__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.Randomize&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.SelectSafe.html#PoeShared_Scaffolding_EnumerableExtensions_SelectSafe__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__">EnumerableExtensions.SelectSafe&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.SelectSafe.html#PoeShared_Scaffolding_EnumerableExtensions_SelectSafe__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Action___0_System_Exception__">EnumerableExtensions.SelectSafe&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;, Action&lt;T, Exception&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToDictionaryWithReplacement.html#PoeShared_Scaffolding_EnumerableExtensions_ToDictionaryWithReplacement__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">EnumerableExtensions.ToDictionaryWithReplacement&lt;T, TKey, TValue&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToDictionaryWithThrow.html#PoeShared_Scaffolding_EnumerableExtensions_ToDictionaryWithThrow__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__">EnumerableExtensions.ToDictionaryWithThrow&lt;T, TKey, TValue&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToDictionary.html#PoeShared_Scaffolding_EnumerableExtensions_ToDictionary__3_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Func___0___2__System_Func_System_ValueTuple___1___2___2____2__">EnumerableExtensions.ToDictionary&lt;T, TKey, TValue&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;, Func&lt;(TKey key, TValue existingValue, TValue newValue), TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToObservableCollection.html#PoeShared_Scaffolding_EnumerableExtensions_ToObservableCollection__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToObservableCollection&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToReadOnlyObservableCollection.html#PoeShared_Scaffolding_EnumerableExtensions_ToReadOnlyObservableCollection__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToReadOnlyObservableCollection&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.EnumerableExtensions.ToVariations.html#PoeShared_Scaffolding_EnumerableExtensions_ToVariations__1_System_Collections_Generic_IEnumerable___0__">EnumerableExtensions.ToVariations&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToNamedTable.html#PoeShared_Scaffolding_ObjectExtensions_DumpToNamedTable__1_System_Collections_Generic_IEnumerable___0__System_String_System_Int32_System_String_">ObjectExtensions.DumpToNamedTable&lt;T&gt;(IEnumerable&lt;T&gt;, string, int, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToNamedTable.html#PoeShared_Scaffolding_ObjectExtensions_DumpToNamedTable__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_">ObjectExtensions.DumpToNamedTable&lt;T&gt;(IEnumerable&lt;T&gt;, string, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToString.html#PoeShared_Scaffolding_ObjectExtensions_DumpToString__1_System_Collections_Generic_IEnumerable___0__">ObjectExtensions.DumpToString&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTable.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTable__1_System_Collections_Generic_IEnumerable___0__System_Int32_">ObjectExtensions.DumpToTable&lt;T&gt;(IEnumerable&lt;T&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTable.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTable__1_System_Collections_Generic_IEnumerable___0__System_String_">ObjectExtensions.DumpToTable&lt;T&gt;(IEnumerable&lt;T&gt;, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTable.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTable__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_System_Nullable_System_Int32__">ObjectExtensions.DumpToTable&lt;T&gt;(IEnumerable&lt;T&gt;, string, string, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringTable.html#PoeShared_Scaffolding_ObjectExtensions_ToStringTable__1_System_Collections_Generic_IEnumerable___0__System_String_">ObjectExtensions.ToStringTable&lt;T&gt;(IEnumerable&lt;T&gt;, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>
