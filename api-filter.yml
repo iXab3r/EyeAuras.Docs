@@ -20,6 +20,8 @@ apiRules:
 - exclude:
     uidRegex: EyeAuras.UI
 - exclude:
+    uidRegex: EyeAuras.Loader
+- exclude:
     uidRegex: PoeShared.Modularity
     type: class
 - exclude:
