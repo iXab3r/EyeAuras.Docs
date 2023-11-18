@@ -94,9 +94,9 @@
                     <article class="content wrap" id="_content" data-uid="">
 
 <div class="article">
-<p><img src="/mainfull.png" alt=""></p>
 <p><strong>EyeAuras</strong>  is an automation tool that allows you to model desired behaviour via system of Triggers and Actions. Color search, image search, OCR (text recognition),  global and conditional hotkeys in conjunction with a wide variety of ways to emulate user input bring up an extremely powerful tool to your toolset. And, as a cherry on top, you can always fallback to C# for triggers and actions.</p>
-<p><img src="/eyeauras_tw5l8cdz4c.png" alt=""></p>
+<p><a href="/articles/guides/getting-started.html">Getting Started</a></p>
+<p><img src="https://wiki.eyeauras.net/eyeauras_tw5l8cdz4c.png" alt=""></p>
 <h2 id="main-concept">Main concept</h2>
 <ul>
 <li><strong>Aura</strong> - combination of Triggers, Actions, Overlays and Enabling conditions. This is what you'll share with others, and this does the actual work.</li>
@@ -117,31 +117,22 @@
 </li>
 <li><strong>Overlays</strong> - always-on-top overlays which could show text, image, custom UI or anything else. Overlays are a part of Aura and are shown only while Aura is Active</li>
 </ul>
-<h3 id="subsystems">Subsystems</h3>
-<ul>
-<li><a href="/en/export-import">Export/Import</a> - transfer, share, or backup EyeAuras packs across different users or devices</li>
-<li><a href="/en/aura-library">Aura Library</a> - a shared collection of EyeAuras packs, available for users to discover, import, and use</li>
-<li><a href="/en/window-matching-expressions">Window Match Expressions</a> - enabling selection of specific windows using a custom expression</li>
-<li><a href="/en/text-match-expressions">Text Match Expressions</a> - Powerful tool enabling text condition validation through Regex, Text, and Lambda evaluators.</li>
-<li><a href="/en/bindings">Bindings</a> - interconnect properties between triggers, actions, and overlays to allow for easier change of group properties and to open up new capabilities</li>
-<li><a href="/en/default-properties">Default Properties</a></li>
-</ul>
 <h3 id="triggers">Triggers</h3>
 <ul>
-<li><a href="/en/triggers/fixed-value">Fixed Value</a> - the most primitive trigger, you can control it's state by selecting it either manually or by using C# scripts</li>
-<li><a href="/en/triggers/images/color-search">Color Search</a> - active when Average color of a selected region matches with Target color. Similarity threshold could be specified.</li>
-<li><a href="/en/triggers/images/image-search"><strong>Image Search</strong></a> - active when some Image is found with a specified similarity</li>
-<li><a href="/en/triggers/images/ai-search-trigger"><strong>AI/ML Search</strong></a> - machine-learning powered <a href="https://docs.ultralytics.com/tasks/detect/">object detection</a>/<a href="https://docs.ultralytics.com/tasks/segment/">segmentation</a> or <a href="https://docs.ultralytics.com/tasks/classify/">classification</a>, currently supports only <a href="https://docs.ultralytics.com/"><strong>Yolo8</strong></a> <strong>in ONNX format</strong>, may be extended later</li>
-<li><a href="/en/triggers/images/text-search"><strong>Text Search</strong></a> - active when recognized text matches with specified expression. It could be comparison by Contains, regexp or C# Lambda</li>
-<li><a href="/en/triggers/aura-is-active"><strong>Aura Is Active</strong></a> - active when linked Auras have specified state (Active/NotActive)</li>
-<li><a href="/en/triggers/hotkey-is-active"><strong>Hotkey Is Active</strong></a> - active when specified combination of keys is either held down or toggled</li>
-<li><a href="/en/triggers/window-is-active"><strong>Window Is Active</strong></a> - active when window matching specified expression is active (in foreground)</li>
-<li><a href="/en/triggers/window-exists"><strong>Window Exists</strong></a> - active when window matching specified expression exists in the system</li>
-<li><a href="/en/triggers/timer"><strong>Timer</strong></a> - periodically activates itself for specified duration</li>
-<li><a href="/en/triggers/network-message"><strong>Message Subscription</strong></a> - activates/deactivates when specified message is received from EyeAuras webserver. Messages are separated by Channels and could be sent using SendMessage action</li>
-<li><a href="/en/triggers/file-contains-text"><strong>File Contains</strong></a> - activates when specified text is found in specified file</li>
-<li><a href="/en/triggers/telegram-message"><strong>Telegram Subscription</strong></a> - activates/deactivates when specified message is received in Telegram channel</li>
-<li><a href="/en/triggers/volume-level"><strong>Volume Control</strong></a> - activates/deactivates when volume level of specified audio device or process reaches specified threshold</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.Default.html"><strong>Fixed Value</strong></a> - the most primitive trigger, you can control it's state by selecting it either manually or by using C# scripts</li>
+<li><a href="/api/EyeAuras.OpenCVAuras.Triggers.ColorSearch.html"><strong>Color Search</strong></a> - active when Average color of a selected region matches with Target color. Similarity threshold could be specified.</li>
+<li><a href="/api/EyeAuras.OpenCVAuras.Triggers.ImageSearch.html"><strong>Image Search</strong></a> - active when some Image is found with a specified similarity</li>
+<li><a href="/api/EyeAuras.OpenCVAuras.Triggers.MLSearch.html"><strong>AI/ML Search</strong></a> - machine-learning powered <a href="https://docs.ultralytics.com/tasks/detect/">object detection</a>/<a href="https://docs.ultralytics.com/tasks/segment/">segmentation</a> or <a href="https://docs.ultralytics.com/tasks/classify/">classification</a>, currently supports only <a href="https://docs.ultralytics.com/"><strong>Yolo8</strong></a> <strong>in ONNX format</strong>, may be extended later</li>
+<li><a href="/api/EyeAuras.OpenCVAuras.Triggers.TextSearch.html"><strong>Text Search</strong></a> - active when recognized text matches with specified expression. It could be comparison by Contains, regexp or C# Lambda</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.AuraIsActive.html"><strong>Aura Is Active</strong></a> - active when linked Auras have specified state (Active/NotActive)</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.HotkeyIsActive.html"><strong>Hotkey Is Active</strong></a> - active when specified combination of keys is either held down or toggled</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.WinActive.html"><strong>Window Is Active</strong></a> - active when window matching specified expression is active (in foreground)</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.WinExists.html"><strong>Window Exists</strong></a> - active when window matching specified expression exists in the system</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.Timer.html"><strong>Timer</strong></a> - periodically activates itself for specified duration</li>
+<li><a href="/api/EyeAuras.NetworkAuras.Triggers.MessageSubscription.html"><strong>Message Subscription</strong></a> - activates/deactivates when specified message is received from EyeAuras webserver. Messages are separated by Channels and could be sent using SendMessage action</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Triggers.FileContains.html"><strong>File Contains</strong></a> - activates when specified text is found in specified file</li>
+<li><a href="/api/EyeAuras.AdvancedAuras.Triggers.TelegramMessage.html"><strong>Telegram Subscription</strong></a> - activates/deactivates when specified message is received in Telegram channel</li>
+<li><a href="/api/EyeAuras.AdvancedAuras.Triggers.VolumeLevel.html"><strong>Volume Control</strong></a> - activates/deactivates when volume level of specified audio device or process reaches specified threshold</li>
 <li><strong>C# Script</strong> - custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.</li>
 </ul>
 <h3 id="actions">Actions</h3>
@@ -153,11 +144,11 @@
 <li><a href="/en/actions/sendinput/send-sequence">Sequence</a> - replayed the specified sequence of keyboard presses, mouse clicks and mouse movements</li>
 </ul>
 </li>
-<li><a href="/en/actions/play-sound"><strong>Play Sound</strong></a> - plays specified sound</li>
-<li><a href="/en/actions/win-activate"><strong>Win Activate</strong></a> - activates specified window</li>
-<li><a href="/en/actions/delay"><strong>Delay</strong></a> - waits for some time before proceeding to the next action</li>
-<li><a href="/en/actions/send-telegram-message"><strong>Send To Telegram</strong></a> - sends message to Telegram channel</li>
-<li><a href="/en/actions/send-network-message"><strong>Send Message</strong></a> - sends network message through EyeAuras infrastructure to a specified Channel. All other instances of EyeAuras on other computers can subscribe and process these messages via Message Subscription trigger</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Actions.PlaySound.html"><strong>Play Sound</strong></a> - plays specified sound</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Actions.WinActivate.html"><strong>Win Activate</strong></a> - activates specified window</li>
+<li><a href="/api/EyeAuras.DefaultAuras.Actions.Delay.html"><strong>Delay</strong></a> - waits for some time before proceeding to the next action</li>
+<li><a href="/api/EyeAuras.AdvancedAuras.Actions.SendToTelegram.html"><strong>Send To Telegram</strong></a> - sends message to Telegram channel</li>
+<li><a href="/api/EyeAuras.NetworkAuras.Actions.SendMessage.html"><strong>Send Message</strong></a> - sends network message through EyeAuras infrastructure to a specified Channel. All other instances of EyeAuras on other computers can subscribe and process these messages via Message Subscription trigger</li>
 <li><strong>C# Script</strong> - custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.</li>
 </ul>
 <h3 id="overlays">Overlays</h3>

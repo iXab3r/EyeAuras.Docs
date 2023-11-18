@@ -103,7 +103,10 @@
 
   <h1 id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger" class="text-break">Interface ITelegramSubscriptionTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an Aura trigger that listens for messages in a specified Telegram chat.
+It activates or deactivates based on the text content of the messages, similar to the NetworkMessage trigger.
+The trigger uses the Telegram Bot API (<a href="https://core.telegram.org/bots/api">https://core.telegram.org/bots/api</a>) for receiving messages.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +180,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -218,43 +218,60 @@
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_ActivationTextEvaluator" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.ActivationTextEvaluator">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.ActivationTextEvaluator.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_ActivationTextEvaluator">ActivationTextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text evaluator used to determine if a received message should activate the trigger.
+This can perform text matching, regular expressions, or C# expression evaluations.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_ChatId" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.ChatId">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.ChatId.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_ChatId">ChatId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the Chat ID. This identifies the specific Telegram chat to monitor.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_DeactivateAutomatically" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.DeactivateAutomatically">
+          <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.DeactivateAutomatically.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_DeactivateAutomatically">DeactivateAutomatically</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates if the trigger should automatically deactivate after being activated by the ActivationTextEvaluator.
+This happens even if no DeactivationTextEvaluator is set.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_DeactivationTextEvaluator" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.DeactivationTextEvaluator">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.DeactivationTextEvaluator.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_DeactivationTextEvaluator">DeactivationTextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text evaluator used to determine if a received message should deactivate the trigger.
+Similar to ActivationTextEvaluator in functionality.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_LastAuraMessage" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.LastAuraMessage">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.LastAuraMessage.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_LastAuraMessage">LastAuraMessage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The last received text message on the subscribed channel.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Messages" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Messages">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Messages.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Messages">Messages</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>A collection of the most recent messages received, stored in a circular list to limit memory usage.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Proxy" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Proxy">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Proxy.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Proxy">Proxy</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the proxy settings, if needed, for connecting to the Telegram API.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Token" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Token">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.ITelegramSubscriptionTrigger.Token.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_ITelegramSubscriptionTrigger_Token">Token</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the token for the Telegram Bot. This is required to authenticate with the Telegram API.</p>
+</td>
       </tr>
     </tbody>
   </table>

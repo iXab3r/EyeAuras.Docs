@@ -103,7 +103,7 @@
 
   <h1 id="PoeShared_Bindings_IValueProvider" data-uid="PoeShared.Bindings.IValueProvider" class="text-break">Interface IValueProvider
 </h1>
-  <div class="markdown level0 summary"><p>Values providers are responsible for providing an actual value OR show an exception if value retrieval is not possible</p>
+  <div class="markdown level0 summary"><p>Values providers are responsible for providing an actual value or providing info about an exception if value retrieval is not possible.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -135,19 +135,22 @@
         <td id="PoeShared_Bindings_IValueProvider_Error" data-uid="PoeShared.Bindings.IValueProvider.Error">
           <a class="xref" href="PoeShared.Bindings.IValueProvider.Error.html#PoeShared_Bindings_IValueProvider_Error">Error</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the exception representing the error that occurred during value retrieval.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IValueProvider_HasValue" data-uid="PoeShared.Bindings.IValueProvider.HasValue">
           <a class="xref" href="PoeShared.Bindings.IValueProvider.HasValue.html#PoeShared_Bindings_IValueProvider_HasValue">HasValue</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether this provider has a value.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IValueProvider_Value" data-uid="PoeShared.Bindings.IValueProvider.Value">
           <a class="xref" href="PoeShared.Bindings.IValueProvider.Value.html#PoeShared_Bindings_IValueProvider_Value">Value</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the value provided by this provider. Does not throw.</p>
+</td>
       </tr>
     </tbody>
   </table>

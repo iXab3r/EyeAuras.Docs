@@ -103,7 +103,12 @@
 
   <h1 id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription" class="text-break">Class YoloModelDescription
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a comprehensive description of a YOLO (You Only Look Once) model.
+This record provides a snapshot of the model's key attributes and settings,
+including its size, dimensions, confidence threshold, overlap threshold, output types,
+and a list of labels it can detect. It is used both for user information and internal
+processing during the inference process.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -164,37 +169,53 @@
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Confidence" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Confidence">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Confidence.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Confidence">Confidence</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the confidence threshold for detecting objects.
+Only objects detected with a confidence level higher than this threshold are considered valid.
+This value helps in filtering out less likely detections.
+Default is set to 0.20.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Dimensions" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Dimensions">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Dimensions.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Dimensions">Dimensions</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of dimensions in the model's output.
+This typically refers to the dimensions of the feature map produced by the model.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Labels" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Labels">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Labels.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Labels">Labels</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the list of labels that the model is capable of detecting.
+Each label in this list represents a specific class or type of object that the model can identify.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Outputs" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Outputs">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Outputs.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Outputs">Outputs</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the array of outputs produced by the model.
+These outputs typically include various parameters and metrics relevant to the model's detection process.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Overlap" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Overlap">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Overlap.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Overlap">Overlap</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the overlap threshold for detecting objects.
+This value is used to handle overlapping bounding boxes and helps in reducing redundant detections.
+Default is set to 0.45.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Size" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Size">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.Size.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_Size">Size</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the size of the model's input window.
+This typically represents the dimensions (width and height) to which input images
+are resized before being fed into the model.</p>
+</td>
       </tr>
     </tbody>
   </table>

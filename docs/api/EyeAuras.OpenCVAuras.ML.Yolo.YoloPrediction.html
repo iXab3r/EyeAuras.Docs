@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction" class="text-break">Struct YoloPrediction
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a prediction made by a Yolo model for object detection and segmentation tasks. It includes the confidence score, bounding rectangle, label, and optionally a mask for segmentation.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
     <h5>Implements</h5>
@@ -141,37 +142,44 @@
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_ClassIdx" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.ClassIdx">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.ClassIdx.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_ClassIdx">ClassIdx</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The index of the class in the Yolo model that corresponds to this prediction.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Label" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Label">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Label.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Label">Label</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The label of the detected object, providing information about the type or class of the object.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Mask" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Mask">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Mask.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Mask">Mask</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The mask associated with this prediction, used in segmentation tasks. The mask delineates the exact shape of the object.
+This field is relevant only for segmentation tasks and can be null for object detection tasks.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Rectangle" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Rectangle">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Rectangle.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Rectangle">Rectangle</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The bounding rectangle of the detected object in the image.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_SampleIdx" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.SampleIdx">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.SampleIdx.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_SampleIdx">SampleIdx</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The index of the sample (image or frame) in which this prediction was made.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Score" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Score">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.Score.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloPrediction_Score">Score</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The confidence score of the prediction, indicating the likelihood that the prediction is correct.</p>
+</td>
       </tr>
     </tbody>
   </table>

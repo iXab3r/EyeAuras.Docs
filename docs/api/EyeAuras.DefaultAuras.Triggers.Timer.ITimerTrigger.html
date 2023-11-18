@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger" data-uid="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger" class="text-break">Interface ITimerTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a timer-based trigger that alternates between active and inactive states based on specified time periods.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +178,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -218,25 +216,33 @@
         <td id="EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerActivationPeriod" data-uid="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerActivationPeriod">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerActivationPeriod.html#EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerActivationPeriod">TimerActivationPeriod</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the period of time the trigger remains in the activated state
+before switching to the deactivated state.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerActivationTimestamp" data-uid="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerActivationTimestamp">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerActivationTimestamp.html#EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerActivationTimestamp">TimerActivationTimestamp</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the timestamp when the trigger is scheduled to next activate.
+This property is null if there is no scheduled activation.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerDeactivationPeriod" data-uid="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerDeactivationPeriod">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerDeactivationPeriod.html#EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerDeactivationPeriod">TimerDeactivationPeriod</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the period of time the trigger remains in the deactivated state
+before switching to the activated state.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerDeactivationTimestamp" data-uid="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerDeactivationTimestamp">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Timer.ITimerTrigger.TimerDeactivationTimestamp.html#EyeAuras_DefaultAuras_Triggers_Timer_ITimerTrigger_TimerDeactivationTimestamp">TimerDeactivationTimestamp</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the timestamp when the trigger is scheduled to next deactivate.
+This property is null if there is no scheduled deactivation.</p>
+</td>
       </tr>
     </tbody>
   </table>

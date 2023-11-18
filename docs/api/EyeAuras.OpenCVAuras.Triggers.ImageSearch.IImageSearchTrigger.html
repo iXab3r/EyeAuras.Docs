@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.IImageSearchTrigger" class="text-break">Interface IImageSearchTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Interface for a trigger that uses template matching to find an image within a captured region.
+It supports transparent images by processing multiple channels.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,9 +140,6 @@
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;.TargetWindow</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ActiveWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow">IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;.ActiveWindow</a>
-    </div>
-    <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;.ImageSink</a>
     </div>
     <div>
@@ -151,9 +150,6 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsScreen.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen">IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;.BoundsScreen</a>
-    </div>
-    <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow">IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;.BoundsWindow</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.IsIgnored.html#EyeAuras_Shared_Triggers_IAuraTrigger_IsIgnored">IAuraTrigger.IsIgnored</a>
@@ -225,9 +221,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -243,6 +236,12 @@
       <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IHasAttachedWindow.ActiveWindow.html#EyeAuras_Shared_IHasAttachedWindow_ActiveWindow">IHasAttachedWindow.ActiveWindow</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
   </div>
@@ -250,7 +249,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IImageSearchTrigger : IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBounds, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IImageSearchTrigger : IWindowCaptureTrigger&lt;IImageSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -266,14 +265,17 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger_LastSeenImageLocation" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.IImageSearchTrigger.LastSeenImageLocation">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.IImageSearchTrigger.LastSeenImageLocation.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger_LastSeenImageLocation">LastSeenImageLocation</a>
         </td>
-        <td class="markdown level1 summary"><p>Bounding box relative to the top left corner of the window</p>
+        <td class="markdown level1 summary"><p>Gets the bounding box of the last seen image location, relative to the top left corner of the window.
+This property is obsolete and is retained only for compatibility with older bindings.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger_SimilarityThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.IImageSearchTrigger.SimilarityThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.IImageSearchTrigger.SimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_IImageSearchTrigger_SimilarityThreshold">SimilarityThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the similarity threshold for the image search.
+This value determines how closely the found image needs to match the template.</p>
+</td>
       </tr>
     </tbody>
   </table>

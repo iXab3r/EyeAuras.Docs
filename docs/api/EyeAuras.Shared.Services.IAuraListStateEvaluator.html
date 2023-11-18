@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_Shared_Services_IAuraListStateEvaluator" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator" class="text-break">Interface IAuraListStateEvaluator
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an evaluator that manages the state and interaction of multiple aura list evaluators and individual aura evaluators.
+It allows for complex configurations to determine the overall active state based on the properties of contained auras and folders.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -144,9 +146,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -179,67 +178,78 @@
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_AllowDisabledAuras" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.AllowDisabledAuras">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.AllowDisabledAuras.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_AllowDisabledAuras">AllowDisabledAuras</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether disabled auras should be considered in the evaluation.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_AllowSelfLink" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.AllowSelfLink">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.AllowSelfLink.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_AllowSelfLink">AllowSelfLink</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether self-linking is allowed, enabling an evaluator to link to its own parent aura.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_AurasById" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.AurasById">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.AurasById.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_AurasById">AurasById</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a cache of auras by their ID.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_Count" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.Count">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.Count.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_Count">Count</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the count of contained evaluators.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_DefaultIsActive" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.DefaultIsActive">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.DefaultIsActive.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_DefaultIsActive">DefaultIsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the default active state to be used in evaluation.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_Evaluators" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.Evaluators">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.Evaluators.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_Evaluators">Evaluators</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the list of individual aura evaluators contained within this evaluator.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_FoldersById" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.FoldersById">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.FoldersById.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_FoldersById">FoldersById</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a cache of folders by their ID.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_HasCyclicReferences" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.HasCyclicReferences">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.HasCyclicReferences.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_HasCyclicReferences">HasCyclicReferences</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether there are cyclic references within the evaluators.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_IsActive" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.IsActive">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.IsActive.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the active state of the evaluator. Null indicates an indeterminate state.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_ListEvaluators" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.ListEvaluators">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.ListEvaluators.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_ListEvaluators">ListEvaluators</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the list of aura list evaluators contained within this evaluator.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_OperationMode" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.OperationMode">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.OperationMode.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_OperationMode">OperationMode</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the operation mode that determines how the evaluators' states are combined.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -257,25 +267,29 @@
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_AddAuraById_System_String_" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.AddAuraById(System.String)">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.AddAuraById.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_AddAuraById_System_String_">AddAuraById(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds an aura to the evaluator by its ID.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_AddFolderById_System_String_" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.AddFolderById(System.String)">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.AddFolderById.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_AddFolderById_System_String_">AddFolderById(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds a folder to the evaluator by its ID.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_Clear" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.Clear">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.Clear.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_Clear">Clear()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Clears all evaluators from this list state evaluator.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListStateEvaluator_Remove_EyeAuras_Shared_Services_IAuraListEvaluator_" data-uid="EyeAuras.Shared.Services.IAuraListStateEvaluator.Remove(EyeAuras.Shared.Services.IAuraListEvaluator)">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.Remove.html#EyeAuras_Shared_Services_IAuraListStateEvaluator_Remove_EyeAuras_Shared_Services_IAuraListEvaluator_">Remove(IAuraListEvaluator)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Removes a specified list evaluator from this evaluator.</p>
+</td>
       </tr>
     </tbody>
   </table>

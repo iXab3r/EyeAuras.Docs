@@ -116,27 +116,36 @@ Classes
       <h5><a class="xref" href="PoeShared.Bindings.ExpressionWatcher.html">ExpressionWatcher</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Bindings.ExpressionWatcherBase.html">ExpressionWatcherBase</a></h5>
-      <section></section>
+      <section><p>Serves as the base class for all watchers in the binding mechanism. It initializes and manages the binding and watching process.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Bindings.ExpressionWatcher-2.html">ExpressionWatcher&lt;TSource, TProperty&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Bindings.ObservableValueWrapper.html">ObservableValueWrapper</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Bindings.PropertyPathWatcher.html">PropertyPathWatcher</a></h5>
-      <section></section>
+      <section><p>A watcher class that monitors Property changes of a given source object.
+It extends the ExpressionWatcherBase to provide functionality specific to watching
+property paths within reactive programming contexts.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Bindings.ReactiveBinding.html">ReactiveBinding</a></h5>
-      <section></section>
+      <section><p>Represents a reactive binding that establishes a connection between a source value provider and a target watcher.
+This binding becomes active when both the source and target have valid values and is used to propagate changes
+from the source to the target, allowing for reactive updates in a data-driven application.</p>
+</section>
     <h3 id="interfaces">
 Interfaces
 </h3>
       <h5><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></h5>
-      <section></section>
+      <section><p>Represents an object that supports binding with reactive properties and objects.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Bindings.ICsharpExpressionParser.html">ICsharpExpressionParser</a></h5>
       <section><p>Defines methods to parse C# expressions.</p>
 </section>
       <h5><a class="xref" href="PoeShared.Bindings.IReactiveBinding.html">IReactiveBinding</a></h5>
-      <section></section>
+      <section><p>Defines a reactive binding that connects a source and a target, ensuring the target reflects changes in the source.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Bindings.IValueProvider.html">IValueProvider</a></h5>
-      <section><p>Values providers are responsible for providing an actual value OR show an exception if value retrieval is not possible</p>
+      <section><p>Values providers are responsible for providing an actual value or providing info about an exception if value retrieval is not possible.</p>
 </section>
       <h5><a class="xref" href="PoeShared.Bindings.IValueWatcher.html">IValueWatcher</a></h5>
       <section><p>Value watchers are responsible for not only providing value/error but are able to set current value in some cases</p>

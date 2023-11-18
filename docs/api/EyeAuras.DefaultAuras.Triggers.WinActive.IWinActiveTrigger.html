@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Triggers_WinActive_IWinActiveTrigger" data-uid="EyeAuras.DefaultAuras.Triggers.WinActive.IWinActiveTrigger" class="text-break">Interface IWinActiveTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines a trigger that activates based on the active foreground window on the system.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +178,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -218,14 +216,16 @@
         <td id="EyeAuras_DefaultAuras_Triggers_WinActive_IWinActiveTrigger_ActiveWindow" data-uid="EyeAuras.DefaultAuras.Triggers.WinActive.IWinActiveTrigger.ActiveWindow">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.WinActive.IWinActiveTrigger.ActiveWindow.html#EyeAuras_DefaultAuras_Triggers_WinActive_IWinActiveTrigger_ActiveWindow">ActiveWindow</a>
         </td>
-        <td class="markdown level1 summary"><p>Resolved window that matches TargetWindow expression</p>
+        <td class="markdown level1 summary"><p>Gets the window handle of the currently active window that matches the TargetWindow expression.
+This property is updated in real-time to reflect the active window that fulfills the matching criteria.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_WinActive_IWinActiveTrigger_TargetWindow" data-uid="EyeAuras.DefaultAuras.Triggers.WinActive.IWinActiveTrigger.TargetWindow">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.WinActive.IWinActiveTrigger.TargetWindow.html#EyeAuras_DefaultAuras_Triggers_WinActive_IWinActiveTrigger_TargetWindow">TargetWindow</a>
         </td>
-        <td class="markdown level1 summary"><p>Specifies expression that will be used to find specific window</p>
+        <td class="markdown level1 summary"><p>Gets or sets the expression used to identify the target window.
+This expression is used to match a specific window based on its properties.</p>
 </td>
       </tr>
     </tbody>

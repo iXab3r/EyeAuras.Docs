@@ -103,7 +103,10 @@
 
   <h1 id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction" class="text-break">Interface ISendToTelegramAction
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Action that sends messages to a specified Telegram chat.
+This action uses a bot token for authentication and can include various options like attaching screenshots.
+Telegram bots can be created and configured as per the instructions at <a href="https://core.telegram.org/bots#creating-a-new-bot">https://core.telegram.org/bots#creating-a-new-bot</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -165,9 +168,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -206,43 +206,53 @@
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_AttachScreenshot" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.AttachScreenshot">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.AttachScreenshot.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_AttachScreenshot">AttachScreenshot</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Determines whether a screenshot of the specified target window should be attached to the message.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_ChatId" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.ChatId">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.ChatId.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_ChatId">ChatId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the chat ID where the message will be sent.
+The chat ID can be a user, group, or channel ID in Telegram.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_ParseMode" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.ParseMode">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.ParseMode.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_ParseMode">ParseMode</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the parse mode for the text message.
+This determines how Telegram will parse the text, commonly as Markdown or HTML.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Proxy" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Proxy">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Proxy.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Proxy">Proxy</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the proxy server information, if required, for connecting to the Telegram API.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_TargetWindow" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.TargetWindow">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.TargetWindow.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_TargetWindow">TargetWindow</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the expression to match the target window for capturing a screenshot.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Text" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Text">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Text.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Text">Text</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the text message to be sent to the Telegram chat.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Token" data-uid="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Token">
           <a class="xref" href="EyeAuras.AdvancedAuras.Actions.SendToTelegram.ISendToTelegramAction.Token.html#EyeAuras_AdvancedAuras_Actions_SendToTelegram_ISendToTelegramAction_Token">Token</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the bot token used for authenticating with the Telegram API.
+Detailed information on obtaining a bot token can be found at <a href="https://core.telegram.org/bots#botfather">https://core.telegram.org/bots#botfather</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>

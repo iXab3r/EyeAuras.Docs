@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties" class="text-break">Class TelegramSubscriptionTriggerProperties
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the properties for configuring a Telegram Subscription Trigger.
+This record holds the necessary settings for the trigger to interact with a specific Telegram chat.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -185,7 +187,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.AdvancedAuras.html">AdvancedAuras</a>.<a class="xref" href="EyeAuras.AdvancedAuras.Triggers.html">Triggers</a>.<a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.html">TelegramMessage</a></h6>
-  <h6><strong>Assembly</strong>: EyeAuras.AdvancedAuras.dll</h6>
+  <h6><strong>Assembly</strong>: EyeAuras.AdvancedAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed record TelegramSubscriptionTriggerProperties : MessageSubscriptionTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;MessageSubscriptionTriggerPropertiesBase&gt;, IEquatable&lt;TelegramSubscriptionTriggerProperties&gt;</code></pre>
@@ -222,7 +224,9 @@
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_ChatId" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.ChatId">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.ChatId.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_ChatId">ChatId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the unique identifier for the Telegram chat.
+This ID determines which chat the trigger will monitor for messages.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_EqualityContract" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.EqualityContract">
@@ -234,13 +238,17 @@
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_Proxy" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.Proxy">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.Proxy.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_Proxy">Proxy</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the proxy settings.
+Use this if the direct connection to the Telegram API is not possible, for example, due to network restrictions.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_Token" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.Token">
           <a class="xref" href="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.Token.html#EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_Token">Token</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the token for the Telegram Bot.
+This token is essential for authenticating with the Telegram API and is provided by Telegram when you create a new bot.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_AdvancedAuras_Triggers_TelegramMessage_TelegramSubscriptionTriggerProperties_Version" data-uid="EyeAuras.AdvancedAuras.Triggers.TelegramMessage.TelegramSubscriptionTriggerProperties.Version">

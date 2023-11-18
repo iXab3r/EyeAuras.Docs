@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction" data-uid="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction" class="text-break">Interface IWinActivateAction
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines an action within the Aura framework that focuses on activating a specified window. This action attempts to bring the target window to the foreground and waits for a specified timeout duration for the window to become active.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -165,9 +166,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -206,21 +204,25 @@
         <td id="EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_ActiveWindow" data-uid="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.ActiveWindow">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.ActiveWindow.html#EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_ActiveWindow">ActiveWindow</a>
         </td>
-        <td class="markdown level1 summary"><p>Resolved window that matches TargetWindow expression</p>
+        <td class="markdown level1 summary"><p>Gets the handle of the window that is resolved from the <a class="xref" href="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.TargetWindow.html#EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_TargetWindow">TargetWindow</a> match expression.
+This represents the actual window that is targeted for activation by this action.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_TargetWindow" data-uid="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.TargetWindow">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.TargetWindow.html#EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_TargetWindow">TargetWindow</a>
         </td>
-        <td class="markdown level1 summary"><p>Specifies expression that will be used to find specific window</p>
+        <td class="markdown level1 summary"><p>Specifies the expression used to identify and locate the specific window to be activated.
+This expression is evaluated to determine which window matches the criteria for activation.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_Timeout" data-uid="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.Timeout">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WinActivate.IWinActivateAction.Timeout.html#EyeAuras_DefaultAuras_Actions_WinActivate_IWinActivateAction_Timeout">Timeout</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Specifies the maximum time duration to wait for the window to become active.
+If the window does not become active within this timeframe, the action may timeout or take alternative actions based on its configuration.</p>
+</td>
       </tr>
     </tbody>
   </table>

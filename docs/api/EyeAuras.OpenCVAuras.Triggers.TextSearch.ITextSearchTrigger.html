@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger" class="text-break">Interface ITextSearchTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Interface defining a text search trigger that performs OCR on a captured region,
+followed by text analysis using a text evaluator.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,9 +140,6 @@
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;.TargetWindow</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ActiveWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow">IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;.ActiveWindow</a>
-    </div>
-    <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;.ImageSink</a>
     </div>
     <div>
@@ -151,9 +150,6 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsScreen.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen">IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;.BoundsScreen</a>
-    </div>
-    <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow">IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;.BoundsWindow</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.IsIgnored.html#EyeAuras_Shared_Triggers_IAuraTrigger_IsIgnored">IAuraTrigger.IsIgnored</a>
@@ -225,9 +221,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -243,6 +236,12 @@
       <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IHasAttachedWindow.ActiveWindow.html#EyeAuras_Shared_IHasAttachedWindow_ActiveWindow">IHasAttachedWindow.ActiveWindow</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
   </div>
@@ -250,7 +249,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITextSearchTrigger : IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBounds, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ITextSearchTrigger : IWindowCaptureTrigger&lt;ITextSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -266,55 +265,73 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_EngineId" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.EngineId">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.EngineId.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_EngineId">EngineId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the ID of the OCR engine used for text recognition.
+This can be set to use different OCR engines like Tesseract or Windows built-in OCR.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_EvaluatorType" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.EvaluatorType">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.EvaluatorType.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_EvaluatorType">EvaluatorType</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the type of text evaluator used for text analysis.
+Determines how the OCR result is analyzed and matched with the target text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_IgnoreCase" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.IgnoreCase">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.IgnoreCase.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_IgnoreCase">IgnoreCase</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the text comparison should ignore case.
+When true, the case of letters is ignored during text matching.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_InvertImage" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.InvertImage">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.InvertImage.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_InvertImage">InvertImage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the image should be inverted before OCR.
+Inverting can be useful for images with light text on a dark background.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_ScaleFactor" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.ScaleFactor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.ScaleFactor.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_ScaleFactor">ScaleFactor</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the scale factor applied to the captured image before OCR.
+Scaling can improve OCR accuracy on small or low-resolution text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_SourceText" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.SourceText">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.SourceText.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_SourceText">SourceText</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the text that has been recognized by the OCR process.
+This is the raw output from the OCR engine.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_TargetText" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.TargetText">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.TargetText.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_TargetText">TargetText</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the target text to match with the OCR result.
+The trigger activates when the OCR'd text matches this target text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_TextEvaluator" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.TextEvaluator">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.TextEvaluator.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_TextEvaluator">TextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the text evaluator used for analyzing the recognized text.
+The evaluator applies specific rules or patterns to the OCR result.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_ThresholdImage" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.ThresholdImage">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.ITextSearchTrigger.ThresholdImage.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_ITextSearchTrigger_ThresholdImage">ThresholdImage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to apply thresholding to the image before OCR.
+Thresholding can enhance text contrast for better recognition.</p>
+</td>
       </tr>
     </tbody>
   </table>

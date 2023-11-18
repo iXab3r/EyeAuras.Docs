@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Triggers_Default_IDefaultTrigger" data-uid="EyeAuras.DefaultAuras.Triggers.Default.IDefaultTrigger" class="text-break">Interface IDefaultTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manually controlled trigger.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +178,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -204,6 +202,10 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IDefaultTrigger : IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, INotifyPropertyChanged, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription</code></pre>
   </div>
+  <h5 id="EyeAuras_DefaultAuras_Triggers_Default_IDefaultTrigger_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class is for triggers that require manual activation or deactivation.
+It provides the flexibility to set the trigger to an active, inactive, or unknown state as needed.</p>
+</div>
   <h3 id="properties">Properties
 </h3>
   <table class="table table-bordered table-condensed">
@@ -218,7 +220,10 @@
         <td id="EyeAuras_DefaultAuras_Triggers_Default_IDefaultTrigger_TriggerValue" data-uid="EyeAuras.DefaultAuras.Triggers.Default.IDefaultTrigger.TriggerValue">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Default.IDefaultTrigger.TriggerValue.html#EyeAuras_DefaultAuras_Triggers_Default_IDefaultTrigger_TriggerValue">TriggerValue</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the value of the trigger.
+A value of 'true' activates the trigger, 'false' deactivates it,
+and 'null' sets it to an unknown state.</p>
+</td>
       </tr>
     </tbody>
   </table>

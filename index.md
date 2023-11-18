@@ -1,10 +1,10 @@
 <div class="article">
 
-![](/mainfull.png)
-
 **EyeAuras**  is an automation tool that allows you to model desired behaviour via system of Triggers and Actions. Color search, image search, OCR (text recognition),  global and conditional hotkeys in conjunction with a wide variety of ways to emulate user input bring up an extremely powerful tool to your toolset. And, as a cherry on top, you can always fallback to C# for triggers and actions. 
 
-![](/eyeauras_tw5l8cdz4c.png)
+[Getting Started](/articles/guides/getting-started.html)
+
+![](https://wiki.eyeauras.net/eyeauras_tw5l8cdz4c.png)
 
 ## Main concept
 
@@ -20,31 +20,22 @@
     -   On Exit - these are executed when Aura becomes Not Active
 -   **Overlays** \- always-on-top overlays which could show text, image, custom UI or anything else. Overlays are a part of Aura and are shown only while Aura is Active
 
-### Subsystems
-
--   [Export/Import](/en/export-import) - transfer, share, or backup EyeAuras packs across different users or devices
--   [Aura Library](/en/aura-library) - a shared collection of EyeAuras packs, available for users to discover, import, and use
--   [Window Match Expressions](/en/window-matching-expressions) - enabling selection of specific windows using a custom expression
--   [Text Match Expressions](/en/text-match-expressions) - Powerful tool enabling text condition validation through Regex, Text, and Lambda evaluators.
--   [Bindings](/en/bindings) - interconnect properties between triggers, actions, and overlays to allow for easier change of group properties and to open up new capabilities
--   [Default Properties](/en/default-properties)
-
 ### Triggers
 
--   [Fixed Value](/en/triggers/fixed-value) - the most primitive trigger, you can control it's state by selecting it either manually or by using C# scripts
--   [Color Search](/en/triggers/images/color-search) - active when Average color of a selected region matches with Target color. Similarity threshold could be specified.
--   [**Image Search**](/en/triggers/images/image-search) - active when some Image is found with a specified similarity
--   [**AI/ML Search**](/en/triggers/images/ai-search-trigger) \- machine-learning powered [object detection](https://docs.ultralytics.com/tasks/detect/)/[segmentation](https://docs.ultralytics.com/tasks/segment/) or [classification](https://docs.ultralytics.com/tasks/classify/), currently supports only [**Yolo8**](https://docs.ultralytics.com/) **in ONNX format**, may be extended later
--   [**Text Search**](/en/triggers/images/text-search) - active when recognized text matches with specified expression. It could be comparison by Contains, regexp or C# Lambda
--   [**Aura Is Active**](/en/triggers/aura-is-active) - active when linked Auras have specified state (Active/NotActive)
--   [**Hotkey Is Active**](/en/triggers/hotkey-is-active) - active when specified combination of keys is either held down or toggled
--   [**Window Is Active**](/en/triggers/window-is-active) \- active when window matching specified expression is active (in foreground)
--   [**Window Exists**](/en/triggers/window-exists) - active when window matching specified expression exists in the system
--   [**Timer**](/en/triggers/timer) \- periodically activates itself for specified duration
--   [**Message Subscription**](/en/triggers/network-message) - activates/deactivates when specified message is received from EyeAuras webserver. Messages are separated by Channels and could be sent using SendMessage action
--   [**File Contains**](/en/triggers/file-contains-text) - activates when specified text is found in specified file
--   [**Telegram Subscription**](/en/triggers/telegram-message) - activates/deactivates when specified message is received in Telegram channel
--   [**Volume Control**](/en/triggers/volume-level) - activates/deactivates when volume level of specified audio device or process reaches specified threshold
+-   [**Fixed Value**](/api/EyeAuras.DefaultAuras.Triggers.Default.html) - the most primitive trigger, you can control it's state by selecting it either manually or by using C# scripts
+-   [**Color Search**](/api/EyeAuras.OpenCVAuras.Triggers.ColorSearch.html) - active when Average color of a selected region matches with Target color. Similarity threshold could be specified.
+-   [**Image Search**](/api/EyeAuras.OpenCVAuras.Triggers.ImageSearch.html) - active when some Image is found with a specified similarity
+-   [**AI/ML Search**](/api/EyeAuras.OpenCVAuras.Triggers.MLSearch.html) \- machine-learning powered [object detection](https://docs.ultralytics.com/tasks/detect/)/[segmentation](https://docs.ultralytics.com/tasks/segment/) or [classification](https://docs.ultralytics.com/tasks/classify/), currently supports only [**Yolo8**](https://docs.ultralytics.com/) **in ONNX format**, may be extended later
+-   [**Text Search**](/api/EyeAuras.OpenCVAuras.Triggers.TextSearch.html) - active when recognized text matches with specified expression. It could be comparison by Contains, regexp or C# Lambda
+-   [**Aura Is Active**](/api/EyeAuras.DefaultAuras.Triggers.AuraIsActive.html) - active when linked Auras have specified state (Active/NotActive)
+-   [**Hotkey Is Active**](/api/EyeAuras.DefaultAuras.Triggers.HotkeyIsActive.html) - active when specified combination of keys is either held down or toggled
+-   [**Window Is Active**](/api/EyeAuras.DefaultAuras.Triggers.WinActive.html) \- active when window matching specified expression is active (in foreground)
+-   [**Window Exists**](/api/EyeAuras.DefaultAuras.Triggers.WinExists.html) - active when window matching specified expression exists in the system
+-   [**Timer**](/api/EyeAuras.DefaultAuras.Triggers.Timer.html) \- periodically activates itself for specified duration
+-   [**Message Subscription**](/api/EyeAuras.NetworkAuras.Triggers.MessageSubscription.html) - activates/deactivates when specified message is received from EyeAuras webserver. Messages are separated by Channels and could be sent using SendMessage action
+-   [**File Contains**](/api/EyeAuras.DefaultAuras.Triggers.FileContains.html) - activates when specified text is found in specified file
+-   [**Telegram Subscription**](/api/EyeAuras.AdvancedAuras.Triggers.TelegramMessage.html) - activates/deactivates when specified message is received in Telegram channel
+-   [**Volume Control**](/api/EyeAuras.AdvancedAuras.Triggers.VolumeLevel.html) - activates/deactivates when volume level of specified audio device or process reaches specified threshold
 -   **C# Script** \- custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.
 
 ### Actions
@@ -53,11 +44,11 @@
     -   [Input](/en/actions/sendinput/send-input) \- generates single keyboard/mouse event
     -   [Text](/en/actions/sendinput/send-text) - inputs specified text either via clipboard or by typing each character individually
     -   [Sequence](/en/actions/sendinput/send-sequence) - replayed the specified sequence of keyboard presses, mouse clicks and mouse movements
--   [**Play Sound**](/en/actions/play-sound) - plays specified sound
--   [**Win Activate**](/en/actions/win-activate) - activates specified window
--   [**Delay**](/en/actions/delay) \- waits for some time before proceeding to the next action
--   [**Send To Telegram**](/en/actions/send-telegram-message) - sends message to Telegram channel
--   [**Send Message**](/en/actions/send-network-message) - sends network message through EyeAuras infrastructure to a specified Channel. All other instances of EyeAuras on other computers can subscribe and process these messages via Message Subscription trigger
+-   [**Play Sound**](/api/EyeAuras.DefaultAuras.Actions.PlaySound.html) - plays specified sound
+-   [**Win Activate**](/api/EyeAuras.DefaultAuras.Actions.WinActivate.html) - activates specified window
+-   [**Delay**](/api/EyeAuras.DefaultAuras.Actions.Delay.html) \- waits for some time before proceeding to the next action
+-   [**Send To Telegram**](/api/EyeAuras.AdvancedAuras.Actions.SendToTelegram.html) - sends message to Telegram channel
+-   [**Send Message**](/api/EyeAuras.NetworkAuras.Actions.SendMessage.html) - sends network message through EyeAuras infrastructure to a specified Channel. All other instances of EyeAuras on other computers can subscribe and process these messages via Message Subscription trigger
 -   **C# Script** \- custom scripts that use the latest version of C# language with full access to internal EyeAuras API. As soon as API will be stabilized there will be examples/docs.
 
 ### Overlays

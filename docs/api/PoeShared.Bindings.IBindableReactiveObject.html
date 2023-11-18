@@ -103,7 +103,8 @@
 
   <h1 id="PoeShared_Bindings_IBindableReactiveObject" data-uid="PoeShared.Bindings.IBindableReactiveObject" class="text-break">Interface IBindableReactiveObject
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an object that supports binding with reactive properties and objects.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -134,25 +135,22 @@
         <td id="PoeShared_Bindings_IBindableReactiveObject_Bindings" data-uid="PoeShared.Bindings.IBindableReactiveObject.Bindings">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">Bindings</a>
         </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="PoeShared_Bindings_IBindableReactiveObject_BindingsList" data-uid="PoeShared.Bindings.IBindableReactiveObject.BindingsList">
-          <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">BindingsList</a>
-        </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a cache of reactive bindings, indexed by their target property paths.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_HasBindings" data-uid="PoeShared.Bindings.IBindableReactiveObject.HasBindings">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.HasBindings.html#PoeShared_Bindings_IBindableReactiveObject_HasBindings">HasBindings</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether the object has any bindings.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_ObjectId" data-uid="PoeShared.Bindings.IBindableReactiveObject.ObjectId">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.ObjectId.html#PoeShared_Bindings_IBindableReactiveObject_ObjectId">ObjectId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the unique identifier of the object. It will be globally-unique across all Bindable objects</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -170,43 +168,50 @@
         <td id="PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IReactiveBinding_" data-uid="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding(PoeShared.Bindings.IReactiveBinding)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IReactiveBinding_">AddOrUpdateBinding(IReactiveBinding)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds or updates a binding.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IValueProvider_System_String_" data-uid="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding(PoeShared.Bindings.IValueProvider,System.String)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IValueProvider_System_String_">AddOrUpdateBinding(IValueProvider, string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds or updates a binding between a target property and a value provider.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding__1_System_String___0_System_String_" data-uid="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding``1(System.String,``0,System.String)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding__1_System_String___0_System_String_">AddOrUpdateBinding&lt;TSource&gt;(string, TSource, string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds or updates a binding between a target property and a source property of a given source object.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_ClearBindings" data-uid="PoeShared.Bindings.IBindableReactiveObject.ClearBindings">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.ClearBindings.html#PoeShared_Bindings_IBindableReactiveObject_ClearBindings">ClearBindings()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Clears all bindings from the object.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_PoeShared_Bindings_IReactiveBinding_" data-uid="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding(PoeShared.Bindings.IReactiveBinding)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_PoeShared_Bindings_IReactiveBinding_">RemoveBinding(IReactiveBinding)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Removes the specified binding from the object.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_System_String_" data-uid="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding(System.String)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_System_String_">RemoveBinding(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Removes a binding based on the target property path.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Bindings_IBindableReactiveObject_ResolveBinding_System_String_" data-uid="PoeShared.Bindings.IBindableReactiveObject.ResolveBinding(System.String)">
           <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.ResolveBinding.html#PoeShared_Bindings_IBindableReactiveObject_ResolveBinding_System_String_">ResolveBinding(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Resolves a binding for a given property path.</p>
+</td>
       </tr>
     </tbody>
   </table>

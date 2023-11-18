@@ -103,7 +103,10 @@
 
   <h1 id="EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification" class="text-break">Struct YoloClassification
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a classification result from a YOLO (You Only Look Once) object detection model.
+This struct provides details about the detected object, including its classification score,
+associated label, and class index.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
     <h5>Implements</h5>
@@ -141,19 +144,28 @@
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_ClassIdx" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.ClassIdx">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.ClassIdx.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_ClassIdx">ClassIdx</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the class index of the detected object.
+This index corresponds to the position of the object's class in the predefined list of classes
+that the model is trained to detect. It serves as a numeric identifier for the object's class.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_Label" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.Label">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.Label.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_Label">Label</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the label associated with the detected object.
+The label provides detailed information about the class or category of the object
+as recognized by the model.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_Score" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.Score">
           <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.Score.html#EyeAuras_OpenCVAuras_ML_Yolo_YoloClassification_Score">Score</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the classification score for the detected object.
+The score, typically ranging from 0 to 1, indicates the confidence level of the model
+in classifying the object. A higher score represents greater confidence.</p>
+</td>
       </tr>
     </tbody>
   </table>

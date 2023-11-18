@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase" class="text-break">Class MessageSubscriptionTriggerPropertiesBase
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base record for properties related to triggers that subscribe to network channels and perform text analysis on messages.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -167,7 +168,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.Triggers.html">Triggers</a></h6>
-  <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
+  <h6><strong>Assembly</strong>: EyeAuras.Shared.Metadata.dll</h6>
   <h5 id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract record MessageSubscriptionTriggerPropertiesBase : AuraTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;MessageSubscriptionTriggerPropertiesBase&gt;</code></pre>
@@ -210,43 +211,50 @@
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationEvaluatorType" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationEvaluatorType">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationEvaluatorType.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationEvaluatorType">ActivationEvaluatorType</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The type of evaluator used for activation. Determines how the ActivationText is interpreted (e.g., as plain text, regex, etc.).</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationIgnoreCase" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationIgnoreCase">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationIgnoreCase.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationIgnoreCase">ActivationIgnoreCase</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether the activation text evaluation should ignore case sensitivity.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationText" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationText">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.ActivationText.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_ActivationText">ActivationText</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text used for activation evaluation. The trigger will activate when a message matches this text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivateAutomatically" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivateAutomatically">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivateAutomatically.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivateAutomatically">DeactivateAutomatically</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates if the trigger should automatically deactivate after being activated, even if no DeactivationText is set.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationEvaluatorType" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationEvaluatorType">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationEvaluatorType.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationEvaluatorType">DeactivationEvaluatorType</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The type of evaluator used for deactivation. Determines how the DeactivationText is interpreted.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationIgnoreCase" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationIgnoreCase">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationIgnoreCase.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationIgnoreCase">DeactivationIgnoreCase</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether the deactivation text evaluation should ignore case sensitivity.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationText" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationText">
           <a class="xref" href="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.DeactivationText.html#EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_DeactivationText">DeactivationText</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text used for deactivation evaluation. The trigger will deactivate when a message matches this text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerPropertiesBase_EqualityContract" data-uid="EyeAuras.Shared.Triggers.MessageSubscriptionTriggerPropertiesBase.EqualityContract">

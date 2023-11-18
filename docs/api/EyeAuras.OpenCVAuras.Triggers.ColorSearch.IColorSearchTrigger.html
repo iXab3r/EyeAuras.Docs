@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger" class="text-break">Interface IColorSearchTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Interface for a trigger that captures a specific window or screen area,
+performs color analysis, and then compares the identified color with a target color.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,9 +140,6 @@
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;.TargetWindow</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ActiveWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow">IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;.ActiveWindow</a>
-    </div>
-    <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;.ImageSink</a>
     </div>
     <div>
@@ -151,9 +150,6 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsScreen.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen">IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;.BoundsScreen</a>
-    </div>
-    <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow">IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;.BoundsWindow</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.IsIgnored.html#EyeAuras_Shared_Triggers_IAuraTrigger_IsIgnored">IAuraTrigger.IsIgnored</a>
@@ -225,9 +221,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -243,6 +236,12 @@
       <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IHasAttachedWindow.ActiveWindow.html#EyeAuras_Shared_IHasAttachedWindow_ActiveWindow">IHasAttachedWindow.ActiveWindow</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
   </div>
@@ -250,7 +249,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IColorSearchTrigger : IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBounds, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IColorSearchTrigger : IWindowCaptureTrigger&lt;IColorSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -263,28 +262,46 @@
     </thead>
     <tbody>
       <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorComparisonGranularity" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorComparisonGranularity">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorComparisonGranularity.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorComparisonGranularity">ColorComparisonGranularity</a>
+        </td>
+        <td class="markdown level1 summary"><p>Sets or gets the granularity level at which the color comparison is performed.</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarity" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarity">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarity.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarity">ColorSimilarity</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the DeltaE color similarity score between the source and target colors.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarityThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarityThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarityThreshold">ColorSimilarityThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Sets or gets the threshold for color similarity that determines the trigger's activation.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_SimilarityMethod" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.SimilarityMethod">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.SimilarityMethod.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_SimilarityMethod">SimilarityMethod</a>
+        </td>
+        <td class="markdown level1 summary"><p>Sets or gets the method used to calculate the similarity between the source and target colors.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_SourceColor" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.SourceColor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.SourceColor.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_SourceColor">SourceColor</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the color identified or calculated from the captured screen or window region.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_TargetColor" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.TargetColor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.TargetColor.html#EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_TargetColor">TargetColor</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Sets or gets the target color to be compared against the source color.</p>
+</td>
       </tr>
     </tbody>
   </table>

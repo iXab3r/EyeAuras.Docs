@@ -10,6 +10,7 @@
             "PoeShared*.dll",
             "EyeAuras*.Metadata.dll",
             "EyeAuras.*Auras.dll",
+            "EyeAuras.Roxy*.dll",
             "EyeAuras.BehaviorTree.dll",
             "EyeAuras.Blazor*.dll",
             "EyeAuras.Shared*.dll",
@@ -36,7 +37,7 @@
   "build": {
     "globalMetadata": {
       "_appTitle": "EyeAuras Docs",
-      "_appName": "EyeAuras",
+      "_appName": "EyeAuras Docs",
       "_appLogoPath": "images/logo.png",
       "_appFaviconPath": "images/favicon.png",
       "_copyrightFooter": "© Xab3r. All rights reserved.",
@@ -54,6 +55,8 @@
       },
       {
         "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -73,7 +76,7 @@
         ],
         "exclude": [
           "obj/**",
-          "_site/**"
+          "docs/**"
         ]
       }
     ],

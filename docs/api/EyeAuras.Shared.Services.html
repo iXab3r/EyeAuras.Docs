@@ -115,7 +115,10 @@ Structs
       <h5><a class="xref" href="EyeAuras.Shared.Services.AuraEvent.html">AuraEvent</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.WindowMatchExpression.html">WindowMatchExpression</a></h5>
-      <section><p>Describes and expression which will be parsed and used to build a list of windows that match it</p>
+      <section><p>Describes and expression which will be parsed and used to build a list of windows that match it
+For more information,
+see <a href="https://wiki.eyeauras.net/window-matching-expressions">Window Match Expressions wiki</a>
+or <a href="https://docs.eyeauras.net/api/EyeAuras.Shared.Services.WindowMatchExpression.html">Window Match Expressions API documentation</a></p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.html">WindowMatchParams</a></h5>
       <section><p>Specifies a set of conditions which should be matched by a window</p>
@@ -128,13 +131,19 @@ Interfaces
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAppModulePathResolver.html">IAppModulePathResolver</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraEvaluator.html">IAuraEvaluator</a></h5>
-      <section></section>
+      <section><p>Represents an evaluator for monitoring and determining the state of a specific aura.
+The evaluator tracks the 'IsActive' state of the aura and compares it against a configured expected state.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraEventLoggingService.html">IAuraEventLoggingService</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraListEvaluator.html">IAuraListEvaluator</a></h5>
-      <section></section>
+      <section><p>Defines an interface for an object that evaluates a list of auras, determining their collective state.
+This interface is part of a system that checks and manages the states of multiple auras.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.html">IAuraListStateEvaluator</a></h5>
-      <section></section>
+      <section><p>Represents an evaluator that manages the state and interaction of multiple aura list evaluators and individual aura evaluators.
+It allows for complex configurations to determine the overall active state based on the properties of contained auras and folders.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraRegistrator.html">IAuraRegistrator</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IAuraRepository.html">IAuraRepository</a></h5>
@@ -167,7 +176,8 @@ Enums
       <h5><a class="xref" href="EyeAuras.Shared.Services.AuraEvaluatorConditionType.html">AuraEvaluatorConditionType</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.AuraEvaluatorOperationMode.html">AuraEvaluatorOperationMode</a></h5>
-      <section></section>
+      <section><p>Defines the operation modes for combining multiple boolean evaluators in an Aura.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.AuraEventCategory.html">AuraEventCategory</a></h5>
       <section></section>
 

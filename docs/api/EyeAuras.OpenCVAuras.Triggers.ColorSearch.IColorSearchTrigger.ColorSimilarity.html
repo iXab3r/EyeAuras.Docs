@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarity_" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarity*"></a>
 <h4 id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarity" data-uid="EyeAuras.OpenCVAuras.Triggers.ColorSearch.IColorSearchTrigger.ColorSimilarity">ColorSimilarity</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Gets the DeltaE color similarity score between the source and target colors.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -127,10 +128,19 @@
   <tbody>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
-      <td></td>
+      <td><p>The calculated color similarity score.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_OpenCVAuras_Triggers_ColorSearch_IColorSearchTrigger_ColorSimilarity_remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>The score is based on the chosen similarity method and provides an insight into how similar the colors are:</p>
+<ul>
+<li>≤ 1.0: Not perceptible by human eyes.</li>
+<li>11 - 49: Colors are more similar than opposite.</li>
+<li>100: Colors are exact opposites.</li>
+</ul>
+</div>
 </article>
                 </div>
 

@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Triggers_Default_DefaultTriggerProperties" data-uid="EyeAuras.DefaultAuras.Triggers.Default.DefaultTriggerProperties" class="text-break">Class DefaultTriggerProperties
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the default properties for a manually controlled trigger.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -164,6 +165,10 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed record DefaultTriggerProperties : AuraTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;DefaultTriggerProperties&gt;</code></pre>
   </div>
+  <h5 id="EyeAuras_DefaultAuras_Triggers_Default_DefaultTriggerProperties_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class encapsulates properties for triggers that require manual activation or deactivation.
+It provides the flexibility to set the trigger to an active, inactive, or unknown state as needed.</p>
+</div>
   <h3 id="constructors">Constructors
 </h3>
   <table class="table table-bordered table-condensed">
@@ -202,7 +207,10 @@
         <td id="EyeAuras_DefaultAuras_Triggers_Default_DefaultTriggerProperties_TriggerValue" data-uid="EyeAuras.DefaultAuras.Triggers.Default.DefaultTriggerProperties.TriggerValue">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.Default.DefaultTriggerProperties.TriggerValue.html#EyeAuras_DefaultAuras_Triggers_Default_DefaultTriggerProperties_TriggerValue">TriggerValue</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the value of the trigger.
+A value of 'true' activates the trigger, 'false' deactivates it,
+and 'null' sets it to an unknown state.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_Default_DefaultTriggerProperties_Version" data-uid="EyeAuras.DefaultAuras.Triggers.Default.DefaultTriggerProperties.Version">

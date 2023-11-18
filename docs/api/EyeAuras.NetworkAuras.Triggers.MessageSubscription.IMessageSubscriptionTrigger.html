@@ -177,9 +177,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -218,37 +215,47 @@
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_ActivationTextEvaluator" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.ActivationTextEvaluator">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.ActivationTextEvaluator.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_ActivationTextEvaluator">ActivationTextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text evaluator used to determine if a received message should activate the trigger.
+This can perform text matching, regular expressions, or C# expression evaluations.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_ChannelId" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.ChannelId">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.ChannelId.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_ChannelId">ChannelId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The identifier for the channel in the EyeAuras network.
+This is usually generated from the SendMessage action. Any message received on this channel is subject to analysis.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_DeactivateAutomatically" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.DeactivateAutomatically">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.DeactivateAutomatically.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_DeactivateAutomatically">DeactivateAutomatically</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates if the trigger should automatically deactivate after being activated by the ActivationTextEvaluator.
+This happens even if no DeactivationTextEvaluator is set.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_DeactivationTextEvaluator" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.DeactivationTextEvaluator">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.DeactivationTextEvaluator.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_DeactivationTextEvaluator">DeactivationTextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Text evaluator used to determine if a received message should deactivate the trigger.
+Similar to ActivationTextEvaluator in functionality.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_LastAuraMessage" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.LastAuraMessage">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.LastAuraMessage.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_LastAuraMessage">LastAuraMessage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The last received text message on the subscribed channel.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_Messages" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.Messages">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.IMessageSubscriptionTrigger.Messages.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_IMessageSubscriptionTrigger_Messages">Messages</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>A collection of the most recent messages received, stored in a circular list to limit memory usage.</p>
+</td>
       </tr>
     </tbody>
   </table>

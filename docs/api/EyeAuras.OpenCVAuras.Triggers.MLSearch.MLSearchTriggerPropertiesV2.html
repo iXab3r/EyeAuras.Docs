@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2" class="text-break">Class MLSearchTriggerPropertiesV2
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines the properties for MLSearchTrigger, providing configuration options for machine learning tasks like object detection, classification, and segmentation.
+Inherits from WindowCaptureTriggerProperties.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -251,49 +253,63 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_ExecutionProvider" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.ExecutionProvider">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.ExecutionProvider.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_ExecutionProvider">ExecutionProvider</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the execution provider for running the ML model (e.g., CPU, GPU).
+Default is set to MLExecutionProvider.Default.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_InterOpNumThreads" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.InterOpNumThreads">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.InterOpNumThreads.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_InterOpNumThreads">InterOpNumThreads</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of threads for inter-operation parallelism in ML ONNX Inference sessions.
+Default value is 1.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_IntraOpNumThreads" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.IntraOpNumThreads">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.IntraOpNumThreads.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_IntraOpNumThreads">IntraOpNumThreads</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of threads for intra-operation parallelism in ML ONNX Inference sessions.
+Default value is 1.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MLClassName" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MLClassName">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MLClassName.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MLClassName">MLClassName</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the class name for machine learning model classification.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MLModelData" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MLModelData">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MLModelData.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MLModelData">MLModelData</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the compressed model data used in the ML trigger.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MaskProcessingType" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MaskProcessingType">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.MaskProcessingType.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_MaskProcessingType">MaskProcessingType</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the mask processing type for segmentation tasks, determining how masks are processed and included in results.
+Default value is MLMaskProcessingType.None.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_OverlapThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.OverlapThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.OverlapThreshold.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_OverlapThreshold">OverlapThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the Intersection over Union (IoU) overlap threshold for object detection. This value helps in reducing false positives.
+Default value is 45.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_SimilarityThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.SimilarityThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.SimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_SimilarityThreshold">SimilarityThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the similarity threshold for object detection. The model considers detections with a confidence score above this threshold.
+Default value is 35.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_MLSearchTriggerPropertiesV2_Version" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.MLSearchTriggerPropertiesV2.Version">

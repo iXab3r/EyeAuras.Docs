@@ -103,7 +103,10 @@
 
   <h1 id="EyeAuras_Shared_Modularity_AuraStateDescriptor" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor" class="text-break">Class AuraStateDescriptor
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the expected state of an aura for a specific condition.
+This class is used to describe what state an aura should be in
+when evaluated as part of an <a class="xref" href="EyeAuras.Shared.Modularity.AuraEvaluatorProperties.html">AuraEvaluatorProperties</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -164,43 +167,57 @@
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_AuraId" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.AuraId">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.AuraId.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_AuraId">AuraId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the unique identifier of the aura.
+This ID is used to reference the specific aura whose state is being described.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_Condition" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.Condition">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.Condition.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_Condition">Condition</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the condition type for evaluating the aura.
+This defines the criteria used to evaluate the aura's state.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_FolderId" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.FolderId">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.FolderId.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_FolderId">FolderId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the identifier of the folder containing the aura.
+This can be used to specify a group of auras if necessary.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_IsActive" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsActive">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsActive.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the aura is expected to be active.
+This can be used to specify if the aura should be actively running or not.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_IsEmpty" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsEmpty">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsEmpty.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_IsEmpty">IsEmpty</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the descriptor is empty.
+An empty descriptor means neither an AuraId nor a FolderId is specified.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_IsLoaded" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsLoaded">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsLoaded.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_IsLoaded">IsLoaded</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the aura is expected to be loaded.
+This can specify if the aura should be loaded into memory or not.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Modularity_AuraStateDescriptor_IsValid" data-uid="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsValid">
           <a class="xref" href="EyeAuras.Shared.Modularity.AuraStateDescriptor.IsValid.html#EyeAuras_Shared_Modularity_AuraStateDescriptor_IsValid">IsValid</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the descriptor is valid.
+A valid descriptor is not empty.</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -104,7 +104,8 @@
 
   <h1 id="EyeAuras_Shared_Services_AuraEvaluatorOperationMode" data-uid="EyeAuras.Shared.Services.AuraEvaluatorOperationMode" class="text-break">Enum AuraEvaluatorOperationMode
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines the operation modes for combining multiple boolean evaluators in an Aura.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.Services.html">Services</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.Shared.Metadata.dll</h6>
@@ -124,12 +125,18 @@
     <tbody>
       <tr>
         <td id="EyeAuras_Shared_Services_AuraEvaluatorOperationMode_All">All</td>
-        <td><p>All evaluators must be active, boolean AND</p>
+        <td><p>All evaluators must be active for the condition to be true.
+This mode operates as a boolean AND, meaning all specified conditions must be met.
+For example, if used with evaluators for 'IsWindowFocused' and 'IsFilePresent',
+the condition is true only if both the window is focused and the file is present.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_AuraEvaluatorOperationMode_Any">Any</td>
-        <td><p>At least one evaluator must be active, boolean OR</p>
+        <td><p>At least one of the evaluators must be active for the condition to be true.
+This mode operates as a boolean OR, meaning the condition is met if any one of the specified conditions is met.
+For instance, if used with evaluators for 'IsNetworkAvailable' and 'IsUserActive',
+the condition is true if either the network is available or the user is active.</p>
 </td>
       </tr>
     </tbody>

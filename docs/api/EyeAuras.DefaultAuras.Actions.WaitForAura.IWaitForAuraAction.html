@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction" data-uid="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction" class="text-break">Interface IWaitForAuraAction
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an action that waits for a specified set of linked auras to become active within a defined timeout period.
+If the auras do not become active within the timeout, an exception is thrown, interrupting the execution flow.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -165,9 +167,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -206,19 +205,24 @@
         <td id="EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_IsActive" data-uid="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.IsActive">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.IsActive.html#EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the linked auras are currently active.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_LinkedAuras" data-uid="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.LinkedAuras">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.LinkedAuras.html#EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_LinkedAuras">LinkedAuras</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the evaluator that identifies and manages the list of linked auras.
+This action waits for these auras to become active.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_Timeout" data-uid="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.Timeout">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.WaitForAura.IWaitForAuraAction.Timeout.html#EyeAuras_DefaultAuras_Actions_WaitForAura_IWaitForAuraAction_Timeout">Timeout</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the time period to wait for the linked auras to become active.
+If the linked auras do not become active within this period, the action will throw an exception.</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -103,7 +103,9 @@
 
   <h1 id="PoeShared_IO_OSPath" data-uid="PoeShared.IO.OSPath" class="text-break">Class OSPath
 </h1>
-  <div class="markdown level0 summary"><p>Platform-specific OS path, will normalize all input paths</p>
+  <div class="markdown level0 summary"><p>Represents a platform-agnostic file system path. This record normalizes input paths
+based on the operating system, providing utility methods to handle file paths
+in a cross-platform manner.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -174,25 +176,29 @@
         <td id="PoeShared_IO_OSPath_AsUnixPath" data-uid="PoeShared.IO.OSPath.AsUnixPath">
           <a class="xref" href="PoeShared.IO.OSPath.AsUnixPath.html#PoeShared_IO_OSPath_AsUnixPath">AsUnixPath</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the Unix-style path representation.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_AsWindowsPath" data-uid="PoeShared.IO.OSPath.AsWindowsPath">
           <a class="xref" href="PoeShared.IO.OSPath.AsWindowsPath.html#PoeShared_IO_OSPath_AsWindowsPath">AsWindowsPath</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the Windows-style path representation.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_Depth" data-uid="PoeShared.IO.OSPath.Depth">
           <a class="xref" href="PoeShared.IO.OSPath.Depth.html#PoeShared_IO_OSPath_Depth">Depth</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the depth of the path, calculated as the number of directory levels in the path.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_DirectoryName" data-uid="PoeShared.IO.OSPath.DirectoryName">
           <a class="xref" href="PoeShared.IO.OSPath.DirectoryName.html#PoeShared_IO_OSPath_DirectoryName">DirectoryName</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the directory name component of the path.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_EqualityContract" data-uid="PoeShared.IO.OSPath.EqualityContract">
@@ -204,19 +210,21 @@
         <td id="PoeShared_IO_OSPath_Exists" data-uid="PoeShared.IO.OSPath.Exists">
           <a class="xref" href="PoeShared.IO.OSPath.Exists.html#PoeShared_IO_OSPath_Exists">Exists</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the file denoted by this path exists.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_FileName" data-uid="PoeShared.IO.OSPath.FileName">
           <a class="xref" href="PoeShared.IO.OSPath.FileName.html#PoeShared_IO_OSPath_FileName">FileName</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the file name component of the path.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_IO_OSPath_FullPath" data-uid="PoeShared.IO.OSPath.FullPath">
           <a class="xref" href="PoeShared.IO.OSPath.FullPath.html#PoeShared_IO_OSPath_FullPath">FullPath</a>
         </td>
-        <td class="markdown level1 summary"><p>Platform-specific full path</p>
+        <td class="markdown level1 summary"><p>Gets the platform-specific full path.</p>
 </td>
       </tr>
     </tbody>

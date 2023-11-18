@@ -103,7 +103,10 @@
 
   <h1 id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_MessageSubscriptionTriggerProperties" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.MessageSubscriptionTriggerProperties" class="text-break">Class MessageSubscriptionTriggerProperties
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Properties of a trigger that subscribes to a specific channel within the EyeAuras network.
+It listens for messages on this channel and changes its state based on the content of these messages.
+The state change is determined by analyzing the messages against activation and deactivation text expressions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -185,7 +188,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.NetworkAuras.html">NetworkAuras</a>.<a class="xref" href="EyeAuras.NetworkAuras.Triggers.html">Triggers</a>.<a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.html">MessageSubscription</a></h6>
-  <h6><strong>Assembly</strong>: EyeAuras.NetworkAuras.dll</h6>
+  <h6><strong>Assembly</strong>: EyeAuras.NetworkAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_MessageSubscriptionTriggerProperties_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed record MessageSubscriptionTriggerProperties : MessageSubscriptionTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;MessageSubscriptionTriggerPropertiesBase&gt;, IEquatable&lt;MessageSubscriptionTriggerProperties&gt;</code></pre>
@@ -222,7 +225,9 @@
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_MessageSubscriptionTriggerProperties_ChannelId" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.MessageSubscriptionTriggerProperties.ChannelId">
           <a class="xref" href="EyeAuras.NetworkAuras.Triggers.MessageSubscription.MessageSubscriptionTriggerProperties.ChannelId.html#EyeAuras_NetworkAuras_Triggers_MessageSubscription_MessageSubscriptionTriggerProperties_ChannelId">ChannelId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>The identifier for the channel in the EyeAuras network.
+This is usually generated from the SendMessage action. Any message received on this channel is subject to analysis.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_NetworkAuras_Triggers_MessageSubscription_MessageSubscriptionTriggerProperties_EqualityContract" data-uid="EyeAuras.NetworkAuras.Triggers.MessageSubscription.MessageSubscriptionTriggerProperties.EqualityContract">

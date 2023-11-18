@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties" class="text-break">Class PlaySoundActionProperties
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the properties for a play sound action in the Aura framework. These properties define the sound notification's characteristics and playback behavior.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -193,31 +194,40 @@
         <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Notification" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Notification">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Notification.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Notification">Notification</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the identifier or name of the sound notification to be played. Default value is &quot;Ping&quot;.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_NotificationWav" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.NotificationWav">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.NotificationWav.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_NotificationWav">NotificationWav</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the WAV format sound data. This data is compressed for efficient storage and transfer.
+The <span class="xref">Newtonsoft.Json.JsonConverter</span> attribute indicates the use of a specific converter for handling the compression.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_PlayInBackground" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.PlayInBackground">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.PlayInBackground.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_PlayInBackground">PlayInBackground</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the sound should be played in the background.
+If true, the action completes immediately after starting the sound. If false, it waits until the sound has finished playing.
+Default is true.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Version" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Version">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Version.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Version">Version</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the version of the properties. Default value is 1.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Volume" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Volume">
           <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Volume.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Volume">Volume</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the volume at which the sound notification should be played.
+This is a floating-point value, typically ranging from 0.0 (silent) to 1.0 (maximum volume). Default is 1.0f.</p>
+</td>
       </tr>
     </tbody>
   </table>

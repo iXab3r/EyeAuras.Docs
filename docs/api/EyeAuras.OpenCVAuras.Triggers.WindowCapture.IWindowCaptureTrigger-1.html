@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1" class="text-break">Interface IWindowCaptureTrigger&lt;TTriggerResult&gt;
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a base interface for all triggers that operate on captured window/screen images,
+including color search, image search, or machine learning-based object detection.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +179,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -195,6 +194,12 @@
       <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IHasAttachedWindow.ActiveWindow.html#EyeAuras_Shared_IHasAttachedWindow_ActiveWindow">IHasAttachedWindow.ActiveWindow</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
   </div>
@@ -202,7 +207,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IWindowCaptureTrigger&lt;out TTriggerResult&gt; : IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBounds, IHasAttachedWindow, INotifyPropertyChanged where TTriggerResult : ICaptureTriggerResult</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IWindowCaptureTrigger&lt;out TTriggerResult&gt; : IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged where TTriggerResult : ICaptureTriggerResult</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -215,7 +220,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">TTriggerResult</span></td>
-        <td></td>
+        <td><p>The type of result produced by the trigger.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -230,108 +236,94 @@
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.ActiveWindow">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ActiveWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow">ActiveWindow</a>
-        </td>
-        <td class="markdown level1 summary"><p>Resolved window that matches TargetWindow expression</p>
-</td>
-      </tr>
-      <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Bounds" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Bounds">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.Bounds.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Bounds">Bounds</a>
         </td>
-        <td class="markdown level1 summary"><p>Bounding box relative to the top left corner of the region inside the window</p>
+        <td class="markdown level1 summary"><p>Gets or sets the bounding box relative to the top-left corner of the region inside the captured window.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.BoundsScreen">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsScreen.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen">BoundsScreen</a>
         </td>
-        <td class="markdown level1 summary"><p>Bounding box relative to the top left corner of the screen</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.BoundsWindow">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow">BoundsWindow</a>
-        </td>
-        <td class="markdown level1 summary"><p>Bounding box relative to the top left corner of the window</p>
+        <td class="markdown level1 summary"><p>Gets or sets the bounding box relative to the top-left corner of the screen for the captured region.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_CaptureCursor" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.CaptureCursor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.CaptureCursor.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_CaptureCursor">CaptureCursor</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to capture the cursor.</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the cursor should be included in the capture.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_CaptureSourceId" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.CaptureSourceId">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.CaptureSourceId.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_CaptureSourceId">CaptureSourceId</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets the ID of the capture source.</p>
+        <td class="markdown level1 summary"><p>Gets or sets the unique identifier for the capture source, such as a window or screen.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_EnablePreview" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.EnablePreview">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.EnablePreview.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_EnablePreview">EnablePreview</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to enable preview.</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to enable a preview of the captured image.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FrameTime" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.FrameTime">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.FrameTime.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FrameTime">FrameTime</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets the frame time.</p>
+        <td class="markdown level1 summary"><p>Gets the duration of each frame in the capture process.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FramesPerSecond" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.FramesPerSecond">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.FramesPerSecond.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FramesPerSecond">FramesPerSecond</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets the frames per second rate.</p>
+        <td class="markdown level1 summary"><p>Gets the actual frames per second rate at which the capture is occurring.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.ImageSink">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">ImageSink</a>
         </td>
-        <td class="markdown level1 summary"><p>Stream of images retrieved by this trigger</p>
+        <td class="markdown level1 summary"><p>[Obsolete] Stream of images retrieved by this trigger. Replaced with ResultSink.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MaxFramesPerSecond" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.MaxFramesPerSecond">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.MaxFramesPerSecond.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MaxFramesPerSecond">MaxFramesPerSecond</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets the maximum frames per second for capture.</p>
+        <td class="markdown level1 summary"><p>Gets or sets the maximum frames per second (FPS) rate for the capture process.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MinFramesPerSecond" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.MinFramesPerSecond">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.MinFramesPerSecond.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MinFramesPerSecond">MinFramesPerSecond</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets the minimum frames per second for capture.</p>
+        <td class="markdown level1 summary"><p>Gets or sets the minimum frames per second (FPS) rate for the capture process.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ResultStream" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.ResultStream">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ResultStream.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ResultStream">ResultStream</a>
         </td>
-        <td class="markdown level1 summary"><p>Stream of processing results retrieved by this trigger</p>
+        <td class="markdown level1 summary"><p>Stream of processing results retrieved by this trigger, providing the output of the capture and analysis process.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.TargetWindow">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">TargetWindow</a>
         </td>
-        <td class="markdown level1 summary"><p>Specifies expression that will be used to find specific window</p>
+        <td class="markdown level1 summary"><p>Specifies the expression used to identify and target a specific window for capture.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_WindowRegion" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.WindowRegion">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.WindowRegion.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_WindowRegion">WindowRegion</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets the region of the window in a complex position model format.</p>
+        <td class="markdown level1 summary"><p>Gets the region of the window or screen to be captured, defined in a complex position model format.</p>
 </td>
       </tr>
     </tbody>
@@ -350,7 +342,7 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.Refresh.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh">Refresh()</a>
         </td>
-        <td class="markdown level1 summary"><p>Forces the refresh of a current image</p>
+        <td class="markdown level1 summary"><p>Forces a refresh of the current image, updating the capture to the latest state.</p>
 </td>
       </tr>
     </tbody>

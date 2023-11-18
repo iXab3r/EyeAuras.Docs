@@ -104,7 +104,10 @@
 
   <h1 id="EyeAuras_Shared_Triggers_AuraTextMessageStatus" data-uid="EyeAuras.Shared.Triggers.AuraTextMessageStatus" class="text-break">Enum AuraTextMessageStatus
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines the possible statuses of a text message within an Aura network or chat context.
+This enum is used to indicate the current processing state of a message,
+from reception to completion of processing.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.Triggers.html">Triggers</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
@@ -124,15 +127,21 @@
     <tbody>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTextMessageStatus_Processed">Processed</td>
-        <td></td>
+        <td><p>Indicates that a message has been fully processed.
+This state signifies that all necessary analysis or processing on the message is complete.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTextMessageStatus_Processing">Processing</td>
-        <td></td>
+        <td><p>Indicates that a message is currently being processed.
+This state is active when a message is under analysis or undergoing some form of processing.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTextMessageStatus_Received">Received</td>
-        <td></td>
+        <td><p>Indicates that a message has been received but not yet processed.
+This is the initial state of a message upon arrival.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

@@ -104,7 +104,8 @@
 
   <h1 id="EyeAuras_OpenCVAuras_ML_MLMaskProcessingType" data-uid="EyeAuras.OpenCVAuras.ML.MLMaskProcessingType" class="text-break">Enum MLMaskProcessingType
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Enumerates the different ways of processing masks during a Segmentation task with a Yolo model. This enum allows for flexibility in how masks are handled and stored post-inference.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.html">OpenCVAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.ML.html">ML</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
@@ -124,15 +125,18 @@
     <tbody>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_MLMaskProcessingType_Include">Include</td>
-        <td></td>
+        <td><p>Includes all masks in the output. This option is useful for scenarios where discrete object identification is needed, such as detecting individual cars.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_MLMaskProcessingType_IncludeMergedByClass">IncludeMergedByClass</td>
-        <td></td>
+        <td><p>Merges all masks of the same class into a single mask. This is particularly useful for tracking homogeneous objects or surfaces like roads, where individual segmentation is not necessary.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_MLMaskProcessingType_None">None</td>
-        <td></td>
+        <td><p>Indicates that no masks should be stored. This option is used when mask data is not required for the application.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

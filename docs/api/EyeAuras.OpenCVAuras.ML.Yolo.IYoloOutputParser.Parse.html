@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_OpenCVAuras_ML_Yolo_IYoloOutputParser_Parse_" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.IYoloOutputParser.Parse*"></a>
 <h4 id="EyeAuras_OpenCVAuras_ML_Yolo_IYoloOutputParser_Parse_System_Collections_Generic_IReadOnlyCollection_Microsoft_ML_OnnxRuntime_NamedOnnxValue__System_Drawing_Size_EyeAuras_OpenCVAuras_ML_Yolo_YoloModelDescription_EyeAuras_OpenCVAuras_ML_MLMaskProcessingType_" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.IYoloOutputParser.Parse(System.Collections.Generic.IReadOnlyCollection{Microsoft.ML.OnnxRuntime.NamedOnnxValue},System.Drawing.Size,EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription,EyeAuras.OpenCVAuras.ML.MLMaskProcessingType)">Parse(IReadOnlyCollection&lt;NamedOnnxValue&gt;, Size, YoloModelDescription, MLMaskProcessingType)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Parses the raw outputs from a Yolo model and converts them into a list of Yolo predictions.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -129,22 +130,26 @@
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<span class="xref">NamedOnnxValue</span>&gt;</td>
       <td><span class="parametername">outputs</span></td>
-      <td></td>
+      <td><p>The raw outputs from the Yolo model as a collection of named ONNX values.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></td>
       <td><span class="parametername">imageSize</span></td>
-      <td></td>
+      <td><p>The size of the image on which the prediction was performed.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.html">YoloModelDescription</a></td>
       <td><span class="parametername">model</span></td>
-      <td></td>
+      <td><p>The description of the Yolo model used for the prediction, containing information like dimensions, confidence threshold, and labels.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="EyeAuras.OpenCVAuras.ML.MLMaskProcessingType.html">MLMaskProcessingType</a></td>
       <td><span class="parametername">maskProcessingType</span></td>
-      <td></td>
+      <td><p>Specifies the type of processing to be applied to the segmentation masks, if applicable.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -159,7 +164,8 @@
   <tbody>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.html">YoloPrediction</a>&gt;</td>
-      <td></td>
+      <td><p>A read-only list of <a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.html">YoloPrediction</a> instances representing the parsed predictions.</p>
+</td>
     </tr>
   </tbody>
 </table>

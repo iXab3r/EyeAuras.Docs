@@ -224,9 +224,6 @@
       <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.Bindings.html#PoeShared_Bindings_BindableReactiveObject_Bindings">BindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.BindingsList.html#PoeShared_Bindings_BindableReactiveObject_BindingsList">BindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
@@ -307,19 +304,24 @@
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_ActivationProgress" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.ActivationProgress">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.ActivationProgress.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_ActivationProgress">ActivationProgress</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the progress towards activation, represented as a percentage.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_ActivationTimeout" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.ActivationTimeout">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.ActivationTimeout.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_ActivationTimeout">ActivationTimeout</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the time duration that the internal trigger value must be continuously active
+before the Trigger itself becomes active.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_DeactivationTimeout" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.DeactivationTimeout">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.DeactivationTimeout.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_DeactivationTimeout">DeactivationTimeout</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the time duration that the internal trigger value must be continuously inactive
+before the Trigger itself becomes inactive.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_Description" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.Description">
@@ -332,42 +334,44 @@
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_EnableAdvancedSettings" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.EnableAdvancedSettings">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.EnableAdvancedSettings.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_EnableAdvancedSettings">EnableAdvancedSettings</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether advanced settings like activation/deactivation timeouts and inversion are enabled for this Trigger.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsActive" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsActive">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsActive.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates whether Trigger state IsActive / NOT Active / Unknown(e.g. disabled, not fully ready yet or underlying resource is not available)</p>
+        <td class="markdown level1 summary"><p>Gets a value indicating the current active state of the Trigger.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabled" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsEnabled">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsEnabled.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabled">IsEnabled</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates whether Trigger is enabled or disabled, for disabled triggers IsActive is expected to be set to null</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the Trigger is enabled.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsIgnored" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsIgnored">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsIgnored.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsIgnored">IsIgnored</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates whether this Trigger is ignored for all checks in the program or not</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether this Trigger is ignored within the program.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsInverted" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsInverted">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsInverted.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsInverted">IsInverted</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates whether IsActive should be Inverted or not for the final result
-Respected by ComplexAuraTrigger</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the IsActive result should be inverted.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_Name" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.Name">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.Name.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_Name">Name</a>
         </td>
-        <td class="markdown level1 summary"><p>Name of an item(could be filename), usually un-localized and could be used in lookups</p>
+        <td class="markdown level1 summary"><p>Gets the name of the item. This name is typically un-localized and can be used for
+identification or lookup purposes. It might represent a filename or a unique identifier
+within a collection.</p>
 </td>
       </tr>
       <tr>
@@ -381,7 +385,8 @@ Respected by ComplexAuraTrigger</p>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActive" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.NextIsActive">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.NextIsActive.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActive">NextIsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the next expected active state of the Trigger.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActiveTimestamp" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.NextIsActiveTimestamp">
@@ -393,7 +398,8 @@ Respected by ComplexAuraTrigger</p>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_TimeLeftTillNextValue" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.TimeLeftTillNextValue">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.TimeLeftTillNextValue.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_TimeLeftTillNextValue">TimeLeftTillNextValue</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the remaining time until the Trigger's IsActive state changes to the value of NextIsActive.</p>
+</td>
       </tr>
     </tbody>
   </table>

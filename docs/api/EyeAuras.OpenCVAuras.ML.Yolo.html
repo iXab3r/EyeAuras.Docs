@@ -108,30 +108,49 @@
 Classes
 </h3>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelDescription.html">YoloModelDescription</a></h5>
-      <section></section>
+      <section><p>Represents a comprehensive description of a YOLO (You Only Look Once) model.
+This record provides a snapshot of the model's key attributes and settings,
+including its size, dimensions, confidence threshold, overlap threshold, output types,
+and a list of labels it can detect. It is used both for user information and internal
+processing during the inference process.</p>
+</section>
     <h3 id="structs">
 Structs
 </h3>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloClassification.html">YoloClassification</a></h5>
-      <section></section>
+      <section><p>Represents a classification result from a YOLO (You Only Look Once) object detection model.
+This struct provides details about the detected object, including its classification score,
+associated label, and class index.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloLabel.html">YoloLabel</a></h5>
-      <section></section>
+      <section><p>Represents a single label as identified by the YOLO (You Only Look Once) object detection system.
+This record structure encapsulates the unique attributes of a detected object's label,
+including its identifier, name, kind, and associated color.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloMask.html">YoloMask</a></h5>
-      <section></section>
+      <section><p>Represents a binary mask used in Segmentation tasks within the Yolo model. Contains an image of the mask and the bounds of the mask.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloPrediction.html">YoloPrediction</a></h5>
-      <section></section>
+      <section><p>Represents a prediction made by a Yolo model for object detection and segmentation tasks. It includes the confidence score, bounding rectangle, label, and optionally a mask for segmentation.</p>
+</section>
     <h3 id="interfaces">
 Interfaces
 </h3>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.IYoloOutputParser.html">IYoloOutputParser</a></h5>
-      <section></section>
+      <section><p>Defines an interface for a class responsible for parsing the outputs received from a Yolo model during the prediction process.</p>
+</section>
     <h3 id="enums">
 Enums
 </h3>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloLabelKind.html">YoloLabelKind</a></h5>
-      <section></section>
+      <section><p>Enumerates the kinds of labels used in YOLOv8 object detection.
+YOLO, an acronym for 'You Only Look Once', is a real-time object detection system
+that identifies objects in images and videos. YOLOv8 refers to the eighth version of this system.
+This enum distinguishes between generic labels and instance segmentation labels.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.YoloModelType.html">YoloModelType</a></h5>
-      <section></section>
+      <section><p>Represents the different types of tasks that the Yolo model can perform.</p>
+</section>
 
 
 </article>

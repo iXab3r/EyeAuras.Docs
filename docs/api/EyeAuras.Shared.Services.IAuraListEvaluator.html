@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_Shared_Services_IAuraListEvaluator" data-uid="EyeAuras.Shared.Services.IAuraListEvaluator" class="text-break">Interface IAuraListEvaluator
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines an interface for an object that evaluates a list of auras, determining their collective state.
+This interface is part of a system that checks and manages the states of multiple auras.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -134,25 +136,34 @@
         <td id="EyeAuras_Shared_Services_IAuraListEvaluator_Evaluators" data-uid="EyeAuras.Shared.Services.IAuraListEvaluator.Evaluators">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListEvaluator.Evaluators.html#EyeAuras_Shared_Services_IAuraListEvaluator_Evaluators">Evaluators</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets an observable list of individual aura evaluators.
+Each evaluator in this list contributes to the overall evaluation of the aura list.
+Changes in the evaluators' states are observed to update the overall active state of the aura list.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListEvaluator_HasCyclicReferences" data-uid="EyeAuras.Shared.Services.IAuraListEvaluator.HasCyclicReferences">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListEvaluator.HasCyclicReferences.html#EyeAuras_Shared_Services_IAuraListEvaluator_HasCyclicReferences">HasCyclicReferences</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether there are cyclic references among the auras being evaluated.
+A cyclic reference occurs when auras reference each other in a loop, potentially causing infinite recursion.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListEvaluator_IsActive" data-uid="EyeAuras.Shared.Services.IAuraListEvaluator.IsActive">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListEvaluator.IsActive.html#EyeAuras_Shared_Services_IAuraListEvaluator_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the evaluated aura list is active based on the defined conditions.
+This property can be null if the active state cannot be determined.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Services_IAuraListEvaluator_Properties" data-uid="EyeAuras.Shared.Services.IAuraListEvaluator.Properties">
           <a class="xref" href="EyeAuras.Shared.Services.IAuraListEvaluator.Properties.html#EyeAuras_Shared_Services_IAuraListEvaluator_Properties">Properties</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the properties of the aura state descriptor.
+This property provides the criteria or conditions based on which the auras are evaluated.</p>
+</td>
       </tr>
     </tbody>
   </table>

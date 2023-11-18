@@ -104,7 +104,11 @@
 
   <h1 id="EyeAuras_OpenCVAuras_ML_Yolo_YoloLabelKind" data-uid="EyeAuras.OpenCVAuras.ML.Yolo.YoloLabelKind" class="text-break">Enum YoloLabelKind
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Enumerates the kinds of labels used in YOLOv8 object detection.
+YOLO, an acronym for 'You Only Look Once', is a real-time object detection system
+that identifies objects in images and videos. YOLOv8 refers to the eighth version of this system.
+This enum distinguishes between generic labels and instance segmentation labels.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.html">OpenCVAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.ML.html">ML</a>.<a class="xref" href="EyeAuras.OpenCVAuras.ML.Yolo.html">Yolo</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
@@ -124,11 +128,20 @@
     <tbody>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloLabelKind_Generic">Generic</td>
-        <td></td>
+        <td><p>Represents a generic label used in YOLOv8.
+Generic labels categorize objects into predefined classes without differentiating
+individual instances of the same class. For example, multiple cars in an image would
+all be labeled as 'car' without distinguishing between each car.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_ML_Yolo_YoloLabelKind_InstanceSeg">InstanceSeg</td>
-        <td></td>
+        <td><p>Represents an instance segmentation label used in YOLOv8.
+Instance segmentation goes beyond generic labeling by not only categorizing objects
+but also differentiating each instance of the same class. For instance, each car in an
+image would be uniquely identified and segmented from the others, allowing for more
+detailed analysis and processing of images.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

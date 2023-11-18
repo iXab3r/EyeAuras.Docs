@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2" class="text-break">Class TextSearchTriggerPropertiesV2
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Record defining the properties for the Text Search Trigger. It extends from WindowCaptureTriggerProperties
+and includes additional settings specific to text searching and OCR (Optical Character Recognition).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -221,7 +223,8 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2__ctor" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.#ctor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.-ctor.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2__ctor">TextSearchTriggerPropertiesV2()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Initializes a new instance of the TextSearchTriggerPropertiesV2 class with default values.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2__ctor_EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.#ctor(EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2)">
@@ -245,7 +248,9 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_EngineId" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.EngineId">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.EngineId.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_EngineId">EngineId</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the ID of the OCR engine used for text recognition.
+Default is set to &quot;Windows (en)&quot; for the Windows built-in OCR engine.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_EqualityContract" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.EqualityContract">
@@ -257,37 +262,49 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_EvaluatorType" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.EvaluatorType">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.EvaluatorType.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_EvaluatorType">EvaluatorType</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the type of text evaluator used for analyzing the OCR result.
+Specifies how the recognized text is analyzed and matched against the target text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_IgnoreCase" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.IgnoreCase">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.IgnoreCase.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_IgnoreCase">IgnoreCase</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to ignore case when matching text.
+When true, case differences are ignored during text comparison.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_InvertImage" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.InvertImage">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.InvertImage.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_InvertImage">InvertImage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to invert the colors of the image before OCR.
+This can improve recognition for images with light text on a dark background.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_ScaleFactor" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.ScaleFactor">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.ScaleFactor.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_ScaleFactor">ScaleFactor</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the scale factor applied to the captured image before performing OCR.
+Adjusting the scale can enhance the OCR accuracy for text of different sizes and resolutions.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_TargetText" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.TargetText">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.TargetText.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_TargetText">TargetText</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the target text to be matched with the OCR result.
+The trigger activates when the recognized text matches this target text.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_ThresholdImage" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.ThresholdImage">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.ThresholdImage.html#EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_ThresholdImage">ThresholdImage</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether to apply a threshold filter to the image before OCR.
+Thresholding enhances the contrast of the text for better recognition.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_TextSearch_TextSearchTriggerPropertiesV2_Version" data-uid="EyeAuras.OpenCVAuras.Triggers.TextSearch.TextSearchTriggerPropertiesV2.Version">

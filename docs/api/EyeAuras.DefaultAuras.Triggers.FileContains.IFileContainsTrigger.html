@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_DefaultAuras_Triggers_FileContains_IFileContainsTrigger" data-uid="EyeAuras.DefaultAuras.Triggers.FileContains.IFileContainsTrigger" class="text-break">Interface IFileContainsTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a trigger that continuously reads or tails a specified file and evaluates its content against a text evaluator.
+The trigger's state is determined by whether the text evaluator finds a match in the file's content.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,9 +179,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -218,13 +217,16 @@
         <td id="EyeAuras_DefaultAuras_Triggers_FileContains_IFileContainsTrigger_TargetFile" data-uid="EyeAuras.DefaultAuras.Triggers.FileContains.IFileContainsTrigger.TargetFile">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.FileContains.IFileContainsTrigger.TargetFile.html#EyeAuras_DefaultAuras_Triggers_FileContains_IFileContainsTrigger_TargetFile">TargetFile</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the file to be monitored and evaluated by the trigger.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_DefaultAuras_Triggers_FileContains_IFileContainsTrigger_TextEvaluator" data-uid="EyeAuras.DefaultAuras.Triggers.FileContains.IFileContainsTrigger.TextEvaluator">
           <a class="xref" href="EyeAuras.DefaultAuras.Triggers.FileContains.IFileContainsTrigger.TextEvaluator.html#EyeAuras_DefaultAuras_Triggers_FileContains_IFileContainsTrigger_TextEvaluator">TextEvaluator</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Provides access to the text evaluator view model used to match text patterns within the target file.
+The text evaluator can be of various types, such as regex, lambda expressions, or plain text.</p>
+</td>
       </tr>
     </tbody>
   </table>

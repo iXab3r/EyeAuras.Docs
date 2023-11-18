@@ -103,7 +103,8 @@
 
   <h1 id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger" class="text-break">Interface IMLSearchTrigger
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents a trigger that employs machine learning, specifically YOLOv8, for tasks such as segmentation, classification, and object detection on CPU or GPU. This trigger is designed for advanced usage, especially in C# scripting, to leverage its full capabilities.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,9 +139,6 @@
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;.TargetWindow</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ActiveWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ActiveWindow">IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;.ActiveWindow</a>
-    </div>
-    <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;.ImageSink</a>
     </div>
     <div>
@@ -151,9 +149,6 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsScreen.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsScreen">IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;.BoundsScreen</a>
-    </div>
-    <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.BoundsWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_BoundsWindow">IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;.BoundsWindow</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.IsIgnored.html#EyeAuras_Shared_Triggers_IAuraTrigger_IsIgnored">IAuraTrigger.IsIgnored</a>
@@ -225,9 +220,6 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.BindingsList.html#PoeShared_Bindings_IBindableReactiveObject_BindingsList">IBindableReactiveObject.BindingsList</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -243,6 +235,12 @@
       <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IHasAttachedWindow.ActiveWindow.html#EyeAuras_Shared_IHasAttachedWindow_ActiveWindow">IHasAttachedWindow.ActiveWindow</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
   </div>
@@ -250,7 +248,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMLSearchTrigger : IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBounds, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMLSearchTrigger : IWindowCaptureTrigger&lt;IMLSearchTriggerResult&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -266,55 +264,64 @@
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_Classifications" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.Classifications">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.Classifications.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_Classifications">Classifications</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Contains immutable arrays of classifications made by the Yolo model.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_ExecutionProvider" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.ExecutionProvider">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.ExecutionProvider.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_ExecutionProvider">ExecutionProvider</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the execution provider, determining how the model is run (e.g., CPU, GPU, CUDA).</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_InterOpNumThreads" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.InterOpNumThreads">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.InterOpNumThreads.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_InterOpNumThreads">InterOpNumThreads</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of threads for inter-operation parallelism. This parameter tunes performance for ML ONNX Inference sessions.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_IntraOpNumThreads" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.IntraOpNumThreads">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.IntraOpNumThreads.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_IntraOpNumThreads">IntraOpNumThreads</a>
         </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_MLModel" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.MLModel">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.MLModel.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_MLModel">MLModel</a>
-        </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of threads for intra-operation parallelism. This setting is also for optimizing ML ONNX Inference sessions.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_MLModelData" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.MLModelData">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.MLModelData.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_MLModelData">MLModelData</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the binary data for the ML model, which is distributed with the trigger.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_OverlapThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.OverlapThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.OverlapThreshold.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_OverlapThreshold">OverlapThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the Intersection over Union (IoU) overlap threshold for object detection. A higher value reduces false positives but may miss some objects. See <a href="https://en.wikipedia.org/wiki/Jaccard_index">https://en.wikipedia.org/wiki/Jaccard_index</a> for more information.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_Predictions" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.Predictions">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.Predictions.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_Predictions">Predictions</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Contains immutable arrays of predictions made by the Yolo model.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_SimilarityThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.SimilarityThreshold">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.SimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_SimilarityThreshold">SimilarityThreshold</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the similarity threshold for predictions. The trigger activates if a prediction with confidence greater or equal to this threshold is found.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_YoloModel" data-uid="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.YoloModel">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.MLSearch.IMLSearchTrigger.YoloModel.html#EyeAuras_OpenCVAuras_Triggers_MLSearch_IMLSearchTrigger_YoloModel">YoloModel</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the YoloModel used for inference in this trigger.</p>
+</td>
       </tr>
     </tbody>
   </table>
