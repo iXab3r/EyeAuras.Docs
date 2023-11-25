@@ -35,8 +35,8 @@
 
 
             <a class="brand" href="../index.html">
-              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
-              <span class="brand-title">EyeAuras</span>
+              <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
             </a>        </div>
 
         <div class="body-content">
@@ -49,8 +49,8 @@
                       <div class="mobile-hide">
 
                         <a class="brand" href="../index.html">
-                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
-                          <span class="brand-title">EyeAuras</span>
+                          <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
                         </a>                      </div>
 
                       <div class="sidesearch">
@@ -123,11 +123,13 @@
     <div><a class="xref" href="EyeAuras.Shared.IAuraEntity.html">IAuraEntity</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></div>
     <div><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasContext.html">IHasContext</a></div>
+    <div><a class="xref" href="PoeShared.Modularity.IHasErrors.html">IHasErrors</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="PoeShared.Modularity.IHasErrorProvider.html">IHasErrorProvider</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasName.html">IHasName</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasDescription.html">IHasDescription</a></div>
   </div>
@@ -236,6 +238,15 @@
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.AddOrUpdateBinding.html#EyeAuras_Shared_Model_AuraObjectBase_AddOrUpdateBinding_EyeAuras_Shared_Bindings_AuraBindingProperties_">AuraObjectBase.AddOrUpdateBinding(AuraBindingProperties)</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.LastError.html#EyeAuras_Shared_Model_AuraObjectBase_LastError">AuraObjectBase.LastError</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.HasErrors.html#EyeAuras_Shared_Model_AuraObjectBase_HasErrors">AuraObjectBase.HasErrors</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Errors.html#EyeAuras_Shared_Model_AuraObjectBase_Errors">AuraObjectBase.Errors</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.IsLoadingProperties.html#EyeAuras_Shared_Model_AuraObjectBase_IsLoadingProperties">AuraObjectBase.IsLoadingProperties</a>
     </div>
     <div>
@@ -246,6 +257,9 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Id.html#EyeAuras_Shared_Model_AuraObjectBase_Id">AuraObjectBase.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.ErrorProvider.html#EyeAuras_Shared_Model_AuraObjectBase_ErrorProvider">AuraObjectBase.ErrorProvider</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_BindableReactiveObject_RemoveBinding_System_String_">BindableReactiveObject.RemoveBinding(string)</a>
@@ -303,7 +317,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
   <h5 id="EyeAuras_Shared_Triggers_MessageSubscriptionTriggerBase_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class MessageSubscriptionTriggerBase&lt;TProperties, TMessage&gt; : LegacyAuraTriggerBase&lt;TProperties&gt;, IAuraObject&lt;TProperties&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IDisposable, INotifyPropertyChanged, IHasId, ICanSetContext, IHasContext, IHasName, IHasDescription where TProperties : MessageSubscriptionTriggerPropertiesBase, IAuraTriggerProperties, new() where TMessage : class</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class MessageSubscriptionTriggerBase&lt;TProperties, TMessage&gt; : LegacyAuraTriggerBase&lt;TProperties&gt;, IAuraObject&lt;TProperties&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasErrorProvider, IHasName, IHasDescription where TProperties : MessageSubscriptionTriggerPropertiesBase, IAuraTriggerProperties, new() where TMessage : class</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">

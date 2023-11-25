@@ -35,8 +35,8 @@
 
 
             <a class="brand" href="../index.html">
-              <img src="../images/logo.png" alt="EyeAuras" class="logomark">
-              <span class="brand-title">EyeAuras</span>
+              <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
             </a>        </div>
 
         <div class="body-content">
@@ -49,8 +49,8 @@
                       <div class="mobile-hide">
 
                         <a class="brand" href="../index.html">
-                          <img src="../images/logo.png" alt="EyeAuras" class="logomark">
-                          <span class="brand-title">EyeAuras</span>
+                          <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
                         </a>                      </div>
 
                       <div class="sidesearch">
@@ -118,11 +118,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></div>
     <div><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasContext.html">IHasContext</a></div>
+    <div><a class="xref" href="PoeShared.Modularity.IHasErrors.html">IHasErrors</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="PoeShared.Modularity.IHasErrorProvider.html">IHasErrorProvider</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -182,7 +184,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
   <h5 id="EyeAuras_Shared_Model_AuraObjectBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AuraObjectBase : BindableReactiveObject, IAuraObject, IBindableReactiveObject, IDisposable, INotifyPropertyChanged, IHasId, ICanSetContext, IHasContext</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AuraObjectBase : BindableReactiveObject, IAuraObject, IBindableReactiveObject, IHasId, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasErrorProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -219,6 +221,27 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_ErrorProvider" data-uid="EyeAuras.Shared.Model.AuraObjectBase.ErrorProvider">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.ErrorProvider.html#EyeAuras_Shared_Model_AuraObjectBase_ErrorProvider">ErrorProvider</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the <a class="xref" href="PoeShared.Modularity.ICanSetErrors.html">ICanSetErrors</a> instance used for error reporting and management.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_Errors" data-uid="EyeAuras.Shared.Model.AuraObjectBase.Errors">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Errors.html#EyeAuras_Shared_Model_AuraObjectBase_Errors">Errors</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets a list of all reported errors.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_HasErrors" data-uid="EyeAuras.Shared.Model.AuraObjectBase.HasErrors">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.HasErrors.html#EyeAuras_Shared_Model_AuraObjectBase_HasErrors">HasErrors</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether any errors have been reported.</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Model_AuraObjectBase_Id" data-uid="EyeAuras.Shared.Model.AuraObjectBase.Id">
           <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.Id.html#EyeAuras_Shared_Model_AuraObjectBase_Id">Id</a>
         </td>
@@ -236,6 +259,13 @@
           <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.IsSavingProperties.html#EyeAuras_Shared_Model_AuraObjectBase_IsSavingProperties">IsSavingProperties</a>
         </td>
         <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_LastError" data-uid="EyeAuras.Shared.Model.AuraObjectBase.LastError">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.LastError.html#EyeAuras_Shared_Model_AuraObjectBase_LastError">LastError</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the last error that occurred.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Model_AuraObjectBase_Properties" data-uid="EyeAuras.Shared.Model.AuraObjectBase.Properties">

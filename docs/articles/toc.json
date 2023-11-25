@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Guides","includedFrom":"~/articles/guides/toc.yml","items":[{"name":"Getting Started","href":"guides/getting-started.html","topicHref":"guides/getting-started.html"}]},{"name":"How-to","includedFrom":"~/articles/howto/toc.yml","items":[{"name":"Test art","href":"howto/test.html","topicHref":"howto/test.html"}]}]}
+{"items":[{"name":"Guides","includedFrom":"~/articles/guides/toc.yml","items":[{"name":"Getting Started","href":"guides/getting-started.html","topicHref":"guides/getting-started.html"}]},{"name":"How-to","includedFrom":"~/articles/howto/toc.yml","items":[{"name":"Test art","href":"howto/test.html","topicHref":"howto/test.html"}]}],"pdf":true}
