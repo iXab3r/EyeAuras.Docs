@@ -8,6 +8,7 @@
             "BlazorRete.dll",
             "PropertyBinder.dll",
             "PoeShared*.dll",
+            "EyeAuras*.Shared.dll",
             "EyeAuras*.Metadata.dll",
             "EyeAuras.*Auras.dll",
             "EyeAuras.Roxy*.dll",
@@ -15,7 +16,7 @@
             "EyeAuras.Blazor*.dll",
             "EyeAuras.Shared*.dll",
             "EyeAuras.Graphics*.dll",
-            "EyeAuras.Scripting.dll",
+            "EyeAuras.Scripting.dll"
           ],
           "exclude": [
             "**/DirectML.Debug.dll",
