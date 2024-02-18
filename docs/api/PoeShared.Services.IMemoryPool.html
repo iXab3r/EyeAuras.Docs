@@ -109,7 +109,7 @@
   <h6><strong>Assembly</strong>: PoeShared.dll</h6>
   <h5 id="PoeShared_Services_IMemoryPool_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMemoryPool</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMemoryPool : IArrayPool&lt;byte&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
 </h3>
@@ -122,72 +122,14 @@
     </thead>
     <tbody>
       <tr>
-        <td id="PoeShared_Services_IMemoryPool_Rent_System_Int32_" data-uid="PoeShared.Services.IMemoryPool.Rent(System.Int32)">
-          <a class="xref" href="PoeShared.Services.IMemoryPool.Rent.html#PoeShared_Services_IMemoryPool_Rent_System_Int32_">Rent(int)</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
         <td id="PoeShared_Services_IMemoryPool_RentPinnedBuffer_System_Int32_" data-uid="PoeShared.Services.IMemoryPool.RentPinnedBuffer(System.Int32)">
           <a class="xref" href="PoeShared.Services.IMemoryPool.RentPinnedBuffer.html#PoeShared_Services_IMemoryPool_RentPinnedBuffer_System_Int32_">RentPinnedBuffer(int)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
-      <tr>
-        <td id="PoeShared_Services_IMemoryPool_Return_System_Byte___" data-uid="PoeShared.Services.IMemoryPool.Return(System.Byte[])">
-          <a class="xref" href="PoeShared.Services.IMemoryPool.Return.html#PoeShared_Services_IMemoryPool_Return_System_Byte___">Return(byte[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>Returns array to memory pool, DOES NOT CLEAR ARRAY</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
   </div>

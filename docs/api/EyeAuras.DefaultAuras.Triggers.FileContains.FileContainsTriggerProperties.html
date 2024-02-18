@@ -123,6 +123,7 @@
     <div><a class="xref" href="PoeShared.Modularity.IHasVersion.html">IHasVersion</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetId.html">ICanSetId</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasTypedId-1.html">IHasTypedId</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerPropertiesBase.html">AuraTriggerPropertiesBase</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.DefaultAuras.Triggers.FileContains.FileContainsTriggerProperties.html">FileContainsTriggerProperties</a>&gt;</div>
   </div>
@@ -163,7 +164,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.DefaultAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_DefaultAuras_Triggers_FileContains_FileContainsTriggerProperties_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed record FileContainsTriggerProperties : AuraTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;FileContainsTriggerProperties&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed record FileContainsTriggerProperties : AuraTriggerPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IHasTypedId&lt;string&gt;, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IEquatable&lt;FileContainsTriggerProperties&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -316,6 +317,21 @@ This determines how the EvaluatorExpression will be interpreted.</p>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>

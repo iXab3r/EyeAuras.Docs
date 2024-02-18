@@ -159,6 +159,12 @@
       <a class="xref" href="EyeAuras.Shared.IAuraObject.Properties.html#EyeAuras_Shared_IAuraObject_Properties">IAuraObject.Properties</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IAuraObject.RaisePropertiesWithBindings.html#EyeAuras_Shared_IAuraObject_RaisePropertiesWithBindings">IAuraObject.RaisePropertiesWithBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IAuraObject.PropertiesChanges.html#EyeAuras_Shared_IAuraObject_PropertiesChanges">IAuraObject.PropertiesChanges</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_System_String_">IBindableReactiveObject.RemoveBinding(string)</a>
     </div>
     <div>
@@ -177,7 +183,7 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IValueProvider_System_String_">IBindableReactiveObject.AddOrUpdateBinding(IValueProvider, string)</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.ObjectId.html#PoeShared_Bindings_IBindableReactiveObject_ObjectId">IBindableReactiveObject.ObjectId</a>
+      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.SessionObjectId.html#PoeShared_Bindings_IBindableReactiveObject_SessionObjectId">IBindableReactiveObject.SessionObjectId</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.HasBindings.html#PoeShared_Bindings_IBindableReactiveObject_HasBindings">IBindableReactiveObject.HasBindings</a>
@@ -186,13 +192,10 @@
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasId.Id.html#EyeAuras_Shared_IHasId_Id">IHasId.Id</a>
+      <a class="xref" href="EyeAuras.Shared.IHasTypedId-1.Id.html#EyeAuras_Shared_IHasTypedId_1_Id">IHasTypedId&lt;string&gt;.Id</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.ICanSetContext.Context.html#EyeAuras_Shared_ICanSetContext_Context">ICanSetContext.Context</a>
-    </div>
-    <div>
-      <a class="xref" href="PoeShared.Modularity.IHasErrors.LastError.html#PoeShared_Modularity_IHasErrors_LastError">IHasErrors.LastError</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Modularity.IHasErrors.HasErrors.html#PoeShared_Modularity_IHasErrors_HasErrors">IHasErrors.HasErrors</a>
@@ -207,20 +210,23 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
     </div>
     <div>
+      <a class="xref" href="PoeShared.Modularity.IHasError.LastError.html#PoeShared_Modularity_IHasError_LastError">IHasError.LastError</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Modularity.IHasErrorProvider.ErrorProvider.html#PoeShared_Modularity_IHasErrorProvider_ErrorProvider">IHasErrorProvider.ErrorProvider</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasName.Name.html#EyeAuras_Shared_IHasName_Name">IHasName.Name</a>
+      <a class="xref" href="EyeAuras.Shared.ICanSetName.Name.html#EyeAuras_Shared_ICanSetName_Name">ICanSetName.Name</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
+      <a class="xref" href="EyeAuras.Shared.ICanSetDescription.Description.html#EyeAuras_Shared_ICanSetDescription_Description">ICanSetDescription.Description</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Shared.html">Shared</a>.<a class="xref" href="EyeAuras.Shared.Triggers.html">Triggers</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
   <h5 id="EyeAuras_Shared_Triggers_IComplexAuraTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IComplexAuraTrigger : IComplexAuraList&lt;IAuraTrigger&gt;, ISourceListEx&lt;IAuraTrigger&gt;, ISourceList&lt;IAuraTrigger&gt;, IObservableList&lt;IAuraTrigger&gt;, IObservableListEx&lt;IAuraTrigger&gt;, IObservableList&lt;IAuraTrigger&gt;, IEnumerable&lt;IAuraTrigger&gt;, IEnumerable, INotifyCollectionChanged, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasErrorProvider, IHasName, IHasDescription</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IComplexAuraTrigger : IComplexAuraList&lt;IAuraTrigger&gt;, ISourceListEx&lt;IAuraTrigger&gt;, ISourceList&lt;IAuraTrigger&gt;, IObservableList&lt;IAuraTrigger&gt;, IObservableListEx&lt;IAuraTrigger&gt;, IObservableList&lt;IAuraTrigger&gt;, IEnumerable&lt;IAuraTrigger&gt;, IEnumerable, INotifyCollectionChanged, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, IHasTypedId&lt;string&gt;, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, ICanSetName, IHasName, ICanSetDescription, IHasDescription</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>

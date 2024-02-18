@@ -109,6 +109,60 @@
 
 
 <a id="PoeShared_Scaffolding_PathUtils_IsSamePath_" data-uid="PoeShared.Scaffolding.PathUtils.IsSamePath*"></a>
+<h4 id="PoeShared_Scaffolding_PathUtils_IsSamePath_System_IO_FileSystemInfo_System_IO_FileSystemInfo_" data-uid="PoeShared.Scaffolding.PathUtils.IsSamePath(System.IO.FileSystemInfo,System.IO.FileSystemInfo)">IsSamePath(FileSystemInfo, FileSystemInfo)</h4>
+<div class="markdown level1 summary"><p>Checks if the two provided paths are the same.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static bool IsSamePath(FileSystemInfo first, FileSystemInfo second)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo">FileSystemInfo</a></td>
+      <td><span class="parametername">first</span></td>
+      <td><p>First path to compare.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo">FileSystemInfo</a></td>
+      <td><span class="parametername">second</span></td>
+      <td><p>Second path to compare.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+      <td><p>Boolean value indicating whether the two paths are the same.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="PoeShared_Scaffolding_PathUtils_IsSamePath_System_IO_FileSystemInfo_System_IO_FileSystemInfo__examples">Examples</h5>
+<pre><code class="lang-csharp">IsSamePath("C:\\temp\\file.txt", "C:/temp/file.txt"); //Returns true</code></pre>
+
+
+
+<a id="PoeShared_Scaffolding_PathUtils_IsSamePath_" data-uid="PoeShared.Scaffolding.PathUtils.IsSamePath*"></a>
 <h4 id="PoeShared_Scaffolding_PathUtils_IsSamePath_System_String_System_String_" data-uid="PoeShared.Scaffolding.PathUtils.IsSamePath(System.String,System.String)">IsSamePath(string, string)</h4>
 <div class="markdown level1 summary"><p>Checks if the two provided paths are the same.</p>
 </div>

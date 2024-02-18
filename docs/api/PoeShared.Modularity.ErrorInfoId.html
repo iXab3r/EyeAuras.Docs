@@ -107,6 +107,8 @@
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.ispanformattable">ISpanFormattable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="PoeShared.Modularity.ErrorInfoId.html">ErrorInfoId</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="PoeShared.Modularity.ErrorInfoId.html">ErrorInfoId</a>&gt;</div>
   </div>
@@ -126,8 +128,9 @@
   <h6><strong>Assembly</strong>: PoeShared.dll</h6>
   <h5 id="PoeShared_Modularity_ErrorInfoId_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ErrorInfoId.ErrorInfoIdSystemTextJsonConverter))]
-public readonly struct ErrorInfoId : IComparable&lt;ErrorInfoId&gt;, IEquatable&lt;ErrorInfoId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(ErrorInfoId.ErrorInfoIdTypeConverter))]
+[JsonConverter(typeof(ErrorInfoId.ErrorInfoIdSystemTextJsonConverter))]
+public struct ErrorInfoId : ISpanFormattable, IFormattable, IComparable&lt;ErrorInfoId&gt;, IEquatable&lt;ErrorInfoId&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -207,7 +210,7 @@ public readonly struct ErrorInfoId : IComparable&lt;ErrorInfoId&gt;, IEquatable&
       </tr>
       <tr>
         <td id="PoeShared_Modularity_ErrorInfoId_Equals_System_Object_" data-uid="PoeShared.Modularity.ErrorInfoId.Equals(System.Object)">
-          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.Equals.html#PoeShared_Modularity_ErrorInfoId_Equals_System_Object_">Equals(object)</a>
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.Equals.html#PoeShared_Modularity_ErrorInfoId_Equals_System_Object_">Equals(object?)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -224,8 +227,50 @@ public readonly struct ErrorInfoId : IComparable&lt;ErrorInfoId&gt;, IEquatable&
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_Parse_System_ReadOnlySpan_System_Char__" data-uid="PoeShared.Modularity.ErrorInfoId.Parse(System.ReadOnlySpan{System.Char})">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.Parse.html#PoeShared_Modularity_ErrorInfoId_Parse_System_ReadOnlySpan_System_Char__">Parse(ReadOnlySpan&lt;char&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_Parse_System_ReadOnlySpan_System_Char__System_IFormatProvider_" data-uid="PoeShared.Modularity.ErrorInfoId.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.Parse.html#PoeShared_Modularity_ErrorInfoId_Parse_System_ReadOnlySpan_System_Char__System_IFormatProvider_">Parse(ReadOnlySpan&lt;char&gt;, IFormatProvider?)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_Parse_System_String_" data-uid="PoeShared.Modularity.ErrorInfoId.Parse(System.String)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.Parse.html#PoeShared_Modularity_ErrorInfoId_Parse_System_String_">Parse(string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="PoeShared_Modularity_ErrorInfoId_ToString" data-uid="PoeShared.Modularity.ErrorInfoId.ToString">
           <a class="xref" href="PoeShared.Modularity.ErrorInfoId.ToString.html#PoeShared_Modularity_ErrorInfoId_ToString">ToString()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_ToString_System_String_System_IFormatProvider_" data-uid="PoeShared.Modularity.ErrorInfoId.ToString(System.String,System.IFormatProvider)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.ToString.html#PoeShared_Modularity_ErrorInfoId_ToString_System_String_System_IFormatProvider_">ToString(string?, IFormatProvider?)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__" data-uid="PoeShared.Modularity.ErrorInfoId.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char})">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.TryFormat.html#PoeShared_Modularity_ErrorInfoId_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__">TryFormat(Span&lt;char&gt;, out int, ReadOnlySpan&lt;char&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_" data-uid="PoeShared.Modularity.ErrorInfoId.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.TryFormat.html#PoeShared_Modularity_ErrorInfoId_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_">TryFormat(Span&lt;char&gt;, out int, ReadOnlySpan&lt;char&gt;, IFormatProvider?)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_TryParse_System_ReadOnlySpan_System_Char__System_IFormatProvider_PoeShared_Modularity_ErrorInfoId__" data-uid="PoeShared.Modularity.ErrorInfoId.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,PoeShared.Modularity.ErrorInfoId@)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.TryParse.html#PoeShared_Modularity_ErrorInfoId_TryParse_System_ReadOnlySpan_System_Char__System_IFormatProvider_PoeShared_Modularity_ErrorInfoId__">TryParse(ReadOnlySpan&lt;char&gt;, IFormatProvider?, out ErrorInfoId)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -248,8 +293,32 @@ public readonly struct ErrorInfoId : IComparable&lt;ErrorInfoId&gt;, IEquatable&
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_op_GreaterThan_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_" data-uid="PoeShared.Modularity.ErrorInfoId.op_GreaterThan(PoeShared.Modularity.ErrorInfoId,PoeShared.Modularity.ErrorInfoId)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.op_GreaterThan.html#PoeShared_Modularity_ErrorInfoId_op_GreaterThan_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_">operator &gt;(ErrorInfoId, ErrorInfoId)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_op_GreaterThanOrEqual_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_" data-uid="PoeShared.Modularity.ErrorInfoId.op_GreaterThanOrEqual(PoeShared.Modularity.ErrorInfoId,PoeShared.Modularity.ErrorInfoId)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.op_GreaterThanOrEqual.html#PoeShared_Modularity_ErrorInfoId_op_GreaterThanOrEqual_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_">operator &gt;=(ErrorInfoId, ErrorInfoId)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="PoeShared_Modularity_ErrorInfoId_op_Inequality_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_" data-uid="PoeShared.Modularity.ErrorInfoId.op_Inequality(PoeShared.Modularity.ErrorInfoId,PoeShared.Modularity.ErrorInfoId)">
           <a class="xref" href="PoeShared.Modularity.ErrorInfoId.op_Inequality.html#PoeShared_Modularity_ErrorInfoId_op_Inequality_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_">operator !=(ErrorInfoId, ErrorInfoId)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_op_LessThan_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_" data-uid="PoeShared.Modularity.ErrorInfoId.op_LessThan(PoeShared.Modularity.ErrorInfoId,PoeShared.Modularity.ErrorInfoId)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.op_LessThan.html#PoeShared_Modularity_ErrorInfoId_op_LessThan_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_">operator &lt;(ErrorInfoId, ErrorInfoId)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Modularity_ErrorInfoId_op_LessThanOrEqual_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_" data-uid="PoeShared.Modularity.ErrorInfoId.op_LessThanOrEqual(PoeShared.Modularity.ErrorInfoId,PoeShared.Modularity.ErrorInfoId)">
+          <a class="xref" href="PoeShared.Modularity.ErrorInfoId.op_LessThanOrEqual.html#PoeShared_Modularity_ErrorInfoId_op_LessThanOrEqual_PoeShared_Modularity_ErrorInfoId_PoeShared_Modularity_ErrorInfoId_">operator &lt;=(ErrorInfoId, ErrorInfoId)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>

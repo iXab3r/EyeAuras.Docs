@@ -109,12 +109,12 @@
 
 
 <a id="EyeAuras_DefaultAuras_Overlays_Image_ImageAuraOverlayContent__ctor_" data-uid="EyeAuras.DefaultAuras.Overlays.Image.ImageAuraOverlayContent.#ctor*"></a>
-<h4 id="EyeAuras_DefaultAuras_Overlays_Image_ImageAuraOverlayContent__ctor_EyeAuras_DefaultAuras_Overlays_Image_IImageAuraOverlay_System_Reactive_Concurrency_IScheduler_" data-uid="EyeAuras.DefaultAuras.Overlays.Image.ImageAuraOverlayContent.#ctor(EyeAuras.DefaultAuras.Overlays.Image.IImageAuraOverlay,System.Reactive.Concurrency.IScheduler)">ImageAuraOverlayContent(IImageAuraOverlay, IScheduler)</h4>
+<h4 id="EyeAuras_DefaultAuras_Overlays_Image_ImageAuraOverlayContent__ctor_EyeAuras_DefaultAuras_Overlays_Image_IImageAuraOverlay_EyeAuras_FileNexus_Services_IResourceRefMaterializationService_EyeAuras_Graphics_Services_IImageBinaryResourceResolver_System_Reactive_Concurrency_IScheduler_" data-uid="EyeAuras.DefaultAuras.Overlays.Image.ImageAuraOverlayContent.#ctor(EyeAuras.DefaultAuras.Overlays.Image.IImageAuraOverlay,EyeAuras.FileNexus.Services.IResourceRefMaterializationService,EyeAuras.Graphics.Services.IImageBinaryResourceResolver,System.Reactive.Concurrency.IScheduler)">ImageAuraOverlayContent(IImageAuraOverlay, IResourceRefMaterializationService, IImageBinaryResourceResolver, IScheduler)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public ImageAuraOverlayContent(IImageAuraOverlay parent, IScheduler scheduler)</code></pre>
+  <pre><code class="lang-csharp hljs">public ImageAuraOverlayContent(IImageAuraOverlay parent, IResourceRefMaterializationService materializationService, IImageBinaryResourceResolver binaryResourceResolver, IScheduler scheduler)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -129,6 +129,16 @@
     <tr>
       <td><a class="xref" href="EyeAuras.DefaultAuras.Overlays.Image.IImageAuraOverlay.html">IImageAuraOverlay</a></td>
       <td><span class="parametername">parent</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">IResourceRefMaterializationService</span></td>
+      <td><span class="parametername">materializationService</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="EyeAuras.Graphics.Services.IImageBinaryResourceResolver.html">IImageBinaryResourceResolver</a></td>
+      <td><span class="parametername">binaryResourceResolver</span></td>
       <td></td>
     </tr>
     <tr>

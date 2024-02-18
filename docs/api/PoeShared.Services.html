@@ -112,7 +112,11 @@ Classes
       <h5><a class="xref" href="PoeShared.Services.KeyboardLayout.html">KeyboardLayout</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.MemoryPool.html">MemoryPool</a></h5>
-      <section></section>
+      <section><p>Provides a resource pool that enables reusing instances of arrays.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Services.MimeContentTypeProvider.html">MimeContentTypeProvider</a></h5>
+      <section><p>Used to look up MIME types given a file path</p>
+</section>
       <h5><a class="xref" href="PoeShared.Services.NamedLock.html">NamedLock</a></h5>
       <section><p>Class that implements locking with timeout and logging of locked threads
 Logging is enabled only in debug configuration due to huge performance input</p>
@@ -123,14 +127,23 @@ Logging is enabled only in debug configuration due to huge performance input</p>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.SevenZipExtractArguments.html">SevenZipExtractArguments</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Services.SharedArrayPool-1.html">SharedArrayPool&lt;T&gt;</a></h5>
+      <section><p><a href="https://medium.com/@epeshk/the-big-performance-difference-between-arraypools-in-net-b25c9fc5e31d">https://medium.com/@epeshk/the-big-performance-difference-between-arraypools-in-net-b25c9fc5e31d</a></p>
+</section>
       <h5><a class="xref" href="PoeShared.Services.SharedResourceBase.html">SharedResourceBase</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Services.SharedResourceBase-1.html">SharedResourceBase&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.SharedResourceLatch.html">SharedResourceLatch</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.SharedResourceRepository-2.html">SharedResourceRepository&lt;TKey, TResource&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a></h5>
-      <section></section>
+      <section><p>Manages a shared resource of type <code class="typeparamref">T</code>, providing controlled access and ensuring efficient reuse.
+This class is designed to handle scenarios where a resource is expensive to create and should be reused
+for as long as it is viable. The resource is created upon first request and subsequently &quot;rented&quot; out
+for use. The class ensures that the same resource instance is reused across multiple requests, maximizing efficiency.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Services.StartupManagerArgs.html">StartupManagerArgs</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.StringMatcher.html">StringMatcher</a></h5>
@@ -146,6 +159,14 @@ Interfaces
       <h5><a class="xref" href="PoeShared.Services.IApplicationAccessor.html">IApplicationAccessor</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.IAssemblyTracker.html">IAssemblyTracker</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Services.IBufferedItem.html">IBufferedItem</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Services.IBufferedItemAsync.html">IBufferedItemAsync</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Services.IBufferedItemId.html">IBufferedItemId</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Services.IBufferedItemsProcessor.html">IBufferedItemsProcessor</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.IComparisonService.html">IComparisonService</a></h5>
       <section></section>
@@ -166,6 +187,11 @@ Interfaces
       <h5><a class="xref" href="PoeShared.Services.IStartupManager.html">IStartupManager</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Services.IUniqueIdGenerator.html">IUniqueIdGenerator</a></h5>
+      <section></section>
+    <h3 id="enums">
+Enums
+</h3>
+      <h5><a class="xref" href="PoeShared.Services.BufferedItemState.html">BufferedItemState</a></h5>
       <section></section>
 
 

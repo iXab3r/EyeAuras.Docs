@@ -111,7 +111,8 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="EyeAuras.Shared.Model.AuraPropertiesBase.html">AuraPropertiesBase</a></div>
     <div class="level2"><a class="xref" href="EyeAuras.Shared.Actions.AuraActionPropertiesBase.html">AuraActionPropertiesBase</a></div>
-    <div class="level3"><span class="xref">PlaySoundActionProperties</span></div>
+    <div class="level3"><a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.html">PlaySoundActionPropertiesV2</a></div>
+    <div class="level4"><span class="xref">PlaySoundActionProperties</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -123,11 +124,28 @@
     <div><a class="xref" href="PoeShared.Modularity.IHasVersion.html">IHasVersion</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetId.html">ICanSetId</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasTypedId-1.html">IHasTypedId</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.Shared.Actions.AuraActionPropertiesBase.html">AuraActionPropertiesBase</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.html">PlaySoundActionPropertiesV2</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.html">PlaySoundActionProperties</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.Equals.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_Equals_EyeAuras_Shared_Actions_AuraActionPropertiesBase_">PlaySoundActionPropertiesV2.Equals(AuraActionPropertiesBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.Notification.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_Notification">PlaySoundActionPropertiesV2.Notification</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.PlayInBackground.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_PlayInBackground">PlaySoundActionPropertiesV2.PlayInBackground</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.Volume.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_Volume">PlaySoundActionPropertiesV2.Volume</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2.Version.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_Version">PlaySoundActionPropertiesV2.Version</a>
+    </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Actions.AuraActionPropertiesBase.Equals.html#EyeAuras_Shared_Actions_AuraActionPropertiesBase_Equals_EyeAuras_Shared_Model_AuraPropertiesBase_">AuraActionPropertiesBase.Equals(AuraPropertiesBase)</a>
     </div>
@@ -154,7 +172,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.DefaultAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed record PlaySoundActionProperties : AuraActionPropertiesBase, IEquatable&lt;AuraPropertiesBase&gt;, IAuraActionProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;AuraActionPropertiesBase&gt;, IEquatable&lt;PlaySoundActionProperties&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed record PlaySoundActionProperties : PlaySoundActionPropertiesV2, IEquatable&lt;AuraPropertiesBase&gt;, IAuraActionProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IHasTypedId&lt;string&gt;, IEquatable&lt;AuraActionPropertiesBase&gt;, IEquatable&lt;PlaySoundActionPropertiesV2&gt;, IEquatable&lt;PlaySoundActionProperties&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -190,45 +208,6 @@
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
-      <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Notification" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Notification">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Notification.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Notification">Notification</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the identifier or name of the sound notification to be played. Default value is &quot;Ping&quot;.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_NotificationWav" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.NotificationWav">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.NotificationWav.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_NotificationWav">NotificationWav</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the WAV format sound data. This data is compressed for efficient storage and transfer.
-The <span class="xref">Newtonsoft.Json.JsonConverter</span> attribute indicates the use of a specific converter for handling the compression.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_PlayInBackground" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.PlayInBackground">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.PlayInBackground.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_PlayInBackground">PlayInBackground</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the sound should be played in the background.
-If true, the action completes immediately after starting the sound. If false, it waits until the sound has finished playing.
-Default is true.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Version" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Version">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Version.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Version">Version</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the version of the properties. Default value is 1.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Volume" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Volume">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Volume.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Volume">Volume</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the volume at which the sound notification should be played.
-This is a floating-point value, typically ranging from 0.0 (silent) to 1.0 (maximum volume). Default is 1.0f.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -248,8 +227,8 @@ This is a floating-point value, typically ranging from 0.0 (silent) to 1.0 (maxi
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Equals_EyeAuras_Shared_Actions_AuraActionPropertiesBase_" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Equals(EyeAuras.Shared.Actions.AuraActionPropertiesBase)">
-          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Equals.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Equals_EyeAuras_Shared_Actions_AuraActionPropertiesBase_">Equals(AuraActionPropertiesBase?)</a>
+        <td id="EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Equals_EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_" data-uid="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Equals(EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionPropertiesV2)">
+          <a class="xref" href="EyeAuras.DefaultAuras.Actions.PlaySound.PlaySoundActionProperties.Equals.html#EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionProperties_Equals_EyeAuras_DefaultAuras_Actions_PlaySound_PlaySoundActionPropertiesV2_">Equals(PlaySoundActionPropertiesV2?)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -310,6 +289,21 @@ This is a floating-point value, typically ranging from 0.0 (silent) to 1.0 (maxi
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>

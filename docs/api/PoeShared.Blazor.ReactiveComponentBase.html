@@ -103,7 +103,8 @@
 
   <h1 id="PoeShared_Blazor_ReactiveComponentBase" data-uid="PoeShared.Blazor.ReactiveComponentBase" class="text-break">Class ReactiveComponentBase
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the base class for a reactive component in a Blazor application.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -122,6 +123,7 @@
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="PoeShared.Blazor.IRefreshableComponent.html">IRefreshableComponent</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -160,7 +162,7 @@
   <h6><strong>Assembly</strong>: PoeShared.Blazor.dll</h6>
   <h5 id="PoeShared_Blazor_ReactiveComponentBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ReactiveComponentBase : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender, IReactiveComponent, IDisposable, INotifyPropertyChanged, IRefreshableComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ReactiveComponentBase : ComponentBase, IComponent, IHandleEvent, IHandleAfterRender, IReactiveComponent, IDisposable, INotifyPropertyChanged, IRefreshableComponent, IAsyncDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -176,7 +178,8 @@
         <td id="PoeShared_Blazor_ReactiveComponentBase__ctor" data-uid="PoeShared.Blazor.ReactiveComponentBase.#ctor">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.-ctor.html#PoeShared_Blazor_ReactiveComponentBase__ctor">ReactiveComponentBase()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.html">ReactiveComponentBase</a> class.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -194,51 +197,70 @@
         <td id="PoeShared_Blazor_ReactiveComponentBase_Anchors" data-uid="PoeShared.Blazor.ReactiveComponentBase.Anchors">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Anchors.html#PoeShared_Blazor_ReactiveComponentBase_Anchors">Anchors</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets a composite disposable container that can contain multiple disposables,
-all of which will be disposed when this container is disposed.</p>
+        <td class="markdown level1 summary"><p>Gets the collection of disposables for this component.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_ComponentId" data-uid="PoeShared.Blazor.ReactiveComponentBase.ComponentId">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.ComponentId.html#PoeShared_Blazor_ReactiveComponentBase_ComponentId">ComponentId</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the unique identifier for the reactive component.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_IsLoaded" data-uid="PoeShared.Blazor.ReactiveComponentBase.IsLoaded">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsLoaded.html#PoeShared_Blazor_ReactiveComponentBase_IsLoaded">IsLoaded</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates whether the component is loaded. Set after the first OnParametersSet call.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_IsRendered" data-uid="PoeShared.Blazor.ReactiveComponentBase.IsRendered">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsRendered.html#PoeShared_Blazor_ReactiveComponentBase_IsRendered">IsRendered</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates whether the component is rendered. Set after the first OnAfterRender call.</p>
 </td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_Log" data-uid="PoeShared.Blazor.ReactiveComponentBase.Log">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Log.html#PoeShared_Blazor_ReactiveComponentBase_Log">Log</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the logger for this component.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_Name" data-uid="PoeShared.Blazor.ReactiveComponentBase.Name">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Name.html#PoeShared_Blazor_ReactiveComponentBase_Name">Name</a>
         </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="PoeShared_Blazor_ReactiveComponentBase_ObjectId" data-uid="PoeShared.Blazor.ReactiveComponentBase.ObjectId">
-          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.ObjectId.html#PoeShared_Blazor_ReactiveComponentBase_ObjectId">ObjectId</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="PoeShared_Blazor_ReactiveComponentBase_RawRefreshCount" data-uid="PoeShared.Blazor.ReactiveComponentBase.RawRefreshCount">
-          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RawRefreshCount.html#PoeShared_Blazor_ReactiveComponentBase_RawRefreshCount">RawRefreshCount</a>
-        </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the name of the component.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_RefreshCount" data-uid="PoeShared.Blazor.ReactiveComponentBase.RefreshCount">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RefreshCount.html#PoeShared_Blazor_ReactiveComponentBase_RefreshCount">RefreshCount</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the total count of refreshes that have occurred.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_RefreshPeriod" data-uid="PoeShared.Blazor.ReactiveComponentBase.RefreshPeriod">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RefreshPeriod.html#PoeShared_Blazor_ReactiveComponentBase_RefreshPeriod">RefreshPeriod</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets or sets the refresh period for the component.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_RefreshRequestCount" data-uid="PoeShared.Blazor.ReactiveComponentBase.RefreshRequestCount">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RefreshRequestCount.html#PoeShared_Blazor_ReactiveComponentBase_RefreshRequestCount">RefreshRequestCount</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the count of refresh requests that have been made. Not all of them will be served - throttling/sampling, filtering, etc.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_WhenRefresh" data-uid="PoeShared.Blazor.ReactiveComponentBase.WhenRefresh">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.WhenRefresh.html#PoeShared_Blazor_ReactiveComponentBase_WhenRefresh">WhenRefresh</a>
         </td>
-        <td class="markdown level1 summary"><p>Two-side channel which allows no notify component when it has to be refreshed AND allows the component model to notify about refresh request</p>
+        <td class="markdown level1 summary"><p>Gets the subject that triggers when the component should refresh.</p>
 </td>
       </tr>
     </tbody>
@@ -263,7 +285,23 @@ all of which will be disposed when this container is disposed.</p>
         <td id="PoeShared_Blazor_ReactiveComponentBase_Dispose" data-uid="PoeShared.Blazor.ReactiveComponentBase.Dispose">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Dispose.html#PoeShared_Blazor_ReactiveComponentBase_Dispose">Dispose()</a>
         </td>
+        <td class="markdown level1 summary"><p>Disposes of the resources used by this component.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_DisposeAsync" data-uid="PoeShared.Blazor.ReactiveComponentBase.DisposeAsync">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.DisposeAsync.html#PoeShared_Blazor_ReactiveComponentBase_DisposeAsync">DisposeAsync()</a>
+        </td>
         <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_OnAfterFirstRenderAsync" data-uid="PoeShared.Blazor.ReactiveComponentBase.OnAfterFirstRenderAsync">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnAfterFirstRenderAsync.html#PoeShared_Blazor_ReactiveComponentBase_OnAfterFirstRenderAsync">OnAfterFirstRenderAsync()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Method invoked first time the component has been rendered. Note that the component does
+not automatically re-render after the completion of any returned <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>, because
+that would cause an infinite render loop.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_OnAfterRender_System_Boolean_" data-uid="PoeShared.Blazor.ReactiveComponentBase.OnAfterRender(System.Boolean)">
@@ -305,13 +343,16 @@ all of which will be disposed when this container is disposed.</p>
         <td id="PoeShared_Blazor_ReactiveComponentBase_PrepareLogger" data-uid="PoeShared.Blazor.ReactiveComponentBase.PrepareLogger">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.PrepareLogger.html#PoeShared_Blazor_ReactiveComponentBase_PrepareLogger">PrepareLogger()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Prepares the logger for this component.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_RaiseAndSetIfChanged__1___0____0_System_String_" data-uid="PoeShared.Blazor.ReactiveComponentBase.RaiseAndSetIfChanged``1(``0@,``0,System.String)">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RaiseAndSetIfChanged.html#PoeShared_Blazor_ReactiveComponentBase_RaiseAndSetIfChanged__1___0____0_System_String_">RaiseAndSetIfChanged&lt;TRet&gt;(ref TRet, TRet, string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Raises a property changed event if the specified field is changed.
+Sets the field to the new value if changed.</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_RaiseAndSet__1___0____0_System_String_" data-uid="PoeShared.Blazor.ReactiveComponentBase.RaiseAndSet``1(``0@,``0,System.String)">
@@ -323,14 +364,15 @@ all of which will be disposed when this container is disposed.</p>
         <td id="PoeShared_Blazor_ReactiveComponentBase_RaisePropertyChanged_System_String_" data-uid="PoeShared.Blazor.ReactiveComponentBase.RaisePropertyChanged(System.String)">
           <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RaisePropertyChanged.html#PoeShared_Blazor_ReactiveComponentBase_RaisePropertyChanged_System_String_">RaisePropertyChanged(string)</a>
         </td>
-        <td class="markdown level1 summary"><p>Raises a change notification indicating that a property has changed.</p>
+        <td class="markdown level1 summary"><p>Raises the PropertyChanged event for a given property.</p>
 </td>
       </tr>
       <tr>
-        <td id="PoeShared_Blazor_ReactiveComponentBase_Refresh" data-uid="PoeShared.Blazor.ReactiveComponentBase.Refresh">
-          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Refresh.html#PoeShared_Blazor_ReactiveComponentBase_Refresh">Refresh()</a>
+        <td id="PoeShared_Blazor_ReactiveComponentBase_Refresh_System_Object_" data-uid="PoeShared.Blazor.ReactiveComponentBase.Refresh(System.Object)">
+          <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Refresh.html#PoeShared_Blazor_ReactiveComponentBase_Refresh_System_Object_">Refresh(object)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Refreshes the component state, equivalent of StateHasChanged but with additional information about reason(if possible).</p>
+</td>
       </tr>
       <tr>
         <td id="PoeShared_Blazor_ReactiveComponentBase_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_" data-uid="PoeShared.Blazor.ReactiveComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)">
@@ -365,6 +407,21 @@ all of which will be disposed when this container is disposed.</p>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>

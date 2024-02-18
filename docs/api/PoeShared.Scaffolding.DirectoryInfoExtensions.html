@@ -151,12 +151,26 @@
     </thead>
     <tbody>
       <tr>
+        <td id="PoeShared_Scaffolding_DirectoryInfoExtensions_GetFileInfo_System_IO_DirectoryInfo_System_String_" data-uid="PoeShared.Scaffolding.DirectoryInfoExtensions.GetFileInfo(System.IO.DirectoryInfo,System.String)">
+          <a class="xref" href="PoeShared.Scaffolding.DirectoryInfoExtensions.GetFileInfo.html#PoeShared_Scaffolding_DirectoryInfoExtensions_GetFileInfo_System_IO_DirectoryInfo_System_String_">GetFileInfo(DirectoryInfo, string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Creates a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a> instance for a file located in the specified directory or its subdirectories.</p>
+</td>
+      </tr>
+      <tr>
         <td id="PoeShared_Scaffolding_DirectoryInfoExtensions_GetFilesSafe_System_IO_DirectoryInfo_System_String_System_IO_SearchOption_" data-uid="PoeShared.Scaffolding.DirectoryInfoExtensions.GetFilesSafe(System.IO.DirectoryInfo,System.String,System.IO.SearchOption)">
           <a class="xref" href="PoeShared.Scaffolding.DirectoryInfoExtensions.GetFilesSafe.html#PoeShared_Scaffolding_DirectoryInfoExtensions_GetFilesSafe_System_IO_DirectoryInfo_System_String_System_IO_SearchOption_">GetFilesSafe(DirectoryInfo, string, SearchOption)</a>
         </td>
         <td class="markdown level1 summary"><p>Recursively retrieves files from the specified directory and its subdirectories
 matching a given search pattern. This method will skip any inaccessible directories
 due to permission issues and continue with the next accessible directory.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_DirectoryInfoExtensions_GetSubdirectory_System_IO_DirectoryInfo_System_String_" data-uid="PoeShared.Scaffolding.DirectoryInfoExtensions.GetSubdirectory(System.IO.DirectoryInfo,System.String)">
+          <a class="xref" href="PoeShared.Scaffolding.DirectoryInfoExtensions.GetSubdirectory.html#PoeShared_Scaffolding_DirectoryInfoExtensions_GetSubdirectory_System_IO_DirectoryInfo_System_String_">GetSubdirectory(DirectoryInfo, string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Creates a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directoryinfo">DirectoryInfo</a> instance representing a subdirectory within the specified parent directory.</p>
 </td>
       </tr>
       <tr>
@@ -178,6 +192,15 @@ due to permission issues and continue with the next accessible directory.</p>
           <a class="xref" href="PoeShared.Scaffolding.DirectoryInfoExtensions.IsSubDir.html#PoeShared_Scaffolding_DirectoryInfoExtensions_IsSubDir_System_IO_DirectoryInfo_System_IO_DirectoryInfo_">IsSubDir(DirectoryInfo, DirectoryInfo)</a>
         </td>
         <td class="markdown level1 summary"><p>Determines if a given path is a subdirectory of another path.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_DirectoryInfoExtensions_RemoveDirectory_System_IO_DirectoryInfo_" data-uid="PoeShared.Scaffolding.DirectoryInfoExtensions.RemoveDirectory(System.IO.DirectoryInfo)">
+          <a class="xref" href="PoeShared.Scaffolding.DirectoryInfoExtensions.RemoveDirectory.html#PoeShared_Scaffolding_DirectoryInfoExtensions_RemoveDirectory_System_IO_DirectoryInfo_">RemoveDirectory(DirectoryInfo)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Recursively deletes a directory along with all its files and subdirectories.
+It first resets any special file attributes (like read-only or hidden) to ensure
+that all files and directories can be deleted without authorization issues.</p>
 </td>
       </tr>
     </tbody>

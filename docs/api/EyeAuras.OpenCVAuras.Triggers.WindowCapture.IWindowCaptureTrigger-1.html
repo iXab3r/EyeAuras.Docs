@@ -5,10 +5,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Interface IWindowCaptureTrigger&lt;TTriggerResult&gt;
+      <title>Interface IWindowCaptureTrigger&lt;TDetectionResult&gt;
  | EyeAuras Docs </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Interface IWindowCaptureTrigger&lt;TTriggerResult&gt;
+      <meta name="title" content="Interface IWindowCaptureTrigger&lt;TDetectionResult&gt;
  | EyeAuras Docs ">
       <meta name="generator" content="docfx ">
   
@@ -101,7 +101,7 @@
 
 
 
-  <h1 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1" class="text-break">Interface IWindowCaptureTrigger&lt;TTriggerResult&gt;
+  <h1 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1" class="text-break">Interface IWindowCaptureTrigger&lt;TDetectionResult&gt;
 </h1>
   <div class="markdown level0 summary"><p>Represents a base interface for all triggers that operate on captured window/screen images,
 including color search, image search, or machine learning-based object detection.</p>
@@ -152,6 +152,12 @@ including color search, image search, or machine learning-based object detection
       <a class="xref" href="EyeAuras.Shared.IAuraObject.Properties.html#EyeAuras_Shared_IAuraObject_Properties">IAuraObject.Properties</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Shared.IAuraObject.RaisePropertiesWithBindings.html#EyeAuras_Shared_IAuraObject_RaisePropertiesWithBindings">IAuraObject.RaisePropertiesWithBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.IAuraObject.PropertiesChanges.html#EyeAuras_Shared_IAuraObject_PropertiesChanges">IAuraObject.PropertiesChanges</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.RemoveBinding.html#PoeShared_Bindings_IBindableReactiveObject_RemoveBinding_System_String_">IBindableReactiveObject.RemoveBinding(string)</a>
     </div>
     <div>
@@ -170,7 +176,7 @@ including color search, image search, or machine learning-based object detection
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.AddOrUpdateBinding.html#PoeShared_Bindings_IBindableReactiveObject_AddOrUpdateBinding_PoeShared_Bindings_IValueProvider_System_String_">IBindableReactiveObject.AddOrUpdateBinding(IValueProvider, string)</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.ObjectId.html#PoeShared_Bindings_IBindableReactiveObject_ObjectId">IBindableReactiveObject.ObjectId</a>
+      <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.SessionObjectId.html#PoeShared_Bindings_IBindableReactiveObject_SessionObjectId">IBindableReactiveObject.SessionObjectId</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.HasBindings.html#PoeShared_Bindings_IBindableReactiveObject_HasBindings">IBindableReactiveObject.HasBindings</a>
@@ -179,13 +185,10 @@ including color search, image search, or machine learning-based object detection
       <a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.Bindings.html#PoeShared_Bindings_IBindableReactiveObject_Bindings">IBindableReactiveObject.Bindings</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasId.Id.html#EyeAuras_Shared_IHasId_Id">IHasId.Id</a>
+      <a class="xref" href="EyeAuras.Shared.IHasTypedId-1.Id.html#EyeAuras_Shared_IHasTypedId_1_Id">IHasTypedId&lt;string&gt;.Id</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.ICanSetContext.Context.html#EyeAuras_Shared_ICanSetContext_Context">ICanSetContext.Context</a>
-    </div>
-    <div>
-      <a class="xref" href="PoeShared.Modularity.IHasErrors.LastError.html#PoeShared_Modularity_IHasErrors_LastError">IHasErrors.LastError</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Modularity.IHasErrors.HasErrors.html#PoeShared_Modularity_IHasErrors_HasErrors">IHasErrors.HasErrors</a>
@@ -197,13 +200,16 @@ including color search, image search, or machine learning-based object detection
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="PoeShared.Modularity.IHasError.LastError.html#PoeShared_Modularity_IHasError_LastError">IHasError.LastError</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Modularity.IHasErrorProvider.ErrorProvider.html#PoeShared_Modularity_IHasErrorProvider_ErrorProvider">IHasErrorProvider.ErrorProvider</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasName.Name.html#EyeAuras_Shared_IHasName_Name">IHasName.Name</a>
+      <a class="xref" href="EyeAuras.Shared.ICanSetName.Name.html#EyeAuras_Shared_ICanSetName_Name">ICanSetName.Name</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.IHasDescription.Description.html#EyeAuras_Shared_IHasDescription_Description">IHasDescription.Description</a>
+      <a class="xref" href="EyeAuras.Shared.ICanSetDescription.Description.html#EyeAuras_Shared_ICanSetDescription_Description">ICanSetDescription.Description</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.IHasBoundsWindow.BoundsWindow.html#EyeAuras_Shared_IHasBoundsWindow_BoundsWindow">IHasBoundsWindow.BoundsWindow</a>
@@ -216,10 +222,10 @@ including color search, image search, or machine learning-based object detection
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.html">OpenCVAuras</a>.<a class="xref" href="EyeAuras.OpenCVAuras.Triggers.html">Triggers</a>.<a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.html">WindowCapture</a></h6>
-  <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
+  <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Shared.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IWindowCaptureTrigger&lt;out TTriggerResult&gt; : IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, ICanSetContext, IHasContext, IHasErrors, IDisposable, IHasErrorProvider, IHasName, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged where TTriggerResult : ICaptureTriggerResult</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IWindowCaptureTrigger&lt;TDetectionResult&gt; : IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, IHasTypedId&lt;string&gt;, ICanSetContext, IHasContext, IHasErrors, IDisposable, IHasError, IHasErrorProvider, ICanSetName, IHasName, ICanSetDescription, IHasDescription, IHasBoundsWindow, IHasAttachedWindow, INotifyPropertyChanged where TDetectionResult : ICaptureTriggerDetectionResult</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -231,7 +237,7 @@ including color search, image search, or machine learning-based object detection
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TTriggerResult</span></td>
+        <td><span class="parametername">TDetectionResult</span></td>
         <td><p>The type of result produced by the trigger.</p>
 </td>
       </tr>
@@ -283,27 +289,6 @@ including color search, image search, or machine learning-based object detection
 </td>
       </tr>
       <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FrameTime" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.FrameTime">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.FrameTime.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FrameTime">FrameTime</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets the duration of each frame in the capture process.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FramesPerSecond" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.FramesPerSecond">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.FramesPerSecond.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_FramesPerSecond">FramesPerSecond</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets the actual frames per second rate at which the capture is occurring.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.ImageSink">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ImageSink.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ImageSink">ImageSink</a>
-        </td>
-        <td class="markdown level1 summary"><p>[Obsolete] Stream of images retrieved by this trigger. Replaced with ResultSink.</p>
-</td>
-      </tr>
-      <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MaxFramesPerSecond" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.MaxFramesPerSecond">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.MaxFramesPerSecond.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_MaxFramesPerSecond">MaxFramesPerSecond</a>
         </td>
@@ -318,17 +303,18 @@ including color search, image search, or machine learning-based object detection
 </td>
       </tr>
       <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ResultStream" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.ResultStream">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.ResultStream.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_ResultStream">ResultStream</a>
-        </td>
-        <td class="markdown level1 summary"><p>Stream of processing results retrieved by this trigger, providing the output of the capture and analysis process.</p>
-</td>
-      </tr>
-      <tr>
         <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.TargetWindow">
           <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.TargetWindow.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_TargetWindow">TargetWindow</a>
         </td>
         <td class="markdown level1 summary"><p>Specifies the expression used to identify and target a specific window for capture.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_WhenImageProcessed" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.WhenImageProcessed">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.WhenImageProcessed.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_WhenImageProcessed">WhenImageProcessed</a>
+        </td>
+        <td class="markdown level1 summary"><p>Stream of processing results retrieved by this trigger, providing the output of the capture and analysis process.
+Images must be processed on the same thread!</p>
 </td>
       </tr>
       <tr>
@@ -351,17 +337,57 @@ including color search, image search, or machine learning-based object detection
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.Refresh.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh">Refresh()</a>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_GetFrameStats" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.GetFrameStats">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.GetFrameStats.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_GetFrameStats">GetFrameStats()</a>
         </td>
-        <td class="markdown level1 summary"><p>Forces a refresh of the current image, updating the capture to the latest state.</p>
+        <td class="markdown level1 summary"><p>Gets frame stats for the captured window - fps(expected, actual)</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Boolean_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh(System.Boolean,System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.Refresh.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Boolean_System_Threading_CancellationToken_">Refresh(bool, CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Synchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.Refresh.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Threading_CancellationToken_">Refresh(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Synchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Boolean_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.RefreshAsync(System.Boolean,System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.RefreshAsync.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Boolean_System_Threading_CancellationToken_">RefreshAsync(bool, CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Asynchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.RefreshAsync(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.RefreshAsync.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Threading_CancellationToken_">RefreshAsync(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Asynchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="EyeAuras.OpenCVAuras.Scaffolding.WindowCaptureTriggerExtensions.FetchNextResult.html#EyeAuras_OpenCVAuras_Scaffolding_WindowCaptureTriggerExtensions_FetchNextResult__1_EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger___0__">WindowCaptureTriggerExtensions.FetchNextResult&lt;TTriggerResult&gt;(IWindowCaptureTrigger&lt;TTriggerResult&gt;)</a>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>

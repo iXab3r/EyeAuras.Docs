@@ -109,12 +109,44 @@
 
 
 <a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
+<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_String__System_Reactive_Disposables_CompositeDisposable_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen(System.IObservable{System.String},System.Reactive.Disposables.CompositeDisposable)">RaisePropertiesWhen(IObservable&lt;string&gt;, CompositeDisposable)</h4>
+<div class="markdown level1 summary"></div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen(IObservable&lt;string&gt; source, CompositeDisposable anchors)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><span class="parametername">source</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">CompositeDisposable</span></td>
+      <td><span class="parametername">anchors</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
 <h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_DynamicData_IObservableList___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(DynamicData.IObservableList{``0})">RaisePropertiesWhen&lt;T&gt;(IObservableList&lt;T&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(IObservableList&lt;T&gt; collection)</code></pre>
+  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(IObservableList&lt;T&gt; collection) where T : INotifyPropertyChanged</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -151,12 +183,12 @@
 
 
 <a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_ISourceCache___0___1__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(DynamicData.ISourceCache{``0,``1})">RaisePropertiesWhen&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;)</h4>
+<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_IObservableCache___0___1__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(DynamicData.IObservableCache{``0,``1})">RaisePropertiesWhen&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt; collection)</code></pre>
+  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt; collection) where T : INotifyPropertyChanged</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -169,7 +201,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">ISourceCache</span>&lt;T, TKey&gt;</td>
+      <td><span class="xref">IObservableCache</span>&lt;T, TKey&gt;</td>
       <td><span class="parametername">collection</span></td>
       <td></td>
     </tr>
@@ -190,136 +222,6 @@
     </tr>
     <tr>
       <td><span class="parametername">TKey</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-
-<a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2___0_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(``0)">RaisePropertiesWhen&lt;TCollection, T&gt;(TCollection)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;TCollection, T&gt;(TCollection collection) where TCollection : IObservableCollection&lt;T&gt; where T : INotifyPropertyChanged</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="xref">TCollection</span></td>
-      <td><span class="parametername">collection</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="typeParameters">Type Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="parametername">TCollection</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="parametername">T</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-
-<a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_PoeShared_Scaffolding_ObservableCollectionEx___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(PoeShared.Scaffolding.ObservableCollectionEx{``0})">RaisePropertiesWhen&lt;T&gt;(ObservableCollectionEx&lt;T&gt;)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(ObservableCollectionEx&lt;T&gt; collection) where T : INotifyPropertyChanged</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="PoeShared.Scaffolding.ObservableCollectionEx-1.html">ObservableCollectionEx</a>&lt;T&gt;</td>
-      <td><span class="parametername">collection</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="typeParameters">Type Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="parametername">T</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-
-<a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_Collections_ObjectModel_ObservableCollection___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(System.Collections.ObjectModel.ObservableCollection{``0})">RaisePropertiesWhen&lt;T&gt;(ObservableCollection&lt;T&gt;)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(ObservableCollection&lt;T&gt; collection) where T : INotifyPropertyChanged</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;T&gt;</td>
-      <td><span class="parametername">collection</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="typeParameters">Type Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="parametername">T</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -354,12 +256,12 @@
 
 
 <a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_String__System_Reactive_Disposables_CompositeDisposable_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen(System.IObservable{System.String},System.Reactive.Disposables.CompositeDisposable)">RaisePropertiesWhen(IObservable&lt;string&gt;, CompositeDisposable)</h4>
+<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_Reactive_EventPattern_System_ComponentModel_PropertyChangedEventArgs___" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen(System.IObservable{System.Reactive.EventPattern{System.ComponentModel.PropertyChangedEventArgs}})">RaisePropertiesWhen(IObservable&lt;EventPattern&lt;PropertyChangedEventArgs&gt;&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen(IObservable&lt;string&gt; source, CompositeDisposable anchors)</code></pre>
+  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen(IObservable&lt;EventPattern&lt;PropertyChangedEventArgs&gt;&gt; source)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -372,13 +274,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">EventPattern</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventargs">PropertyChangedEventArgs</a>&gt;&gt;</td>
       <td><span class="parametername">source</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">CompositeDisposable</span></td>
-      <td><span class="parametername">anchors</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -428,12 +325,12 @@
 
 
 <a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_IObservable___0____" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(System.IObservable{``0}[])">RaisePropertiesWhen&lt;T&gt;(params IObservable&lt;T&gt;[])</h4>
+<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_System_IObservable_DynamicData_IChangeSet___0___1___" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(System.IObservable{DynamicData.IChangeSet{``0,``1}})">RaisePropertiesWhen&lt;TObject, TKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(params IObservable&lt;T&gt;[] sources)</code></pre>
+  <pre><code class="lang-csharp hljs">public void RaisePropertiesWhen&lt;TObject, TKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt; changes)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -446,8 +343,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;T&gt;[]</td>
-      <td><span class="parametername">sources</span></td>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TKey&gt;&gt;</td>
+      <td><span class="parametername">changes</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -462,7 +359,11 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="parametername">T</span></td>
+      <td><span class="parametername">TObject</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TKey</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -470,12 +371,12 @@
 
 
 <a id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen*"></a>
-<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0____" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(EyeAuras.Shared.IAuraObject{``0}[])">RaisePropertiesWhen&lt;T&gt;(params IAuraObject&lt;T&gt;[])</h4>
+<h4 id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(EyeAuras.Shared.IAuraObject{``0})">RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(params IAuraObject&lt;T&gt;[] sources) where T : class, IAuraProperties</code></pre>
+  <pre><code class="lang-csharp hljs">protected void RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt; source) where T : class, IAuraProperties</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -488,8 +389,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject</a>&lt;T&gt;[]</td>
-      <td><span class="parametername">sources</span></td>
+      <td><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject</a>&lt;T&gt;</td>
+      <td><span class="parametername">source</span></td>
       <td></td>
     </tr>
   </tbody>

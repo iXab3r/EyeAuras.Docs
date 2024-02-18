@@ -119,11 +119,13 @@
     <div><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></div>
     <div><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasTypedId-1.html">IHasTypedId</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasContext.html">IHasContext</a></div>
     <div><a class="xref" href="PoeShared.Modularity.IHasErrors.html">IHasErrors</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="PoeShared.Modularity.IHasError.html">IHasError</a></div>
     <div><a class="xref" href="PoeShared.Modularity.IHasErrorProvider.html">IHasErrorProvider</a></div>
   </div>
   <div class="inheritedMembers">
@@ -150,7 +152,7 @@
       <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.Log.html#PoeShared_Bindings_BindableReactiveObject_Log">BindableReactiveObject.Log</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.ObjectId.html#PoeShared_Bindings_BindableReactiveObject_ObjectId">BindableReactiveObject.ObjectId</a>
+      <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.SessionObjectId.html#PoeShared_Bindings_BindableReactiveObject_SessionObjectId">BindableReactiveObject.SessionObjectId</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Bindings.BindableReactiveObject.HasBindings.html#PoeShared_Bindings_BindableReactiveObject_HasBindings">BindableReactiveObject.HasBindings</a>
@@ -184,7 +186,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
   <h5 id="EyeAuras_Shared_Model_AuraObjectBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AuraObjectBase : BindableReactiveObject, IAuraObject, IBindableReactiveObject, IHasId, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasErrorProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AuraObjectBase : BindableReactiveObject, IAuraObject, IBindableReactiveObject, IHasId, IHasTypedId&lt;string&gt;, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -273,6 +275,18 @@
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_PropertiesChanges" data-uid="EyeAuras.Shared.Model.AuraObjectBase.PropertiesChanges">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.PropertiesChanges.html#EyeAuras_Shared_Model_AuraObjectBase_PropertiesChanges">PropertiesChanges</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWithBindings" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWithBindings">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWithBindings.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWithBindings">RaisePropertiesWithBindings</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -285,6 +299,12 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_AddDefaultBinding_System_String_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.AddDefaultBinding(System.String)">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.AddDefaultBinding.html#EyeAuras_Shared_Model_AuraObjectBase_AddDefaultBinding_System_String_">AddDefaultBinding(string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
       <tr>
         <td id="EyeAuras_Shared_Model_AuraObjectBase_AddOrUpdateBinding_EyeAuras_Shared_Bindings_AuraBindingProperties_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.AddOrUpdateBinding(EyeAuras.Shared.Bindings.AuraBindingProperties)">
           <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.AddOrUpdateBinding.html#EyeAuras_Shared_Model_AuraObjectBase_AddOrUpdateBinding_EyeAuras_Shared_Bindings_AuraBindingProperties_">AddOrUpdateBinding(AuraBindingProperties)</a>
@@ -300,6 +320,18 @@
       <tr>
         <td id="EyeAuras_Shared_Model_AuraObjectBase_LoadProperties_EyeAuras_Shared_IAuraProperties_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.LoadProperties(EyeAuras.Shared.IAuraProperties)">
           <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.LoadProperties.html#EyeAuras_Shared_Model_AuraObjectBase_LoadProperties_EyeAuras_Shared_IAuraProperties_">LoadProperties(IAuraProperties)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesRefresh" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesRefresh">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesRefresh.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesRefresh">RaisePropertiesRefresh()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_Reactive_EventPattern_System_ComponentModel_PropertyChangedEventArgs___" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen(System.IObservable{System.Reactive.EventPattern{System.ComponentModel.PropertyChangedEventArgs}})">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen_System_IObservable_System_Reactive_EventPattern_System_ComponentModel_PropertyChangedEventArgs___">RaisePropertiesWhen(IObservable&lt;EventPattern&lt;PropertyChangedEventArgs&gt;&gt;)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -328,20 +360,8 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0____" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(EyeAuras.Shared.IAuraObject{``0}[])">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0____">RaisePropertiesWhen&lt;T&gt;(params IAuraObject&lt;T&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_PoeShared_Scaffolding_ObservableCollectionEx___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(PoeShared.Scaffolding.ObservableCollectionEx{``0})">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_PoeShared_Scaffolding_ObservableCollectionEx___0__">RaisePropertiesWhen&lt;T&gt;(ObservableCollectionEx&lt;T&gt;)</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_Collections_ObjectModel_ObservableCollection___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(System.Collections.ObjectModel.ObservableCollection{``0})">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_Collections_ObjectModel_ObservableCollection___0__">RaisePropertiesWhen&lt;T&gt;(ObservableCollection&lt;T&gt;)</a>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(EyeAuras.Shared.IAuraObject{``0})">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__">RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt;)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -352,20 +372,14 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_IObservable___0____" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``1(System.IObservable{``0}[])">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_System_IObservable___0____">RaisePropertiesWhen&lt;T&gt;(params IObservable&lt;T&gt;[])</a>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_IObservableCache___0___1__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(DynamicData.IObservableCache{``0,``1})">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_IObservableCache___0___1__">RaisePropertiesWhen&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_ISourceCache___0___1__" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(DynamicData.ISourceCache{``0,``1})">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_DynamicData_ISourceCache___0___1__">RaisePropertiesWhen&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;)</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2___0_" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(``0)">
-          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2___0_">RaisePropertiesWhen&lt;TCollection, T&gt;(TCollection)</a>
+        <td id="EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_System_IObservable_DynamicData_IChangeSet___0___1___" data-uid="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen``2(System.IObservable{DynamicData.IChangeSet{``0,``1}})">
+          <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_System_IObservable_DynamicData_IChangeSet___0___1___">RaisePropertiesWhen&lt;TObject, TKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -392,6 +406,21 @@
   </div>
   <div>
       <a class="xref" href="EyeAuras.Shared.Scaffolding.AuraModelExtensions.WithContext.html#EyeAuras_Shared_Scaffolding_AuraModelExtensions_WithContext__3___0___1_System_Linq_Expressions_Expression_System_Func___1___2___">AuraModelExtensions.WithContext&lt;TTarget, TSrc, TContext&gt;(TTarget, TSrc, Expression&lt;Func&lt;TSrc, TContext&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>

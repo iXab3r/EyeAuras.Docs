@@ -112,7 +112,8 @@
     <div class="level1"><a class="xref" href="EyeAuras.Shared.Model.AuraPropertiesBase.html">AuraPropertiesBase</a></div>
     <div class="level2"><a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerPropertiesBase.html">AuraTriggerPropertiesBase</a></div>
     <div class="level3"><a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowCaptureTriggerProperties.html">WindowCaptureTriggerProperties</a></div>
-    <div class="level4"><span class="xref">ImageSearchTriggerProperties</span></div>
+    <div class="level4"><a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.html">ImageSearchTriggerPropertiesV2</a></div>
+    <div class="level5"><span class="xref">ImageSearchTriggerProperties</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -126,11 +127,28 @@
     <div><a class="xref" href="PoeShared.Modularity.IHasVersion.html">IHasVersion</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetId.html">ICanSetId</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasTypedId-1.html">IHasTypedId</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowCaptureTriggerProperties.html">WindowCaptureTriggerProperties</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.html">ImageSearchTriggerPropertiesV2</a>&gt;</div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.html">ImageSearchTriggerProperties</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.Equals.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_Equals_EyeAuras_OpenCVAuras_Triggers_WindowCapture_WindowCaptureTriggerProperties_">ImageSearchTriggerPropertiesV2.Equals(WindowCaptureTriggerProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.SimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_SimilarityThreshold">ImageSearchTriggerPropertiesV2.SimilarityThreshold</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.ImageSize.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_ImageSize">ImageSearchTriggerPropertiesV2.ImageSize</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.ImageData.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_ImageData">ImageSearchTriggerPropertiesV2.ImageData</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2.Version.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_Version">ImageSearchTriggerPropertiesV2.Version</a>
+    </div>
     <div>
       <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowCaptureTriggerProperties.Equals.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_WindowCaptureTriggerProperties_Equals_EyeAuras_Shared_Triggers_AuraTriggerPropertiesBase_">WindowCaptureTriggerProperties.Equals(AuraTriggerPropertiesBase)</a>
     </div>
@@ -205,7 +223,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.OpenCVAuras.Metadata.dll</h6>
   <h5 id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record ImageSearchTriggerProperties : WindowCaptureTriggerProperties, IEquatable&lt;AuraPropertiesBase&gt;, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IWindowCaptureTriggerProperties, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IEquatable&lt;WindowCaptureTriggerProperties&gt;, IEquatable&lt;ImageSearchTriggerProperties&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record ImageSearchTriggerProperties : ImageSearchTriggerPropertiesV2, IEquatable&lt;AuraPropertiesBase&gt;, IEquatable&lt;AuraTriggerPropertiesBase&gt;, IWindowCaptureTriggerProperties, IAuraTriggerProperties, IAuraProperties, IPoeEyeConfigVersioned, IPoeEyeConfig, IHasVersion, ICanSetId, IHasId, IHasTypedId&lt;string&gt;, IEquatable&lt;WindowCaptureTriggerProperties&gt;, IEquatable&lt;ImageSearchTriggerPropertiesV2&gt;, IEquatable&lt;ImageSearchTriggerProperties&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -247,45 +265,6 @@
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageData" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageData">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageData.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageData">ImageData</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the image data as a byte array.
-This data represents the image used for template matching.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageFilePath" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageFilePath">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageFilePath.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageFilePath">ImageFilePath</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the file path to the image used for searching.
-The image at this path is used as a template for the search process.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageSize" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageSize">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.ImageSize.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_ImageSize">ImageSize</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the size of the image used in the search.
-This property defines the dimensions of the template image.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_SimilarityThreshold" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.SimilarityThreshold">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.SimilarityThreshold.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_SimilarityThreshold">SimilarityThreshold</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the similarity threshold for image matching.
-This value defines the required degree of similarity between the template and the captured image.
-A higher value indicates a stricter match requirement.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Version" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Version">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Version.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Version">Version</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -305,8 +284,8 @@ A higher value indicates a stricter match requirement.</p>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Equals_EyeAuras_OpenCVAuras_Triggers_WindowCapture_WindowCaptureTriggerProperties_" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Equals(EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowCaptureTriggerProperties)">
-          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Equals.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Equals_EyeAuras_OpenCVAuras_Triggers_WindowCapture_WindowCaptureTriggerProperties_">Equals(WindowCaptureTriggerProperties?)</a>
+        <td id="EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Equals_EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_" data-uid="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Equals(EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerPropertiesV2)">
+          <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.ImageSearch.ImageSearchTriggerProperties.Equals.html#EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerProperties_Equals_EyeAuras_OpenCVAuras_Triggers_ImageSearch_ImageSearchTriggerPropertiesV2_">Equals(ImageSearchTriggerPropertiesV2?)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -367,6 +346,21 @@ A higher value indicates a stricter match requirement.</p>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>

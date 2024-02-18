@@ -120,8 +120,8 @@
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IInputController.html">IInputController</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IKeyboardController.html">IKeyboardController</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IMouseController.html">IMouseController</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IMouseButtonController.html">IMouseButtonController</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IMouseAbsoluteController.html">IMouseAbsoluteController</a></div>
     <div><a class="xref" href="EyeAuras.Roxy.Shared.IMouseRelativeController.html">IMouseRelativeController</a></div>
@@ -154,6 +154,9 @@
     </div>
     <div>
       <a class="xref" href="PoeShared.Services.SharedResourceBase.TryRent.html#PoeShared_Services_SharedResourceBase_TryRent">SharedResourceBase.TryRent()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Services.SharedResourceBase.CanRent.html#PoeShared_Services_SharedResourceBase_CanRent">SharedResourceBase.CanRent()</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Services.SharedResourceBase.Dispose.html#PoeShared_Services_SharedResourceBase_Dispose">SharedResourceBase.Dispose()</a>
@@ -211,7 +214,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Roxy.Shared.dll</h6>
   <h5 id="EyeAuras_Roxy_Shared_InputSimulatorMapper_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InputSimulatorMapper : LegacyInputControllerBase, ISharedResource, INotifyPropertyChanged, IInputController, IKeyboardController, IDisposable, IMouseController, IMouseButtonController, IMouseAbsoluteController, IMouseRelativeController</code></pre>
+    <pre><code class="lang-csharp hljs">public class InputSimulatorMapper : LegacyInputControllerBase, ISharedResource, INotifyPropertyChanged, IInputController, IKeyboardController, IMouseController, IDisposable, IMouseButtonController, IMouseAbsoluteController, IMouseRelativeController</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -241,6 +244,12 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td id="EyeAuras_Roxy_Shared_InputSimulatorMapper_FormatToString_PoeShared_Scaffolding_ToStringBuilder_" data-uid="EyeAuras.Roxy.Shared.InputSimulatorMapper.FormatToString(PoeShared.Scaffolding.ToStringBuilder)">
+          <a class="xref" href="EyeAuras.Roxy.Shared.InputSimulatorMapper.FormatToString.html#EyeAuras_Roxy_Shared_InputSimulatorMapper_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">FormatToString(ToStringBuilder)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
       <tr>
         <td id="EyeAuras_Roxy_Shared_InputSimulatorMapper_KeyDown_PoeShared_Native_IWindowHandle_WindowsInput_Native_VirtualKeyCode_" data-uid="EyeAuras.Roxy.Shared.InputSimulatorMapper.KeyDown(PoeShared.Native.IWindowHandle,WindowsInput.Native.VirtualKeyCode)">
           <a class="xref" href="EyeAuras.Roxy.Shared.InputSimulatorMapper.KeyDown.html#EyeAuras_Roxy_Shared_InputSimulatorMapper_KeyDown_PoeShared_Native_IWindowHandle_WindowsInput_Native_VirtualKeyCode_">KeyDown(IWindowHandle, VirtualKeyCode)</a>
@@ -340,6 +349,21 @@
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>

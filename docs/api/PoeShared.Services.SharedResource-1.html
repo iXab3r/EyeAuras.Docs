@@ -103,7 +103,11 @@
 
   <h1 id="PoeShared_Services_SharedResource_1" data-uid="PoeShared.Services.SharedResource`1" class="text-break">Class SharedResource&lt;T&gt;
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manages a shared resource of type <code class="typeparamref">T</code>, providing controlled access and ensuring efficient reuse.
+This class is designed to handle scenarios where a resource is expensive to create and should be reused
+for as long as it is viable. The resource is created upon first request and subsequently &quot;rented&quot; out
+for use. The class ensures that the same resource instance is reused across multiple requests, maximizing efficiency.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -154,10 +158,30 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the shared resource. Must be a subclass of <a class="xref" href="PoeShared.Services.SharedResourceBase.html">SharedResourceBase</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="PoeShared_Services_SharedResource_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The <a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a> class is especially useful in situations where resource creation is costly,
+such as network connections, database connections, or large data structures. It ensures that the overhead of 
+creating such resources is incurred only once and the resource is reused until it is no longer valid or the 
+<a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a> itself is disposed.
+</p>
+<p>
+The class also manages the lifecycle of the resource. The resource is expected to remain alive and usable 
+until the <a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a> class is disposed. Upon disposal, the <a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a> 
+class disposes of the managed resource as well, ensuring proper cleanup. If the resource disposes itself or 
+becomes unusable (e.g., a network connection is lost), the class will automatically create a new instance of 
+the resource upon the next request.
+</p>
+<p>
+The class employs thread-safe mechanisms to ensure that the resource can be accessed concurrently from multiple 
+threads without race conditions. This makes it suitable for use in multi-threaded environments.
+</p>
+</div>
   <h3 id="constructors">Constructors
 </h3>
   <table class="table table-bordered table-condensed">
@@ -172,7 +196,8 @@
         <td id="PoeShared_Services_SharedResource_1__ctor_System_Func__0__" data-uid="PoeShared.Services.SharedResource`1.#ctor(System.Func{`0})">
           <a class="xref" href="PoeShared.Services.SharedResource-1.-ctor.html#PoeShared_Services_SharedResource_1__ctor_System_Func__0__">SharedResource(Func&lt;T&gt;)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PoeShared.Services.SharedResource-1.html">SharedResource&lt;T&gt;</a> class.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -190,7 +215,8 @@
         <td id="PoeShared_Services_SharedResource_1_IsRented" data-uid="PoeShared.Services.SharedResource`1.IsRented">
           <a class="xref" href="PoeShared.Services.SharedResource-1.IsRented.html#PoeShared_Services_SharedResource_1_IsRented">IsRented</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the current instance of the shared resource is rented.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -208,11 +234,27 @@
         <td id="PoeShared_Services_SharedResource_1_RentOrCreate" data-uid="PoeShared.Services.SharedResource`1.RentOrCreate">
           <a class="xref" href="PoeShared.Services.SharedResource-1.RentOrCreate.html#PoeShared_Services_SharedResource_1_RentOrCreate">RentOrCreate()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Rents the current instance of the shared resource or creates a new one if necessary.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.DisposableExtensions.AssignTo.html#PoeShared_Scaffolding_DisposableExtensions_AssignTo__1___0_System_Reactive_Disposables_SerialDisposable_">DisposableExtensions.AssignTo&lt;T&gt;(T, SerialDisposable)</a>
   </div>

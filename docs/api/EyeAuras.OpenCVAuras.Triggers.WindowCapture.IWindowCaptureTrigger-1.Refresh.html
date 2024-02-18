@@ -109,14 +109,155 @@
 
 
 <a id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh*"></a>
-<h4 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh">Refresh()</h4>
-<div class="markdown level1 summary"><p>Forces a refresh of the current image, updating the capture to the latest state.</p>
+<h4 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Boolean_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh(System.Boolean,System.Threading.CancellationToken)">Refresh(bool, CancellationToken)</h4>
+<div class="markdown level1 summary"><p>Synchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">void Refresh()</code></pre>
+  <pre><code class="lang-csharp hljs">WindowImageProcessedEventArgs&lt;TDetectionResult&gt; Refresh(bool includeImages = false, CancellationToken cancellationToken = default)</code></pre>
 </div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+      <td><span class="parametername">includeImages</span></td>
+      <td><p>Whether to include images in the detection results.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+      <td><span class="parametername">cancellationToken</span></td>
+      <td><p>A token to monitor for cancellation requests.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowImageProcessedEventArgs-1.html">WindowImageProcessedEventArgs</a>&lt;TDetectionResult&gt;</td>
+      <td><p>A <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowImageProcessedEventArgs-1.html">WindowImageProcessedEventArgs&lt;TDetectionResult&gt;</a> containing the detection results.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Boolean_System_Threading_CancellationToken__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method is provided for compatibility and simplicity reasons, allowing for a straightforward, synchronous approach to image refresh and detection. However, it is recommended to use the asynchronous <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.RefreshAsync.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Boolean_System_Threading_CancellationToken_">RefreshAsync(bool, CancellationToken)</a> method in conjunction with the <code>await</code> keyword for improved performance and responsiveness, especially in UI applications.</p>
+<p>The synchronous refresh performs several critical operations:</p>
+<ul>
+<li>Pulling the latest available image from the image source.</li>
+<li>Initiating the detection process.</li>
+<li>Applying trigger conditions.</li>
+<li>Returning detection results to the caller.</li>
+</ul>
+<p>Important considerations:</p>
+<ul><li>The images returned are live references and not static snapshots. Handle these images in a thread-safe manner.</li><li>By default, images are not included in the result. Use the <code class="paramref">includeImages</code> parameter to include them.</li><li>Errors encountered during the process are rethrown to the caller.</li></ul>
+</div>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+      <td><p>Thrown if an error occurs during the refresh process.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh*"></a>
+<h4 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Threading_CancellationToken_" data-uid="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger`1.Refresh(System.Threading.CancellationToken)">Refresh(CancellationToken)</h4>
+<div class="markdown level1 summary"><p>Synchronously forces a refresh of the current image, performing detection and updating the capture to the latest state.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">WindowImageProcessedEventArgs&lt;TDetectionResult&gt; Refresh(CancellationToken cancellationToken = default)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+      <td><span class="parametername">cancellationToken</span></td>
+      <td><p>A token to monitor for cancellation requests.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowImageProcessedEventArgs-1.html">WindowImageProcessedEventArgs</a>&lt;TDetectionResult&gt;</td>
+      <td><p>A <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.WindowImageProcessedEventArgs-1.html">WindowImageProcessedEventArgs&lt;TDetectionResult&gt;</a> containing the detection results.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_Refresh_System_Threading_CancellationToken__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method is provided for compatibility and simplicity reasons, allowing for a straightforward, synchronous approach to image refresh and detection. However, it is recommended to use the asynchronous <a class="xref" href="EyeAuras.OpenCVAuras.Triggers.WindowCapture.IWindowCaptureTrigger-1.RefreshAsync.html#EyeAuras_OpenCVAuras_Triggers_WindowCapture_IWindowCaptureTrigger_1_RefreshAsync_System_Boolean_System_Threading_CancellationToken_">RefreshAsync(bool, CancellationToken)</a> method in conjunction with the <code>await</code> keyword for improved performance and responsiveness, especially in UI applications.</p>
+<p>The synchronous refresh performs several critical operations:</p>
+<ul>
+<li>Pulling the latest available image from the image source.</li>
+<li>Initiating the detection process.</li>
+<li>Applying trigger conditions.</li>
+<li>Returning detection results to the caller.</li>
+</ul>
+<p>Important considerations:</p>
+<ul><li>Errors encountered during the process are rethrown to the caller.</li></ul>
+</div>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+      <td><p>Thrown if an error occurs during the refresh process.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
 </article>
                 </div>
 

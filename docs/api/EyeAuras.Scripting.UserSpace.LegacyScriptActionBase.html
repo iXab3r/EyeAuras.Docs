@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class LegacyScriptActionBase
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class LegacyScriptActionBase
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase">
+
+
+
+  <h1 id="EyeAuras_Scripting_UserSpace_LegacyScriptActionBase" data-uid="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase" class="text-break">Class LegacyScriptActionBase
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveObject.html">DisposableReactiveObject</a></div>
+    <div class="level2"><a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.html">LegacyScriptExecutorBase</a></div>
+    <div class="level3"><span class="xref">LegacyScriptActionBase</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="EyeAuras.Scripting.Scaffolding.ILegacyScriptAction.html">ILegacyScriptAction</a></div>
+    <div><a class="xref" href="EyeAuras.Scripting.Scaffolding.ILegacyScriptExecutor.html">ILegacyScriptExecutor</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.SetArgs.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_SetArgs_EyeAuras_Scripting_Scaffolding_ScriptExecutorArgs_">LegacyScriptExecutorBase.SetArgs(ScriptExecutorArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetEnumerator.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetEnumerator">LegacyScriptExecutorBase.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Add.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Add_System_Collections_Generic_KeyValuePair_System_String_System_Object__">LegacyScriptExecutorBase.Add(KeyValuePair&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Clear.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Clear">LegacyScriptExecutorBase.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Contains.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Contains_System_Collections_Generic_KeyValuePair_System_String_System_Object__">LegacyScriptExecutorBase.Contains(KeyValuePair&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CopyTo.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CopyTo_System_Collections_Generic_KeyValuePair_System_String_System_Object____System_Int32_">LegacyScriptExecutorBase.CopyTo(KeyValuePair&lt;string, object&gt;[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Remove.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Remove_System_Collections_Generic_KeyValuePair_System_String_System_Object__">LegacyScriptExecutorBase.Remove(KeyValuePair&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Add.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Add_System_String_System_Object_">LegacyScriptExecutorBase.Add(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.ContainsKey.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_ContainsKey_System_String_">LegacyScriptExecutorBase.ContainsKey(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Remove.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Remove_System_String_">LegacyScriptExecutorBase.Remove(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.TryGetValue.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_TryGetValue_System_String_System_Object__">LegacyScriptExecutorBase.TryGetValue(string, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.TryGetValue.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_TryGetValue__1_System_String___0__">LegacyScriptExecutorBase.TryGetValue&lt;T&gt;(string, out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.AddOrUpdate.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_AddOrUpdate__1_System_String___0_">LegacyScriptExecutorBase.AddOrUpdate&lt;T&gt;(string, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindAuraById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindAuraById_System_String_">LegacyScriptExecutorBase.FindAuraById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindAuraByPath.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindAuraByPath_System_String_">LegacyScriptExecutorBase.FindAuraByPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindFolderByPath.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindFolderByPath_System_String_">LegacyScriptExecutorBase.FindFolderByPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindTriggerById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindTriggerById_System_String_">LegacyScriptExecutorBase.FindTriggerById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindActionById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindActionById_System_String_">LegacyScriptExecutorBase.FindActionById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindOverlayById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindOverlayById_System_String_">LegacyScriptExecutorBase.FindOverlayById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggerById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggerById_System_String_">LegacyScriptExecutorBase.GetTriggerById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetActionById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetActionById_System_String_">LegacyScriptExecutorBase.GetActionById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOverlayById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOverlayById_System_String_">LegacyScriptExecutorBase.GetOverlayById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FindModelById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FindModelById__1_System_String_">LegacyScriptExecutorBase.FindModelById&lt;TAuraModel&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetModelById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetModelById__1_System_String_">LegacyScriptExecutorBase.GetModelById&lt;TAuraModel&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetAuraById.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetAuraById_System_String_">LegacyScriptExecutorBase.GetAuraById(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetAuraByPath.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetAuraByPath_System_String_">LegacyScriptExecutorBase.GetAuraByPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CreateAction.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CreateAction_EyeAuras_Shared_IAuraProperties_">LegacyScriptExecutorBase.CreateAction(IAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CreateTrigger.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CreateTrigger_EyeAuras_Shared_IAuraProperties_">LegacyScriptExecutorBase.CreateTrigger(IAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CreateAction.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CreateAction_System_String_">LegacyScriptExecutorBase.CreateAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CreateTrigger.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CreateTrigger_System_String_">LegacyScriptExecutorBase.CreateTrigger(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.ClearLog.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_ClearLog">LegacyScriptExecutorBase.ClearLog()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Sleep.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Sleep_System_TimeSpan_">LegacyScriptExecutorBase.Sleep(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Sleep.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Sleep_System_Int32_">LegacyScriptExecutorBase.Sleep(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.WriteToLog.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_WriteToLog_System_Object_">LegacyScriptExecutorBase.WriteToLog(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.WriteToLog.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_WriteToLog_System_String_">LegacyScriptExecutorBase.WriteToLog(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.WaitForValue.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_WaitForValue__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Predicate___1__System_TimeSpan_">LegacyScriptExecutorBase.WaitForValue&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Predicate&lt;T1&gt;, TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggersByType.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggersByType_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetTriggersByType(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggersByType.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggersByType_System_String_">LegacyScriptExecutorBase.GetTriggersByType(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggersByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggersByName_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetTriggersByName(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOverlayByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOverlayByName_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetOverlayByName(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOnEnterActionsByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOnEnterActionsByName_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetOnEnterActionsByName(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOnExitActionsByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOnExitActionsByName_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetOnExitActionsByName(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetWhileActiveActionsByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetWhileActiveActionsByName_EyeAuras_Shared_Model_IAuraContext_System_String_">LegacyScriptExecutorBase.GetWhileActiveActionsByName(IAuraContext, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggersByName.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggersByName_System_String_">LegacyScriptExecutorBase.GetTriggersByName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetTriggerByType.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetTriggerByType_System_String_">LegacyScriptExecutorBase.GetTriggerByType(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetPropertyValue.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetPropertyValue__1_System_Object_System_String_">LegacyScriptExecutorBase.GetPropertyValue&lt;T&gt;(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.SetPropertyValue.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_SetPropertyValue__1_System_Object_System_String___0_">LegacyScriptExecutorBase.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOrDefault.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOrDefault__1_System_String___0____0_">LegacyScriptExecutorBase.GetOrDefault&lt;T&gt;(string, out T, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOrDefault.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOrDefault__1_System_String___0__">LegacyScriptExecutorBase.GetOrDefault&lt;T&gt;(string, out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetOrDefault.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetOrDefault__1_System_String___0_">LegacyScriptExecutorBase.GetOrDefault&lt;T&gt;(string, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetVariable.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetVariable__1_System_String_">LegacyScriptExecutorBase.GetVariable&lt;T&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetVariable.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetVariable__1_System_String_System_String_">LegacyScriptExecutorBase.GetVariable&lt;T&gt;(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.GetVariable.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_GetVariable__1_EyeAuras_Shared_IAura_System_String_">LegacyScriptExecutorBase.GetVariable&lt;T&gt;(IAura, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.EyeSharedServices.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_EyeSharedServices">LegacyScriptExecutorBase.EyeSharedServices</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Services.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Services">LegacyScriptExecutorBase.Services</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.AuraContext.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_AuraContext">LegacyScriptExecutorBase.AuraContext</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Aura.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Aura">LegacyScriptExecutorBase.Aura</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Context.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Context">LegacyScriptExecutorBase.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.FolderContext.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_FolderContext">LegacyScriptExecutorBase.FolderContext</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Container.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Container">LegacyScriptExecutorBase.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Output.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Output">LegacyScriptExecutorBase.Output</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.IsRunning.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_IsRunning">LegacyScriptExecutorBase.IsRunning</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.CancellationToken.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_CancellationToken">LegacyScriptExecutorBase.CancellationToken</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Log.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Log">LegacyScriptExecutorBase.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Count.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Count">LegacyScriptExecutorBase.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.IsReadOnly.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_IsReadOnly">LegacyScriptExecutorBase.IsReadOnly</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Item.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Item_System_String_">LegacyScriptExecutorBase.this[string]</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Keys.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Keys">LegacyScriptExecutorBase.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptExecutorBase.Values.html#EyeAuras_Scripting_UserSpace_LegacyScriptExecutorBase_Values">LegacyScriptExecutorBase.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Scripting.html">Scripting</a>.<a class="xref" href="EyeAuras.Scripting.UserSpace.html">UserSpace</a></h6>
+  <h6><strong>Assembly</strong>: EyeAuras.Scripting.dll</h6>
+  <h5 id="EyeAuras_Scripting_UserSpace_LegacyScriptActionBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LegacyScriptActionBase : LegacyScriptExecutorBase, IDictionary&lt;string, object&gt;, ICollection&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable, ILegacyScriptAction, ILegacyScriptExecutor, IDisposable, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_UserSpace_LegacyScriptActionBase__ctor" data-uid="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.#ctor">
+          <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.-ctor.html#EyeAuras_Scripting_UserSpace_LegacyScriptActionBase__ctor">LegacyScriptActionBase()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_UserSpace_LegacyScriptActionBase_Execute" data-uid="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.Execute">
+          <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.Execute.html#EyeAuras_Scripting_UserSpace_LegacyScriptActionBase_Execute">Execute()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_UserSpace_LegacyScriptActionBase_ExecuteInternal_System_Threading_CancellationToken_" data-uid="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.ExecuteInternal(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.Scripting.UserSpace.LegacyScriptActionBase.ExecuteInternal.html#EyeAuras_Scripting_UserSpace_LegacyScriptActionBase_ExecuteInternal_System_Threading_CancellationToken_">ExecuteInternal(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

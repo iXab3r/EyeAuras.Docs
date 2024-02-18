@@ -109,19 +109,6 @@
 
 
 <a id="EyeAuras_Shared_Actions_AuraActionBase_1_Execute_" data-uid="EyeAuras.Shared.Actions.AuraActionBase`1.Execute*"></a>
-<h4 id="EyeAuras_Shared_Actions_AuraActionBase_1_Execute" data-uid="EyeAuras.Shared.Actions.AuraActionBase`1.Execute">Execute()</h4>
-<div class="markdown level1 summary"><p>Executes the action. The action can be cancelled (if supported) by calling the Cancel method.</p>
-</div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public void Execute()</code></pre>
-</div>
-<h5 class="implements">Implements</h5>
-    <div><a class="xref" href="EyeAuras.Shared.Actions.IAuraAction.Execute.html#EyeAuras_Shared_Actions_IAuraAction_Execute">IAuraAction.Execute()</a></div>
-
-
-<a id="EyeAuras_Shared_Actions_AuraActionBase_1_Execute_" data-uid="EyeAuras.Shared.Actions.AuraActionBase`1.Execute*"></a>
 <h4 id="EyeAuras_Shared_Actions_AuraActionBase_1_Execute_System_Threading_CancellationToken_" data-uid="EyeAuras.Shared.Actions.AuraActionBase`1.Execute(System.Threading.CancellationToken)">Execute(CancellationToken)</h4>
 <div class="markdown level1 summary"><p>Executes the action with support for parent cancellation.
 The action can be cancelled (if supported) by calling the Cancel method either on the action itself or on the parent.</p>
@@ -129,7 +116,7 @@ The action can be cancelled (if supported) by calling the Cancel method either o
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public void Execute(CancellationToken parentToken)</code></pre>
+  <pre><code class="lang-csharp hljs">public void Execute(CancellationToken parentToken = default)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
