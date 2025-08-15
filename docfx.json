@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../../Sources/EyeAuras.SDK/bin",
+          "src": "../../Sources/EyeAuras.SDK.Embedded/bin",
           "files": [
             "BlazorRete.dll",
             "PropertyBinder.dll",
@@ -41,7 +41,7 @@
       "_appName": "EyeAuras Docs",
       "_appLogoPath": "images/logo.png",
       "_appFaviconPath": "images/favicon.png",
-      "_copyrightFooter": "© Xab3r. All rights reserved.",
+      "_copyrightFooter": "2025 © Xab3r. All rights reserved.",
       "_enableSearch": true,
       "_enableNewTab": true,
       "pdf": true,
