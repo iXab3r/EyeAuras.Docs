@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../../Sources/EyeAuras.SDK.Embedded/bin",
+          "src": "../../Sources/EyeAuras.SDK/bin",
           "files": [
             "BlazorRete.dll",
             "PropertyBinder.dll",
@@ -11,6 +11,8 @@
             "EyeAuras*.Shared.dll",
             "EyeAuras*.Metadata.dll",
             "EyeAuras.*Auras.dll",
+            "EyeAuras.*.Metadata.dll",
+            "EyeAuras.*.Shared.dll",
             "EyeAuras.Roxy*.dll",
             "EyeAuras.BehaviorTree.dll",
             "EyeAuras.Blazor*.dll",
