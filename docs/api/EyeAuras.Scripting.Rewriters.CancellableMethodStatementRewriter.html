@@ -1,0 +1,1050 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class CancellableMethodStatementRewriter
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class CancellableMethodStatementRewriter
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter">
+
+
+
+  <h1 id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter" class="text-break">Class CancellableMethodStatementRewriter
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxvisitor-1">CSharpSyntaxVisitor</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode">SyntaxNode</a>&gt;</div>
+    <div class="level2"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter">CSharpSyntaxRewriter</a></div>
+    <div class="level3"><span class="xref">CancellableMethodStatementRewriter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visit">CSharpSyntaxRewriter.Visit(SyntaxNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittoken">CSharpSyntaxRewriter.VisitToken(SyntaxToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittrivia">CSharpSyntaxRewriter.VisitTrivia(SyntaxTrivia)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlist#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlist-1(microsoft-codeanalysis-syntaxlist((-0)))">CSharpSyntaxRewriter.VisitList&lt;TNode&gt;(SyntaxList&lt;TNode&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlistelement#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlistelement-1(-0)">CSharpSyntaxRewriter.VisitListElement&lt;TNode&gt;(TNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlist#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlist-1(microsoft-codeanalysis-separatedsyntaxlist((-0)))">CSharpSyntaxRewriter.VisitList&lt;TNode&gt;(SeparatedSyntaxList&lt;TNode&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlistseparator">CSharpSyntaxRewriter.VisitListSeparator(SyntaxToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlist#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlist(microsoft-codeanalysis-syntaxtokenlist)">CSharpSyntaxRewriter.VisitList(SyntaxTokenList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlist#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlist(microsoft-codeanalysis-syntaxtrivialist)">CSharpSyntaxRewriter.VisitList(SyntaxTriviaList)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlistelement#microsoft-codeanalysis-csharp-csharpsyntaxrewriter-visitlistelement(microsoft-codeanalysis-syntaxtrivia)">CSharpSyntaxRewriter.VisitListElement(SyntaxTrivia)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitidentifiername">CSharpSyntaxRewriter.VisitIdentifierName(IdentifierNameSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitqualifiedname">CSharpSyntaxRewriter.VisitQualifiedName(QualifiedNameSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitgenericname">CSharpSyntaxRewriter.VisitGenericName(GenericNameSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeargumentlist">CSharpSyntaxRewriter.VisitTypeArgumentList(TypeArgumentListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitaliasqualifiedname">CSharpSyntaxRewriter.VisitAliasQualifiedName(AliasQualifiedNameSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpredefinedtype">CSharpSyntaxRewriter.VisitPredefinedType(PredefinedTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitarraytype">CSharpSyntaxRewriter.VisitArrayType(ArrayTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitarrayrankspecifier">CSharpSyntaxRewriter.VisitArrayRankSpecifier(ArrayRankSpecifierSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpointertype">CSharpSyntaxRewriter.VisitPointerType(PointerTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointertype">CSharpSyntaxRewriter.VisitFunctionPointerType(FunctionPointerTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointerparameterlist">CSharpSyntaxRewriter.VisitFunctionPointerParameterList(FunctionPointerParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointercallingconvention">CSharpSyntaxRewriter.VisitFunctionPointerCallingConvention(FunctionPointerCallingConventionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointerunmanagedcallingconventionlist">CSharpSyntaxRewriter.VisitFunctionPointerUnmanagedCallingConventionList(FunctionPointerUnmanagedCallingConventionListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointerunmanagedcallingconvention">CSharpSyntaxRewriter.VisitFunctionPointerUnmanagedCallingConvention(FunctionPointerUnmanagedCallingConventionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnullabletype">CSharpSyntaxRewriter.VisitNullableType(NullableTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittupletype">CSharpSyntaxRewriter.VisitTupleType(TupleTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittupleelement">CSharpSyntaxRewriter.VisitTupleElement(TupleElementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitomittedtypeargument">CSharpSyntaxRewriter.VisitOmittedTypeArgument(OmittedTypeArgumentSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitreftype">CSharpSyntaxRewriter.VisitRefType(RefTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitscopedtype">CSharpSyntaxRewriter.VisitScopedType(ScopedTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparenthesizedexpression">CSharpSyntaxRewriter.VisitParenthesizedExpression(ParenthesizedExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittupleexpression">CSharpSyntaxRewriter.VisitTupleExpression(TupleExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitprefixunaryexpression">CSharpSyntaxRewriter.VisitPrefixUnaryExpression(PrefixUnaryExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitawaitexpression">CSharpSyntaxRewriter.VisitAwaitExpression(AwaitExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpostfixunaryexpression">CSharpSyntaxRewriter.VisitPostfixUnaryExpression(PostfixUnaryExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitmemberaccessexpression">CSharpSyntaxRewriter.VisitMemberAccessExpression(MemberAccessExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconditionalaccessexpression">CSharpSyntaxRewriter.VisitConditionalAccessExpression(ConditionalAccessExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitmemberbindingexpression">CSharpSyntaxRewriter.VisitMemberBindingExpression(MemberBindingExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitelementbindingexpression">CSharpSyntaxRewriter.VisitElementBindingExpression(ElementBindingExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrangeexpression">CSharpSyntaxRewriter.VisitRangeExpression(RangeExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitimplicitelementaccess">CSharpSyntaxRewriter.VisitImplicitElementAccess(ImplicitElementAccessSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbinaryexpression">CSharpSyntaxRewriter.VisitBinaryExpression(BinaryExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitassignmentexpression">CSharpSyntaxRewriter.VisitAssignmentExpression(AssignmentExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconditionalexpression">CSharpSyntaxRewriter.VisitConditionalExpression(ConditionalExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitthisexpression">CSharpSyntaxRewriter.VisitThisExpression(ThisExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbaseexpression">CSharpSyntaxRewriter.VisitBaseExpression(BaseExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitliteralexpression">CSharpSyntaxRewriter.VisitLiteralExpression(LiteralExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitmakerefexpression">CSharpSyntaxRewriter.VisitMakeRefExpression(MakeRefExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitreftypeexpression">CSharpSyntaxRewriter.VisitRefTypeExpression(RefTypeExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrefvalueexpression">CSharpSyntaxRewriter.VisitRefValueExpression(RefValueExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcheckedexpression">CSharpSyntaxRewriter.VisitCheckedExpression(CheckedExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdefaultexpression">CSharpSyntaxRewriter.VisitDefaultExpression(DefaultExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeofexpression">CSharpSyntaxRewriter.VisitTypeOfExpression(TypeOfExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitsizeofexpression">CSharpSyntaxRewriter.VisitSizeOfExpression(SizeOfExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitelementaccessexpression">CSharpSyntaxRewriter.VisitElementAccessExpression(ElementAccessExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitargumentlist">CSharpSyntaxRewriter.VisitArgumentList(ArgumentListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbracketedargumentlist">CSharpSyntaxRewriter.VisitBracketedArgumentList(BracketedArgumentListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitargument">CSharpSyntaxRewriter.VisitArgument(ArgumentSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitexpressioncolon">CSharpSyntaxRewriter.VisitExpressionColon(ExpressionColonSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnamecolon">CSharpSyntaxRewriter.VisitNameColon(NameColonSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdeclarationexpression">CSharpSyntaxRewriter.VisitDeclarationExpression(DeclarationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcastexpression">CSharpSyntaxRewriter.VisitCastExpression(CastExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitanonymousmethodexpression">CSharpSyntaxRewriter.VisitAnonymousMethodExpression(AnonymousMethodExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitsimplelambdaexpression">CSharpSyntaxRewriter.VisitSimpleLambdaExpression(SimpleLambdaExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrefexpression">CSharpSyntaxRewriter.VisitRefExpression(RefExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparenthesizedlambdaexpression">CSharpSyntaxRewriter.VisitParenthesizedLambdaExpression(ParenthesizedLambdaExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinitializerexpression">CSharpSyntaxRewriter.VisitInitializerExpression(InitializerExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitimplicitobjectcreationexpression">CSharpSyntaxRewriter.VisitImplicitObjectCreationExpression(ImplicitObjectCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitobjectcreationexpression">CSharpSyntaxRewriter.VisitObjectCreationExpression(ObjectCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitwithexpression">CSharpSyntaxRewriter.VisitWithExpression(WithExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitanonymousobjectmemberdeclarator">CSharpSyntaxRewriter.VisitAnonymousObjectMemberDeclarator(AnonymousObjectMemberDeclaratorSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitanonymousobjectcreationexpression">CSharpSyntaxRewriter.VisitAnonymousObjectCreationExpression(AnonymousObjectCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitarraycreationexpression">CSharpSyntaxRewriter.VisitArrayCreationExpression(ArrayCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitimplicitarraycreationexpression">CSharpSyntaxRewriter.VisitImplicitArrayCreationExpression(ImplicitArrayCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitstackallocarraycreationexpression">CSharpSyntaxRewriter.VisitStackAllocArrayCreationExpression(StackAllocArrayCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitimplicitstackallocarraycreationexpression">CSharpSyntaxRewriter.VisitImplicitStackAllocArrayCreationExpression(ImplicitStackAllocArrayCreationExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcollectionexpression">CSharpSyntaxRewriter.VisitCollectionExpression(CollectionExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitexpressionelement">CSharpSyntaxRewriter.VisitExpressionElement(ExpressionElementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitspreadelement">CSharpSyntaxRewriter.VisitSpreadElement(SpreadElementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitqueryexpression">CSharpSyntaxRewriter.VisitQueryExpression(QueryExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitquerybody">CSharpSyntaxRewriter.VisitQueryBody(QueryBodySyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfromclause">CSharpSyntaxRewriter.VisitFromClause(FromClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitletclause">CSharpSyntaxRewriter.VisitLetClause(LetClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitjoinclause">CSharpSyntaxRewriter.VisitJoinClause(JoinClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitjoinintoclause">CSharpSyntaxRewriter.VisitJoinIntoClause(JoinIntoClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitwhereclause">CSharpSyntaxRewriter.VisitWhereClause(WhereClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitorderbyclause">CSharpSyntaxRewriter.VisitOrderByClause(OrderByClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitordering">CSharpSyntaxRewriter.VisitOrdering(OrderingSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitselectclause">CSharpSyntaxRewriter.VisitSelectClause(SelectClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitgroupclause">CSharpSyntaxRewriter.VisitGroupClause(GroupClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitquerycontinuation">CSharpSyntaxRewriter.VisitQueryContinuation(QueryContinuationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitomittedarraysizeexpression">CSharpSyntaxRewriter.VisitOmittedArraySizeExpression(OmittedArraySizeExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterpolatedstringexpression">CSharpSyntaxRewriter.VisitInterpolatedStringExpression(InterpolatedStringExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitispatternexpression">CSharpSyntaxRewriter.VisitIsPatternExpression(IsPatternExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitthrowexpression">CSharpSyntaxRewriter.VisitThrowExpression(ThrowExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitwhenclause">CSharpSyntaxRewriter.VisitWhenClause(WhenClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdiscardpattern">CSharpSyntaxRewriter.VisitDiscardPattern(DiscardPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdeclarationpattern">CSharpSyntaxRewriter.VisitDeclarationPattern(DeclarationPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitvarpattern">CSharpSyntaxRewriter.VisitVarPattern(VarPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrecursivepattern">CSharpSyntaxRewriter.VisitRecursivePattern(RecursivePatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpositionalpatternclause">CSharpSyntaxRewriter.VisitPositionalPatternClause(PositionalPatternClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpropertypatternclause">CSharpSyntaxRewriter.VisitPropertyPatternClause(PropertyPatternClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitsubpattern">CSharpSyntaxRewriter.VisitSubpattern(SubpatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconstantpattern">CSharpSyntaxRewriter.VisitConstantPattern(ConstantPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparenthesizedpattern">CSharpSyntaxRewriter.VisitParenthesizedPattern(ParenthesizedPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrelationalpattern">CSharpSyntaxRewriter.VisitRelationalPattern(RelationalPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypepattern">CSharpSyntaxRewriter.VisitTypePattern(TypePatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbinarypattern">CSharpSyntaxRewriter.VisitBinaryPattern(BinaryPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitunarypattern">CSharpSyntaxRewriter.VisitUnaryPattern(UnaryPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlistpattern">CSharpSyntaxRewriter.VisitListPattern(ListPatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitslicepattern">CSharpSyntaxRewriter.VisitSlicePattern(SlicePatternSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterpolatedstringtext">CSharpSyntaxRewriter.VisitInterpolatedStringText(InterpolatedStringTextSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterpolation">CSharpSyntaxRewriter.VisitInterpolation(InterpolationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterpolationalignmentclause">CSharpSyntaxRewriter.VisitInterpolationAlignmentClause(InterpolationAlignmentClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterpolationformatclause">CSharpSyntaxRewriter.VisitInterpolationFormatClause(InterpolationFormatClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitglobalstatement">CSharpSyntaxRewriter.VisitGlobalStatement(GlobalStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitblock">CSharpSyntaxRewriter.VisitBlock(BlockSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlocalfunctionstatement">CSharpSyntaxRewriter.VisitLocalFunctionStatement(LocalFunctionStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlocaldeclarationstatement">CSharpSyntaxRewriter.VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitvariabledeclaration">CSharpSyntaxRewriter.VisitVariableDeclaration(VariableDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitvariabledeclarator">CSharpSyntaxRewriter.VisitVariableDeclarator(VariableDeclaratorSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitequalsvalueclause">CSharpSyntaxRewriter.VisitEqualsValueClause(EqualsValueClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitsinglevariabledesignation">CSharpSyntaxRewriter.VisitSingleVariableDesignation(SingleVariableDesignationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdiscarddesignation">CSharpSyntaxRewriter.VisitDiscardDesignation(DiscardDesignationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparenthesizedvariabledesignation">CSharpSyntaxRewriter.VisitParenthesizedVariableDesignation(ParenthesizedVariableDesignationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitexpressionstatement">CSharpSyntaxRewriter.VisitExpressionStatement(ExpressionStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitemptystatement">CSharpSyntaxRewriter.VisitEmptyStatement(EmptyStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlabeledstatement">CSharpSyntaxRewriter.VisitLabeledStatement(LabeledStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitgotostatement">CSharpSyntaxRewriter.VisitGotoStatement(GotoStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbreakstatement">CSharpSyntaxRewriter.VisitBreakStatement(BreakStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcontinuestatement">CSharpSyntaxRewriter.VisitContinueStatement(ContinueStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitreturnstatement">CSharpSyntaxRewriter.VisitReturnStatement(ReturnStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitthrowstatement">CSharpSyntaxRewriter.VisitThrowStatement(ThrowStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visityieldstatement">CSharpSyntaxRewriter.VisitYieldStatement(YieldStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitwhilestatement">CSharpSyntaxRewriter.VisitWhileStatement(WhileStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdostatement">CSharpSyntaxRewriter.VisitDoStatement(DoStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitforstatement">CSharpSyntaxRewriter.VisitForStatement(ForStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitforeachstatement">CSharpSyntaxRewriter.VisitForEachStatement(ForEachStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitforeachvariablestatement">CSharpSyntaxRewriter.VisitForEachVariableStatement(ForEachVariableStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitusingstatement">CSharpSyntaxRewriter.VisitUsingStatement(UsingStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfixedstatement">CSharpSyntaxRewriter.VisitFixedStatement(FixedStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcheckedstatement">CSharpSyntaxRewriter.VisitCheckedStatement(CheckedStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitunsafestatement">CSharpSyntaxRewriter.VisitUnsafeStatement(UnsafeStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlockstatement">CSharpSyntaxRewriter.VisitLockStatement(LockStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitifstatement">CSharpSyntaxRewriter.VisitIfStatement(IfStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitelseclause">CSharpSyntaxRewriter.VisitElseClause(ElseClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitswitchstatement">CSharpSyntaxRewriter.VisitSwitchStatement(SwitchStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitswitchsection">CSharpSyntaxRewriter.VisitSwitchSection(SwitchSectionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcasepatternswitchlabel">CSharpSyntaxRewriter.VisitCasePatternSwitchLabel(CasePatternSwitchLabelSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcaseswitchlabel">CSharpSyntaxRewriter.VisitCaseSwitchLabel(CaseSwitchLabelSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdefaultswitchlabel">CSharpSyntaxRewriter.VisitDefaultSwitchLabel(DefaultSwitchLabelSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitswitchexpression">CSharpSyntaxRewriter.VisitSwitchExpression(SwitchExpressionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitswitchexpressionarm">CSharpSyntaxRewriter.VisitSwitchExpressionArm(SwitchExpressionArmSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittrystatement">CSharpSyntaxRewriter.VisitTryStatement(TryStatementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcatchclause">CSharpSyntaxRewriter.VisitCatchClause(CatchClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcatchdeclaration">CSharpSyntaxRewriter.VisitCatchDeclaration(CatchDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcatchfilterclause">CSharpSyntaxRewriter.VisitCatchFilterClause(CatchFilterClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfinallyclause">CSharpSyntaxRewriter.VisitFinallyClause(FinallyClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcompilationunit">CSharpSyntaxRewriter.VisitCompilationUnit(CompilationUnitSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitexternaliasdirective">CSharpSyntaxRewriter.VisitExternAliasDirective(ExternAliasDirectiveSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitusingdirective">CSharpSyntaxRewriter.VisitUsingDirective(UsingDirectiveSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnamespacedeclaration">CSharpSyntaxRewriter.VisitNamespaceDeclaration(NamespaceDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfilescopednamespacedeclaration">CSharpSyntaxRewriter.VisitFileScopedNamespaceDeclaration(FileScopedNamespaceDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitattributelist">CSharpSyntaxRewriter.VisitAttributeList(AttributeListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitattributetargetspecifier">CSharpSyntaxRewriter.VisitAttributeTargetSpecifier(AttributeTargetSpecifierSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitattribute">CSharpSyntaxRewriter.VisitAttribute(AttributeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitattributeargumentlist">CSharpSyntaxRewriter.VisitAttributeArgumentList(AttributeArgumentListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitattributeargument">CSharpSyntaxRewriter.VisitAttributeArgument(AttributeArgumentSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnameequals">CSharpSyntaxRewriter.VisitNameEquals(NameEqualsSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeparameterlist">CSharpSyntaxRewriter.VisitTypeParameterList(TypeParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeparameter">CSharpSyntaxRewriter.VisitTypeParameter(TypeParameterSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitstructdeclaration">CSharpSyntaxRewriter.VisitStructDeclaration(StructDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitinterfacedeclaration">CSharpSyntaxRewriter.VisitInterfaceDeclaration(InterfaceDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrecorddeclaration">CSharpSyntaxRewriter.VisitRecordDeclaration(RecordDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitenumdeclaration">CSharpSyntaxRewriter.VisitEnumDeclaration(EnumDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdelegatedeclaration">CSharpSyntaxRewriter.VisitDelegateDeclaration(DelegateDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitenummemberdeclaration">CSharpSyntaxRewriter.VisitEnumMemberDeclaration(EnumMemberDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbaselist">CSharpSyntaxRewriter.VisitBaseList(BaseListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitsimplebasetype">CSharpSyntaxRewriter.VisitSimpleBaseType(SimpleBaseTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitprimaryconstructorbasetype">CSharpSyntaxRewriter.VisitPrimaryConstructorBaseType(PrimaryConstructorBaseTypeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeparameterconstraintclause">CSharpSyntaxRewriter.VisitTypeParameterConstraintClause(TypeParameterConstraintClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconstructorconstraint">CSharpSyntaxRewriter.VisitConstructorConstraint(ConstructorConstraintSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitclassorstructconstraint">CSharpSyntaxRewriter.VisitClassOrStructConstraint(ClassOrStructConstraintSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypeconstraint">CSharpSyntaxRewriter.VisitTypeConstraint(TypeConstraintSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdefaultconstraint">CSharpSyntaxRewriter.VisitDefaultConstraint(DefaultConstraintSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitallowsconstraintclause">CSharpSyntaxRewriter.VisitAllowsConstraintClause(AllowsConstraintClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitrefstructconstraint">CSharpSyntaxRewriter.VisitRefStructConstraint(RefStructConstraintSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfielddeclaration">CSharpSyntaxRewriter.VisitFieldDeclaration(FieldDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visiteventfielddeclaration">CSharpSyntaxRewriter.VisitEventFieldDeclaration(EventFieldDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitexplicitinterfacespecifier">CSharpSyntaxRewriter.VisitExplicitInterfaceSpecifier(ExplicitInterfaceSpecifierSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitmethoddeclaration">CSharpSyntaxRewriter.VisitMethodDeclaration(MethodDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitoperatordeclaration">CSharpSyntaxRewriter.VisitOperatorDeclaration(OperatorDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconversionoperatordeclaration">CSharpSyntaxRewriter.VisitConversionOperatorDeclaration(ConversionOperatorDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconstructordeclaration">CSharpSyntaxRewriter.VisitConstructorDeclaration(ConstructorDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconstructorinitializer">CSharpSyntaxRewriter.VisitConstructorInitializer(ConstructorInitializerSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdestructordeclaration">CSharpSyntaxRewriter.VisitDestructorDeclaration(DestructorDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpropertydeclaration">CSharpSyntaxRewriter.VisitPropertyDeclaration(PropertyDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitarrowexpressionclause">CSharpSyntaxRewriter.VisitArrowExpressionClause(ArrowExpressionClauseSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visiteventdeclaration">CSharpSyntaxRewriter.VisitEventDeclaration(EventDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitindexerdeclaration">CSharpSyntaxRewriter.VisitIndexerDeclaration(IndexerDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitaccessorlist">CSharpSyntaxRewriter.VisitAccessorList(AccessorListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitaccessordeclaration">CSharpSyntaxRewriter.VisitAccessorDeclaration(AccessorDeclarationSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparameterlist">CSharpSyntaxRewriter.VisitParameterList(ParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbracketedparameterlist">CSharpSyntaxRewriter.VisitBracketedParameterList(BracketedParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitparameter">CSharpSyntaxRewriter.VisitParameter(ParameterSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitfunctionpointerparameter">CSharpSyntaxRewriter.VisitFunctionPointerParameter(FunctionPointerParameterSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitincompletemember">CSharpSyntaxRewriter.VisitIncompleteMember(IncompleteMemberSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitskippedtokenstrivia">CSharpSyntaxRewriter.VisitSkippedTokensTrivia(SkippedTokensTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdocumentationcommenttrivia">CSharpSyntaxRewriter.VisitDocumentationCommentTrivia(DocumentationCommentTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visittypecref">CSharpSyntaxRewriter.VisitTypeCref(TypeCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitqualifiedcref">CSharpSyntaxRewriter.VisitQualifiedCref(QualifiedCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnamemembercref">CSharpSyntaxRewriter.VisitNameMemberCref(NameMemberCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitindexermembercref">CSharpSyntaxRewriter.VisitIndexerMemberCref(IndexerMemberCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitoperatormembercref">CSharpSyntaxRewriter.VisitOperatorMemberCref(OperatorMemberCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitconversionoperatormembercref">CSharpSyntaxRewriter.VisitConversionOperatorMemberCref(ConversionOperatorMemberCrefSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcrefparameterlist">CSharpSyntaxRewriter.VisitCrefParameterList(CrefParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcrefbracketedparameterlist">CSharpSyntaxRewriter.VisitCrefBracketedParameterList(CrefBracketedParameterListSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitcrefparameter">CSharpSyntaxRewriter.VisitCrefParameter(CrefParameterSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlelement">CSharpSyntaxRewriter.VisitXmlElement(XmlElementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlelementstarttag">CSharpSyntaxRewriter.VisitXmlElementStartTag(XmlElementStartTagSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlelementendtag">CSharpSyntaxRewriter.VisitXmlElementEndTag(XmlElementEndTagSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlemptyelement">CSharpSyntaxRewriter.VisitXmlEmptyElement(XmlEmptyElementSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlname">CSharpSyntaxRewriter.VisitXmlName(XmlNameSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlprefix">CSharpSyntaxRewriter.VisitXmlPrefix(XmlPrefixSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmltextattribute">CSharpSyntaxRewriter.VisitXmlTextAttribute(XmlTextAttributeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlcrefattribute">CSharpSyntaxRewriter.VisitXmlCrefAttribute(XmlCrefAttributeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlnameattribute">CSharpSyntaxRewriter.VisitXmlNameAttribute(XmlNameAttributeSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmltext">CSharpSyntaxRewriter.VisitXmlText(XmlTextSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlcdatasection">CSharpSyntaxRewriter.VisitXmlCDataSection(XmlCDataSectionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlprocessinginstruction">CSharpSyntaxRewriter.VisitXmlProcessingInstruction(XmlProcessingInstructionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitxmlcomment">CSharpSyntaxRewriter.VisitXmlComment(XmlCommentSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitifdirectivetrivia">CSharpSyntaxRewriter.VisitIfDirectiveTrivia(IfDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitelifdirectivetrivia">CSharpSyntaxRewriter.VisitElifDirectiveTrivia(ElifDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitelsedirectivetrivia">CSharpSyntaxRewriter.VisitElseDirectiveTrivia(ElseDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitendifdirectivetrivia">CSharpSyntaxRewriter.VisitEndIfDirectiveTrivia(EndIfDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitregiondirectivetrivia">CSharpSyntaxRewriter.VisitRegionDirectiveTrivia(RegionDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitendregiondirectivetrivia">CSharpSyntaxRewriter.VisitEndRegionDirectiveTrivia(EndRegionDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visiterrordirectivetrivia">CSharpSyntaxRewriter.VisitErrorDirectiveTrivia(ErrorDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitwarningdirectivetrivia">CSharpSyntaxRewriter.VisitWarningDirectiveTrivia(WarningDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitbaddirectivetrivia">CSharpSyntaxRewriter.VisitBadDirectiveTrivia(BadDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitdefinedirectivetrivia">CSharpSyntaxRewriter.VisitDefineDirectiveTrivia(DefineDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitundefdirectivetrivia">CSharpSyntaxRewriter.VisitUndefDirectiveTrivia(UndefDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlinedirectivetrivia">CSharpSyntaxRewriter.VisitLineDirectiveTrivia(LineDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlinedirectiveposition">CSharpSyntaxRewriter.VisitLineDirectivePosition(LineDirectivePositionSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitlinespandirectivetrivia">CSharpSyntaxRewriter.VisitLineSpanDirectiveTrivia(LineSpanDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpragmawarningdirectivetrivia">CSharpSyntaxRewriter.VisitPragmaWarningDirectiveTrivia(PragmaWarningDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitpragmachecksumdirectivetrivia">CSharpSyntaxRewriter.VisitPragmaChecksumDirectiveTrivia(PragmaChecksumDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitreferencedirectivetrivia">CSharpSyntaxRewriter.VisitReferenceDirectiveTrivia(ReferenceDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitloaddirectivetrivia">CSharpSyntaxRewriter.VisitLoadDirectiveTrivia(LoadDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitshebangdirectivetrivia">CSharpSyntaxRewriter.VisitShebangDirectiveTrivia(ShebangDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitnullabledirectivetrivia">CSharpSyntaxRewriter.VisitNullableDirectiveTrivia(NullableDirectiveTriviaSyntax)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxrewriter.visitintostructuredtrivia">CSharpSyntaxRewriter.VisitIntoStructuredTrivia</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxvisitor-1.defaultvisit">CSharpSyntaxVisitor&lt;SyntaxNode&gt;.DefaultVisit(SyntaxNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Scripting.html">Scripting</a>.<a class="xref" href="EyeAuras.Scripting.Rewriters.html">Rewriters</a></h6>
+  <h6><strong>Assembly</strong>: EyeAuras.Scripting.dll</h6>
+  <h5 id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CancellableMethodStatementRewriter : CSharpSyntaxRewriter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter__ctor_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.#ctor(Microsoft.CodeAnalysis.SemanticModel,System.Boolean)">
+          <a class="xref" href="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.-ctor.html#EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter__ctor_Microsoft_CodeAnalysis_SemanticModel_System_Boolean_">CancellableMethodStatementRewriter(SemanticModel, bool)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_EnsureTokenIsAvailable" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.EnsureTokenIsAvailable">
+          <a class="xref" href="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.EnsureTokenIsAvailable.html#EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_EnsureTokenIsAvailable">EnsureTokenIsAvailable</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_VisitClassDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.VisitClassDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax)">
+          <a class="xref" href="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.VisitClassDeclaration.html#EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_VisitClassDeclaration_Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_">VisitClassDeclaration(ClassDeclarationSyntax)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_VisitInvocationExpression_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_" data-uid="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.VisitInvocationExpression(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)">
+          <a class="xref" href="EyeAuras.Scripting.Rewriters.CancellableMethodStatementRewriter.VisitInvocationExpression.html#EyeAuras_Scripting_Rewriters_CancellableMethodStatementRewriter_VisitInvocationExpression_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_">VisitInvocationExpression(InvocationExpressionSyntax)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

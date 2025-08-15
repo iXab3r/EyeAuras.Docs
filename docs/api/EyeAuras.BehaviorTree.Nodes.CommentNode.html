@@ -111,14 +111,14 @@
     <div class="level1"><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveObject.html">DisposableReactiveObject</a></div>
     <div class="level2"><a class="xref" href="PoeShared.Bindings.BindableReactiveObject.html">BindableReactiveObject</a></div>
     <div class="level3"><a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.html">AuraObjectBase</a></div>
-    <div class="level4"><a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.html">AuraObjectBase</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase.html">CommentNodePropertiesBase</a>&gt;</div>
-    <div class="level5"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.html">NodeBase</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase.html">CommentNodePropertiesBase</a>&gt;</div>
+    <div class="level4"><a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.html">AuraObjectBase</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodeProperties.html">CommentNodeProperties</a>&gt;</div>
+    <div class="level5"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.html">NodeBase</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodeProperties.html">CommentNodeProperties</a>&gt;</div>
     <div class="level6"><span class="xref">CommentNode</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="EyeAuras.BehaviorTree.Nodes.INode-1.html">INode</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase.html">CommentNodePropertiesBase</a>&gt;</div>
-    <div><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase.html">CommentNodePropertiesBase</a>&gt;</div>
+    <div><a class="xref" href="EyeAuras.BehaviorTree.Nodes.INode-1.html">INode</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodeProperties.html">CommentNodeProperties</a>&gt;</div>
+    <div><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject</a>&lt;<a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNodeProperties.html">CommentNodeProperties</a>&gt;</div>
     <div><a class="xref" href="EyeAuras.BehaviorTree.Nodes.INode.html">INode</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></div>
     <div><a class="xref" href="PoeShared.Bindings.IBindableReactiveObject.html">IBindableReactiveObject</a></div>
@@ -140,106 +140,148 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ResetStatus.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ResetStatus">NodeBase&lt;CommentNodePropertiesBase&gt;.ResetStatus()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Freeze.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Freeze_System_String_">NodeBase&lt;CommentNodeProperties&gt;.Freeze(string)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Clone.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clone">NodeBase&lt;CommentNodePropertiesBase&gt;.Clone()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ResetStatus.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ResetStatus">NodeBase&lt;CommentNodeProperties&gt;.ResetStatus()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Remove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Remove">NodeBase&lt;CommentNodePropertiesBase&gt;.Remove()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CloneProperties.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CloneProperties_System_Boolean_">NodeBase&lt;CommentNodeProperties&gt;.CloneProperties(bool)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Tick.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Tick_System_Threading_CancellationToken_">NodeBase&lt;CommentNodePropertiesBase&gt;.Tick(CancellationToken)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Remove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Remove">NodeBase&lt;CommentNodeProperties&gt;.Remove()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Reset.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Reset">NodeBase&lt;CommentNodePropertiesBase&gt;.Reset()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Cancel.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Cancel">NodeBase&lt;CommentNodeProperties&gt;.Cancel()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.AddChild.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_AddChild__1_EyeAuras_BehaviorTree_Nodes_IBTNodeProperties_">NodeBase&lt;CommentNodePropertiesBase&gt;.AddChild&lt;TNode&gt;(IBTNodeProperties)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParent.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParent">NodeBase&lt;CommentNodeProperties&gt;.CanBecomeParent()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FormatToString.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">NodeBase&lt;CommentNodePropertiesBase&gt;.FormatToString(ToStringBuilder)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParentOf.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParentOf_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeBase&lt;CommentNodeProperties&gt;.CanBecomeParentOf(IBTNode)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeStorage.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeStorage">NodeBase&lt;CommentNodePropertiesBase&gt;.NodeStorage</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Tick.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Tick_System_Threading_CancellationToken_">NodeBase&lt;CommentNodeProperties&gt;.Tick(CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeFactory.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeFactory">NodeBase&lt;CommentNodePropertiesBase&gt;.NodeFactory</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Reset.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Reset">NodeBase&lt;CommentNodeProperties&gt;.Reset()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeCacheFactory.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeCacheFactory">NodeBase&lt;CommentNodePropertiesBase&gt;.NodeCacheFactory</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.AddChild.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_AddChild__1_EyeAuras_BehaviorTree_Nodes_IBTNodeProperties_">NodeBase&lt;CommentNodeProperties&gt;.AddChild&lt;TNode&gt;(IBTNodeProperties)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Clock.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clock">NodeBase&lt;CommentNodePropertiesBase&gt;.Clock</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FormatToString.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">NodeBase&lt;CommentNodeProperties&gt;.FormatToString(ToStringBuilder)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Position.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Position">NodeBase&lt;CommentNodePropertiesBase&gt;.Position</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CalculateTimeLeft.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CalculateTimeLeft_System_Nullable_System_TimeSpan__System_Nullable_System_TimeSpan__">NodeBase&lt;CommentNodeProperties&gt;.CalculateTimeLeft(TimeSpan?, TimeSpan?)</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Name.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Name">NodeBase&lt;CommentNodePropertiesBase&gt;.Name</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.EventLoggingService.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_EventLoggingService">NodeBase&lt;CommentNodeProperties&gt;.EventLoggingService</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsEnabled.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsEnabled">NodeBase&lt;CommentNodePropertiesBase&gt;.IsEnabled</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeStorage.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeStorage">NodeBase&lt;CommentNodeProperties&gt;.NodeStorage</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Children.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Children">NodeBase&lt;CommentNodePropertiesBase&gt;.Children</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeFactory.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeFactory">NodeBase&lt;CommentNodeProperties&gt;.NodeFactory</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenAsList.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenAsList">NodeBase&lt;CommentNodePropertiesBase&gt;.ChildrenAsList</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeCacheFactory.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeCacheFactory">NodeBase&lt;CommentNodeProperties&gt;.NodeCacheFactory</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenById">NodeBase&lt;CommentNodePropertiesBase&gt;.ChildrenById</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Clock.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clock">NodeBase&lt;CommentNodeProperties&gt;.Clock</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildIdStrategy.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildIdStrategy">NodeBase&lt;CommentNodePropertiesBase&gt;.ChildIdStrategy</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Position.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Position">NodeBase&lt;CommentNodeProperties&gt;.Position</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenSource.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenSource">NodeBase&lt;CommentNodePropertiesBase&gt;.ChildrenSource</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Name.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Name">NodeBase&lt;CommentNodeProperties&gt;.Name</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Status.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Status">NodeBase&lt;CommentNodePropertiesBase&gt;.Status</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Depth.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Depth">NodeBase&lt;CommentNodeProperties&gt;.Depth</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.LastTickTimestamp.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_LastTickTimestamp">NodeBase&lt;CommentNodePropertiesBase&gt;.LastTickTimestamp</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsEnabled.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsEnabled">NodeBase&lt;CommentNodeProperties&gt;.IsEnabled</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.LastTickDuration.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_LastTickDuration">NodeBase&lt;CommentNodePropertiesBase&gt;.LastTickDuration</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsSelected.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsSelected">NodeBase&lt;CommentNodeProperties&gt;.IsSelected</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsBusy.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsBusy">NodeBase&lt;CommentNodePropertiesBase&gt;.IsBusy</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsRemoving.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsRemoving">NodeBase&lt;CommentNodeProperties&gt;.IsRemoving</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReady.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReady">NodeBase&lt;CommentNodePropertiesBase&gt;.IsReady</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozen.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozen">NodeBase&lt;CommentNodeProperties&gt;.IsFrozen</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ShortDescription.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription">NodeBase&lt;CommentNodePropertiesBase&gt;.ShortDescription</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozenState.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozenState">NodeBase&lt;CommentNodeProperties&gt;.IsFrozenState</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReferenceNode.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReferenceNode">NodeBase&lt;CommentNodePropertiesBase&gt;.IsReferenceNode</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Children.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Children">NodeBase&lt;CommentNodeProperties&gt;.Children</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.DefaultName.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_DefaultName">NodeBase&lt;CommentNodePropertiesBase&gt;.DefaultName</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenAsList.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenAsList">NodeBase&lt;CommentNodeProperties&gt;.ChildrenAsList</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeId.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeId">NodeBase&lt;CommentNodePropertiesBase&gt;.NodeId</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildren.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildren">NodeBase&lt;CommentNodeProperties&gt;.FlattenChildren</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Parent.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Parent">NodeBase&lt;CommentNodePropertiesBase&gt;.Parent</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildrenById">NodeBase&lt;CommentNodeProperties&gt;.FlattenChildrenById</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Root.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Root">NodeBase&lt;CommentNodePropertiesBase&gt;.Root</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenById">NodeBase&lt;CommentNodeProperties&gt;.ChildrenById</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Blackboard.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Blackboard">NodeBase&lt;CommentNodePropertiesBase&gt;.Blackboard</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildIdStrategy.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildIdStrategy">NodeBase&lt;CommentNodeProperties&gt;.ChildIdStrategy</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.SaveProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_SaveProperties">AuraObjectBase&lt;CommentNodePropertiesBase&gt;.SaveProperties()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenSource.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenSource">NodeBase&lt;CommentNodeProperties&gt;.ChildrenSource</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.LoadProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_LoadProperties_EyeAuras_Shared_IAuraProperties_">AuraObjectBase&lt;CommentNodePropertiesBase&gt;.LoadProperties(IAuraProperties)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Status.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Status">NodeBase&lt;CommentNodeProperties&gt;.Status</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.Properties.html#EyeAuras_Shared_Model_AuraObjectBase_1_Properties">AuraObjectBase&lt;CommentNodePropertiesBase&gt;.Properties</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.LastTickTimestamp.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_LastTickTimestamp">NodeBase&lt;CommentNodeProperties&gt;.LastTickTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.LastTickDuration.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_LastTickDuration">NodeBase&lt;CommentNodeProperties&gt;.LastTickDuration</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsBusy.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsBusy">NodeBase&lt;CommentNodeProperties&gt;.IsBusy</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReady.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReady">NodeBase&lt;CommentNodeProperties&gt;.IsReady</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanRemove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanRemove">NodeBase&lt;CommentNodeProperties&gt;.CanRemove</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ShortDescription.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription">NodeBase&lt;CommentNodeProperties&gt;.ShortDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.DefaultName.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_DefaultName">NodeBase&lt;CommentNodeProperties&gt;.DefaultName</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeId.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeId">NodeBase&lt;CommentNodeProperties&gt;.NodeId</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Parent.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Parent">NodeBase&lt;CommentNodeProperties&gt;.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Root.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Root">NodeBase&lt;CommentNodeProperties&gt;.Root</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Blackboard.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Blackboard">NodeBase&lt;CommentNodeProperties&gt;.Blackboard</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Session.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Session">NodeBase&lt;CommentNodeProperties&gt;.Session</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.SaveProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_SaveProperties">AuraObjectBase&lt;CommentNodeProperties&gt;.SaveProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.LoadProperties.html#EyeAuras_Shared_Model_AuraObjectBase_1_LoadProperties_EyeAuras_Shared_IAuraProperties_">AuraObjectBase&lt;CommentNodeProperties&gt;.LoadProperties(IAuraProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.Properties.html#EyeAuras_Shared_Model_AuraObjectBase_1_Properties">AuraObjectBase&lt;CommentNodeProperties&gt;.Properties</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesRefresh.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesRefresh">AuraObjectBase.RaisePropertiesRefresh()</a>
@@ -267,6 +309,9 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">AuraObjectBase.RaisePropertiesWhenAny&lt;T&gt;(T, params Expression&lt;Func&lt;T, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1___2___">AuraObjectBase.RaisePropertiesWhenAny&lt;TSender, TRet, T1&gt;(TSender, Expression&lt;Func&lt;TSender, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, T1&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt;)</a>
@@ -367,7 +412,7 @@
   <h5 id="EyeAuras_BehaviorTree_Nodes_CommentNode_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AuraEntity(Name = &quot;Comment&quot;)]
-public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;CommentNodePropertiesBase&gt;, IAuraObject&lt;CommentNodePropertiesBase&gt;, INode, IAuraObject, IBindableReactiveObject, ICanSetContext, IHasContext, IBTNode, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, IBehaviorTreeSerializable, ICanSetName, IHasName, IEntityContainer, IHasId, IHasTypedId&lt;string&gt;</code></pre>
+public class CommentNode : NodeBase&lt;CommentNodeProperties&gt;, INode&lt;CommentNodeProperties&gt;, IAuraObject&lt;CommentNodeProperties&gt;, INode, IAuraObject, IBindableReactiveObject, ICanSetContext, IHasContext, IBTNode, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, IBehaviorTreeSerializable, ICanSetName, IHasName, IEntityContainer, IHasId, IHasTypedId&lt;string&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -398,8 +443,14 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_Comment" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.Comment">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.Comment.html#EyeAuras_BehaviorTree_Nodes_CommentNode_Comment">Comment</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_AutoSize" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.AutoSize">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.AutoSize.html#EyeAuras_BehaviorTree_Nodes_CommentNode_AutoSize">AutoSize</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_Content" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.Content">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.Content.html#EyeAuras_BehaviorTree_Nodes_CommentNode_Content">Content</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -412,6 +463,18 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
       <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_MaxOutputs" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.MaxOutputs">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.MaxOutputs.html#EyeAuras_BehaviorTree_Nodes_CommentNode_MaxOutputs">MaxOutputs</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_Text" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.Text">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.Text.html#EyeAuras_BehaviorTree_Nodes_CommentNode_Text">Text</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_TextFormat" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.TextFormat">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.TextFormat.html#EyeAuras_BehaviorTree_Nodes_CommentNode_TextFormat">TextFormat</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -435,35 +498,20 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
 </td>
       </tr>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_VisitLoad_EyeAuras_BehaviorTree_Nodes_CommentNodePropertiesBase_" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitLoad(EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase)">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitLoad.html#EyeAuras_BehaviorTree_Nodes_CommentNode_VisitLoad_EyeAuras_BehaviorTree_Nodes_CommentNodePropertiesBase_">VisitLoad(CommentNodePropertiesBase)</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_VisitLoad_EyeAuras_BehaviorTree_Nodes_CommentNodeProperties_" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitLoad(EyeAuras.BehaviorTree.Nodes.CommentNodeProperties)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitLoad.html#EyeAuras_BehaviorTree_Nodes_CommentNode_VisitLoad_EyeAuras_BehaviorTree_Nodes_CommentNodeProperties_">VisitLoad(CommentNodeProperties)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_VisitSave_EyeAuras_BehaviorTree_Nodes_CommentNodePropertiesBase_" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitSave(EyeAuras.BehaviorTree.Nodes.CommentNodePropertiesBase)">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitSave.html#EyeAuras_BehaviorTree_Nodes_CommentNode_VisitSave_EyeAuras_BehaviorTree_Nodes_CommentNodePropertiesBase_">VisitSave(CommentNodePropertiesBase)</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_CommentNode_VisitSave_EyeAuras_BehaviorTree_Nodes_CommentNodeProperties_" data-uid="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitSave(EyeAuras.BehaviorTree.Nodes.CommentNodeProperties)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.VisitSave.html#EyeAuras_BehaviorTree_Nodes_CommentNode_VisitSave_EyeAuras_BehaviorTree_Nodes_CommentNodeProperties_">VisitSave(CommentNodeProperties)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -475,6 +523,9 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -498,13 +549,16 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -516,7 +570,22 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildren.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildren_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildren(IBTNode)</a>
   </div>
   <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildrenAndSelf.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildrenAndSelf_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildrenAndSelf(IBTNode)</a>
+  </div>
+  <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.FindRoot.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_FindRoot_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.FindRoot(IBTNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetChildById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetChildById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetChildById(IBTNode, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetDisplayMode.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetDisplayMode_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetDisplayMode(IBTNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetNodeById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetNodeById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetNodeById(IBTNode, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetTreeKind.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetTreeKind_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetTreeKind(IBTNode)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
@@ -535,7 +604,7 @@ public class CommentNode : NodeBase&lt;CommentNodePropertiesBase&gt;, INode&lt;C
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

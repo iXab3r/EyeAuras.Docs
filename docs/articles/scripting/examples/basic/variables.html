@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Variables | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Variables | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../../styles/config.css">
+      <link rel="stylesheet" href="../../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <link rel="stylesheet" href="../../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../../index.html">
+              <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../../index.html">
+                          <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="why-variables">Why Variables?</h1>
+
+<p>Typically, your scripts will not run indefinitely; they are not full-fledged programs with long lifecycles. Usually, a script is launched, performs a task, and then terminates.</p>
+<p>In EyeAuras, there is a variety of data storage options. Let's explore from short-lived to long-lasting.</p>
+<h1 id="local-variables">Local Variables</h1>
+<p>There's nothing complicated here - these variables exist only as long as the method/code block is running. There are no special features here.</p>
+<pre><code class="lang-csharp">var test = 123;
+</code></pre>
+<h1 id="sandbox-properties">Sandbox Properties</h1>
+<p>Since your script is a class in C#, you can declare properties and assign values to them. The unique feature is that the values of these properties persist until the script changes. As soon as you make a change, the script will be recompiled, and all values stored in the properties will be lost. It's very convenient for storing things that need to be initialized only once and then used throughout the script's lifetime.</p>
+<pre><code class="lang-csharp">int MyCounter { get; set; }
+
+// lots of your code here
+
+MyCounter = 16;
+
+// more code here
+
+Log.Info($&quot;Counter: {MyCounter}&quot;);
+
+</code></pre>
+<h1 id="scriptaurafolder-variables">Script/Aura/Folder Variables</h1>
+<p>Here is where non-standard things begin, which are part of the EyeAuras architecture. For long-term storage (even between program runs in the near future), you can store data in auras, folders, and trees. To view the current variable values, select an aura or folder and open the <code>Variables</code> tab. There you can see the type, current value, last update time, etc. Editing is not possible yet, only deletion.
+The main purpose of such variables is to transfer data from one script to another, store user configurations, etc.</p>
+<p><img src="https://i.imgur.com/J9n7GkS.png" alt="Variables"></p>
+<h1 id="script-variables---variables-api">Script Variables - Variables API</h1>
+<p>A script can read and write variables that not only persist between script changes but are also accessible for <strong>other scripts</strong>. This is one way to transfer data and settings between scripts.
+For example, one of your scripts can handle configuration, while another can perform tasks using that configuration.</p>
+<p>So, your scripts running in the <a href="/ru/scripting/sandbox">sandbox</a> environment, by default, have access to the <a href="/ru/scripting/api/IVariablesScriptingApi">Variables</a> property.</p>
+<pre><code class="lang-csharp">Log.Info($&quot;Variables count: {Variables.Count}&quot;);
+</code></pre>
+<p>There are quite a few methods available, but we'll focus on two main ways. It's an associative array, meaning you can read and write using strings.</p>
+<p>Let's start by writing something there.</p>
+<pre><code class="lang-csharp">Variables[&quot;myCounter&quot;] = 1; // write 1 to the variable named myCounter
+Log.Info($&quot;Counter value: {Variables[&quot;myCounter&quot;]}&quot;); // read the value of the myCounter variable, which will be 1
+</code></pre>
+<p>The downside of this approach is that if we need to know the data type we are working with, we need to cast it to the correct type because this information will be lost upon saving.</p>
+<pre><code class="lang-csharp">Variables[&quot;myCounter&quot;] = 1; // write 1 to the variable named myCounter
+// Variables[&quot;myCounter&quot;] = Variables[&quot;myCounter&quot;] + 1; // won't work and will throw an error!
+
+Variables[&quot;myCounter&quot;] = (int)Variables[&quot;myCounter&quot;] + 1; // this will work
+Log.Info($&quot;Counter value: {Variables[&quot;myCounter&quot;]}&quot;); // myCounter will be 2
+</code></pre>
+<p><strong>C#</strong> is not <strong>Python</strong>; it's important for C# to know the data types it's working with. However, constantly casting to the correct type is inconvenient. Here, the helper class <code>ScriptVariable&lt;T&gt;</code> comes to the rescue, allowing you to specify the <strong>name</strong> and <strong>type</strong> of the variable once and then work with it directly.</p>
+<pre><code class="lang-csharp">var myCounter = Variables.Get&lt;int&gt;(&quot;myCounter&quot;); // initialize an int variable named myCounter
+myCounter.Value = myCounter.Value + 1; // increase the value by 1
+Log.Info($&quot;Counter value: {myCounter}&quot;); // myCounter will be 2, 3, etc.
+</code></pre>
+<p>In this approach, you only need to declare the variable once, similar to local variables, and then work with them without worrying about mixing up names or types.</p>
+<h1 id="aurafolder-variables">Aura/Folder Variables</h1>
+<p>Just like a script, each aura and folder also serve as containers for storing any variables. Knowing the path to an aura/folder allows you to access its variables. The <a href="/ru/scripting/api/IVariablesScriptingApi">Variables</a> has two methods <code>ScriptVariable&lt;T&gt; Get&lt;T&gt;(string auraPath, string variableName);</code> and <code>ScriptVariable&lt;T&gt; Get&lt;T&gt;(IHasVariables source, string variableName);</code>, which can be used to read and write variables from any source.</p>
+<h2 id="option-1">Option 1</h2>
+<pre><code class="lang-csharp">var auraVariable = Variables.Get&lt;int&gt;(@&quot;.\Something&quot;, &quot;myCounter&quot;);
+auraVariable.Value = 16;
+</code></pre>
+<p>Specify where to find the aura/folder/tree, and the program will handle the rest.</p>
+<h2 id="option-2">Option 2</h2>
+<pre><code class="lang-csharp">var aura = AuraTree.GetAuraByPath(@&quot;.\Something&quot;);
+var auraVariable = Variables.Get&lt;int&gt;(aura, &quot;myCounter&quot;);
+auraVariable.Value = 16;
+</code></pre>
+<p>First, find the aura/folder and then specify to read the variables from it.</p>
+<h1 id="hierarchy">Hierarchy</h1>
+<p>All aura and folder variables follow a hierarchy. If you enter a value for a variable at the folder level, all child folders and auras will have access to that value. It also supports the ability to override values. The closest analogy to this structure is <a href="https://en.wikipedia.org/wiki/CSS">CSS</a> in HTML.
+This structure allows for flexible settings propagation to all child auras. EyeAuras uses this feature to pass default values deep into the tree, such as the window to attach to, the simulator to use for input, etc.
+p.s. By overwriting, for example, <code>default.WindowSelector.TargetWindow</code>, you will affect how the default window is selected in all nested auras.</p>
+<h1 id="blackboard-aka-tree-variables">Blackboard aka Tree Variables</h1>
+<blockquote>
+<p>TBA
+{.is-warning}</p>
+</blockquote>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../../styles/singulink.js"></script>    </body>
+</html>

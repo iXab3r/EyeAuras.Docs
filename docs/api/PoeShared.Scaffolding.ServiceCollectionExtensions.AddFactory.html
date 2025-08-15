@@ -109,6 +109,53 @@
 
 
 <a id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory_" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory*"></a>
+<h4 id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___0__" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0})">AddFactory&lt;TImplementation&gt;(IServiceCollection, Func&lt;IServiceProvider, TImplementation&gt;)</h4>
+<div class="markdown level1 summary"></div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static void AddFactory&lt;TImplementation&gt;(this IServiceCollection services, Func&lt;IServiceProvider, TImplementation&gt; factoryFunc) where TImplementation : class</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
+      <td><span class="parametername">services</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TImplementation&gt;</td>
+      <td><span class="parametername">factoryFunc</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TImplementation</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory_" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory*"></a>
 <h4 id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddFactory&lt;TService, TImplementation&gt;(IServiceCollection)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
@@ -152,53 +199,11 @@
     </tr>
   </tbody>
 </table>
-
-
-<a id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory_" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory*"></a>
-<h4 id="PoeShared_Scaffolding_ServiceCollectionExtensions_AddFactory__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="PoeShared.Scaffolding.ServiceCollectionExtensions.AddFactory``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddFactory&lt;TService&gt;(IServiceCollection)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static void AddFactory&lt;TService&gt;(this IServiceCollection services) where TService : class</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
-      <td><span class="parametername">services</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="typeParameters">Type Parameters</h5>
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="parametername">TService</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

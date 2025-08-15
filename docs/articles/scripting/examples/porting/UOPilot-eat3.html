@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>UOPilot | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="UOPilot | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../../styles/config.css">
+      <link rel="stylesheet" href="../../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <link rel="stylesheet" href="../../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../../index.html">
+              <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../../index.html">
+                          <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="what-is-this">What is This?</h1>
+
+<p>An example of a UO Pilot script and how its nearly identical equivalent can be implemented in EyeAuras.</p>
+<p>The only difference is that I moved status message display to the log.</p>
+<p>An alternative approach would be to use the <a href="/en/scripting/examples/basic/toast-wpf">Toast API</a>, OnScreenCanvas API, or <a href="/en/scripting/blazor-windows/getting-started">BlazorWindows</a>, but for displaying a single line of text, these options seem excessive.</p>
+<h1 id="uo-pilot">UO Pilot</h1>
+<pre><code class="lang-js">#NoEnv
+SetWorkingDir %A_ScriptDir%
+SetTitleMatchMode, Fast
+
+; Variables for storing cursor coordinates
+global CursorX := 0
+global CursorY := 0
+global Toggle := 0 ; Toggle for enabling/disabling the script
+
+; Create GUI for displaying text on screen
+Gui, +AlwaysOnTop +ToolWindow -Caption +E0x20 ; Always on top, no title bar, clickable
+Gui, Add, Text, vStatusText, Script Disabled ; Text that will be updated
+Gui, Show, NoActivate X0 Y0, StatusWindow ; Show the window without activating it
+
+; Hotkey F5: Save cursor coordinates
+F5::
+    CoordMode, Mouse, Screen
+    MouseGetPos, CursorX, CursorY
+    GuiControl,, StatusText, Coordinates saved: X=%CursorX%, Y=%CursorY%
+    Sleep, 2000 ; Show message for 2 seconds
+    GuiControl,, StatusText, Script Disabled
+return
+
+; Hotkey F3: Run script once
+F3::
+    Gosub, MainScript
+return
+
+; Hotkey F6: Start/Stop loop
+F6::
+    Toggle := !Toggle ; Toggle state
+    if (Toggle) {
+        GuiControl,, StatusText, Script Enabled
+        SetTimer, RunMainScript, 100 ; Run timer every 100 ms
+    } else {
+        GuiControl,, StatusText, Script Disabled
+        SetTimer, RunMainScript, Off ; Stop timer
+    }
+return
+
+; Timer to run the main script
+RunMainScript:
+    Gosub, MainScript
+return
+
+; Move GUI around screen
+~LButton::
+    MouseGetPos, StartMouseX, StartMouseY ; Save initial mouse coordinates
+    Gui, +LastFound ; Get ID of the last created GUI
+    WinGetPos, GuiStartX, GuiStartY, GuiW, GuiH ; Save initial window coordinates
+    ; Check if click occurred inside the window
+    if (StartMouseX &gt;= GuiStartX &amp;&amp; StartMouseX &lt;= GuiStartX + GuiW &amp;&amp; StartMouseY &gt;= GuiStartY &amp;&amp; StartMouseY &lt;= GuiStartY + GuiH) {
+        While GetKeyState(&quot;LButton&quot;, &quot;P&quot;) { ; While LMB is held down
+            MouseGetPos, CurrentMouseX, CurrentMouseY ; Get current mouse coordinates
+            ; Calculate offset
+            OffsetX := CurrentMouseX - StartMouseX
+            OffsetY := CurrentMouseY - StartMouseY
+            ; New window coordinates
+            NewGuiX := GuiStartX + OffsetX
+            NewGuiY := GuiStartY + OffsetY
+            Gui, Show, x%NewGuiX% y%NewGuiY% NoActivate ; Move the window
+            Sleep, 20 ; Small delay to reduce load
+        }
+    }
+return
+
+; Main script logic
+MainScript:
+    WinActivate, TL.exe
+    Sleep, 2500
+
+    SendInput, {f}
+    Sleep, 300
+
+    CoordMode, Mouse, Screen
+    Click, 1005, 1005
+    CoordMode, Mouse, Window
+    Sleep, 200
+
+    if !MyImageSearch(FoundX, FoundY, 640, 186, 1237, 939, &quot;Vegetarian.bmp&quot;)
+    {
+        Sleep, 1000
+        if !MyImageSearch(FoundX, FoundY, 640, 186, 1237, 939, &quot;Vegetarian.bmp&quot;)
+        {
+            if !MyImageSearch(FoundX, FoundY, 640, 186, 1237, 939, &quot;Vegetarian1.bmp&quot;)
+            {
+                GuiControl,, StatusText, Object 'Vegetarian' not found!
+                Sleep, 2000
+                GuiControl,, StatusText, Script Disabled
+                return
+            }
+        }
+    }
+    Click, %FoundX%, %FoundY%
+    Sleep, 200
+
+    Click, 1499, 1004
+    Sleep, 200
+
+    SendInput, {Esc}
+    Sleep, 200
+
+    Sleep, 600
+    CoordMode, Mouse, Screen
+    Click, right, %CursorX%, %CursorY%
+    CoordMode, Mouse, Window
+return
+
+; Image search function
+MyImageSearch(ByRef FoundX, ByRef FoundY, X1, Y1, X2, Y2, ImageFile)
+{
+    CoordMode, Pixel, Window
+    Loop, 10
+    {
+        ImageSearch, FoundX, FoundY, %X1%, %Y1%, %X2%, %Y2%, %A_ScriptDir%\%ImageFile%
+        if (ErrorLevel = 0)
+            return true
+        Sleep, 100
+    }
+    return false
+}
+</code></pre>
+<h1 id="eyeauras-c-script">EyeAuras C# Script</h1>
+<pre><code class="lang-csharp">ISendInputScriptingApi SendInput { get; init; }
+
+ISendInputScriptingApi SendInputWindow { get; init; }
+
+IComputerVisionExperimentalScriptingApi ComputerVision { get; init; }
+
+bool Toggle { get; set; }
+
+string ScriptDirectoryPath { get; init; } = AppDomain.CurrentDomain.BaseDirectory;
+
+int CursorX { get; set; }
+
+int CursorY { get; set; }
+
+//------------------------------------------------------
+
+SerialDisposable timerAnchor;
+
+Log.Info(&quot;Hello, World!&quot;);
+Log.Info($&quot;Running the script from {ScriptDirectoryPath}&quot;);
+timerAnchor = new SerialDisposable().AddTo(ExecutionAnchors); //stop timer when script stops
+
+var window = GetService&lt;IWindowSelector&gt;().GetWindow(&quot;TL.exe&quot;);
+
+var cv = ComputerVision
+    .ForWindow(window) //работать будем с окном
+    .EnableOsd(10); //включаем встроенный OSD
+
+SendInputWindow.TargetWindow = window; //этот SendInput будет работать с окном
+
+//эта строчка заставит скрипт ждать, пока он не будет выключен
+//более эффективный эквивалент while(true) {}
+cancellationToken.WaitHandle.WaitOne();
+
+void MainScript()
+{
+    window.Activate();
+    Sleep(2500);
+
+    SendInput.KeyPress(Key.F);
+    Sleep(300);
+
+    SendInput.MouseClick(1005, 1005);
+    Sleep(200);
+
+    int FoundX, FoundY;
+
+    if (!MyImageSearch(out FoundX, out FoundY, 640, 186, 1237, 939, &quot;Vegetarian.bmp&quot;))
+    {
+        Sleep(1000);
+        if (!MyImageSearch(out FoundX, out FoundY, 640, 186, 1237, 939, &quot;Vegetarian.bmp&quot;))
+        {
+            if (!MyImageSearch(out FoundX, out FoundY, 640, 186, 1237, 939, &quot;Vegetarian1.bmp&quot;))
+            {
+                Log.Warn($&quot;Объект 'Vegetarian' не найден!&quot;);
+                Sleep(2000);
+                Log.Warn($&quot;Скрипт выключен&quot;);
+                return;
+            }
+        }
+    }
+
+    SendInputWindow.MouseClick(FoundX, FoundY);
+    Sleep(200);
+
+    SendInputWindow.MouseClick(1499, 1004);
+    Sleep(200);
+
+    SendInputWindow.KeyPress(Key.Escape);
+    Sleep(200);
+
+    Sleep(600);
+    SendInput.MouseRightClick(CursorX, CursorY);
+}
+
+bool MyImageSearch(out int FoundX, out int FoundY, int X1, int Y1, int X2, int Y2, string ImageFile)
+{
+    Rectangle result;
+    for (int i = 0; i &lt; 10; i++)
+    {
+        result = cv.ImageSearch(ImageFile);
+        if (!result.IsEmpty)
+        {
+            //found the image
+            FoundX = result.X;
+            FoundY = result.Y;
+            return true;
+        }
+        Sleep(100);
+    }
+    FoundX = FoundY = 0;
+    return false;
+}
+
+[Keybind(Hotkey = &quot;F3&quot;)]
+void RunOnce()
+{
+    Log.Info($&quot;Запускаем блок логики единожды&quot;);
+    MainScript();
+}
+
+[Keybind(Hotkey = &quot;F5&quot;)]
+void ShowCoordinates()
+{
+    var cursorPosition = SendInput.CursorPosition;
+    Log.Info($&quot;Координаты мыши: {cursorPosition}&quot;);
+    CursorX = cursorPosition.X;
+    CursorY = cursorPosition.Y;
+}
+
+[Keybind(Hotkey = &quot;F6&quot;)]
+void ToggleScript()
+{
+    Log.Info($&quot;IsEnabled: {Toggle}&quot;);
+    Toggle = !Toggle;
+    if (Toggle)
+    {
+        timerAnchor.Disposable = Observable
+            .Timer(DateTimeOffset.Now, TimeSpan.FromMilliseconds(100))
+            .Subscribe(MainScript); //initialize the timer
+    }
+    else
+    {
+        timerAnchor.Disposable = null; //stop timer
+    }
+}
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../../styles/singulink.js"></script>    </body>
+</html>

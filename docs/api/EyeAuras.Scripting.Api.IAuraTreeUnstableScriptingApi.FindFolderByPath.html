@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Scripting_Api_IAuraTreeUnstableScriptingApi_FindFolderByPath_" data-uid="EyeAuras.Scripting.Api.IAuraTreeUnstableScriptingApi.FindFolderByPath*"></a>
 <h4 id="EyeAuras_Scripting_Api_IAuraTreeUnstableScriptingApi_FindFolderByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeUnstableScriptingApi.FindFolderByPath(System.String)">FindFolderByPath(string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Finds a folder by its path, which can be specified as either an absolute path (e.g., &quot;MyProject/Folders/Folder1&quot;) or a relative path (e.g., &quot;./Folder1&quot; to find Folder1 in the same directory as the script using this API).</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -129,7 +130,8 @@
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">path</span></td>
-      <td></td>
+      <td><p>The path of the folder, either absolute or relative.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -144,15 +146,38 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.IFolder.html">IFolder</a></td>
-      <td></td>
+      <td><p>The folder at the specified path, or null if not found. It is important to note that this method could return null if the folder is not located.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Scripting_Api_IAuraTreeUnstableScriptingApi_FindFolderByPath_System_String__examples">Examples</h5>
+<p>Using an absolute path:</p>
+<pre><code class="lang-csharp">var folder = api.FindFolderByPath("MyProject/Folders/Folder1");
+if (folder != null)
+{
+    Console.WriteLine("Folder found!");
+}
+else
+{
+    Console.WriteLine("Folder not found.");
+}</code></pre>
+<p>Using a relative path:</p>
+<pre><code class="lang-csharp">var folder = api.FindFolderByPath("./Folder1");
+if (folder != null)
+{
+    Console.WriteLine("Folder found in the current directory!");
+}
+else
+{
+    Console.WriteLine("Folder not found in the current directory.");
+}</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

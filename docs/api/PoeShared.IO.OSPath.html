@@ -115,6 +115,7 @@ in a cross-platform manner.</p>
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="PoeShared.IO.OSPath.html">OSPath</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -136,7 +137,8 @@ in a cross-platform manner.</p>
   <h6><strong>Assembly</strong>: PoeShared.dll</h6>
   <h5 id="PoeShared_IO_OSPath_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record OSPath : IEquatable&lt;OSPath&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(OSPathConverter))]
+public record OSPath : IComparable, IEquatable&lt;OSPath&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -157,6 +159,42 @@ in a cross-platform manner.</p>
       <tr>
         <td id="PoeShared_IO_OSPath__ctor_System_String_" data-uid="PoeShared.IO.OSPath.#ctor(System.String)">
           <a class="xref" href="PoeShared.IO.OSPath.-ctor.html#PoeShared_IO_OSPath__ctor_System_String_">OSPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_IO_OSPath_AllSeparators" data-uid="PoeShared.IO.OSPath.AllSeparators">
+          <a class="xref" href="PoeShared.IO.OSPath.AllSeparators.html">AllSeparators</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_IO_OSPath_Empty" data-uid="PoeShared.IO.OSPath.Empty">
+          <a class="xref" href="PoeShared.IO.OSPath.Empty.html">Empty</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_IO_OSPath_UnixDirectorySeparator" data-uid="PoeShared.IO.OSPath.UnixDirectorySeparator">
+          <a class="xref" href="PoeShared.IO.OSPath.UnixDirectorySeparator.html">UnixDirectorySeparator</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_IO_OSPath_WindowsDirectorySeparator" data-uid="PoeShared.IO.OSPath.WindowsDirectorySeparator">
+          <a class="xref" href="PoeShared.IO.OSPath.WindowsDirectorySeparator.html">WindowsDirectorySeparator</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -194,8 +232,8 @@ in a cross-platform manner.</p>
 </td>
       </tr>
       <tr>
-        <td id="PoeShared_IO_OSPath_DirectoryName" data-uid="PoeShared.IO.OSPath.DirectoryName">
-          <a class="xref" href="PoeShared.IO.OSPath.DirectoryName.html#PoeShared_IO_OSPath_DirectoryName">DirectoryName</a>
+        <td id="PoeShared_IO_OSPath_Directory" data-uid="PoeShared.IO.OSPath.Directory">
+          <a class="xref" href="PoeShared.IO.OSPath.Directory.html#PoeShared_IO_OSPath_Directory">Directory</a>
         </td>
         <td class="markdown level1 summary"><p>Gets the directory name component of the path.</p>
 </td>
@@ -214,17 +252,17 @@ in a cross-platform manner.</p>
 </td>
       </tr>
       <tr>
-        <td id="PoeShared_IO_OSPath_FileName" data-uid="PoeShared.IO.OSPath.FileName">
-          <a class="xref" href="PoeShared.IO.OSPath.FileName.html#PoeShared_IO_OSPath_FileName">FileName</a>
+        <td id="PoeShared_IO_OSPath_FullName" data-uid="PoeShared.IO.OSPath.FullName">
+          <a class="xref" href="PoeShared.IO.OSPath.FullName.html#PoeShared_IO_OSPath_FullName">FullName</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets the file name component of the path.</p>
+        <td class="markdown level1 summary"><p>Gets the platform-specific full path.</p>
 </td>
       </tr>
       <tr>
-        <td id="PoeShared_IO_OSPath_FullPath" data-uid="PoeShared.IO.OSPath.FullPath">
-          <a class="xref" href="PoeShared.IO.OSPath.FullPath.html#PoeShared_IO_OSPath_FullPath">FullPath</a>
+        <td id="PoeShared_IO_OSPath_Name" data-uid="PoeShared.IO.OSPath.Name">
+          <a class="xref" href="PoeShared.IO.OSPath.Name.html#PoeShared_IO_OSPath_Name">Name</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets the platform-specific full path.</p>
+        <td class="markdown level1 summary"><p>Gets the file name component of the path.</p>
 </td>
       </tr>
     </tbody>
@@ -252,6 +290,12 @@ in a cross-platform manner.</p>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="PoeShared_IO_OSPath_CompareTo_System_Object_" data-uid="PoeShared.IO.OSPath.CompareTo(System.Object)">
+          <a class="xref" href="PoeShared.IO.OSPath.CompareTo.html#PoeShared_IO_OSPath_CompareTo_System_Object_">CompareTo(object)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="PoeShared_IO_OSPath_Equals_PoeShared_IO_OSPath_" data-uid="PoeShared.IO.OSPath.Equals(PoeShared.IO.OSPath)">
           <a class="xref" href="PoeShared.IO.OSPath.Equals.html#PoeShared_IO_OSPath_Equals_PoeShared_IO_OSPath_">Equals(OSPath)</a>
         </td>
@@ -260,6 +304,12 @@ in a cross-platform manner.</p>
       <tr>
         <td id="PoeShared_IO_OSPath_Equals_System_Object_" data-uid="PoeShared.IO.OSPath.Equals(System.Object)">
           <a class="xref" href="PoeShared.IO.OSPath.Equals.html#PoeShared_IO_OSPath_Equals_System_Object_">Equals(object?)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_IO_OSPath_Equals_System_String_System_String_" data-uid="PoeShared.IO.OSPath.Equals(System.String,System.String)">
+          <a class="xref" href="PoeShared.IO.OSPath.Equals.html#PoeShared_IO_OSPath_Equals_System_String_System_String_">Equals(string, string)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -306,6 +356,12 @@ in a cross-platform manner.</p>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="PoeShared_IO_OSPath_op_Implicit_System_String__PoeShared_IO_OSPath" data-uid="PoeShared.IO.OSPath.op_Implicit(System.String)~PoeShared.IO.OSPath">
+          <a class="xref" href="PoeShared.IO.OSPath.op_Implicit.html#PoeShared_IO_OSPath_op_Implicit_System_String__PoeShared_IO_OSPath">implicit operator OSPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="PoeShared_IO_OSPath_op_Inequality_PoeShared_IO_OSPath_PoeShared_IO_OSPath_" data-uid="PoeShared.IO.OSPath.op_Inequality(PoeShared.IO.OSPath,PoeShared.IO.OSPath)">
           <a class="xref" href="PoeShared.IO.OSPath.op_Inequality.html#PoeShared_IO_OSPath_op_Inequality_PoeShared_IO_OSPath_PoeShared_IO_OSPath_">operator !=(OSPath?, OSPath?)</a>
         </td>
@@ -314,21 +370,6 @@ in a cross-platform manner.</p>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -340,6 +381,9 @@ in a cross-platform manner.</p>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -363,13 +407,16 @@ in a cross-platform manner.</p>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -391,7 +438,7 @@ in a cross-platform manner.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

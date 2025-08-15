@@ -169,6 +169,23 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="PropertyBinder_Binder_DisposeBindingMapOnWatcherDisposal" data-uid="PropertyBinder.Binder.DisposeBindingMapOnWatcherDisposal">
+          <a class="xref" href="PropertyBinder.Binder.DisposeBindingMapOnWatcherDisposal.html#PropertyBinder_Binder_DisposeBindingMapOnWatcherDisposal">DisposeBindingMapOnWatcherDisposal</a>
+        </td>
+        <td class="markdown level1 summary"><p>As of 2024-12-23
+This flag enables optimization/bugfix which has to be VERY thoroughly tested.
+Whenever Watcher(binding) gets disposed, BindingMap will also be disposed, making sure that
+no stale references are kept inside it.
+The main problem is that BindingMap that is held inside ThreadStatic BindingExecutor
+holds reference to even those objects which have already been disposed/cleaned up
+normally, if queue keeps processing, this is not a problem as such bindings will be executed and removed from the queue
+but in multi-threaded scenarios there may be such BindingExecutors which get to execute only at periods of high load and
+become stale afterwards. In such cases there is a chance that there will be queue filled with references to no-longer alive objects.
+This prevents them from being GCed.
+More details is available in ShouldBeCollectedWithBinderInvocations test</p>
+</td>
+      </tr>
+      <tr>
         <td id="PropertyBinder_Binder_ExpressionCompiler" data-uid="PropertyBinder.Binder.ExpressionCompiler">
           <a class="xref" href="PropertyBinder.Binder.ExpressionCompiler.html#PropertyBinder_Binder_ExpressionCompiler">ExpressionCompiler</a>
         </td>
@@ -217,7 +234,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

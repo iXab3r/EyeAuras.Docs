@@ -109,12 +109,12 @@
 
 
 <a id="EyeAuras_BehaviorTree_BehaviorTreeRootNode__ctor_" data-uid="EyeAuras.BehaviorTree.BehaviorTreeRootNode.#ctor*"></a>
-<h4 id="EyeAuras_BehaviorTree_BehaviorTreeRootNode__ctor_EyeAuras_Shared_Services_IAuraListStateEvaluator_EyeAuras_Shared_IEyeSharedServices_" data-uid="EyeAuras.BehaviorTree.BehaviorTreeRootNode.#ctor(EyeAuras.Shared.Services.IAuraListStateEvaluator,EyeAuras.Shared.IEyeSharedServices)">BehaviorTreeRootNode(IAuraListStateEvaluator, IEyeSharedServices)</h4>
+<h4 id="EyeAuras_BehaviorTree_BehaviorTreeRootNode__ctor_PoeShared_Prism_IFactory_EyeAuras_Shared_Services_IAuraListStateEvaluator__EyeAuras_Shared_IEyeSharedServices_PoeShared_Prism_IFactory_EyeAuras_Shared_Model_ILazyAuraObjectList_EyeAuras_Shared_Triggers_IAuraTrigger__EyeAuras_Shared_Model_IEntityContainer_DynamicData_ISourceList_EyeAuras_Shared_Triggers_IAuraTrigger__System_Reactive_Concurrency_IScheduler__" data-uid="EyeAuras.BehaviorTree.BehaviorTreeRootNode.#ctor(PoeShared.Prism.IFactory{EyeAuras.Shared.Services.IAuraListStateEvaluator},EyeAuras.Shared.IEyeSharedServices,PoeShared.Prism.IFactory{EyeAuras.Shared.Model.ILazyAuraObjectList{EyeAuras.Shared.Triggers.IAuraTrigger},EyeAuras.Shared.Model.IEntityContainer,DynamicData.ISourceList{EyeAuras.Shared.Triggers.IAuraTrigger},System.Reactive.Concurrency.IScheduler})">BehaviorTreeRootNode(IFactory&lt;IAuraListStateEvaluator&gt;, IEyeSharedServices, IFactory&lt;ILazyAuraObjectList&lt;IAuraTrigger&gt;, IEntityContainer, ISourceList&lt;IAuraTrigger&gt;, IScheduler&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public BehaviorTreeRootNode(IAuraListStateEvaluator listStateEvaluator, IEyeSharedServices eyeServices)</code></pre>
+  <pre><code class="lang-csharp hljs">public BehaviorTreeRootNode(IFactory&lt;IAuraListStateEvaluator&gt; listStateEvaluatorFactory, IEyeSharedServices eyeServices, IFactory&lt;ILazyAuraObjectList&lt;IAuraTrigger&gt;, IEntityContainer, ISourceList&lt;IAuraTrigger&gt;, IScheduler&gt; triggerListFactory)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -127,13 +127,18 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.html">IAuraListStateEvaluator</a></td>
-      <td><span class="parametername">listStateEvaluator</span></td>
+      <td><a class="xref" href="PoeShared.Prism.IFactory-1.html">IFactory</a>&lt;<a class="xref" href="EyeAuras.Shared.Services.IAuraListStateEvaluator.html">IAuraListStateEvaluator</a>&gt;</td>
+      <td><span class="parametername">listStateEvaluatorFactory</span></td>
       <td></td>
     </tr>
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.IEyeSharedServices.html">IEyeSharedServices</a></td>
       <td><span class="parametername">eyeServices</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="PoeShared.Prism.IFactory-4.html">IFactory</a>&lt;<a class="xref" href="EyeAuras.Shared.Model.ILazyAuraObjectList-1.html">ILazyAuraObjectList</a>&lt;<a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.html">IAuraTrigger</a>&gt;, <a class="xref" href="EyeAuras.Shared.Model.IEntityContainer.html">IEntityContainer</a>, <span class="xref">ISourceList</span>&lt;<a class="xref" href="EyeAuras.Shared.Triggers.IAuraTrigger.html">IAuraTrigger</a>&gt;, <span class="xref">IScheduler</span>&gt;</td>
+      <td><span class="parametername">triggerListFactory</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -142,7 +147,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

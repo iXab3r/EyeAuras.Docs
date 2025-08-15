@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting Process list | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting Process list | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../../../styles/config.css">
+      <link rel="stylesheet" href="../../../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <link rel="stylesheet" href="../../../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../../../index.html">
+              <img src="../../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../../../index.html">
+                          <img src="../../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h2 id="getting-the-list-of-running-processes">Getting the list of running processes</h2>
+
+<p>We'll start with a very simple task - what if we want to list running processes on local machine?</p>
+<p>In classic C# this is solved by <a href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.process.getprocesses?view=net-8.0">Process.GetProcesses()</a></p>
+<p>But as we're operating withing EyeAuras API, we have to take a bit different approach, which will allow
+us to very easily switch between different memory reading techniques.</p>
+<h3 id="the-simplest-appoach---equivalent-of-working-via-process">The simplest appoach - equivalent of working via <code>Process</code></h3>
+<pre><code class="lang-csharp">using EyeAuras.Memory;
+
+var processes = LocalProcess.GetProcesses();
+Log.Info(processes.DumpToNamedTable(&quot;Processes&quot;));
+</code></pre>
+<p>As a result of running that script, you should see something like this in <code>EventLog</code> - list with a very-very basic information about running processes, containing their <code>ProcessId</code> (aka <code>PID</code>) and <code>ProcessName</code>
+<img src="https://s3.eyeauras.net/media/2025/05/NVIDIA_Overlay_1k4NSsZyzm.png" alt="Event Log"></p>
+<h3 id="using-leechcore-pmem-driver">Using LeechCore PMEM driver</h3>
+<p>Now, we'll use a different approach and instead of using <code>LocalProcess</code> as our entry point, we'll call <code>LCProcess</code> (<a href="https://github.com/ufrisk/LeechCore">LeechCore</a> Process). LeechCore is a fantastic library developed by <a href="https://github.com/ufrisk">Ulf Frisk</a>.</p>
+<p>Internally, it has multiple different techniques of reading target (not only local, &quot;target&quot;) system memory, including, of course, process information.</p>
+<p>For you, end user, the matter of switching to a different memory reading approach is a matter of switching a single class, adding namespace and supplying valid startup arguments.</p>
+<p>For this example, we'll supply the library with <code>-device pmem</code> command line, which makes it load and use <a href="https://github.com/Velocidex/WinPmem">WinPMEM</a> driver.</p>
+<pre><code class="lang-csharp">using EyeAuras.Memory;
+using EyeAuras.Memory.MPFS; //note the new namespace we've added - this is where LCProcess resides
+
+var processes = LCProcess.GetProcesses(&quot;-device&quot;, &quot;pmem&quot;);
+Log.Info(processes.DumpToNamedTable(&quot;Processes&quot;));
+</code></pre>
+<p>I'll omit the result as it should be exactly the same as they were before.</p>
+<h3 id="using-leechcore-hyper-v">Using LeechCore Hyper-V</h3>
+<p>Lets do something cool here. Lets try to read list of processes running <strong>INSIDE</strong> Hyper-V Virtual Machine (aka <code>Guest</code>) from <code>Host</code>.
+For simplicity, I'll pick ID of the very first VM we have here (id=0), in your case you may have to pick other ID.</p>
+<pre><code class="lang-csharp">using EyeAuras.Memory;
+using EyeAuras.Memory.MPFS;
+
+
+var processes = LCProcess.GetProcesses(&quot;-device&quot;, &quot;hvmm://id=0&quot;);
+Log.Info(processes.DumpToNamedTable(&quot;Processes&quot;));
+</code></pre>
+<p><img src="https://s3.eyeauras.net/media/2025/05/NVIDIA_Overlay_Irub5Wxahg.png" alt="VM Processes"></p>
+<h3 id="setting-up-hyper-v-machine">Setting up Hyper-V Machine</h3>
+<p>I'll post here only the most important part - do not forget to <strong>disable</strong> <code>Dynamic Memory</code> in VM Settings.
+<img src="https://s3.eyeauras.net/media/2025/05/NVIDIA_Overlay_gOcli4xKIn.png" alt="Dynamic memory"></p>
+<h3 id="listing-hyper-v-machine">Listing Hyper-V Machine</h3>
+<p>For now, this requires running MemProcFS (which uses LeechCore) separately.</p>
+<pre><code class="lang-bash">MemProcFS.exe -device hvmm://listvm
+</code></pre>
+<p>Here is how output could look like for a very simple scenario with a single VM:</p>
+<pre><code class="lang-bash">   Microsoft Hyper-V Virtual Machine plugin 1.2.20240329(beta) for MemProcFS (by Ulf Frisk).
+
+   plugin parameters:
+      hvmm://id=&lt;vm id number&gt;
+      hvmm://id=&lt;vm id number&gt;,unix
+      hvmm://listvm
+      hvmm://enumguestosbuild
+      hvmm://loglevel=&lt;log level number&gt;
+   Example: MemProcFS.exe -device hvmm://listvm
+
+   Virtual Machines:
+    --&gt; [id = 0] ShadowForge (PartitionId = 0x2, Full VM)
+   You selected the following virtual machine: ShadowForge
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../../../styles/singulink.js"></script>    </body>
+</html>

@@ -103,17 +103,14 @@
 
   <h1 id="EyeAuras_Shared_Services_WindowMatchParams" data-uid="EyeAuras.Shared.Services.WindowMatchParams" class="text-break">Struct WindowMatchParams
 </h1>
-  <div class="markdown level0 summary"><p>Specifies a set of conditions which should be matched by a window</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.html">WindowMatchParams</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
@@ -128,7 +125,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.Metadata.dll</h6>
   <h5 id="EyeAuras_Shared_Services_WindowMatchParams_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct WindowMatchParams</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct WindowMatchParams : IEquatable&lt;WindowMatchParams&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -211,6 +208,14 @@
 </td>
       </tr>
       <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_Properties" data-uid="EyeAuras.Shared.Services.WindowMatchParams.Properties">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.Properties.html#EyeAuras_Shared_Services_WindowMatchParams_Properties">Properties</a>
+        </td>
+        <td class="markdown level1 summary"><p>Stores dynamically parsed properties from the expression. Properties are usually in square brackets e.g. windowTitle [type=toplevel]
+Keys are compared using StringComparer.OrdinalIgnoreCase</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Services_WindowMatchParams_Title" data-uid="EyeAuras.Shared.Services.WindowMatchParams.Title">
           <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.Title.html#EyeAuras_Shared_Services_WindowMatchParams_Title">Title</a>
         </td>
@@ -230,14 +235,68 @@
     </thead>
     <tbody>
       <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_Equals_EyeAuras_Shared_Services_WindowMatchParams_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.Equals(EyeAuras.Shared.Services.WindowMatchParams)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.Equals.html#EyeAuras_Shared_Services_WindowMatchParams_Equals_EyeAuras_Shared_Services_WindowMatchParams_">Equals(WindowMatchParams)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_Equals_System_Object_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.Equals(System.Object)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.Equals.html#EyeAuras_Shared_Services_WindowMatchParams_Equals_System_Object_">Equals(object)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_FromExpression_EyeAuras_Shared_Services_WindowMatchExpression_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.FromExpression(EyeAuras.Shared.Services.WindowMatchExpression)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.FromExpression.html#EyeAuras_Shared_Services_WindowMatchParams_FromExpression_EyeAuras_Shared_Services_WindowMatchExpression_">FromExpression(WindowMatchExpression)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Services_WindowMatchParams_FromExpression_System_String_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.FromExpression(System.String)">
           <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.FromExpression.html#EyeAuras_Shared_Services_WindowMatchParams_FromExpression_System_String_">FromExpression(string)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_GetHashCode" data-uid="EyeAuras.Shared.Services.WindowMatchParams.GetHashCode">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.GetHashCode.html#EyeAuras_Shared_Services_WindowMatchParams_GetHashCode">GetHashCode()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_GetProperties_EyeAuras_Shared_Services_WindowMatchExpression_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.GetProperties(EyeAuras.Shared.Services.WindowMatchExpression)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.GetProperties.html#EyeAuras_Shared_Services_WindowMatchParams_GetProperties_EyeAuras_Shared_Services_WindowMatchExpression_">GetProperties(WindowMatchExpression)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Services_WindowMatchParams_ToString" data-uid="EyeAuras.Shared.Services.WindowMatchParams.ToString">
           <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.ToString.html#EyeAuras_Shared_Services_WindowMatchParams_ToString">ToString()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_op_Equality_EyeAuras_Shared_Services_WindowMatchParams_EyeAuras_Shared_Services_WindowMatchParams_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.op_Equality(EyeAuras.Shared.Services.WindowMatchParams,EyeAuras.Shared.Services.WindowMatchParams)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.op_Equality.html#EyeAuras_Shared_Services_WindowMatchParams_op_Equality_EyeAuras_Shared_Services_WindowMatchParams_EyeAuras_Shared_Services_WindowMatchParams_">operator ==(WindowMatchParams, WindowMatchParams)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Services_WindowMatchParams_op_Inequality_EyeAuras_Shared_Services_WindowMatchParams_EyeAuras_Shared_Services_WindowMatchParams_" data-uid="EyeAuras.Shared.Services.WindowMatchParams.op_Inequality(EyeAuras.Shared.Services.WindowMatchParams,EyeAuras.Shared.Services.WindowMatchParams)">
+          <a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.op_Inequality.html#EyeAuras_Shared_Services_WindowMatchParams_op_Inequality_EyeAuras_Shared_Services_WindowMatchParams_EyeAuras_Shared_Services_WindowMatchParams_">operator !=(WindowMatchParams, WindowMatchParams)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -257,6 +316,9 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -272,13 +334,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -288,7 +353,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

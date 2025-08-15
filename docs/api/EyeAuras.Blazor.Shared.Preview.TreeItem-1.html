@@ -109,10 +109,11 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveObject.html">DisposableReactiveObject</a></div>
-    <div class="level2"><span class="xref">TreeItem&lt;T&gt;</span></div>
-      <div class="level3"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.AuraItem.html">AuraItem</a></div>
-      <div class="level3"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.BehaviorTreeItem.html">BehaviorTreeItem</a></div>
-      <div class="level3"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.FolderItem.html">FolderItem</a></div>
+    <div class="level2"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.html">TreeItem</a></div>
+    <div class="level3"><span class="xref">TreeItem&lt;T&gt;</span></div>
+      <div class="level4"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.AuraItem.html">AuraItem</a></div>
+      <div class="level4"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.BehaviorTreeItem.html">BehaviorTreeItem</a></div>
+      <div class="level4"><a class="xref" href="EyeAuras.Blazor.Shared.Preview.FolderItem.html">FolderItem</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -122,6 +123,33 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.Parent.html#EyeAuras_Blazor_Shared_Preview_TreeItem_Parent">TreeItem.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.PrefixIcon.html#EyeAuras_Blazor_Shared_Preview_TreeItem_PrefixIcon">TreeItem.PrefixIcon</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.SuffixIcon.html#EyeAuras_Blazor_Shared_Preview_TreeItem_SuffixIcon">TreeItem.SuffixIcon</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.EffectivePermissions.html#EyeAuras_Blazor_Shared_Preview_TreeItem_EffectivePermissions">TreeItem.EffectivePermissions</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.Permissions.html#EyeAuras_Blazor_Shared_Preview_TreeItem_Permissions">TreeItem.Permissions</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.Children.html#EyeAuras_Blazor_Shared_Preview_TreeItem_Children">TreeItem.Children</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.IsLoaded.html#EyeAuras_Blazor_Shared_Preview_TreeItem_IsLoaded">TreeItem.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.AuraCount.html#EyeAuras_Blazor_Shared_Preview_TreeItem_AuraCount">TreeItem.AuraCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem.FolderCount.html#EyeAuras_Blazor_Shared_Preview_TreeItem_FolderCount">TreeItem.FolderCount</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
@@ -148,7 +176,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Blazor.Shared.dll</h6>
   <h5 id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TreeItem&lt;T&gt; : DisposableReactiveObject, IDisposable, ITreeItem, INotifyPropertyChanged where T : EyeItemProperties</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class TreeItem&lt;T&gt; : TreeItem, IDisposable, ITreeItem, INotifyPropertyChanged where T : EyeItemProperties</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -176,8 +204,8 @@
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1__ctor" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.#ctor">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.-ctor.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1__ctor">TreeItem()</a>
+        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1__ctor__0_" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.#ctor(`0)">
+          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.-ctor.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1__ctor__0_">TreeItem(T)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -194,71 +222,14 @@
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_AuraCount" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.AuraCount">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.AuraCount.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_AuraCount">AuraCount</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_Children" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.Children">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.Children.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_Children">Children</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_FolderCount" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.FolderCount">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.FolderCount.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_FolderCount">FolderCount</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_IsLoaded" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.IsLoaded">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.IsLoaded.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_IsLoaded">IsLoaded</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_PrefixIcon" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.PrefixIcon">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.PrefixIcon.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_PrefixIcon">PrefixIcon</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
         <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_Properties" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.Properties">
           <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.Properties.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_Properties">Properties</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_PropertiesJson" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.PropertiesJson">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.PropertiesJson.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_PropertiesJson">PropertiesJson</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_Preview_TreeItem_1_SuffixIcon" data-uid="EyeAuras.Blazor.Shared.Preview.TreeItem`1.SuffixIcon">
-          <a class="xref" href="EyeAuras.Blazor.Shared.Preview.TreeItem-1.SuffixIcon.html#EyeAuras_Blazor_Shared_Preview_TreeItem_1_SuffixIcon">SuffixIcon</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -270,6 +241,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -293,13 +267,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -321,7 +298,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

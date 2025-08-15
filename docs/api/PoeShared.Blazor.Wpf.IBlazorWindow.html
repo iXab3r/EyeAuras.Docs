@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IBlazorWindow
+ | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IBlazorWindow
+ | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow">
+
+
+
+  <h1 id="PoeShared_Blazor_Wpf_IBlazorWindow" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow" class="text-break">Interface IBlazorWindow
+</h1>
+  <div class="markdown level0 summary"><p>Defines the contract for a Blazor window with configurable UI properties, event-driven lifecycle, and window state operations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.BeginInvoke.html#PoeShared_Blazor_Wpf_IBlazorWindowController_BeginInvoke_System_Action_">IBlazorWindowController.BeginInvoke(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WaitForIdle.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WaitForIdle_System_TimeSpan_">IBlazorWindowController.WaitForIdle(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Minimize.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Minimize">IBlazorWindowController.Minimize()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Maximize.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Maximize">IBlazorWindowController.Maximize()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Restore.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Restore">IBlazorWindowController.Restore()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Hide.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Hide">IBlazorWindowController.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Show.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Show">IBlazorWindowController.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Activate.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Activate">IBlazorWindowController.Activate()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ShowDialog.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ShowDialog_System_Threading_CancellationToken_">IBlazorWindowController.ShowDialog(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Close.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Close">IBlazorWindowController.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.EnableDragMove.html#PoeShared_Blazor_Wpf_IBlazorWindowController_EnableDragMove">IBlazorWindowController.EnableDragMove()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Log.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Log">IBlazorWindowController.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ResizeMode.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ResizeMode">IBlazorWindowController.ResizeMode</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.TitleBarDisplayMode.html#PoeShared_Blazor_Wpf_IBlazorWindowController_TitleBarDisplayMode">IBlazorWindowController.TitleBarDisplayMode</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ShowInTaskbar.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ShowInTaskbar">IBlazorWindowController.ShowInTaskbar</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Padding.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Padding">IBlazorWindowController.Padding</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.IsClickThrough.html#PoeShared_Blazor_Wpf_IBlazorWindowController_IsClickThrough">IBlazorWindowController.IsClickThrough</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.IsDebugMode.html#PoeShared_Blazor_Wpf_IBlazorWindowController_IsDebugMode">IBlazorWindowController.IsDebugMode</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.IsVisible.html#PoeShared_Blazor_Wpf_IBlazorWindowController_IsVisible">IBlazorWindowController.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Opacity.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Opacity">IBlazorWindowController.Opacity</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Title.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Title">IBlazorWindowController.Title</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Topmost.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Topmost">IBlazorWindowController.Topmost</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.NoActivate.html#PoeShared_Blazor_Wpf_IBlazorWindowController_NoActivate">IBlazorWindowController.NoActivate</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ShowCloseButton.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ShowCloseButton">IBlazorWindowController.ShowCloseButton</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ShowMinButton.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ShowMinButton">IBlazorWindowController.ShowMinButton</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.ShowMaxButton.html#PoeShared_Blazor_Wpf_IBlazorWindowController_ShowMaxButton">IBlazorWindowController.ShowMaxButton</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Left.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Left">IBlazorWindowController.Left</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Top.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Top">IBlazorWindowController.Top</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Width.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Width">IBlazorWindowController.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Height.html#PoeShared_Blazor_Wpf_IBlazorWindowController_Height">IBlazorWindowController.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MinWidth.html#PoeShared_Blazor_Wpf_IBlazorWindowController_MinWidth">IBlazorWindowController.MinWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MinHeight.html#PoeShared_Blazor_Wpf_IBlazorWindowController_MinHeight">IBlazorWindowController.MinHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MaxWidth.html#PoeShared_Blazor_Wpf_IBlazorWindowController_MaxWidth">IBlazorWindowController.MaxWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MaxHeight.html#PoeShared_Blazor_Wpf_IBlazorWindowController_MaxHeight">IBlazorWindowController.MaxHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.BackgroundColor.html#PoeShared_Blazor_Wpf_IBlazorWindowController_BackgroundColor">IBlazorWindowController.BackgroundColor</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.BorderColor.html#PoeShared_Blazor_Wpf_IBlazorWindowController_BorderColor">IBlazorWindowController.BorderColor</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.BorderThickness.html#PoeShared_Blazor_Wpf_IBlazorWindowController_BorderThickness">IBlazorWindowController.BorderThickness</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WindowState.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WindowState">IBlazorWindowController.WindowState</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenKeyDown.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenKeyDown">IBlazorWindowController.WhenKeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenKeyUp.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenKeyUp">IBlazorWindowController.WhenKeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenPreviewKeyDown.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenPreviewKeyDown">IBlazorWindowController.WhenPreviewKeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenPreviewKeyUp.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenPreviewKeyUp">IBlazorWindowController.WhenPreviewKeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenMouseDown.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenMouseDown">IBlazorWindowController.WhenMouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenMouseUp.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenMouseUp">IBlazorWindowController.WhenMouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenPreviewMouseDown.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenPreviewMouseDown">IBlazorWindowController.WhenPreviewMouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenPreviewMouseUp.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenPreviewMouseUp">IBlazorWindowController.WhenPreviewMouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenMouseMove.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenMouseMove">IBlazorWindowController.WhenMouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenPreviewMouseMove.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenPreviewMouseMove">IBlazorWindowController.WhenPreviewMouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenLoaded.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenLoaded">IBlazorWindowController.WhenLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenUnloaded.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenUnloaded">IBlazorWindowController.WhenUnloaded</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenClosed.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenClosed">IBlazorWindowController.WhenClosed</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenClosing.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenClosing">IBlazorWindowController.WhenClosing</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenActivated.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenActivated">IBlazorWindowController.WhenActivated</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.WhenDeactivated.html#PoeShared_Blazor_Wpf_IBlazorWindowController_WhenDeactivated">IBlazorWindowController.WhenDeactivated</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.KeyDown.html">IBlazorWindowController.KeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.KeyUp.html">IBlazorWindowController.KeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.PreviewKeyDown.html">IBlazorWindowController.PreviewKeyDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.PreviewKeyUp.html">IBlazorWindowController.PreviewKeyUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MouseDown.html">IBlazorWindowController.MouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MouseUp.html">IBlazorWindowController.MouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.MouseMove.html">IBlazorWindowController.MouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.PreviewMouseDown.html">IBlazorWindowController.PreviewMouseDown</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.PreviewMouseUp.html">IBlazorWindowController.PreviewMouseUp</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.PreviewMouseMove.html">IBlazorWindowController.PreviewMouseMove</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Closing.html">IBlazorWindowController.Closing</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Activated.html">IBlazorWindowController.Activated</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Deactivated.html">IBlazorWindowController.Deactivated</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Loaded.html">IBlazorWindowController.Loaded</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.Closed.html">IBlazorWindowController.Closed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.GetWindowHandle.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_GetWindowHandle">IBlazorWindowNativeController.GetWindowHandle()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.GetWindowRect.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_GetWindowRect">IBlazorWindowNativeController.GetWindowRect()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.SetWindowRect.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_SetWindowRect_System_Drawing_Rectangle_">IBlazorWindowNativeController.SetWindowRect(Rectangle)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.SetWindowSize.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_SetWindowSize_System_Drawing_Size_">IBlazorWindowNativeController.SetWindowSize(Size)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.SetWindowPos.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_SetWindowPos_System_Drawing_Point_">IBlazorWindowNativeController.SetWindowPos(Point)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.Dispatcher.html#PoeShared_Blazor_Wpf_IBlazorWindowNativeController_Dispatcher">IBlazorWindowNativeController.Dispatcher</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PoeShared.html">PoeShared</a>.<a class="xref" href="PoeShared.Blazor.html">Blazor</a>.<a class="xref" href="PoeShared.Blazor.Wpf.html">Wpf</a></h6>
+  <h6><strong>Assembly</strong>: PoeShared.Blazor.Wpf.dll</h6>
+  <h5 id="PoeShared_Blazor_Wpf_IBlazorWindow_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBlazorWindow : IBlazorWindowController, IDisposable, INotifyPropertyChanged, IBlazorWindowNativeController</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_TitleBarAnchorName" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.TitleBarAnchorName">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.TitleBarAnchorName.html">TitleBarAnchorName</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowAnchorName" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowAnchorName">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowAnchorName.html">WindowAnchorName</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowBody" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowBody">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowBody.html">WindowBody</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowId" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowId">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowId.html">WindowId</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowStatusBarId" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowStatusBarId">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowStatusBarId.html">WindowStatusBarId</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowTitleBarId" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowTitleBarId">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowTitleBarId.html">WindowTitleBarId</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_AdditionalFileProvider" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.AdditionalFileProvider">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.AdditionalFileProvider.html#PoeShared_Blazor_Wpf_IBlazorWindow_AdditionalFileProvider">AdditionalFileProvider</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets additional file provider which will be used by Blazor</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_AdditionalFiles" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.AdditionalFiles">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.AdditionalFiles.html#PoeShared_Blazor_Wpf_IBlazorWindow_AdditionalFiles">AdditionalFiles</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets list of additional files which will be included into browser</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_Container" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.Container">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.Container.html#PoeShared_Blazor_Wpf_IBlazorWindow_Container">Container</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets container which will be used by window to resolve the View</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_ControlConfigurator" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.ControlConfigurator">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.ControlConfigurator.html#PoeShared_Blazor_Wpf_IBlazorWindow_ControlConfigurator">ControlConfigurator</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets Blazor control configurator which allows to inject custom actions into the pipeline</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_DataContext" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.DataContext">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.DataContext.html#PoeShared_Blazor_Wpf_IBlazorWindow_DataContext">DataContext</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets the data context which will be assigned to View.
+This property is a legacy one, will be removed in future versions and is replaced with DataContext</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_ViewDataContext" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.ViewDataContext">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.ViewDataContext.html#PoeShared_Blazor_Wpf_IBlazorWindow_ViewDataContext">ViewDataContext</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets the data context which will be assigned to View.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_ViewType" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.ViewType">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.ViewType.html#PoeShared_Blazor_Wpf_IBlazorWindow_ViewType">ViewType</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets type of View which will be displayed within the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_ViewTypeForTitleBar" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.ViewTypeForTitleBar">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.ViewTypeForTitleBar.html#PoeShared_Blazor_Wpf_IBlazorWindow_ViewTypeForTitleBar">ViewTypeForTitleBar</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets type of View which will be displayed inside title bar</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_WindowStartupLocation" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.WindowStartupLocation">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.WindowStartupLocation.html#PoeShared_Blazor_Wpf_IBlazorWindow_WindowStartupLocation">WindowStartupLocation</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets the startup location of the window.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_RegisterFileProvider_Microsoft_Extensions_FileProviders_IFileProvider_" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.RegisterFileProvider(Microsoft.Extensions.FileProviders.IFileProvider)">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.RegisterFileProvider.html#PoeShared_Blazor_Wpf_IBlazorWindow_RegisterFileProvider_Microsoft_Extensions_FileProviders_IFileProvider_">RegisterFileProvider(IFileProvider)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Adds additional file provider which will be used by Blazor. Added to the end of the list.
+Removed on disposal</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Blazor_Wpf_IBlazorWindow_ShowDevTools" data-uid="PoeShared.Blazor.Wpf.IBlazorWindow.ShowDevTools">
+          <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.ShowDevTools.html#PoeShared_Blazor_Wpf_IBlazorWindow_ShowDevTools">ShowDevTools()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Shows Chromium DevTools</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyTypeOrDefault.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyTypeOrDefault_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyTypeOrDefault(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.GetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_GetPropertyValue__1_System_Object_System_String_">ObjectReflectionExtensions.GetPropertyValue&lt;T&gt;(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectReflectionExtensions.SetPropertyValue.html#PoeShared_Scaffolding_ObjectReflectionExtensions_SetPropertyValue__1_System_Object_System_String___0_">ObjectReflectionExtensions.SetPropertyValue&lt;T&gt;(object, string, T)</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

@@ -138,6 +138,7 @@
     <div><a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.IBehaviorTreeSerializable.html">IBehaviorTreeSerializable</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetName.html">ICanSetName</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasName.html">IHasName</a></div>
+    <div><a class="xref" href="EyeAuras.Shared.IHasLinkedAuras.html">IHasLinkedAuras</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -145,13 +146,25 @@
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.ActionNode-1.MaxOutputs.html#EyeAuras_BehaviorTree_Nodes_ActionNode_1_MaxOutputs">ActionNode&lt;ExecuteAuraNodeProperties&gt;.MaxOutputs</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Freeze.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Freeze_System_String_">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Freeze(string)</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ResetStatus.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ResetStatus">NodeBase&lt;ExecuteAuraNodeProperties&gt;.ResetStatus()</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Clone.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clone">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Clone()</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CloneProperties.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CloneProperties_System_Boolean_">NodeBase&lt;ExecuteAuraNodeProperties&gt;.CloneProperties(bool)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Remove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Remove">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Remove()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Cancel.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Cancel">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Cancel()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParent.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParent">NodeBase&lt;ExecuteAuraNodeProperties&gt;.CanBecomeParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParentOf.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParentOf_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeBase&lt;ExecuteAuraNodeProperties&gt;.CanBecomeParentOf(IBTNode)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Tick.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Tick_System_Threading_CancellationToken_">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Tick(CancellationToken)</a>
@@ -161,6 +174,9 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.AddChild.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_AddChild__1_EyeAuras_BehaviorTree_Nodes_IBTNodeProperties_">NodeBase&lt;ExecuteAuraNodeProperties&gt;.AddChild&lt;TNode&gt;(IBTNodeProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.EventLoggingService.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_EventLoggingService">NodeBase&lt;ExecuteAuraNodeProperties&gt;.EventLoggingService</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeStorage.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeStorage">NodeBase&lt;ExecuteAuraNodeProperties&gt;.NodeStorage</a>
@@ -181,13 +197,34 @@
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Name.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Name">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Name</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Depth.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Depth">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Depth</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsEnabled.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsEnabled">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsSelected.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsSelected">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsRemoving.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsRemoving">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsRemoving</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozen.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozen">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsFrozen</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozenState.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozenState">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsFrozenState</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Children.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Children">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Children</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenAsList.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenAsList">NodeBase&lt;ExecuteAuraNodeProperties&gt;.ChildrenAsList</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildren.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildren">NodeBase&lt;ExecuteAuraNodeProperties&gt;.FlattenChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildrenById">NodeBase&lt;ExecuteAuraNodeProperties&gt;.FlattenChildrenById</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ChildrenById">NodeBase&lt;ExecuteAuraNodeProperties&gt;.ChildrenById</a>
@@ -214,16 +251,19 @@
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReady.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReady">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsReady</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ShortDescription.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription">NodeBase&lt;ExecuteAuraNodeProperties&gt;.ShortDescription</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanRemove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanRemove">NodeBase&lt;ExecuteAuraNodeProperties&gt;.CanRemove</a>
     </div>
     <div>
-      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReferenceNode.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReferenceNode">NodeBase&lt;ExecuteAuraNodeProperties&gt;.IsReferenceNode</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ShortDescription.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription">NodeBase&lt;ExecuteAuraNodeProperties&gt;.ShortDescription</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.DefaultName.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_DefaultName">NodeBase&lt;ExecuteAuraNodeProperties&gt;.DefaultName</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.MaxInputs.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_MaxInputs">NodeBase&lt;ExecuteAuraNodeProperties&gt;.MaxInputs</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.AutoSize.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_AutoSize">NodeBase&lt;ExecuteAuraNodeProperties&gt;.AutoSize</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.NodeId.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_NodeId">NodeBase&lt;ExecuteAuraNodeProperties&gt;.NodeId</a>
@@ -238,10 +278,16 @@
       <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Blackboard.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Blackboard">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Blackboard</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Session.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Session">NodeBase&lt;ExecuteAuraNodeProperties&gt;.Session</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase-1.Properties.html#EyeAuras_Shared_Model_AuraObjectBase_1_Properties">AuraObjectBase&lt;ExecuteAuraNodeProperties&gt;.Properties</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__2_System_IObservable_DynamicData_IChangeSet___0___1___">AuraObjectBase.RaisePropertiesWhen&lt;TObject, TKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1___2___">AuraObjectBase.RaisePropertiesWhenAny&lt;TSender, TRet, T1&gt;(TSender, Expression&lt;Func&lt;TSender, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, T1&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.ResolveBinding.html#EyeAuras_Shared_Model_AuraObjectBase_ResolveBinding_System_String_">AuraObjectBase.ResolveBinding(string)</a>
@@ -332,8 +378,8 @@
   <h6><strong>Assembly</strong>: EyeAuras.BehaviorTree.dll</h6>
   <h5 id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AuraEntity(Name = &quot;Execute Aura&quot;)]
-public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt;, INode&lt;ExecuteAuraNodeProperties&gt;, IAuraObject&lt;ExecuteAuraNodeProperties&gt;, IEntityContainer, IActionNode, INode, IAuraObject, IBindableReactiveObject, ICanSetContext, IHasContext, IBTNode, IHasId, IHasTypedId&lt;string&gt;, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, IBehaviorTreeSerializable, ICanSetName, IHasName</code></pre>
+    <pre><code class="lang-csharp hljs">[AuraEntity(Name = &quot;Run Aura&quot;)]
+public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt;, INode&lt;ExecuteAuraNodeProperties&gt;, IAuraObject&lt;ExecuteAuraNodeProperties&gt;, IEntityContainer, IActionNode, INode, IAuraObject, IBindableReactiveObject, ICanSetContext, IHasContext, IBTNode, IHasId, IHasTypedId&lt;string&gt;, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, IBehaviorTreeSerializable, ICanSetName, IHasName, IHasLinkedAuras</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -367,7 +413,22 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
         <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_LinkedAuras" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.LinkedAuras">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.LinkedAuras.html#EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_LinkedAuras">LinkedAuras</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets the evaluator that manages and monitors the states of linked auras.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_Strategy" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.Strategy">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.Strategy.html#EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_Strategy">Strategy</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets the strategy for executing the actions within the linked auras, e.g. Ordered or Random</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_Times" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.Times">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.Times.html#EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_Times">Times</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets the number of times the actions within the linked auras should be executed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -382,11 +443,10 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_TickInternal_System_Threading_CancellationToken_" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.TickInternal(System.Threading.CancellationToken)">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.TickInternal.html#EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_TickInternal_System_Threading_CancellationToken_">TickInternal(CancellationToken)</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_TickAction_System_Threading_CancellationToken_" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.TickAction(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.TickAction.html#EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_TickAction_System_Threading_CancellationToken_">TickAction(CancellationToken)</a>
         </td>
-        <td class="markdown level1 summary"><p>This abstract method defines the main logic of the node and must be implemented in child classes.</p>
-</td>
+        <td class="markdown level1 summary"></td>
       </tr>
       <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNode_VisitLoad_EyeAuras_BehaviorTree_Nodes_Actions_ExecuteAuraNodeProperties_" data-uid="EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNode.VisitLoad(EyeAuras.BehaviorTree.Nodes.Actions.ExecuteAuraNodeProperties)">
@@ -404,21 +464,6 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
-  <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
   <div>
@@ -429,6 +474,9 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -452,13 +500,16 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -470,7 +521,22 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildren.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildren_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildren(IBTNode)</a>
   </div>
   <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildrenAndSelf.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildrenAndSelf_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildrenAndSelf(IBTNode)</a>
+  </div>
+  <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.FindRoot.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_FindRoot_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.FindRoot(IBTNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetChildById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetChildById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetChildById(IBTNode, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetDisplayMode.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetDisplayMode_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetDisplayMode(IBTNode)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetNodeById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetNodeById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetNodeById(IBTNode, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetTreeKind.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetTreeKind_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetTreeKind(IBTNode)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
@@ -489,7 +555,7 @@ public sealed class ExecuteAuraNode : ActionNode&lt;ExecuteAuraNodeProperties&gt
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

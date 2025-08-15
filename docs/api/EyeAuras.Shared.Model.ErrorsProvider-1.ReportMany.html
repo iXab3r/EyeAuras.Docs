@@ -169,11 +169,77 @@
 </table>
 <h5 class="implements">Implements</h5>
     <div><a class="xref" href="PoeShared.Modularity.ICanSetErrors.ReportMany.html#PoeShared_Modularity_ICanSetErrors_ReportMany__1_DynamicData_IObservableList___0__">ICanSetErrors.ReportMany&lt;T&gt;(IObservableList&lt;T&gt;)</a></div>
+
+
+<a id="EyeAuras_Shared_Model_ErrorsProvider_1_ReportMany_" data-uid="EyeAuras.Shared.Model.ErrorsProvider`1.ReportMany*"></a>
+<h4 id="EyeAuras_Shared_Model_ErrorsProvider_1_ReportMany__2_DynamicData_IObservableCache___0___1__" data-uid="EyeAuras.Shared.Model.ErrorsProvider`1.ReportMany``2(DynamicData.IObservableCache{``0,``1})">ReportMany&lt;T1, TKey&gt;(IObservableCache&lt;T1, TKey&gt;)</h4>
+<div class="markdown level1 summary"><p>Subscribes to multiple error sources and reports their errors.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public IDisposable ReportMany&lt;T1, TKey&gt;(IObservableCache&lt;T1, TKey&gt; sources) where T1 : IHasErrors</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">IObservableCache</span>&lt;T1, TKey&gt;</td>
+      <td><span class="parametername">sources</span></td>
+      <td><p>The error sources to subscribe to.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+      <td><p>A subscription that can be disposed to stop reporting errors from the sources.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">T1</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TKey</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="PoeShared.Modularity.ICanSetErrors.ReportMany.html#PoeShared_Modularity_ICanSetErrors_ReportMany__2_DynamicData_IObservableCache___0___1__">ICanSetErrors.ReportMany&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</a></div>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

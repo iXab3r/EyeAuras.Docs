@@ -108,7 +108,14 @@
 Classes
 </h3>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.html">AuraScriptSandbox</a></h5>
-      <section></section>
+      <section><p>Provides a specialized scripting sandbox for Aura scripts, extending the base ScriptSandbox with Aura-specific functionality.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.KeybindAttribute.html">KeybindAttribute</a></h5>
+      <section><p>Specifies that a method should be invoked when a specific hotkey is pressed.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.ScriptContainerExtension.html">ScriptContainerExtension</a></h5>
+      <section><p>Base class for script-level Unity container extensions used in Aura scripting.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.ScriptSandbox.html">ScriptSandbox</a></h5>
       <section><p>Scripts are running using this class as &quot;globals&quot; provider, i.e. any property or method of this class
 are considered as &quot;native&quot; methods of the script</p>
@@ -119,30 +126,51 @@ are considered as &quot;native&quot; methods of the script</p>
 Interfaces
 </h3>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.html">IAuraAccessor</a></h5>
+      <section><p>Represents an accessor for an aura, encapsulating the ability to interact with and manipulate various properties and collections associated with the aura.
+Provides access to the aura's identifiers, state, and actions, as well as its hierarchical structure through overlays and triggers.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.html">IAuraScriptSandbox</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.html">IAuraTreeScriptingApi</a></h5>
-      <section></section>
+      <section><p>Provides methods for interacting with the aura tree, including finding and retrieving auras, folders, and behavior trees.
+It supports operations to both safely find elements (returning null if not found) and directly retrieve elements (throwing exceptions if not found),
+accommodating scenarios that require precise control over error handling. The interface enables accessing collections of all managed auras, folders,
+and behavior trees, as well as fetching specific triggers and actions associated with auras by path. This facilitates dynamic and scriptable interactions
+with the application's hierarchical structure, ideal for scenarios requiring runtime navigation and manipulation of the aura tree.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeUnstableScriptingApi.html">IAuraTreeUnstableScriptingApi</a></h5>
-      <section></section>
+      <section><p>Provides an unstable API for scripting interactions with aura trees. This API is subject to change
+and operates within a specific aura and folder context that may evolve over the API's lifecycle.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IBehaviorTreeAccessor.html">IBehaviorTreeAccessor</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IFolderAccessor.html">IFolderAccessor</a></h5>
       <section></section>
-      <h5><a class="xref" href="EyeAuras.Scripting.Api.IOnScreenCanvasScriptingApi.html">IOnScreenCanvasScriptingApi</a></h5>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.IMacroAccessor.html">IMacroAccessor</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.IScriptSandbox.html">IScriptSandbox</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IScriptingApi.html">IScriptingApi</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IScriptingApiContext.html">IScriptingApiContext</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Scripting.Api.IVariablesScriptingApi.html">IVariablesScriptingApi</a></h5>
-      <section></section>
+      <section><p>Defines an API for scripting interactions that involve accessing and manipulating variables within a scriptable environment.
+This interface extends the basic variable access capabilities with script-focused functionalities, allowing for strongly-typed variable interactions.</p>
+</section>
+    <h3 id="enums">
+Enums
+</h3>
+      <h5><a class="xref" href="EyeAuras.Scripting.Api.KeybindActivationType.html">KeybindActivationType</a></h5>
+      <section><p>Specifies when the keybind should trigger: on key press (KeyDown), on key release (KeyUp), or both.</p>
+</section>
 
 
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

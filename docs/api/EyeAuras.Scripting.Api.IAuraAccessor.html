@@ -103,7 +103,9 @@
 
   <h1 id="EyeAuras_Scripting_Api_IAuraAccessor" data-uid="EyeAuras.Scripting.Api.IAuraAccessor" class="text-break">Interface IAuraAccessor
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an accessor for an aura, encapsulating the ability to interact with and manipulate various properties and collections associated with the aura.
+Provides access to the aura's identifiers, state, and actions, as well as its hierarchical structure through overlays and triggers.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -161,70 +163,89 @@
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_EnablingConditions" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.EnablingConditions">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.EnablingConditions.html#EyeAuras_Scripting_Api_IAuraAccessor_EnablingConditions">EnablingConditions</a>
         </td>
-        <td class="markdown level1 summary"><p>Contains a list of conditions which are required for this item to start &quot;ticking&quot;</p>
+        <td class="markdown level1 summary"><p>Gets a list of triggers that serve as conditions required for this aura to become active.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_IsActive" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.IsActive">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.IsActive.html#EyeAuras_Scripting_Api_IAuraAccessor_IsActive">IsActive</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the aura is currently active.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_IsEnabled" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.IsEnabled">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.IsEnabled.html#EyeAuras_Scripting_Api_IAuraAccessor_IsEnabled">IsEnabled</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates whether this item is disabled (available for selection/edit) or not</p>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether this aura is enabled and available for selection or editing.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_OnEnterActions" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.OnEnterActions">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.OnEnterActions.html#EyeAuras_Scripting_Api_IAuraAccessor_OnEnterActions">OnEnterActions</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a list of actions that are executed when the aura is first activated.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_OnExitActions" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.OnExitActions">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.OnExitActions.html#EyeAuras_Scripting_Api_IAuraAccessor_OnExitActions">OnExitActions</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a list of actions that are executed when the aura is deactivated.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_Overlays" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.Overlays">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.Overlays.html#EyeAuras_Scripting_Api_IAuraAccessor_Overlays">Overlays</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a list of overlays associated with this aura, providing additional contextual or visual enhancements.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_Triggers" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.Triggers">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.Triggers.html#EyeAuras_Scripting_Api_IAuraAccessor_Triggers">Triggers</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a list of triggers associated with this aura, defining interactions or conditions monitored during the aura's lifecycle.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraAccessor_WhileActiveActions" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.WhileActiveActions">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.WhileActiveActions.html#EyeAuras_Scripting_Api_IAuraAccessor_WhileActiveActions">WhileActiveActions</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a list of actions that are executed repeatedly while the aura is active.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraAccessor_Execute_System_Threading_CancellationToken_" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.Execute(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.Execute.html#EyeAuras_Scripting_Api_IAuraAccessor_Execute_System_Threading_CancellationToken_">Execute(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Executes all actions in that aura in the following order: OnEnter -&gt; WhileActive -&gt; OnExit
+It does not matter whether the aura has changed its state or not - all actions will be executed anyways, if not cancelled</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraAccessor_ExecuteAsync_System_Threading_CancellationToken_" data-uid="EyeAuras.Scripting.Api.IAuraAccessor.ExecuteAsync(System.Threading.CancellationToken)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraAccessor.ExecuteAsync.html#EyeAuras_Scripting_Api_IAuraAccessor_ExecuteAsync_System_Threading_CancellationToken_">ExecuteAsync(CancellationToken)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Executes all actions in that aura in the following order: OnEnter -&gt; WhileActive -&gt; OnExit
+It does not matter whether the aura has changed it's state or not - all actions will be executed anyways, if not cancelled</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -236,6 +257,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -259,13 +283,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -287,7 +314,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

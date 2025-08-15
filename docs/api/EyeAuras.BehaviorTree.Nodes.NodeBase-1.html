@@ -118,10 +118,10 @@
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.CommentNode.html">CommentNode</a></div>
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.ConditionNode-1.html">ConditionNode&lt;T&gt;</a></div>
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.ControlFlow.BehaviorTreeNode.html">BehaviorTreeNode</a></div>
-      <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.ControlFlow.IfThenElseNode.html">IfThenElseNode</a></div>
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.ControlFlow.SubTreeNode.html">SubTreeNode</a></div>
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.ControlFlowNode-1.html">ControlFlowNode&lt;T&gt;</a></div>
       <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.DecoratorNode-1.html">DecoratorNode&lt;T&gt;</a></div>
+      <div class="level6"><a class="xref" href="EyeAuras.BehaviorTree.Nodes.MacroNode-1.html">MacroNode&lt;T&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -182,6 +182,9 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">AuraObjectBase.RaisePropertiesWhenAny&lt;T&gt;(T, params Expression&lt;Func&lt;T, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1___2___">AuraObjectBase.RaisePropertiesWhenAny&lt;TSender, TRet, T1&gt;(TSender, Expression&lt;Func&lt;TSender, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, T1&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt;)</a>
@@ -327,10 +330,23 @@
     </thead>
     <tbody>
       <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_AutoSize" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.AutoSize">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.AutoSize.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_AutoSize">AutoSize</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Blackboard" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Blackboard">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Blackboard.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Blackboard">Blackboard</a>
         </td>
         <td class="markdown level1 summary"><p>Contains a reference to behavior tree blackboard, which is shared amongst all tree nodes</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanRemove" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.CanRemove">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanRemove.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanRemove">CanRemove</a>
+        </td>
+        <td class="markdown level1 summary"><p>IsReady means that Node could be removed from parent sub-tree</p>
 </td>
       </tr>
       <tr>
@@ -383,16 +399,57 @@ is determined by the ChildrenIdStrategy.</p>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Depth" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Depth">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Depth.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Depth">Depth</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_EventLoggingService" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.EventLoggingService">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.EventLoggingService.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_EventLoggingService">EventLoggingService</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildren" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.FlattenChildren">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildren.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildren">FlattenChildren</a>
+        </td>
+        <td class="markdown level1 summary"><p>All children of the current node and children of children as well</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildrenById" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.FlattenChildrenById">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FlattenChildrenById.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FlattenChildrenById">FlattenChildrenById</a>
+        </td>
+        <td class="markdown level1 summary"><p>All children of the current node and children of children as well</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsBusy" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsBusy">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsBusy.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsBusy">IsBusy</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Indicates whether the node is currently doing something</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsEnabled" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsEnabled">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsEnabled.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsEnabled">IsEnabled</a>
         </td>
         <td class="markdown level1 summary"><p>Indicates whether this node is disabled (considered for evaluation/execution) or not</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozen" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsFrozen">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozen.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozen">IsFrozen</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates whether this node is frozen or not. If frozen, it should not be removable/draggable by user</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozenState" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsFrozenState">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsFrozenState.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsFrozenState">IsFrozenState</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates whether this node is frozen or not, with annotation. If frozen, it should not be removable/draggable by user</p>
 </td>
       </tr>
       <tr>
@@ -403,12 +460,17 @@ is determined by the ChildrenIdStrategy.</p>
 </td>
       </tr>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReferenceNode" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsReferenceNode">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsReferenceNode.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsReferenceNode">IsReferenceNode</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsRemoving" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsRemoving">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsRemoving.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsRemoving">IsRemoving</a>
         </td>
-        <td class="markdown level1 summary"><p>Reference node should not serialize children
-e.g. SubTree node holds ID of BehaviorTree and is materialized when needed and should not ever be serialized WITH
-its children</p>
+        <td class="markdown level1 summary"><p>Indicates whether this node is toggled for removal in UI</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsSelected" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.IsSelected">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.IsSelected.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_IsSelected">IsSelected</a>
+        </td>
+        <td class="markdown level1 summary"><p>Indicates whether this node is currently selected in UI</p>
 </td>
       </tr>
       <tr>
@@ -488,6 +550,14 @@ unique.</p>
 </td>
       </tr>
       <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Session" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Session">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Session.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Session">Session</a>
+        </td>
+        <td class="markdown level1 summary"><p>Contains a reference to behavior tree session, which is shared amongst all tree nodes.
+It contains information such a number of ticks, current status, etc</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.ShortDescription">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.ShortDescription.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_ShortDescription">ShortDescription</a>
         </td>
@@ -520,8 +590,37 @@ unique.</p>
 </td>
       </tr>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clone" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Clone">
-          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Clone.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Clone">Clone()</a>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_CalculateTimeLeft_System_Nullable_System_TimeSpan__System_Nullable_System_TimeSpan__" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.CalculateTimeLeft(System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CalculateTimeLeft.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CalculateTimeLeft_System_Nullable_System_TimeSpan__System_Nullable_System_TimeSpan__">CalculateTimeLeft(TimeSpan?, TimeSpan?)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParent" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.CanBecomeParent">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParent.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParent">CanBecomeParent()</a>
+        </td>
+        <td class="markdown level1 summary"><p>This operation analyzes whether any node can become a parent of a different node.
+Checks for circular references, states, etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParentOf_EyeAuras_BehaviorTree_Nodes_IBTNode_" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.CanBecomeParentOf(EyeAuras.BehaviorTree.Nodes.IBTNode)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CanBecomeParentOf.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CanBecomeParentOf_EyeAuras_BehaviorTree_Nodes_IBTNode_">CanBecomeParentOf(IBTNode)</a>
+        </td>
+        <td class="markdown level1 summary"><p>This operation analyzes whether the node can become a parent of a different node.
+Checks for circular references, states, etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Cancel" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Cancel">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Cancel.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Cancel">Cancel()</a>
+        </td>
+        <td class="markdown level1 summary"><p>This operation cancels current tick if it is progress. Does not do anything otherwise</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_CloneProperties_System_Boolean_" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.CloneProperties(System.Boolean)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.CloneProperties.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_CloneProperties_System_Boolean_">CloneProperties(bool)</a>
         </td>
         <td class="markdown level1 summary"><p>Clones properties of this node and its children</p>
 </td>
@@ -529,6 +628,12 @@ unique.</p>
       <tr>
         <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.FormatToString(PoeShared.Scaffolding.ToStringBuilder)">
           <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.FormatToString.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_">FormatToString(ToStringBuilder)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_BehaviorTree_Nodes_NodeBase_1_Freeze_System_String_" data-uid="EyeAuras.BehaviorTree.Nodes.NodeBase`1.Freeze(System.String)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Nodes.NodeBase-1.Freeze.html#EyeAuras_BehaviorTree_Nodes_NodeBase_1_Freeze_System_String_">Freeze(string)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -589,22 +694,22 @@ unique.</p>
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildren.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildren_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildren(IBTNode)</a>
   </div>
   <div>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.EnumerateChildrenAndSelf.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_EnumerateChildrenAndSelf_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.EnumerateChildrenAndSelf(IBTNode)</a>
+  </div>
+  <div>
       <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.FindRoot.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_FindRoot_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.FindRoot(IBTNode)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetChildById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetChildById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetChildById(IBTNode, string)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetDisplayMode.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetDisplayMode_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetDisplayMode(IBTNode)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetNodeById.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetNodeById_EyeAuras_BehaviorTree_Nodes_IBTNode_System_String_">NodeExtensions.GetNodeById(IBTNode, string)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.NodeExtensions.GetTreeKind.html#EyeAuras_BehaviorTree_Scaffolding_NodeExtensions_GetTreeKind_EyeAuras_BehaviorTree_Nodes_IBTNode_">NodeExtensions.GetTreeKind(IBTNode)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
@@ -617,6 +722,9 @@ unique.</p>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -640,13 +748,16 @@ unique.</p>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -668,7 +779,7 @@ unique.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

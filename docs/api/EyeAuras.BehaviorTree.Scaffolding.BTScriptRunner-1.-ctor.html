@@ -109,12 +109,12 @@
 
 
 <a id="EyeAuras_BehaviorTree_Scaffolding_BTScriptRunner_1__ctor_" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTScriptRunner`1.#ctor*"></a>
-<h4 id="EyeAuras_BehaviorTree_Scaffolding_BTScriptRunner_1__ctor_EyeAuras_BehaviorTree_Nodes_INode_PoeShared_Prism_IFactory_EyeAuras_Repl_AuraScript_System_Type__EyeAuras_Scripting_Services_IDefaultReferencesProvider_Unity_IUnityContainer_" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTScriptRunner`1.#ctor(EyeAuras.BehaviorTree.Nodes.INode,PoeShared.Prism.IFactory{EyeAuras.Repl.AuraScript,System.Type},EyeAuras.Scripting.Services.IDefaultReferencesProvider,Unity.IUnityContainer)">BTScriptRunner(INode, IFactory&lt;AuraScript, Type&gt;, IDefaultReferencesProvider, IUnityContainer)</h4>
+<h4 id="EyeAuras_BehaviorTree_Scaffolding_BTScriptRunner_1__ctor_EyeAuras_BehaviorTree_Nodes_INode_PoeShared_Prism_IFactory_EyeAuras_Scripting_Visitors_ILinkedAurasScriptVisitor_EyeAuras_Repl_IAuraScript__EyeAuras_Scripting_Services_IAuraScriptFactory_EyeAuras_Scripting_Services_IEyeProjectSerializer_EyeAuras_Shared_Services_IAuraEventLoggingService_Unity_IUnityContainer_" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTScriptRunner`1.#ctor(EyeAuras.BehaviorTree.Nodes.INode,PoeShared.Prism.IFactory{EyeAuras.Scripting.Visitors.ILinkedAurasScriptVisitor,EyeAuras.Repl.IAuraScript},EyeAuras.Scripting.Services.IAuraScriptFactory,EyeAuras.Scripting.Services.IEyeProjectSerializer,EyeAuras.Shared.Services.IAuraEventLoggingService,Unity.IUnityContainer)">BTScriptRunner(INode, IFactory&lt;ILinkedAurasScriptVisitor, IAuraScript&gt;, IAuraScriptFactory, IEyeProjectSerializer, IAuraEventLoggingService, IUnityContainer)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public BTScriptRunner(INode parentNode, IFactory&lt;AuraScript, Type&gt; scriptFactory, IDefaultReferencesProvider defaultReferencesProvider, IUnityContainer container)</code></pre>
+  <pre><code class="lang-csharp hljs">public BTScriptRunner(INode parentNode, IFactory&lt;ILinkedAurasScriptVisitor, IAuraScript&gt; csharpScriptVisitorFactory, IAuraScriptFactory scriptFactory, IEyeProjectSerializer eyeProjectSerializer, IAuraEventLoggingService eventLoggingService, IUnityContainer container)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -132,13 +132,23 @@
       <td></td>
     </tr>
     <tr>
-      <td><a class="xref" href="PoeShared.Prism.IFactory-2.html">IFactory</a>&lt;<span class="xref">AuraScript</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+      <td><a class="xref" href="PoeShared.Prism.IFactory-2.html">IFactory</a>&lt;<a class="xref" href="EyeAuras.Scripting.Visitors.ILinkedAurasScriptVisitor.html">ILinkedAurasScriptVisitor</a>, <span class="xref">IAuraScript</span>&gt;</td>
+      <td><span class="parametername">csharpScriptVisitorFactory</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="EyeAuras.Scripting.Services.IAuraScriptFactory.html">IAuraScriptFactory</a></td>
       <td><span class="parametername">scriptFactory</span></td>
       <td></td>
     </tr>
     <tr>
-      <td><a class="xref" href="EyeAuras.Scripting.Services.IDefaultReferencesProvider.html">IDefaultReferencesProvider</a></td>
-      <td><span class="parametername">defaultReferencesProvider</span></td>
+      <td><a class="xref" href="EyeAuras.Scripting.Services.IEyeProjectSerializer.html">IEyeProjectSerializer</a></td>
+      <td><span class="parametername">eyeProjectSerializer</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="EyeAuras.Shared.Services.IAuraEventLoggingService.html">IAuraEventLoggingService</a></td>
+      <td><span class="parametername">eventLoggingService</span></td>
       <td></td>
     </tr>
     <tr>
@@ -152,7 +162,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

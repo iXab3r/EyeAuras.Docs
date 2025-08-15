@@ -146,12 +146,6 @@
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
-      <tr>
-        <td id="PoeShared_Logging_IFluentLog_Metrics" data-uid="PoeShared.Logging.IFluentLog.Metrics">
-          <a class="xref" href="PoeShared.Logging.IFluentLog.Metrics.html#PoeShared_Logging_IFluentLog_Metrics">Metrics</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -240,21 +234,6 @@
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
-  <div>
       <a class="xref" href="PoeShared.LogExtensions.ErrorIfThrows.html#PoeShared_LogExtensions_ErrorIfThrows_PoeShared_Logging_IFluentLog_System_Action_System_String_">LogExtensions.ErrorIfThrows(IFluentLog, Action, string)</a>
   </div>
   <div>
@@ -330,6 +309,15 @@
       <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithAction.html#PoeShared_Logging_FluentLogExtensions_WithAction_PoeShared_Logging_IFluentLog_System_Action_System_ValueTuple_PoeShared_Logging_FluentLogLevel_System_String___">FluentLogExtensions.WithAction(IFluentLog, Action&lt;(FluentLogLevel Level, string Message)&gt;)</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithLogAction.html#PoeShared_Logging_FluentLogExtensions_WithLogAction_PoeShared_Logging_IFluentLog_System_Action_System_ValueTuple_PoeShared_Logging_FluentLogLevel_System_String_System_String_System_String_System_Exception___">FluentLogExtensions.WithLogAction(IFluentLog, Action&lt;(FluentLogLevel Level, string Message, string Prefix, string Suffix, Exception Exception)&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithMaxLineLength.html#PoeShared_Logging_FluentLogExtensions_WithMaxLineLength_PoeShared_Logging_IFluentLog_System_Nullable_System_Int32__">FluentLogExtensions.WithMaxLineLength(IFluentLog, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithMinLogLevelOverride.html#PoeShared_Logging_FluentLogExtensions_WithMinLogLevelOverride_PoeShared_Logging_IFluentLog_System_Nullable_PoeShared_Logging_FluentLogLevel__">FluentLogExtensions.WithMinLogLevelOverride(IFluentLog, FluentLogLevel?)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithPrefix.html#PoeShared_Logging_FluentLogExtensions_WithPrefix_PoeShared_Logging_IFluentLog_System_Func_System_String__">FluentLogExtensions.WithPrefix(IFluentLog, Func&lt;string&gt;)</a>
   </div>
   <div>
@@ -345,6 +333,9 @@
       <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithTable.html#PoeShared_Logging_FluentLogExtensions_WithTable__1_PoeShared_Logging_IFluentLog_System_Collections_Generic_IEnumerable___0__System_String_">FluentLogExtensions.WithTable&lt;T&gt;(IFluentLog, IEnumerable&lt;T&gt;, string)</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Logging.FluentLogExtensions.WithoutMaxLineLength.html#PoeShared_Logging_FluentLogExtensions_WithoutMaxLineLength_PoeShared_Logging_IFluentLog_">FluentLogExtensions.WithoutMaxLineLength(IFluentLog)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Logging.FluentLogExtensions.Write.html#PoeShared_Logging_FluentLogExtensions_Write_PoeShared_Logging_IFluentLog_PoeShared_Logging_FluentLogLevel_System_Func_System_String__">FluentLogExtensions.Write(IFluentLog, FluentLogLevel, Func&lt;string&gt;)</a>
   </div>
   <div>
@@ -358,6 +349,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -381,13 +375,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -409,7 +406,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

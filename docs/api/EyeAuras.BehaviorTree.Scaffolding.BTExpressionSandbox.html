@@ -115,16 +115,45 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.html">IAuraScriptSandbox</a></div>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IScriptSandbox.html">IScriptSandbox</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.AddContext.html#EyeAuras_Scripting_Api_AuraScriptSandbox_AddContext_EyeAuras_Scripting_Api_IScriptingApiContext_">AuraScriptSandbox.AddContext(IScriptingApiContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.AddNewExtension.html#EyeAuras_Scripting_Api_AuraScriptSandbox_AddNewExtension__1">AuraScriptSandbox.AddNewExtension&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.AddNewExtension.html#EyeAuras_Scripting_Api_AuraScriptSandbox_AddNewExtension_System_Type_">AuraScriptSandbox.AddNewExtension(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_System_Type_">AuraScriptSandbox.GetService(Type)</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__1">AuraScriptSandbox.GetService&lt;T&gt;()</a>
     </div>
     <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__2___1_">AuraScriptSandbox.GetService&lt;TOut, TIn1&gt;(TIn1)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__3___1___2_">AuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2&gt;(TIn1, TIn2)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__4___1___2___3_">AuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2, TIn3&gt;(TIn1, TIn2, TIn3)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__5___1___2___3___4_">AuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2, TIn3, TIn4&gt;(TIn1, TIn2, TIn3, TIn4)</a>
+    </div>
+    <div>
       <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.Log.html#EyeAuras_Scripting_Api_AuraScriptSandbox_Log">AuraScriptSandbox.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.ExecutionAnchors.html#EyeAuras_Scripting_Api_AuraScriptSandbox_ExecutionAnchors">AuraScriptSandbox.ExecutionAnchors</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Scripting.Api.AuraScriptSandbox.AuraTree.html#EyeAuras_Scripting_Api_AuraScriptSandbox_AuraTree">AuraScriptSandbox.AuraTree</a>
@@ -137,6 +166,12 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.Scripting.Api.ScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Int32_">ScriptSandbox.Sleep(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.ScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double_">ScriptSandbox.Sleep(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Scripting.Api.ScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double_System_Double_">ScriptSandbox.Sleep(double, double)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Scripting.Api.ScriptSandbox.cancellationToken.html#EyeAuras_Scripting_Api_ScriptSandbox_cancellationToken">ScriptSandbox.cancellationToken</a>
@@ -167,7 +202,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.BehaviorTree.dll</h6>
   <h5 id="EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BTExpressionSandbox : AuraScriptSandbox, IDisposable, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public class BTExpressionSandbox : AuraScriptSandbox, INotifyPropertyChanged, IAuraScriptSandbox, IScriptSandbox, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -180,8 +215,8 @@
     </thead>
     <tbody>
       <tr>
-        <td id="EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox__ctor_EyeAuras_BehaviorTree_Nodes_INode_EyeAuras_Shared_Model_IEyeContext_Unity_IUnityContainer_EyeAuras_Shared_Services_IAuraEventLoggingService_" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.#ctor(EyeAuras.BehaviorTree.Nodes.INode,EyeAuras.Shared.Model.IEyeContext,Unity.IUnityContainer,EyeAuras.Shared.Services.IAuraEventLoggingService)">
-          <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.-ctor.html#EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox__ctor_EyeAuras_BehaviorTree_Nodes_INode_EyeAuras_Shared_Model_IEyeContext_Unity_IUnityContainer_EyeAuras_Shared_Services_IAuraEventLoggingService_">BTExpressionSandbox(INode, IEyeContext, IUnityContainer, IAuraEventLoggingService)</a>
+        <td id="EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox__ctor_PoeShared_Logging_IFluentLog_EyeAuras_BehaviorTree_Nodes_INode_Unity_IUnityContainer_EyeAuras_Scripting_Services_IUnityRegistrationsLookup_" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.#ctor(PoeShared.Logging.IFluentLog,EyeAuras.BehaviorTree.Nodes.INode,Unity.IUnityContainer,EyeAuras.Scripting.Services.IUnityRegistrationsLookup)">
+          <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.-ctor.html#EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox__ctor_PoeShared_Logging_IFluentLog_EyeAuras_BehaviorTree_Nodes_INode_Unity_IUnityContainer_EyeAuras_Scripting_Services_IUnityRegistrationsLookup_">BTExpressionSandbox(IFluentLog, INode, IUnityContainer, IUnityRegistrationsLookup)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -201,26 +236,12 @@
         <td id="EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox_Blackboard" data-uid="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.Blackboard">
           <a class="xref" href="EyeAuras.BehaviorTree.Scaffolding.BTExpressionSandbox.Blackboard.html#EyeAuras_BehaviorTree_Scaffolding_BTExpressionSandbox_Blackboard">Blackboard</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Contains a reference to behavior tree blackboard, which is shared amongst all tree nodes</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -232,6 +253,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -255,13 +279,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -283,7 +310,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

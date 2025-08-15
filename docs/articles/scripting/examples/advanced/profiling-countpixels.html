@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Profiling CV API CountPixels | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Profiling CV API CountPixels | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../../styles/config.css">
+      <link rel="stylesheet" href="../../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <link rel="stylesheet" href="../../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../../index.html">
+              <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../../index.html">
+                          <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="what-are-we-comparing">What Are We Comparing?</h1>
+
+<p>We are comparing two methods for counting pixels of a specific color. Both methods are defined directly in the script and operate on BGR (blue-green-red) images.</p>
+<h2 id="countpixelsnaive"><strong>CountPixelsNaive</strong></h2>
+<p>This method uses <code>Image&lt;Bgr, byte&gt;</code>'s <code>GetPixel(x, y)</code>, which internally relies on <code>CvInvoke.cvGet2D</code>.</p>
+<h2 id="countpixelsnaivemem"><strong>CountPixelsNaiveMem</strong></h2>
+<p>This method reads data directly from memory.</p>
+<p>Both methods use the same logic — calculating the &quot;distance&quot; between colors, pixel by pixel.</p>
+<h1 id="lets-jump-to-the-results">Let's Jump to the Results</h1>
+<p>As shown, the memory-reading method (<strong>163.31ms</strong>) is more than <strong>TWICE</strong> as fast as <code>CvInvoke.cvGet2D</code> (<strong>397.3ms</strong>) — and this gap will only increase with larger image sizes. The code itself isn’t significantly more complex — the main change was introducing the additional <code>BgrByteColor</code> struct to represent color. The rest of the logic remains almost identical.</p>
+<pre><code class="lang-bash">DESKTOP-PK81KT3 at 3/23/2025 4:54:39 PM
+Test1\FindColor CV Profiler 0ms
+&gt;&gt; MLSearchRaw - RawPixelsKey { ThreadId = 81 } - Creation 23.41ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Preparations 0ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Refresh 1,616.5ms
+&gt;&gt; MLSearchRaw - RawPixelsKey { ThreadId = 81 } - Resolution 0ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Preparations 0ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Refresh 397.3ms
+&gt;&gt; MLSearchRaw - RawPixelsKey { ThreadId = 81 } - Resolution 0ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Preparations 0ms
+&gt;&gt; ProcessPixels - RawPixelsKey { ThreadId = 81 } - Refresh 163.31ms
+</code></pre>
+<h2 id="can-it-be-even-faster">Can It Be Even Faster?</h2>
+<p>Definitely! Modern CPUs have numerous useful instructions for efficient block operations (which is precisely our case). Another option is to move this calculation to the GPU; however, this introduces additional complexities — for example, transferring the image to the GPU also takes time, so performance testing is necessary. Furthermore, there are numerous optimization techniques available, but that's a topic for another article.</p>
+<h1 id="example-code">Example Code</h1>
+<pre><code class="lang-csharp">using Emgu.CV;
+using Emgu.CV.Structure;
+using EyeAuras.OpenCVAuras.Scaffolding;
+using StackExchange.Profiling;
+
+var targetWindow = GetService&lt;IWindowSelector&gt;().GetWindow(&quot;Aim Trainer&quot;);
+
+// This API is used to perform Computer Vision operations (image/text/color/ML search)
+var cv = GetService&lt;IComputerVisionExperimentalScriptingApi&gt;()
+    .ForWindow(targetWindow)
+    .EnableProfiling();
+
+var targetColor = Color.FromArgb(255, 88, 35);
+var bgrTargetColor = new Bgr(targetColor.B, targetColor.G, targetColor.R);
+
+// The first call is ALWAYS slower due to initialization
+cv.ProcessPixels(img =&gt;
+{
+    Log.Info(&quot;Initialization pass&quot;);
+});
+
+cv.ProcessPixels(img =&gt;
+{
+    Log.Info($&quot;Processing image via Naive method: {img.Size}&quot;);
+    var countPixels = CountPixelsNaive(img, bgrTargetColor, 100);
+});
+
+cv.ProcessPixels(img =&gt;
+{
+    Log.Info($&quot;Processing image via Naive Mem method: {img.Size}&quot;);
+    var countPixels = CountPixelsNaiveMem(img, bgrTargetColor, 100);
+});
+
+Log.Info($&quot;Results:\n{cv.Profiler.RenderPlainText()}&quot;);
+
+// Naive Method
+static int CountPixelsNaive(Image&lt;Bgr, byte&gt; image, Bgr color, Percentage similarity)
+{
+    var tolerance = (1 - similarity.ToDecimal()) * 255.0;
+    var count = 0;
+
+    for (var y = 0; y &lt; image.Height; y++)
+    {
+        for (var x = 0; x &lt; image.Width; x++)
+        {
+            var pixel = image[y, x];
+            if (IsColorMatch(pixel, color, tolerance))
+            {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+
+// Memory-Based Method
+static int CountPixelsNaiveMem(Image&lt;Bgr, byte&gt; image, Bgr color, Percentage similarity)
+{
+    var tolerance = (1 - similarity.ToDecimal()) * 255.0;
+    var memory = image.Mat.AsReadOnlySpan2D&lt;BgrByteColor&gt;();
+    var colorAsVector = new BgrByteColor((byte)color.Blue, (byte)color.Green, (byte)color.Red);
+
+    var count = 0;
+    for (var y = 0; y &lt; memory.Height; y++)
+    {
+        for (var x = 0; x &lt; memory.Width; x++)
+        {
+            var pixel = memory[row: y, column: x];
+            if (IsColorMatch(pixel, colorAsVector, tolerance))
+            {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+
+// Color Matching Logic
+private static bool IsColorMatch(Bgr pixel, Bgr targetColor, double tolerance)
+{
+    double distance = Math.Sqrt(
+        Math.Pow(pixel.Blue - targetColor.Blue, 2) +
+        Math.Pow(pixel.Green - targetColor.Green, 2) +
+        Math.Pow(pixel.Red - targetColor.Red, 2)
+    );
+    return distance &lt;= tolerance;
+}
+
+private static bool IsColorMatch(BgrByteColor pixel, BgrByteColor targetColor, double tolerance)
+{
+    double distance = Math.Sqrt(
+        Math.Pow(pixel.Blue - targetColor.Blue, 2) +
+        Math.Pow(pixel.Green - targetColor.Green, 2) +
+        Math.Pow(pixel.Red - targetColor.Red, 2)
+    );
+    return distance &lt;= tolerance;
+}
+
+// BgrByteColor Struct
+private readonly record struct BgrByteColor
+{
+    public BgrByteColor(byte blue, byte green, byte red)
+    {
+        Blue = blue;
+        Green = green;
+        Red = red;
+    }
+
+    public readonly byte Blue;
+    public readonly byte Green;
+    public readonly byte Red;
+}
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../../styles/singulink.js"></script>    </body>
+</html>

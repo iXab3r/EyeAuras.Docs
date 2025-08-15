@@ -109,10 +109,6 @@ Namespaces
 </h3>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.Behaviors.html">PoeShared.Blazor.Wpf.Behaviors</a></h5>
       <section></section>
-      <h5><a class="xref" href="PoeShared.Blazor.Wpf.Installer.html">PoeShared.Blazor.Wpf.Installer</a></h5>
-      <section></section>
-      <h5><a class="xref" href="PoeShared.Blazor.Wpf.Scaffolding.html">PoeShared.Blazor.Wpf.Scaffolding</a></h5>
-      <section></section>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.Services.html">PoeShared.Blazor.Wpf.Services</a></h5>
       <section></section>
     <h3 id="classes">
@@ -120,16 +116,33 @@ Classes
 </h3>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorContentControl.html">BlazorContentControl</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorContentControlConfiguratorBase.html">BlazorContentControlConfiguratorBase</a></h5>
+      <section><p>Base class for implementing <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorContentControlConfigurator.html">IBlazorContentControlConfigurator</a> with no-op defaults.</p>
+<p>This class is intended to simplify the creation of configurators by allowing implementers
+to override only the lifecycle stages they are interested in.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWebViewEx.html">BlazorWebViewEx</a></h5>
       <section></section>
-      <h5><a class="xref" href="PoeShared.Blazor.Wpf.CachingFileProvider.html">CachingFileProvider</a></h5>
-      <section><p>This file provider caches pre-loads all files inside content root which measurably reduces access time on slow systems.
-Also this fixes a problem with virtualized file system - file watchers which are used by PhysicalFileProvider are not stable</p>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWindowContent.html">BlazorWindowContent</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWindowDebugPanel.html">BlazorWindowDebugPanel</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWindowEdgeResizeController.html">BlazorWindowEdgeResizeController</a></h5>
+      <section><p>Implements the default window resize behavior for a <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.html">IBlazorWindow</a>, enabling the window
+to be resized by dragging edges/corners</p>
 </section>
-      <h5><a class="xref" href="PoeShared.Blazor.Wpf.InMemoryFileInfo.html">InMemoryFileInfo</a></h5>
-      <section></section>
-      <h5><a class="xref" href="PoeShared.Blazor.Wpf.InMemoryFileProvider.html">InMemoryFileProvider</a></h5>
-      <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWindowMouseDragController.html">BlazorWindowMouseDragController</a></h5>
+      <section><p>Implements the default window drag behavior for a <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.html">IBlazorWindow</a>, enabling the window
+to be repositioned via mouse dragging</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.BlazorWindowMouseDragControllerBase.html">BlazorWindowMouseDragControllerBase</a></h5>
+      <section><p>Base class for implementing mouse-based window dragging behavior in a Blazor-integrated window.
+Manages mouse capture, drag threshold detection, and cursor changes during drag operations.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.CompositeBlazorContentControlConfigurator.html">CompositeBlazorContentControlConfigurator</a></h5>
+      <section><p>Reactive composite that aggregates multiple <a class="xref" href="PoeShared.Blazor.Wpf.IBlazorContentControlConfigurator.html">IBlazorContentControlConfigurator</a> instances.
+Allows dynamic addition/removal of configurators and invokes them in registration order.</p>
+</section>
     <h3 id="structs">
 Structs
 </h3>
@@ -140,20 +153,50 @@ Interfaces
 </h3>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorContentControl.html">IBlazorContentControl</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorContentControlConfigurator.html">IBlazorContentControlConfigurator</a></h5>
+      <section><p>Defines extension points for configuring and initializing a <a class="xref" href="PoeShared.Blazor.Wpf.BlazorContentControl.html">BlazorContentControl</a>.
+Implement this interface to hook into the control's lifecycle stages such as
+configuration start, service registration, and post-initialization.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindow.html">IBlazorWindow</a></h5>
+      <section><p>Defines the contract for a Blazor window with configurable UI properties, event-driven lifecycle, and window state operations.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowAccessor.html">IBlazorWindowAccessor</a></h5>
+      <section><p>This interface could be used to access current Blazor Window from inside its context</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowController.html">IBlazorWindowController</a></h5>
+      <section><p>Defines the contract for a Blazor window with configurable UI properties, event-driven lifecycle, and window state operations.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowMetroController.html">IBlazorWindowMetroController</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.IBlazorWindowNativeController.html">IBlazorWindowNativeController</a></h5>
+      <section><p>Defines a contract for managing native window properties and operations within the Blazor environment,
+providing direct control over window positioning, sizing, and retrieval of window handles.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.ICoreWebView2Accessor.html">ICoreWebView2Accessor</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.IWebViewAccessor.html">IWebViewAccessor</a></h5>
       <section></section>
     <h3 id="enums">
 Enums
 </h3>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.TitleBarDisplayMode.html">TitleBarDisplayMode</a></h5>
+      <section><p>Specifies the display mode for the title bar in a Blazor-based window,
+providing options for native, embedded, or hidden configurations.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Blazor.Wpf.WebViewInstallType.html">WebViewInstallType</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Blazor.Wpf.WindowResizeDirection.html">WindowResizeDirection</a></h5>
+      <section><p>Specifies the direction(s) in which a window can be resized.
+Typically used to determine the cursor type or the drag behavior during edge/corner resizing.</p>
+</section>
 
 
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

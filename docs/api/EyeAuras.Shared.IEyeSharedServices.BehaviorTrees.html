@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Shared_IEyeSharedServices_BehaviorTrees_" data-uid="EyeAuras.Shared.IEyeSharedServices.BehaviorTrees*"></a>
 <h4 id="EyeAuras_Shared_IEyeSharedServices_BehaviorTrees" data-uid="EyeAuras.Shared.IEyeSharedServices.BehaviorTrees">BehaviorTrees</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Gets an observable list of all behavior trees in the system.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -131,11 +132,17 @@
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Shared_IEyeSharedServices_BehaviorTrees_examples">Examples</h5>
+<pre><code class="lang-csharp">// Find enabled trees
+var enabledTrees = eyeServices.BehaviorTrees.Items
+    .Where(t =&gt; t.IsEnabled)
+    .ToList();</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

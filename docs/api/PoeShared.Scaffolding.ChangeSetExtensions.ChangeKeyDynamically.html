@@ -109,6 +109,85 @@
 
 
 <a id="PoeShared_Scaffolding_ChangeSetExtensions_ChangeKeyDynamically_" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.ChangeKeyDynamically*"></a>
+<h4 id="PoeShared_Scaffolding_ChangeSetExtensions_ChangeKeyDynamically__4_System_IObservable_DynamicData_IChangeSet___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.ChangeKeyDynamically``4(System.IObservable{DynamicData.IChangeSet{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``0,``3}})">ChangeKeyDynamically&lt;TObject, TSourceKey, TSource, TDestinationKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TSourceKey&gt;&gt;, Expression&lt;Func&lt;TObject, TSource&gt;&gt;, Expression&lt;Func&lt;TObject, TDestinationKey&gt;&gt;)</h4>
+<div class="markdown level1 summary"></div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IObservable&lt;IChangeSet&lt;TObject, TDestinationKey&gt;&gt; ChangeKeyDynamically&lt;TObject, TSourceKey, TSource, TDestinationKey&gt;(this IObservable&lt;IChangeSet&lt;TObject, TSourceKey&gt;&gt; source, Expression&lt;Func&lt;TObject, TSource&gt;&gt; keySourceSelectorExpression, Expression&lt;Func&lt;TObject, TDestinationKey&gt;&gt; keySelectorExpression) where TObject : INotifyPropertyChanged where TSourceKey : notnull where TDestinationKey : notnull</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TSourceKey&gt;&gt;</td>
+      <td><span class="parametername">source</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TObject, TSource&gt;&gt;</td>
+      <td><span class="parametername">keySourceSelectorExpression</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TObject, TDestinationKey&gt;&gt;</td>
+      <td><span class="parametername">keySelectorExpression</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TDestinationKey&gt;&gt;</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TObject</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TSourceKey</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TSource</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TDestinationKey</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="PoeShared_Scaffolding_ChangeSetExtensions_ChangeKeyDynamically_" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.ChangeKeyDynamically*"></a>
 <h4 id="PoeShared_Scaffolding_ChangeSetExtensions_ChangeKeyDynamically__3_System_IObservable_DynamicData_IChangeSet___0___1___System_Linq_Expressions_Expression_System_Func___0___2___DynamicData_IObservableCache___0___2___" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.ChangeKeyDynamically``3(System.IObservable{DynamicData.IChangeSet{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},DynamicData.IObservableCache{``0,``2}@)">ChangeKeyDynamically&lt;TObject, TSourceKey, TDestinationKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TSourceKey&gt;&gt;, Expression&lt;Func&lt;TObject, TDestinationKey&gt;&gt;, out IObservableCache&lt;TObject, TDestinationKey&gt;)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
@@ -185,7 +264,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>IAuraTreeScriptingApi | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="IAuraTreeScriptingApi | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../styles/config.css">
+      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../index.html">
+              <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../index.html">
+                          <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+
+
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// Provides methods for interacting with the aura tree, including finding and retrieving auras, folders, and behavior trees. 
+/// It supports operations to both safely find elements (returning null if not found) and directly retrieve elements (throwing exceptions if not found), 
+/// accommodating scenarios that require precise control over error handling. The interface enables accessing collections of all managed auras, folders, 
+/// and behavior trees, as well as fetching specific triggers and actions associated with auras by path. This facilitates dynamic and scriptable interactions 
+/// with the application's hierarchical structure, ideal for scenarios requiring runtime navigation and manipulation of the aura tree.
+/// &lt;/summary&gt;
+public interface IAuraTreeScriptingApi : IScriptingApi
+{
+    /// &lt;summary&gt;
+    /// Contains reference to the Aura (or null) which holds the current script.
+    /// &lt;/summary&gt;
+    IAuraAccessor Aura { get; }
+
+    /// &lt;summary&gt;
+    /// Contains reference to the Folder which holds the current script.
+    /// &lt;/summary&gt;
+    IFolderAccessor Folder { get; }
+
+    /// &lt;summary&gt;
+    /// Contains all folders in the Aura Tree.
+    /// &lt;/summary&gt;
+    IObservableList&lt;IFolderAccessor&gt; Folders { get; }
+
+    /// &lt;summary&gt;
+    /// Contains all auras in the Aura Tree.
+    /// &lt;/summary&gt;
+    IObservableList&lt;IAuraAccessor&gt; Auras { get; }
+
+    /// &lt;summary&gt;
+    /// Contains all behavior trees in the Aura Tree.
+    /// &lt;/summary&gt;
+    IObservableList&lt;IBehaviorTreeAccessor&gt; BehaviorTrees { get; }
+
+    /// &lt;summary&gt;
+    /// Finds an aura by its path. Returns null if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the aura, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The aura at the specified path, or null if not found.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// var aura = AuraTree.FindAuraByPath(&quot;MyFolder/Aura1&quot;);
+    /// if (aura != null)
+    /// {
+    ///     Log.Info(&quot;Aura found!&quot;);
+    /// }
+    /// else
+    /// {
+    ///     Log.Info(&quot;Aura not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IAuraAccessor FindAuraByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Gets an aura by its path. Throws an exception if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the aura, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The aura at the specified path.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// try
+    /// {
+    ///     var aura = AuraTree.GetAuraByPath(&quot;MyFolder/Aura1&quot;);
+    ///     Log.Info(&quot;Aura found!&quot;);
+    /// }
+    /// catch (NotFoundException)
+    /// {
+    ///     Log.Info(&quot;Aura not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IAuraAccessor GetAuraByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Finds a folder by its path. Returns null if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the folder, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The folder at the specified path, or null if not found.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// var folder = AuraTree.FindFolderByPath(&quot;MyProject/Folders/Folder1&quot;);
+    /// if (folder != null)
+    /// {
+    ///     Log.Info(&quot;Folder found!&quot;);
+    /// }
+    /// else
+    /// {
+    ///     Log.Info(&quot;Folder not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IFolderAccessor FindFolderByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Gets a folder by its path. Throws an exception if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the folder, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The folder at the specified path.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// try
+    /// {
+    ///     var folder = AuraTree.GetFolderByPath(&quot;MyProject/Folders/Folder1&quot;);
+    ///     Log.Info(&quot;Folder found!&quot;);
+    /// }
+    /// catch (NotFoundException)
+    /// {
+    ///     Log.Info(&quot;Folder not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IFolderAccessor GetFolderByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Finds a behavior tree by its path. Returns null if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the behavior tree, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The behavior tree at the specified path, or null if not found.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// var behaviorTree = AuraTree.FindBehaviorTreeByPath(&quot;MyProject/BehaviorTrees/Tree1&quot;);
+    /// if (behaviorTree != null)
+    /// {
+    ///     Log.Info(&quot;Behavior tree found!&quot;);
+    /// }
+    /// else
+    /// {
+    ///     Log.Info(&quot;Behavior tree not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IBehaviorTreeAccessor FindBehaviorTreeByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Gets a behavior tree by its path. Throws an exception if not found.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path of the behavior tree, either absolute or relative.&lt;/param&gt;
+    /// &lt;returns&gt;The behavior tree at the specified path.&lt;/returns&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// try
+    /// {
+    ///     var behaviorTree = AuraTree.GetBehaviorTreeByPath(&quot;MyProject/BehaviorTrees/Tree1&quot;);
+    ///     Log.Info(&quot;Behavior tree found!&quot;);
+    /// }
+    /// catch (NotFoundException)
+    /// {
+    ///     Log.Info(&quot;Behavior tree not found.&quot;);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IBehaviorTreeAccessor GetBehaviorTreeByPath(string path);
+
+    /// &lt;summary&gt;
+    /// Gets a trigger of a specific type by path. Throws an exception if the trigger cannot be found or does not match the specified type.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name=&quot;TTrigger&quot;&gt;The type of the trigger to get.&lt;/typeparam&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path to the aura containing the trigger.&lt;/param&gt;
+    /// &lt;returns&gt;A trigger of the specified type.&lt;/returns&gt;
+    /// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if the trigger of the specified type cannot be found at the given path, or if the aura does not contain any triggers at all.&lt;/exception&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// try
+    /// {
+    ///     var trigger = AuraTree.GetTriggerByPath&lt;IImageSearchTrigger&gt;(&quot;MyAuraPath&quot;);
+    ///     Log.Info($&quot;Trigger found: {trigger.Name}&quot;);
+    /// }
+    /// catch (ArgumentException ex)
+    /// {
+    ///     Log.Info(ex.Message);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    public TTrigger GetTriggerByPath&lt;TTrigger&gt;(string path) where TTrigger : IAuraTrigger;
+
+    /// &lt;summary&gt;
+    /// Gets an action of a specific type by path. Throws an exception if the action cannot be found or does not match the specified type.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name=&quot;TAction&quot;&gt;The type of the action to get.&lt;/typeparam&gt;
+    /// &lt;param name=&quot;path&quot;&gt;The path to the aura containing the action.&lt;/param&gt;
+    /// &lt;returns&gt;An action of the specified type.&lt;/returns&gt;
+    /// &lt;exception cref=&quot;ArgumentException&quot;&gt;Thrown if the action of the specified type cannot be found at the given path, or if the aura does not contain any actions at all.&lt;/exception&gt;
+    /// &lt;example&gt;
+    /// &lt;code&gt;
+    /// try
+    /// {
+    ///     var action = AuraTree.GetActionByPath&lt;ISendSequenceAction&gt;(&quot;MyAuraPath&quot;);
+    ///     Log.Info($&quot;Action found: {action.Name}&quot;);
+    /// }
+    /// catch (ArgumentException ex)
+    /// {
+    ///     Log.Info(ex.Message);
+    /// }
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    public TAction GetActionByPath&lt;TAction&gt;(string path) where TAction : IAuraAction;
+}
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../styles/singulink.js"></script>    </body>
+</html>

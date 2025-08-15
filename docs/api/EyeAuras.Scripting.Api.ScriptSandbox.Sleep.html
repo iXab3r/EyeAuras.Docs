@@ -135,6 +135,8 @@
     </tr>
   </tbody>
 </table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_IScriptSandbox_Sleep_System_TimeSpan_">IScriptSandbox.Sleep(TimeSpan)</a></div>
 <h5 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_TimeSpan__remarks">Remarks</h5>
 <div class="markdown level1 remarks"><p>This method synchronously delays the execution of the current method for the specified <code class="paramref">delay</code>.
 It utilizes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.delay#system-threading-tasks-task-delay(system-timespan-system-threading-cancellationtoken)">Delay(TimeSpan, CancellationToken)</a> to implement the delay,
@@ -185,8 +187,118 @@ and it will block the calling thread until the delay has elapsed or the operatio
     </tr>
   </tbody>
 </table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_IScriptSandbox_Sleep_System_Int32_">IScriptSandbox.Sleep(int)</a></div>
 <h5 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Int32__remarks">Remarks</h5>
 <div class="markdown level1 remarks"><p>This method synchronously delays the execution of the current method for the specified <code class="paramref">delayMs</code>.
+It utilizes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.delay#system-threading-tasks-task-delay(system-timespan-system-threading-cancellationtoken)">Delay(TimeSpan, CancellationToken)</a> to implement the delay,
+and it will block the calling thread until the delay has elapsed or the operation is canceled.</p>
+</div>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+      <td><p>Thrown if the operation is canceled through the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_" data-uid="EyeAuras.Scripting.Api.ScriptSandbox.Sleep*"></a>
+<h4 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double_" data-uid="EyeAuras.Scripting.Api.ScriptSandbox.Sleep(System.Double)">Sleep(double)</h4>
+<div class="markdown level1 summary"><p>Suspends the execution of the current method for a specified duration.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public void Sleep(double delayMs)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+      <td><span class="parametername">delayMs</span></td>
+      <td><p>The amount of time in milliseconds for which to suspend execution.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IScriptSandbox.Sleep.html#EyeAuras_Scripting_Api_IScriptSandbox_Sleep_System_Double_">IScriptSandbox.Sleep(double)</a></div>
+<h5 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method synchronously delays the execution of the current method for the specified <code class="paramref">delayMs</code>.
+It utilizes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.delay#system-threading-tasks-task-delay(system-timespan-system-threading-cancellationtoken)">Delay(TimeSpan, CancellationToken)</a> to implement the delay,
+and it will block the calling thread until the delay has elapsed or the operation is canceled.</p>
+</div>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></td>
+      <td><p>Thrown if the operation is canceled through the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_" data-uid="EyeAuras.Scripting.Api.ScriptSandbox.Sleep*"></a>
+<h4 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double_System_Double_" data-uid="EyeAuras.Scripting.Api.ScriptSandbox.Sleep(System.Double,System.Double)">Sleep(double, double)</h4>
+<div class="markdown level1 summary"><p>Suspends the execution of the current method for a some time period ranging from <code class="paramref">minDelayMs</code> to <code class="paramref">maxDelayMs</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public void Sleep(double minDelayMs, double maxDelayMs)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+      <td><span class="parametername">minDelayMs</span></td>
+      <td><p>The minimum amount of time in milliseconds for which to suspend execution.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+      <td><span class="parametername">maxDelayMs</span></td>
+      <td><p>The maximum amount of time in milliseconds for which to suspend execution.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="EyeAuras_Scripting_Api_ScriptSandbox_Sleep_System_Double_System_Double__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method synchronously delays the execution of the current method for random period of time.
 It utilizes <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task.delay#system-threading-tasks-task-delay(system-timespan-system-threading-cancellationtoken)">Delay(TimeSpan, CancellationToken)</a> to implement the delay,
 and it will block the calling thread until the delay has elapsed or the operation is canceled.</p>
 </div>
@@ -210,7 +322,7 @@ and it will block the calling thread until the delay has elapsed or the operatio
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

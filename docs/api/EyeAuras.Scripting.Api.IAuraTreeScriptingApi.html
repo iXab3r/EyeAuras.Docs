@@ -103,19 +103,27 @@
 
   <h1 id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi" class="text-break">Interface IAuraTreeScriptingApi
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides methods for interacting with the aura tree, including finding and retrieving auras, folders, and behavior trees.
+It supports operations to both safely find elements (returning null if not found) and directly retrieve elements (throwing exceptions if not found),
+accommodating scenarios that require precise control over error handling. The interface enables accessing collections of all managed auras, folders,
+and behavior trees, as well as fetching specific triggers and actions associated with auras by path. This facilitates dynamic and scriptable interactions
+with the application's hierarchical structure, ideal for scenarios requiring runtime navigation and manipulation of the aura tree.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="EyeAuras.Scripting.Api.IScriptingApi.Name.html#EyeAuras_Scripting_Api_IScriptingApi_Name">IScriptingApi.Name</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EyeAuras.html">EyeAuras</a>.<a class="xref" href="EyeAuras.Scripting.html">Scripting</a>.<a class="xref" href="EyeAuras.Scripting.Api.html">Api</a></h6>
   <h6><strong>Assembly</strong>: EyeAuras.Scripting.dll</h6>
   <h5 id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAuraTreeScriptingApi : IScriptingApi</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAuraTreeScriptingApi : IScriptingApi, IDisposable</code></pre>
   </div>
   <h3 id="properties">Properties
 </h3>
@@ -131,35 +139,42 @@
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Aura" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Aura">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Aura.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Aura">Aura</a>
         </td>
-        <td class="markdown level1 summary"><p>Contains reference to Aura (or null) which holds current script</p>
+        <td class="markdown level1 summary"><p>Contains reference to the Aura (or null) which holds the current script.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Auras" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Auras">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Auras.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Auras">Auras</a>
         </td>
-        <td class="markdown level1 summary"><p>All auras in Aura Tree</p>
+        <td class="markdown level1 summary"><p>Contains all auras in the Aura Tree.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_BehaviorTrees" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.BehaviorTrees">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.BehaviorTrees.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_BehaviorTrees">BehaviorTrees</a>
         </td>
-        <td class="markdown level1 summary"><p>All behavior trees in Aura Tree</p>
+        <td class="markdown level1 summary"><p>Contains all behavior trees in the Aura Tree.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Folder" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Folder">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Folder.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Folder">Folder</a>
         </td>
-        <td class="markdown level1 summary"><p>Contains reference to a Folder which holds current script</p>
+        <td class="markdown level1 summary"><p>Contains reference to the Folder which holds the current script.</p>
 </td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Folders" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Folders">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Folders.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Folders">Folders</a>
         </td>
-        <td class="markdown level1 summary"><p>All folders in Aura Tree</p>
+        <td class="markdown level1 summary"><p>Contains all folders in the Aura Tree.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Macros" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Macros">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.Macros.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_Macros">Macros</a>
+        </td>
+        <td class="markdown level1 summary"><p>Contains all macros in the Aura Tree.</p>
 </td>
       </tr>
     </tbody>
@@ -178,17 +193,33 @@
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindAuraByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindAuraByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindAuraByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindAuraByPath_System_String_">FindAuraByPath(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Finds an aura by its path. Returns null if not found.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindBehaviorTreeByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindBehaviorTreeByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindBehaviorTreeByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindBehaviorTreeByPath_System_String_">FindBehaviorTreeByPath(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Finds a behavior tree by its path. Returns null if not found.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindFolderByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindFolderByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindFolderByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindFolderByPath_System_String_">FindFolderByPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Finds a folder by its path. Returns null if not found.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindMacroByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindMacroByPath(System.String)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.FindMacroByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_FindMacroByPath_System_String_">FindMacroByPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Finds a macro by its path. Returns null if not found.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetActionByPath__1_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetActionByPath``1(System.String)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetActionByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetActionByPath__1_System_String_">GetActionByPath&lt;TAction&gt;(string)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -196,38 +227,39 @@
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetAuraByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetAuraByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetAuraByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetAuraByPath_System_String_">GetAuraByPath(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets an aura by its path. Throws an exception if not found.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetBehaviorTreeByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetBehaviorTreeByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetBehaviorTreeByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetBehaviorTreeByPath_System_String_">GetBehaviorTreeByPath(string)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Gets a behavior tree by its path. Throws an exception if not found.</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetFolderByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetFolderByPath(System.String)">
           <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetFolderByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetFolderByPath_System_String_">GetFolderByPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets a folder by its path. Throws an exception if not found.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetMacroByPath_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetMacroByPath(System.String)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetMacroByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetMacroByPath_System_String_">GetMacroByPath(string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets a macro by its path. Throws an exception if not found.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetTriggerByPath__1_System_String_" data-uid="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetTriggerByPath``1(System.String)">
+          <a class="xref" href="EyeAuras.Scripting.Api.IAuraTreeScriptingApi.GetTriggerByPath.html#EyeAuras_Scripting_Api_IAuraTreeScriptingApi_GetTriggerByPath__1_System_String_">GetTriggerByPath&lt;TTrigger&gt;(string)</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -239,6 +271,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -262,13 +297,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -290,7 +328,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

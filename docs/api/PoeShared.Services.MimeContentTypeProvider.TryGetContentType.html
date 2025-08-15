@@ -109,13 +109,13 @@
 
 
 <a id="PoeShared_Services_MimeContentTypeProvider_TryGetContentType_" data-uid="PoeShared.Services.MimeContentTypeProvider.TryGetContentType*"></a>
-<h4 id="PoeShared_Services_MimeContentTypeProvider_TryGetContentType_System_String_System_Net_Mime_ContentType__" data-uid="PoeShared.Services.MimeContentTypeProvider.TryGetContentType(System.String,System.Net.Mime.ContentType@)">TryGetContentType(string, out ContentType)</h4>
+<h4 id="PoeShared_Services_MimeContentTypeProvider_TryGetContentType_System_String_System_Nullable_PoeShared_Modularity_MimeContentType___" data-uid="PoeShared.Services.MimeContentTypeProvider.TryGetContentType(System.String,System.Nullable{PoeShared.Modularity.MimeContentType}@)">TryGetContentType(string, out MimeContentType?)</h4>
 <div class="markdown level1 summary"><p>Given a file path, determine the MIME type</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public bool TryGetContentType(string path, out ContentType contentType)</code></pre>
+  <pre><code class="lang-csharp hljs">public bool TryGetContentType(string path, out MimeContentType? contentType)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -134,7 +134,7 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mime.contenttype">ContentType</a></td>
+      <td><a class="xref" href="PoeShared.Modularity.MimeContentType.html">MimeContentType</a>?</td>
       <td><span class="parametername">contentType</span></td>
       <td><p>The resulting MIME type</p>
 </td>
@@ -161,7 +161,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

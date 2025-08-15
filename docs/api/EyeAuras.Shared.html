@@ -115,9 +115,15 @@ Namespaces
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.EntityListEditor.html">EyeAuras.Shared.EntityListEditor</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Git.html">EyeAuras.Shared.Git</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.HierarchicalDefaultProperties.html">EyeAuras.Shared.HierarchicalDefaultProperties</a></h5>
+      <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Model.html">EyeAuras.Shared.Model</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Modularity.html">EyeAuras.Shared.Modularity</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Osd.html">EyeAuras.Shared.Osd</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Overlays.html">EyeAuras.Shared.Overlays</a></h5>
       <section></section>
@@ -129,7 +135,7 @@ Namespaces
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.html">EyeAuras.Shared.Services</a></h5>
       <section></section>
-      <h5><a class="xref" href="EyeAuras.Shared.Sharing.Services.html">EyeAuras.Shared.Sharing.Services</a></h5>
+      <h5><a class="xref" href="EyeAuras.Shared.Sharing.html">EyeAuras.Shared.Sharing</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Statistics.html">EyeAuras.Shared.Statistics</a></h5>
       <section></section>
@@ -146,18 +152,24 @@ Classes
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.ProxyAuraProperties.html">ProxyAuraProperties</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.WellKnownTemplateKeys.html">WellKnownTemplateKeys</a></h5>
+      <section></section>
     <h3 id="interfaces">
 Interfaces
 </h3>
       <h5><a class="xref" href="EyeAuras.Shared.IAura.html">IAura</a></h5>
-      <section></section>
+      <section><p>Represents a high-level aura entity in the EyeAuras system that combines model, visual, and control aspects.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.IAuraEntity.html">IAuraEntity</a></h5>
       <section><p>Represents aura object which has name and description</p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.IAuraObject.html">IAuraObject</a></h5>
-      <section></section>
+      <section><p>Represents a core aura object in the EyeAuras system that supports property binding, error tracking, and context awareness.
+This interface serves as the foundation for all aura-related objects that need to maintain state and handle property changes.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.IAuraObject-1.html">IAuraObject&lt;TProperties&gt;</a></h5>
-      <section></section>
+      <section><p>Strongly-typed extension of IAuraObject that specifies the concrete type of properties managed by the aura object.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.IAuraProperties.html">IAuraProperties</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.IAuraPropertiesEditor.html">IAuraPropertiesEditor</a></h5>
@@ -165,7 +177,9 @@ Interfaces
       <h5><a class="xref" href="EyeAuras.Shared.IAuraPropertiesEditor-1.html">IAuraPropertiesEditor&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.IBehaviorTree.html">IBehaviorTree</a></h5>
-      <section></section>
+      <section><p>Represents a behavior tree that can execute hierarchical behaviors in a systematic way.
+Implements core tree functionality while integrating with the EyeAuras item system.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.ICanBeArchived.html">ICanBeArchived</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></h5>
@@ -185,10 +199,10 @@ Interfaces
       <h5><a class="xref" href="EyeAuras.Shared.IComplexAuraList-1.html">IComplexAuraList&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.IEyeItem.html">IEyeItem</a></h5>
-      <section><p>Item in a program tree (folders, auras, etc)</p>
+      <section><p>Represents a hierarchical item in the EyeAuras system, such as folders, auras, or behavior trees.</p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.IEyeSharedServices.html">IEyeSharedServices</a></h5>
-      <section><p>Contains utility services which could be used to access program internals</p>
+      <section><p>Provides core application services and functionality for the EyeAuras system.</p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.IFolder.html">IFolder</a></h5>
       <section></section>
@@ -210,7 +224,8 @@ Interfaces
       <section><p>Defines an interface for objects that maintain links to auras and folders by their IDs.</p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.IHasLinkedAuras.html">IHasLinkedAuras</a></h5>
-      <section></section>
+      <section><p>Represents an object that maintains references to other auras and can evaluate their states.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.IHasName.html">IHasName</a></h5>
       <section><p>Defines an interface for objects that have a name. This interface is useful for identifying
 objects, especially in scenarios where the name represents an un-localized identifier,
@@ -228,7 +243,7 @@ such as a filename, and can be used for lookups or comparisons.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

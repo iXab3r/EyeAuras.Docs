@@ -107,6 +107,9 @@
     <h3 id="classes">
 Classes
 </h3>
+      <h5><a class="xref" href="PoeShared.Scaffolding.AlphanumericStringComparer.html">AlphanumericStringComparer</a></h5>
+      <section><p>Implements a natural comparer for strings.</p>
+</section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ArrayPoolEventListener.html">ArrayPoolEventListener</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.AssemblyExtensions.html">AssemblyExtensions</a></h5>
@@ -118,6 +121,8 @@ This class is optimized for performance in multi-threaded environments.</p>
       <h5><a class="xref" href="PoeShared.Scaffolding.BenchmarkTimer.html">BenchmarkTimer</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.BinaryExtensions.html">BinaryExtensions</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.Cached-1.html">Cached&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.html">ChangeSetExtensions</a></h5>
       <section></section>
@@ -142,7 +147,11 @@ because I liked their interface.</p>
       <h5><a class="xref" href="PoeShared.Scaffolding.ComplexProgressTracker.html">ComplexProgressTracker</a></h5>
       <section><p>Manages and tracks the progress of multiple tasks, providing an aggregated progress percentage.</p>
 </section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.ConcurrentQueueUtils.html">ConcurrentQueueUtils</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ConfigurableReactiveObjectWithProperties-1.html">ConfigurableReactiveObjectWithProperties&lt;TProperties&gt;</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.DateTimeExtensions.html">DateTimeExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.DateTimeUtils.html">DateTimeUtils</a></h5>
       <section></section>
@@ -153,6 +162,8 @@ because I liked their interface.</p>
       <h5><a class="xref" href="PoeShared.Scaffolding.DisposableExtensions.html">DisposableExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.DisposableReactiveRecord.html">DisposableReactiveRecord</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.EnablementControllerExtensions.html">EnablementControllerExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.EnumExtensions.html">EnumExtensions</a></h5>
       <section></section>
@@ -169,9 +180,13 @@ because I liked their interface.</p>
       <section><p>A comparer which implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a> for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a>.
 This is copied from EFCore to avoid bringing all EF dependencies along with it: <a href="https://github.com/dotnet/efcore/blob/8e675829631dc49c284a779c86c2eab1d742f729/src/EFCore/Query/ExpressionEqualityComparer.cs">https://github.com/dotnet/efcore/blob/8e675829631dc49c284a779c86c2eab1d742f729/src/EFCore/Query/ExpressionEqualityComparer.cs</a></p>
 </section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.ExpressionUtils.html">ExpressionUtils</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.Fallback-1.html">Fallback&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.FileInfoExtensions.html">FileInfoExtensions</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.FileProviderExtensions.html">FileProviderExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.FileUtils.html">FileUtils</a></h5>
       <section></section>
@@ -186,17 +201,34 @@ This is copied from EFCore to avoid bringing all EF dependencies along with it: 
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.HierarchicalValue-2.html">HierarchicalValue&lt;TContainer, T&gt;</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.IconHelper.html">IconHelper</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.InMemoryFileInfo.html">InMemoryFileInfo</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.InMemoryFileProvider.html">InMemoryFileProvider</a></h5>
+      <section><p>Provides an in-memory file provider for serving files and directory contents dynamically.
+This class implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.fileproviders.ifileprovider">IFileProvider</a> to provide virtual files,
+allowing for dynamic creation, updates, and retrieval of file and directory structures.</p>
+<p>Key Features:</p>
+<ul><li>Stores files in memory with an <span class="xref">DynamicData.ISourceCache&lt;TObject, TKey&gt;</span> for efficient access.</li><li>Handles URL-decoded paths to accommodate browser-originated file requests.</li><li>Supports retrieving individual files via <a class="xref" href="PoeShared.Scaffolding.InMemoryFileProvider.GetFileInfo.html#PoeShared_Scaffolding_InMemoryFileProvider_GetFileInfo_System_String_">GetFileInfo(string)</a>.</li><li>Supports listing directory contents via <a class="xref" href="PoeShared.Scaffolding.InMemoryFileProvider.GetDirectoryContents.html#PoeShared_Scaffolding_InMemoryFileProvider_GetDirectoryContents_System_String_">GetDirectoryContents(string)</a>.</li><li>Automatically updates the count of files available.</li></ul>
+</section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IntPtrExtensions.html">IntPtrExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.InvalidStateException.html">InvalidStateException</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IpAddressExtensions.html">IpAddressExtensions</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.JTokenExtensions.html">JTokenExtensions</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.JsonUtils.html">JsonUtils</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.KeyboardLayoutManagerExtensions.html">KeyboardLayoutManagerExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.LambdaComparer-1.html">LambdaComparer&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.LambdaEqualityComparer-1.html">LambdaEqualityComparer&lt;T&gt;</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.LazyInMemoryFileInfo.html">LazyInMemoryFileInfo</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.LazyReactiveObject-1.html">LazyReactiveObject&lt;T&gt;</a></h5>
       <section></section>
@@ -207,8 +239,6 @@ This is copied from EFCore to avoid bringing all EF dependencies along with it: 
       <h5><a class="xref" href="PoeShared.Scaffolding.LoggingListChangeSetAdaptor-1.html">LoggingListChangeSetAdaptor&lt;T&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.MappingEnumerator-2.html">MappingEnumerator&lt;T, TResult&gt;</a></h5>
-      <section></section>
-      <h5><a class="xref" href="PoeShared.Scaffolding.MetricsExtensions.html">MetricsExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.NaturalStringComparer.html">NaturalStringComparer</a></h5>
       <section><p>Implements a natural comparer for strings.</p>
@@ -249,6 +279,13 @@ This is copied from EFCore to avoid bringing all EF dependencies along with it: 
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ReactiveSet-1.html">ReactiveSet&lt;T&gt;</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.RefCountedLinkedSet-1.html">RefCountedLinkedSet&lt;T&gt;</a></h5>
+      <section><p>Ref-counted MRU set: items are unique by equality; each Add increments a refcount,
+each token Dispose decrements it; item is removed when refcount hits zero.
+Enumeration yields items in MRU-first order (most recently added/updated first).</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.RotatingCancellationTokenSource.html">RotatingCancellationTokenSource</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.SchedulerExtensions.html">SchedulerExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.SecureStringExtensions.html">SecureStringExtensions</a></h5>
@@ -257,6 +294,14 @@ This is copied from EFCore to avoid bringing all EF dependencies along with it: 
       <h5><a class="xref" href="PoeShared.Scaffolding.SemaphoreSlimExtensions.html">SemaphoreSlimExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ServiceCollectionExtensions.html">ServiceCollectionExtensions</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.ServiceHosting-1.html">ServiceHosting&lt;T&gt;</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.SetExtensions.html">SetExtensions</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.ShellLinkUtils.html">ShellLinkUtils</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.SimpleProgressReporter.html">SimpleProgressReporter</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.SourceCacheAccessor-2.html">SourceCacheAccessor&lt;TObject, TKey&gt;</a></h5>
       <section></section>
@@ -290,6 +335,8 @@ NOTE: The same approach for SourceList does not work as it is not really possibl
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.UnityContainerExtensions.html">UnityContainerExtensions</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.VectorExtensions.html">VectorExtensions</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.VersionExtensions.html">VersionExtensions</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.WellKnownContentTypes.html">WellKnownContentTypes</a></h5>
@@ -307,11 +354,20 @@ NOTE: The same approach for SourceList does not work as it is not really possibl
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.XmlExtensions.html">XmlExtensions</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.ZipFileUtils.html">ZipFileUtils</a></h5>
+      <section></section>
     <h3 id="structs">
 Structs
 </h3>
       <h5><a class="xref" href="PoeShared.Scaffolding.AnnotatedBoolean.html">AnnotatedBoolean</a></h5>
       <section><p>Represents a boolean value annotated with a string, providing additional context or information about the boolean value.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.Annotated-1.html">Annotated&lt;T&gt;</a></h5>
+      <section><p>Represents a value of type T annotated with a string, providing additional context or information about the value.</p>
+</section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.Percentage.html">Percentage</a></h5>
+      <section><p>Represents a percentage value (0-100).
+Provides utility methods for conversion and scaling.</p>
 </section>
       <h5><a class="xref" href="PoeShared.Scaffolding.ProcessHelper.ProcessRunInfo.html">ProcessHelper.ProcessRunInfo</a></h5>
       <section></section>
@@ -344,11 +400,17 @@ that need to be released in a particular manner.</p>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IConfigurableReactiveObject-1.html">IConfigurableReactiveObject&lt;TProperties&gt;</a></h5>
       <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.IDispatcherScheduler.html">IDispatcherScheduler</a></h5>
+      <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IHierarchicalSourceCache-2.html">IHierarchicalSourceCache&lt;TObject, TKey&gt;</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.IInMemoryFileProvider.html">IInMemoryFileProvider</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IObservableCacheEx-2.html">IObservableCacheEx&lt;T, TKey&gt;</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IObservableListEx-1.html">IObservableListEx&lt;T&gt;</a></h5>
+      <section></section>
+      <h5><a class="xref" href="PoeShared.Scaffolding.IProgressReporter.html">IProgressReporter</a></h5>
       <section></section>
       <h5><a class="xref" href="PoeShared.Scaffolding.IReactiveList-1.html">IReactiveList&lt;T&gt;</a></h5>
       <section></section>
@@ -370,7 +432,7 @@ that need to be released in a particular manner.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

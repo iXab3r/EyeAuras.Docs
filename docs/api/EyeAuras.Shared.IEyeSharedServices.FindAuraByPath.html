@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Shared_IEyeSharedServices_FindAuraByPath_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindAuraByPath*"></a>
 <h4 id="EyeAuras_Shared_IEyeSharedServices_FindAuraByPath_System_String_System_String_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindAuraByPath(System.String,System.String)">FindAuraByPath(string, string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Finds an aura by its path relative to a root path.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -129,12 +130,14 @@
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">rootPath</span></td>
-      <td></td>
+      <td><p>The base directory path to start the search from.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">path</span></td>
-      <td></td>
+      <td><p>The relative path to the target aura.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -149,15 +152,23 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.IAura.html">IAura</a></td>
-      <td></td>
+      <td><p>The found aura or null if not found.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Shared_IEyeSharedServices_FindAuraByPath_System_String_System_String__examples">Examples</h5>
+<pre><code class="lang-csharp">// Find aura in root folder
+var aura = eyeServices.FindAuraByPath(".", "MyAura");
+
+// Find aura in nested folder
+var aura = eyeServices.FindAuraByPath("Triggers", "Combat/FlaskManager");</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

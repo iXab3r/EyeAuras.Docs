@@ -109,8 +109,58 @@
 
 
 <a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
+<h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_System_Type_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService(System.Type)">GetService(Type)</h4>
+<div class="markdown level1 summary"><p>Resolves and returns a service of the specified type from the Unity container.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public object GetService(Type type)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+      <td><span class="parametername">type</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+      <td><p>The resolved service instance of type T.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_System_Type__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method attempts to resolve a service of type T from the configured Unity container. If the service implements IDisposable,
+it is automatically added to a CompositeDisposable to ensure it is disposed of when the sandbox is disposed. This management
+of disposable resources helps in preventing memory leaks and other resource management issues.</p>
+</div>
+
+
+<a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
 <h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__1" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService``1">GetService&lt;T&gt;()</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Resolves and returns a service of the specified type from the Unity container.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -127,7 +177,8 @@
   <tbody>
     <tr>
       <td><span class="xref">T</span></td>
-      <td></td>
+      <td><p>The resolved service instance of type T.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -142,15 +193,377 @@
   <tbody>
     <tr>
       <td><span class="parametername">T</span></td>
-      <td></td>
+      <td><p>The type of the service to resolve.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_IAuraScriptSandbox_GetService__1">IAuraScriptSandbox.GetService&lt;T&gt;()</a></div>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__1_remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method attempts to resolve a service of type T from the configured Unity container. If the service implements IDisposable,
+it is automatically added to a CompositeDisposable to ensure it is disposed of when the sandbox is disposed. This management
+of disposable resources helps in preventing memory leaks and other resource management issues.</p>
+</div>
+
+
+<a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
+<h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__2___1_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService``2(``1)">GetService&lt;TOut, TIn1&gt;(TIn1)</h4>
+<div class="markdown level1 summary"><p>Resolves a factory service that requires one input parameter, then creates and returns an instance of the specified type.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public TOut GetService&lt;TOut, TIn1&gt;(TIn1 param1)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TIn1</span></td>
+      <td><span class="parametername">param1</span></td>
+      <td><p>The first parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TOut</span></td>
+      <td><p>The created service instance of type TOut.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TOut</span></td>
+      <td><p>The type of the service to resolve and create.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn1</span></td>
+      <td><p>The type of the first parameter required by the factory.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_IAuraScriptSandbox_GetService__2___1_">IAuraScriptSandbox.GetService&lt;TOut, TIn1&gt;(TIn1)</a></div>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__2___1__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method is useful for resolving services that require additional configuration or parameters upon creation, as it uses
+a factory pattern to initialize the service instance with the specified parameter.</p>
+</div>
+
+
+<a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
+<h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__3___1___2_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService``3(``1,``2)">GetService&lt;TOut, TIn1, TIn2&gt;(TIn1, TIn2)</h4>
+<div class="markdown level1 summary"><p>Resolves a factory service that requires two input parameters, then creates and returns an instance of the specified type.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public TOut GetService&lt;TOut, TIn1, TIn2&gt;(TIn1 param1, TIn2 param2)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TIn1</span></td>
+      <td><span class="parametername">param1</span></td>
+      <td><p>The first parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn2</span></td>
+      <td><span class="parametername">param2</span></td>
+      <td><p>The second parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TOut</span></td>
+      <td><p>The created service instance of type TOut.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TOut</span></td>
+      <td><p>The type of the service to resolve and create.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn1</span></td>
+      <td><p>The type of the first parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn2</span></td>
+      <td><p>The type of the second parameter required by the factory.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_IAuraScriptSandbox_GetService__3___1___2_">IAuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2&gt;(TIn1, TIn2)</a></div>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__3___1___2__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This method extends the factory pattern to services that require two parameters upon instantiation, ensuring flexibility in
+configuring services with multiple dependencies.</p>
+</div>
+
+
+<a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
+<h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__4___1___2___3_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService``4(``1,``2,``3)">GetService&lt;TOut, TIn1, TIn2, TIn3&gt;(TIn1, TIn2, TIn3)</h4>
+<div class="markdown level1 summary"><p>Resolves a factory service that requires three input parameters, then creates and returns an instance of the specified type.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public TOut GetService&lt;TOut, TIn1, TIn2, TIn3&gt;(TIn1 param1, TIn2 param2, TIn3 param3)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TIn1</span></td>
+      <td><span class="parametername">param1</span></td>
+      <td><p>The first parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn2</span></td>
+      <td><span class="parametername">param2</span></td>
+      <td><p>The second parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn3</span></td>
+      <td><span class="parametername">param3</span></td>
+      <td><p>The third parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TOut</span></td>
+      <td><p>The created service instance of type TOut.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TOut</span></td>
+      <td><p>The type of the service to resolve and create.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn1</span></td>
+      <td><p>The type of the first parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn2</span></td>
+      <td><p>The type of the second parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn3</span></td>
+      <td><p>The type of the third parameter required by the factory.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_IAuraScriptSandbox_GetService__4___1___2___3_">IAuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2, TIn3&gt;(TIn1, TIn2, TIn3)</a></div>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__4___1___2___3__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This overload supports service creation scenarios requiring three parameters, facilitating complex configuration or initialization
+through the factory.</p>
+</div>
+
+
+<a id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService*"></a>
+<h4 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__5___1___2___3___4_" data-uid="EyeAuras.Scripting.Api.AuraScriptSandbox.GetService``5(``1,``2,``3,``4)">GetService&lt;TOut, TIn1, TIn2, TIn3, TIn4&gt;(TIn1, TIn2, TIn3, TIn4)</h4>
+<div class="markdown level1 summary"><p>Resolves a factory service that requires four input parameters, then creates and returns an instance of the specified type.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public TOut GetService&lt;TOut, TIn1, TIn2, TIn3, TIn4&gt;(TIn1 param1, TIn2 param2, TIn3 param3, TIn4 param4)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TIn1</span></td>
+      <td><span class="parametername">param1</span></td>
+      <td><p>The first parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn2</span></td>
+      <td><span class="parametername">param2</span></td>
+      <td><p>The second parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn3</span></td>
+      <td><span class="parametername">param3</span></td>
+      <td><p>The third parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">TIn4</span></td>
+      <td><span class="parametername">param4</span></td>
+      <td><p>The fourth parameter to pass to the factory's creation method.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">TOut</span></td>
+      <td><p>The created service instance of type TOut.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TOut</span></td>
+      <td><p>The type of the service to resolve and create.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn1</span></td>
+      <td><p>The type of the first parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn2</span></td>
+      <td><p>The type of the second parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn3</span></td>
+      <td><p>The type of the third parameter required by the factory.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TIn4</span></td>
+      <td><p>The type of the fourth parameter required by the factory.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="EyeAuras.Scripting.Api.IAuraScriptSandbox.GetService.html#EyeAuras_Scripting_Api_IAuraScriptSandbox_GetService__5___1___2___3___4_">IAuraScriptSandbox.GetService&lt;TOut, TIn1, TIn2, TIn3, TIn4&gt;(TIn1, TIn2, TIn3, TIn4)</a></div>
+<h5 id="EyeAuras_Scripting_Api_AuraScriptSandbox_GetService__5___1___2___3___4__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>This overload provides the most flexibility by enabling services to be created with up to four dependencies, useful for scenarios
+where complex initialization is necessary.</p>
+</div>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>ImGui - Getting started | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="ImGui - Getting started | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../styles/config.css">
+      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../index.html">
+              <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../index.html">
+                          <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="imgui-in-the-context-of-eyeauras">ImGui in the Context of EyeAuras</h1>
+
+<p><strong>ImGui</strong> is a remarkably powerful yet simple and intuitive library for drawing <em>stuff</em>. The author originally intended it for UI development in games, but it quickly found use far beyond that — the <a href="https://github.com/ocornut/imgui/wiki/Software-using-dear-imgui">list of adopters</a> is quite impressive.</p>
+<p>But here we’re dealing with <strong>automation</strong>, right? So how does ImGui help us?</p>
+<p>The answer: ImGui is the <strong>simplest and most intuitive</strong> way to build custom UI. It’s even easier than <a href="/scripting/blazor-windows/getting-started">Blazor Windows</a>.</p>
+<hr>
+<h2 id="how-to-install">How to Install</h2>
+<p>EyeAuras is gradually transitioning to a modular NuGet-based system so that users can include <strong>only the features they need</strong>. The current functionality has grown too large — image capture, analysis, effects, behavior trees, input simulation, memory reading, audio processing, Blazor UIs… almost no mini-app uses even half of it.</p>
+<p>So we're moving various features into NuGet packages that you can install just like any other.</p>
+<pre><code class="lang-csharp">#r &quot;nuget:EyeAuras.ImGuiSdk, 0.0.6&quot;
+ 
+using EyeAuras.ImGuiSdk; // required for registration methods
+using ImGuiNET;          // access to ImGui APIs
+using System.Numerics;   // for Vector2/Vector3 use with ImGui
+
+AddNewExtension&lt;ImGuiContainerExtensions&gt;(); // registers IImGuiExperimentalApi and others
+
+var osd = GetService&lt;IImGuiExperimentalApi&gt;() // creates the ImGui overlay
+    .AddTo(ExecutionAnchors); // ensures cleanup when script stops
+</code></pre>
+<hr>
+<h2 id="hello-world">Hello, World</h2>
+<p>There are 3 things you need to do to start using ImGui:</p>
+<ul>
+<li>Import the <code>ImGuiNET</code> namespace</li>
+<li>Create <code>IImGuiApi</code> via <code>GetService</code></li>
+<li>Call <code>AddRenderer()</code> with your rendering method</li>
+</ul>
+<p>That's it. EyeAuras will handle overlay creation and the render loop. You only need to put your logic in the method passed to <code>AddRenderer</code>.</p>
+<blockquote>
+<p>💡 Note: Your method will be called <strong>on every frame</strong>, so avoid sleeping or long blocking code.</p>
+</blockquote>
+<pre><code class="lang-csharp">#r &quot;nuget:EyeAuras.ImGuiSdk, 0.0.6&quot;
+ 
+using EyeAuras.ImGuiSdk;
+using ImGuiNET;
+using System.Numerics;
+
+AddNewExtension&lt;ImGuiContainerExtensions&gt;();
+
+var osd = GetService&lt;IImGuiExperimentalApi&gt;()
+    .AddTo(ExecutionAnchors);
+
+osd.AddRenderer(() =&gt;
+{
+    ImGui.ShowDemoWindow();
+});
+
+cancellationToken.WaitHandle.WaitOne(); // keep running until script is stopped
+</code></pre>
+<p><img src="https://s3.eyeauras.net/media/2025/06/EyeAuras_KXCTkIyw7EU3oo3q.gif" alt="ImGui Demo window"></p>
+<hr>
+<h2 id="creating-a-toggle">Creating a Toggle</h2>
+<p>Let’s create something of our own. The demo window is useful for testing, but not very practical.</p>
+<p>Just like in <a href="/scripting/blazor-windows/getting-started">Blazor Windows</a>, let’s <a href="/scripting/blazor-windows/4-toggle-hotkeyisactive">create a toggle</a>.</p>
+<h3 id="what-needs-to-be-done">What needs to be done?</h3>
+<ul>
+<li>Create the <code>IImGuiApi</code> overlay</li>
+<li>Pass a rendering method to <code>AddRenderer</code></li>
+<li>Draw a checkbox and some text inside the render method</li>
+</ul>
+<p>And that’s it! No state management, no sleep calls, no click processing — it’s all immediate mode. The syntax might seem odd at first, but ChatGPT knows ImGui <strong>very well</strong>, so don’t hesitate to ask questions.</p>
+<pre><code class="lang-csharp">#r &quot;nuget:EyeAuras.ImGuiSdk, 0.0.6&quot;
+
+using EyeAuras.ImGuiSdk; 
+using ImGuiNET;
+using System.Numerics;
+
+[Inject] IAuraTreeScriptingApi AuraTree { get; init; }
+
+IHotkeyIsActiveTrigger Trigger =&gt; AuraTree.GetTriggerByPath&lt;IHotkeyIsActiveTrigger&gt;(&quot;./TargetAura&quot;);
+
+AddNewExtension&lt;ImGuiContainerExtensions&gt;();
+
+var osd = GetService&lt;IImGuiExperimentalApi&gt;()
+    .AddTo(ExecutionAnchors);
+
+osd.AddRenderer(() =&gt;
+{
+    ImGui.Begin(&quot;My UI&quot;);
+
+    ImGui.Text(&quot;Control window flags and interaction behavior.&quot;);
+
+    var isActive = Trigger.TriggerValue ?? false;
+    if (ImGui.Checkbox(&quot;Is Active&quot;, ref isActive))
+    {
+        Trigger.TriggerValue = isActive;
+    }
+    ImGui.SameLine();
+    ImGui.TextDisabled(&quot;(Gets/Sets whether Trigger is active or not)&quot;);
+
+    ImGui.Separator();
+
+    if (Trigger.IsActive == true)
+    {
+        ImGui.TextColored(new Vector4(0f, 1f, 0f, 1f), &quot;Trigger is currently ACTIVE&quot;);
+    }
+    else
+    {
+        ImGui.TextColored(new Vector4(1f, 0f, 0f, 1f), &quot;Trigger is currently INACTIVE&quot;);
+    }
+
+    ImGui.End();
+});
+
+cancellationToken.WaitHandle.WaitOne();
+</code></pre>
+<p><img src="https://s3.eyeauras.net/media/2025/06/EyeAuras_950pfgdzIy4pe780.gif" alt="Toggle"></p>
+<hr>
+<h2 id="what-else-can-you-do-with-imgui">What Else Can You Do With ImGui?</h2>
+<p>Besides drawing interactive windows, ImGui can also be used for <strong>OSD (On-Screen Display)</strong> — drawing overlays directly onto the screen. You can render both <strong>2D</strong> and <strong>3D</strong> objects.</p>
+<p>Here's an example — everything you see is rendered using ImGui, including both UI and screen overlays:</p>
+<p>📺 <a href="https://www.youtube.com/watch?v=y0u20InSjbg">L2 Demo</a></p>
+<hr>
+<p>Let me know if you'd like this converted into a docs page or integrated into EyeAuras script templates.</p>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../styles/singulink.js"></script>    </body>
+</html>

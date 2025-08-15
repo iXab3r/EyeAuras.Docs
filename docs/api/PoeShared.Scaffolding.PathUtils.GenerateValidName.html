@@ -109,13 +109,13 @@
 
 
 <a id="PoeShared_Scaffolding_PathUtils_GenerateValidName_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName*"></a>
-<h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Func_System_String_System_Int32_System_String__System_Predicate_System_String__" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(System.String,System.Func{System.String,System.Int32,System.String},System.Predicate{System.String})">GenerateValidName(string, Func&lt;string, int, string&gt;, Predicate&lt;string&gt;)</h4>
+<h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Func_System_String_System_Int32_System_String__System_Predicate_System_String__System_Int32_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(System.String,System.Func{System.String,System.Int32,System.String},System.Predicate{System.String},System.Int32)">GenerateValidName(string, Func&lt;string, int, string&gt;, Predicate&lt;string&gt;, int)</h4>
 <div class="markdown level1 summary"><p>Generates a valid path name by mutating a base path name.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static string GenerateValidName(string baseName, Func&lt;string, int, string&gt; mutation, Predicate&lt;string&gt; pathValidator)</code></pre>
+  <pre><code class="lang-csharp hljs">public static string GenerateValidName(string baseName, Func&lt;string, int, string&gt; mutation, Predicate&lt;string&gt; pathValidator, int startIdx = 1)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -144,6 +144,12 @@
       <td><span class="parametername">pathValidator</span></td>
       <td><p>A function to check the validity of a path, which returns true when valid and false
 otherwise.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+      <td><span class="parametername">startIdx</span></td>
+      <td><p>Start index that will be used for mutations</p>
 </td>
     </tr>
   </tbody>
@@ -183,13 +189,65 @@ otherwise.</p>
 
 
 <a id="PoeShared_Scaffolding_PathUtils_GenerateValidName_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName*"></a>
+<h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_Func_System_Int32_System_String__System_Predicate_System_String__System_Int32_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(System.Func{System.Int32,System.String},System.Predicate{System.String},System.Int32)">GenerateValidName(Func&lt;int, string&gt;, Predicate&lt;string&gt;, int)</h4>
+<div class="markdown level1 summary"></div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static string GenerateValidName(Func&lt;int, string&gt; generator, Predicate&lt;string&gt; pathValidator, int startIdx = 1)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><span class="parametername">generator</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><span class="parametername">pathValidator</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+      <td><span class="parametername">startIdx</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="PoeShared_Scaffolding_PathUtils_GenerateValidName_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName*"></a>
 <h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Predicate_System_String__" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(System.String,System.Predicate{System.String})">GenerateValidName(string, Predicate&lt;string&gt;)</h4>
 <div class="markdown level1 summary"><p>Creates a valid path name by appending a number to a base path name.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static string GenerateValidName(string baseName, Predicate&lt;string&gt; pathValidator)</code></pre>
+  <pre><code class="lang-csharp hljs">public static string GenerateValidName(string filePath, Predicate&lt;string&gt; pathValidator)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -203,7 +261,7 @@ otherwise.</p>
   <tbody>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-      <td><span class="parametername">baseName</span></td>
+      <td><span class="parametername">filePath</span></td>
       <td><p>The base path.</p>
 </td>
     </tr>
@@ -234,11 +292,125 @@ otherwise.</p>
 <h5 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Predicate_System_String___examples">Examples</h5>
 <pre><code class="lang-csharp">GenerateValidName("C:\\temp", path =&gt; !Directory.Exists(path)); //Returns "C:\\temp (1)" if "C:\\temp" exists</code></pre>
 
+
+
+<a id="PoeShared_Scaffolding_PathUtils_GenerateValidName_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName*"></a>
+<h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Predicate_System_String__System_Func_System_Int32_System_String__" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(System.String,System.Predicate{System.String},System.Func{System.Int32,System.String})">GenerateValidName(string, Predicate&lt;string&gt;, Func&lt;int, string&gt;)</h4>
+<div class="markdown level1 summary"><p>Creates a valid path name by appending a number to a base path name.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static string GenerateValidName(string filePath, Predicate&lt;string&gt; pathValidator, Func&lt;int, string&gt; suffixGenerator)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+      <td><span class="parametername">filePath</span></td>
+      <td><p>The base path.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><span class="parametername">pathValidator</span></td>
+      <td><p>A function to validate a path, which returns true when valid and false otherwise.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+      <td><span class="parametername">suffixGenerator</span></td>
+      <td><p>A function which will be used to generate post-name suffix</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+      <td><p>A valid path converted from the base path.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_System_String_System_Predicate_System_String__System_Func_System_Int32_System_String___examples">Examples</h5>
+<pre><code class="lang-csharp">GenerateValidName("C:\\temp", path =&gt; !Directory.Exists(path)); //Returns "C:\\temp (1)" if "C:\\temp" exists</code></pre>
+
+
+
+<a id="PoeShared_Scaffolding_PathUtils_GenerateValidName_" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName*"></a>
+<h4 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_PoeShared_IO_OSPath_System_Predicate_PoeShared_IO_OSPath__" data-uid="PoeShared.Scaffolding.PathUtils.GenerateValidName(PoeShared.IO.OSPath,System.Predicate{PoeShared.IO.OSPath})">GenerateValidName(OSPath, Predicate&lt;OSPath&gt;)</h4>
+<div class="markdown level1 summary"><p>Creates a valid path name by appending a number to a base path name.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static OSPath GenerateValidName(OSPath baseName, Predicate&lt;OSPath&gt; pathValidator)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="PoeShared.IO.OSPath.html">OSPath</a></td>
+      <td><span class="parametername">baseName</span></td>
+      <td><p>The base path.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="PoeShared.IO.OSPath.html">OSPath</a>&gt;</td>
+      <td><span class="parametername">pathValidator</span></td>
+      <td><p>A function to validate a path, which returns true when valid and false otherwise.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="PoeShared.IO.OSPath.html">OSPath</a></td>
+      <td><p>A valid path converted from the base path.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="PoeShared_Scaffolding_PathUtils_GenerateValidName_PoeShared_IO_OSPath_System_Predicate_PoeShared_IO_OSPath___examples">Examples</h5>
+<pre><code class="lang-csharp">GenerateValidName("C:\\temp", path =&gt; !Directory.Exists(path)); //Returns "C:\\temp (1)" if "C:\\temp" exists</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

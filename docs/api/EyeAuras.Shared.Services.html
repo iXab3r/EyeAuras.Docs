@@ -115,7 +115,9 @@ Classes
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.LambdaWindowHandleMatcher.html">LambdaWindowHandleMatcher</a></h5>
       <section></section>
-      <h5><a class="xref" href="EyeAuras.Shared.Services.TimeSensitiveChannel-2.html">TimeSensitiveChannel&lt;TRequest, TResponse&gt;</a></h5>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.LifecycleEventArgs.html">LifecycleEventArgs</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.ProfilerProvider.html">ProfilerProvider</a></h5>
       <section></section>
     <h3 id="structs">
 Structs
@@ -129,8 +131,7 @@ see <a href="https://wiki.eyeauras.net/window-matching-expressions">Window Match
 or <a href="https://docs.eyeauras.net/api/EyeAuras.Shared.Services.WindowMatchExpression.html">Window Match Expressions API documentation</a></p>
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.WindowMatchParams.html">WindowMatchParams</a></h5>
-      <section><p>Specifies a set of conditions which should be matched by a window</p>
-</section>
+      <section></section>
     <h3 id="interfaces">
 Interfaces
 </h3>
@@ -172,11 +173,33 @@ It allows for complex configurations to determine the overall active state based
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IEyeEntityFactory.html">IEyeEntityFactory</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IEyeItemEvaluator.html">IEyeItemEvaluator</a></h5>
+      <section><p>Represents an evaluator for monitoring and determining the state of a specific aura.
+The evaluator tracks the 'IsActive' state of the aura and compares it against a configured expected state.</p>
+</section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IImportWindowDisplayer.html">IImportWindowDisplayer</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.ILicensedAppModuleLoader.html">ILicensedAppModuleLoader</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.ILifecycleEventsProvider.html">ILifecycleEventsProvider</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IMainWindowBlocksRegistrator.html">IMainWindowBlocksRegistrator</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IModuleBlacklistManager.html">IModuleBlacklistManager</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IModuleLoader.html">IModuleLoader</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IPackWindowDisplayer.html">IPackWindowDisplayer</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IPerformanceMetricsAddon.html">IPerformanceMetricsAddon</a></h5>
+      <section><p>Represents a service interface for monitoring and retrieving performance metrics
+of the current application, including CPU usage, memory usage, disk I/O, and more.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IProfilerProvider.html">IProfilerProvider</a></h5>
+      <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IUsernameProvider.html">IUsernameProvider</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.IWindowFinderService.html">IWindowFinderService</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.IWindowHandleMatcher.html">IWindowHandleMatcher</a></h5>
       <section></section>
@@ -196,15 +219,22 @@ Enums
 </section>
       <h5><a class="xref" href="EyeAuras.Shared.Services.AuraEventCategory.html">AuraEventCategory</a></h5>
       <section></section>
-      <h5><a class="xref" href="EyeAuras.Shared.Services.TimeSensitiveChannelBackBufferPressureStrategy.html">TimeSensitiveChannelBackBufferPressureStrategy</a></h5>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.LifecycleEventType.html">LifecycleEventType</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.WindowMatchOwnershipType.html">WindowMatchOwnershipType</a></h5>
+      <section><p>Specifies the ownership requirements for a matched window, allowing you to filter based on
+whether the window is owned by EyeAuras or by an external application.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.Shared.Services.WindowMatchWindowType.html">WindowMatchWindowType</a></h5>
+      <section><p>Specifies types of windows that can be matched based on their hierarchical relationship within the system.</p>
+</section>
 
 
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

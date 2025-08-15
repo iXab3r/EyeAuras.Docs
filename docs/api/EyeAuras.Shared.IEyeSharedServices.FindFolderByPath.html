@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Shared_IEyeSharedServices_FindFolderByPath_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindFolderByPath*"></a>
 <h4 id="EyeAuras_Shared_IEyeSharedServices_FindFolderByPath_System_String_System_String_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindFolderByPath(System.String,System.String)">FindFolderByPath(string, string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Finds a folder by its path relative to a root path.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -129,12 +130,14 @@
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">rootPath</span></td>
-      <td></td>
+      <td><p>The base directory path to start the search from.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">path</span></td>
-      <td></td>
+      <td><p>The relative path to the target folder.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -149,15 +152,23 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.IFolder.html">IFolder</a></td>
-      <td></td>
+      <td><p>The found folder or null if not found.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Shared_IEyeSharedServices_FindFolderByPath_System_String_System_String__examples">Examples</h5>
+<pre><code class="lang-csharp">// Find folder in root
+var folder = eyeServices.FindFolderByPath(".", "Macros");
+
+// Find nested folder
+var folder = eyeServices.FindFolderByPath("Macros", "Combat/Flasks");</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

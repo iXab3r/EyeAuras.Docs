@@ -128,14 +128,15 @@
     <div><a class="xref" href="EyeAuras.Shared.ICanSetContext.html">ICanSetContext</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasContext.html">IHasContext</a></div>
     <div><a class="xref" href="PoeShared.Modularity.IHasErrors.html">IHasErrors</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="PoeShared.Modularity.IHasError.html">IHasError</a></div>
     <div><a class="xref" href="PoeShared.Modularity.IHasErrorProvider.html">IHasErrorProvider</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetName.html">ICanSetName</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasName.html">IHasName</a></div>
     <div><a class="xref" href="EyeAuras.Shared.ICanSetDescription.html">ICanSetDescription</a></div>
     <div><a class="xref" href="EyeAuras.Shared.IHasDescription.html">IHasDescription</a></div>
+    <div><a class="xref" href="PoeShared.Common.IEnablementController.html">IEnablementController</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -174,6 +175,9 @@
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">AuraObjectBase.RaisePropertiesWhenAny&lt;T&gt;(T, params Expression&lt;Func&lt;T, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhenAny.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhenAny__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1___2___">AuraObjectBase.RaisePropertiesWhenAny&lt;TSender, TRet, T1&gt;(TSender, Expression&lt;Func&lt;TSender, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, T1&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="EyeAuras.Shared.Model.AuraObjectBase.RaisePropertiesWhen.html#EyeAuras_Shared_Model_AuraObjectBase_RaisePropertiesWhen__1_EyeAuras_Shared_IAuraObject___0__">AuraObjectBase.RaisePropertiesWhen&lt;T&gt;(IAuraObject&lt;T&gt;)</a>
@@ -273,7 +277,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.dll</h6>
   <h5 id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AuraTriggerBase&lt;TAuraProperties&gt; : AuraObjectBase&lt;TAuraProperties&gt;, IAuraObject&lt;TAuraProperties&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, IHasTypedId&lt;string&gt;, ICanSetContext, IHasContext, IHasErrors, IDisposable, INotifyPropertyChanged, IHasError, IHasErrorProvider, ICanSetName, IHasName, ICanSetDescription, IHasDescription where TAuraProperties : class, IAuraTriggerProperties, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AuraTriggerBase&lt;TAuraProperties&gt; : AuraObjectBase&lt;TAuraProperties&gt;, IAuraObject&lt;TAuraProperties&gt;, IAuraTrigger, IAuraEntity, IAuraObject, IBindableReactiveObject, IHasId, IHasTypedId&lt;string&gt;, ICanSetContext, IHasContext, IHasErrors, IHasError, IHasErrorProvider, ICanSetName, IHasName, ICanSetDescription, IHasDescription, IEnablementController, IDisposable, INotifyPropertyChanged where TAuraProperties : class, IAuraTriggerProperties, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -369,17 +373,30 @@ before the Trigger itself becomes inactive.</p>
 </td>
       </tr>
       <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsActiveState" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsActiveState">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsActiveState.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsActiveState">IsActiveState</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets a value indicating the current active state of the Trigger with optional annotation.</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabled" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsEnabled">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsEnabled.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabled">IsEnabled</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the Trigger is enabled.</p>
+        <td class="markdown level1 summary"><p>Gets a value indicating whether the Trigger is enabled.</p>
 </td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabledState" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsEnabledState">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsEnabledState.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsEnabledState">IsEnabledState</a>
+        </td>
+        <td class="markdown level1 summary"></td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsIgnored" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsIgnored">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsIgnored.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsIgnored">IsIgnored</a>
         </td>
-        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether this Trigger is ignored within the program.</p>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether this element is disabled by the user.</p>
 </td>
       </tr>
       <tr>
@@ -387,6 +404,13 @@ before the Trigger itself becomes inactive.</p>
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsInverted.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsInverted">IsInverted</a>
         </td>
         <td class="markdown level1 summary"><p>Gets or sets a value indicating whether the IsActive result should be inverted.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsMinimized" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.IsMinimized">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.IsMinimized.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_IsMinimized">IsMinimized</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets or sets a value indicating whether this element should be shown in minimized form in UI</p>
 </td>
       </tr>
       <tr>
@@ -411,6 +435,13 @@ before the Trigger itself becomes inactive.</p>
 </td>
       </tr>
       <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActiveState" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.NextIsActiveState">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.NextIsActiveState.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActiveState">NextIsActiveState</a>
+        </td>
+        <td class="markdown level1 summary"><p>Gets the next expected active state of the Trigger with annotation.</p>
+</td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActiveTimestamp" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.NextIsActiveTimestamp">
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.NextIsActiveTimestamp.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_NextIsActiveTimestamp">NextIsActiveTimestamp</a>
         </td>
@@ -421,6 +452,14 @@ before the Trigger itself becomes inactive.</p>
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.TimeLeftTillNextValue.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_TimeLeftTillNextValue">TimeLeftTillNextValue</a>
         </td>
         <td class="markdown level1 summary"><p>Gets the remaining time until the Trigger's IsActive state changes to the value of NextIsActive.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_TriggerScheduler" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.TriggerScheduler">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.TriggerScheduler.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_TriggerScheduler">TriggerScheduler</a>
+        </td>
+        <td class="markdown level1 summary"><p>Scheduler which is used to propagate activity updates.
+It is guaranteed that each and every state update comes via that Scheduler to avoid race conditions</p>
 </td>
       </tr>
     </tbody>
@@ -440,6 +479,14 @@ before the Trigger itself becomes inactive.</p>
           <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.CreateTriggerEventSource.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_CreateTriggerEventSource">CreateTriggerEventSource()</a>
         </td>
         <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_Disable_System_String_" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.Disable(System.String)">
+          <a class="xref" href="EyeAuras.Shared.Triggers.AuraTriggerBase-1.Disable.html#EyeAuras_Shared_Triggers_AuraTriggerBase_1_Disable_System_String_">Disable(string)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Allows to temporarily fully disable trigger mechanism.
+This will basically put trigger on pause, preserving CPU resources</p>
+</td>
       </tr>
       <tr>
         <td id="EyeAuras_Shared_Triggers_AuraTriggerBase_1_FormatToString_PoeShared_Scaffolding_ToStringBuilder_" data-uid="EyeAuras.Shared.Triggers.AuraTriggerBase`1.FormatToString(PoeShared.Scaffolding.ToStringBuilder)">
@@ -469,28 +516,16 @@ before the Trigger itself becomes inactive.</p>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="EyeAuras.Shared.Scaffolding.AuraModelExtensions.InheritContext.html#EyeAuras_Shared_Scaffolding_AuraModelExtensions_InheritContext__2___0___1_">AuraModelExtensions.InheritContext&lt;TTarget, TSource&gt;(TTarget, TSource)</a>
+      <a class="xref" href="EyeAuras.Shared.Scaffolding.AuraObjectExtensions.RaisePropertiesWhen.html#EyeAuras_Shared_Scaffolding_AuraObjectExtensions_RaisePropertiesWhen__1___0_System_Linq_Expressions_Expression_System_Func___0_EyeAuras_Shared_Model_IComplexPositionModel___">AuraObjectExtensions.RaisePropertiesWhen&lt;T&gt;(T, Expression&lt;Func&lt;T, IComplexPositionModel&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="EyeAuras.Shared.Scaffolding.AuraModelExtensions.WithContext.html#EyeAuras_Shared_Scaffolding_AuraModelExtensions_WithContext__2___0___1_">AuraModelExtensions.WithContext&lt;TTarget, TContext&gt;(TTarget, TContext)</a>
+      <a class="xref" href="EyeAuras.Shared.Scaffolding.CanSetContextExtensions.InheritContext.html#EyeAuras_Shared_Scaffolding_CanSetContextExtensions_InheritContext__2___0___1_">CanSetContextExtensions.InheritContext&lt;TTarget, TSource&gt;(TTarget, TSource)</a>
   </div>
   <div>
-      <a class="xref" href="EyeAuras.Shared.Scaffolding.AuraModelExtensions.WithContext.html#EyeAuras_Shared_Scaffolding_AuraModelExtensions_WithContext__3___0___1_System_Linq_Expressions_Expression_System_Func___1___2___">AuraModelExtensions.WithContext&lt;TTarget, TSrc, TContext&gt;(TTarget, TSrc, Expression&lt;Func&lt;TSrc, TContext&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.Shared.Scaffolding.CanSetContextExtensions.WithContext.html#EyeAuras_Shared_Scaffolding_CanSetContextExtensions_WithContext__2___0___1_">CanSetContextExtensions.WithContext&lt;TTarget, TContext&gt;(TTarget, TContext)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
+      <a class="xref" href="EyeAuras.Shared.Scaffolding.CanSetContextExtensions.WithContext.html#EyeAuras_Shared_Scaffolding_CanSetContextExtensions_WithContext__3___0___1_System_Linq_Expressions_Expression_System_Func___1___2___">CanSetContextExtensions.WithContext&lt;TTarget, TSrc, TContext&gt;(TTarget, TSrc, Expression&lt;Func&lt;TSrc, TContext&gt;&gt;)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
@@ -503,6 +538,9 @@ before the Trigger itself becomes inactive.</p>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -526,13 +564,16 @@ before the Trigger itself becomes inactive.</p>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -554,7 +595,7 @@ before the Trigger itself becomes inactive.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

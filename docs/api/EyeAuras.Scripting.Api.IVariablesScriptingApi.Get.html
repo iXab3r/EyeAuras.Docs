@@ -110,11 +110,12 @@
 
 <a id="EyeAuras_Scripting_Api_IVariablesScriptingApi_Get_" data-uid="EyeAuras.Scripting.Api.IVariablesScriptingApi.Get*"></a>
 <h4 id="EyeAuras_Scripting_Api_IVariablesScriptingApi_Get__1_System_String_System_String_" data-uid="EyeAuras.Scripting.Api.IVariablesScriptingApi.Get``1(System.String,System.String)">Get&lt;T&gt;(string, string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Retrieves a strongly-typed <a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable&lt;T&gt;</a> associated with a given aura and variable name.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">ScriptVariable&lt;T&gt; Get&lt;T&gt;(string auraPath, string variableName)</code></pre>
+  <pre><code class="lang-csharp hljs">ScriptVariable&lt;T&gt; Get&lt;T&gt;(string itemPath, string variableName)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-condensed">
@@ -128,13 +129,15 @@
   <tbody>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-      <td><span class="parametername">auraPath</span></td>
-      <td></td>
+      <td><span class="parametername">itemPath</span></td>
+      <td><p>The path identifying the aura.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">variableName</span></td>
-      <td></td>
+      <td><p>The name of the variable.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -149,7 +152,8 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable</a>&lt;T&gt;</td>
-      <td></td>
+      <td><p>A strongly-typed <a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable&lt;T&gt;</a> instance.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -164,7 +168,8 @@
   <tbody>
     <tr>
       <td><span class="parametername">T</span></td>
-      <td></td>
+      <td><p>The type of the variable's value.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -172,7 +177,8 @@
 
 <a id="EyeAuras_Scripting_Api_IVariablesScriptingApi_Get_" data-uid="EyeAuras.Scripting.Api.IVariablesScriptingApi.Get*"></a>
 <h4 id="EyeAuras_Scripting_Api_IVariablesScriptingApi_Get__1_EyeAuras_Shared_Model_IHasVariables_System_String_" data-uid="EyeAuras.Scripting.Api.IVariablesScriptingApi.Get``1(EyeAuras.Shared.Model.IHasVariables,System.String)">Get&lt;T&gt;(IHasVariables, string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Retrieves a strongly-typed <a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable&lt;T&gt;</a> from a specific source that implements <a class="xref" href="EyeAuras.Shared.Model.IHasVariables.html">IHasVariables</a>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -191,12 +197,14 @@
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.Model.IHasVariables.html">IHasVariables</a></td>
       <td><span class="parametername">source</span></td>
-      <td></td>
+      <td><p>The source object containing the variable.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">variableName</span></td>
-      <td></td>
+      <td><p>The name of the variable.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -211,7 +219,8 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable</a>&lt;T&gt;</td>
-      <td></td>
+      <td><p>A strongly-typed <a class="xref" href="EyeAuras.Scripting.UserSpace.ScriptVariable-1.html">ScriptVariable&lt;T&gt;</a> instance.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -226,7 +235,8 @@
   <tbody>
     <tr>
       <td><span class="parametername">T</span></td>
-      <td></td>
+      <td><p>The type of the variable's value.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -234,7 +244,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

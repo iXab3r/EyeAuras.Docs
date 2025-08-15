@@ -110,7 +110,8 @@
   <h6><strong>Assembly</strong>: EyeAuras.Shared.Metadata.dll</h6>
   <h5 id="EyeAuras_Shared_Bindings_AuraBindingType_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum AuraBindingType</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(StringEnumConverter))]
+public enum AuraBindingType</code></pre>
   </div>
   <h3 id="fields">Fields
 </h3>
@@ -150,6 +151,9 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;AuraBindingType, TTarget&gt;(AuraBindingType, TTarget)</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;AuraBindingType&gt;(AuraBindingType)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;AuraBindingType&gt;(AuraBindingType)</a>
   </div>
   <div>
@@ -165,7 +169,7 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;AuraBindingType, TCollection&gt;(AuraBindingType, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;AuraBindingType&gt;(AuraBindingType)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;AuraBindingType&gt;(AuraBindingType, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;AuraBindingType&gt;(AuraBindingType)</a>
@@ -174,13 +178,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;AuraBindingType, TTarget&gt;(AuraBindingType, TTarget, params string[])</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;AuraBindingType, T1&gt;(AuraBindingType, Func&lt;AuraBindingType, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;AuraBindingType&gt;(AuraBindingType, XContainer)</a>
   </div>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

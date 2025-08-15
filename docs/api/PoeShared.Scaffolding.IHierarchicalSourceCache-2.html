@@ -108,6 +108,39 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">ISourceCache&lt;TObject, TKey&gt;.Edit(Action&lt;ISourceUpdater&lt;TObject, TKey&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">ISourceCache&lt;TObject, TKey&gt;.KeySelector</span>
+    </div>
+    <div>
+      <span class="xref">IObservableCache&lt;TObject, TKey&gt;.Lookup(TKey)</span>
+    </div>
+    <div>
+      <span class="xref">IObservableCache&lt;TObject, TKey&gt;.Count</span>
+    </div>
+    <div>
+      <span class="xref">IObservableCache&lt;TObject, TKey&gt;.Items</span>
+    </div>
+    <div>
+      <span class="xref">IObservableCache&lt;TObject, TKey&gt;.Keys</span>
+    </div>
+    <div>
+      <span class="xref">IObservableCache&lt;TObject, TKey&gt;.KeyValues</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">IConnectableCache&lt;TObject, TKey&gt;.Connect(Func&lt;TObject, bool&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">IConnectableCache&lt;TObject, TKey&gt;.Preview(Func&lt;TObject, bool&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">IConnectableCache&lt;TObject, TKey&gt;.Watch(TKey)</span>
+    </div>
+    <div>
+      <span class="xref">IConnectableCache&lt;TObject, TKey&gt;.CountChanged</span>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
@@ -118,7 +151,7 @@
   <h6><strong>Assembly</strong>: PoeShared.dll</h6>
   <h5 id="PoeShared_Scaffolding_IHierarchicalSourceCache_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IHierarchicalSourceCache&lt;TObject, TKey&gt; : ISourceCache&lt;TObject, TKey&gt;, IObservableCache&lt;TObject, TKey&gt;, IConnectableCache&lt;TObject, TKey&gt;, IDisposable, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IHierarchicalSourceCache&lt;TObject, TKey&gt; : ISourceCache&lt;TObject, TKey&gt;, IObservableCache&lt;TObject, TKey&gt;, IConnectableCache&lt;TObject, TKey&gt;, IObservableCache&lt;TObject, TKey&gt;, IConnectableCache&lt;TObject, TKey&gt;, IDisposable, INotifyPropertyChanged</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -165,6 +198,180 @@
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.AsObservableList.html#PoeShared_Scaffolding_ChangeSetExtensions_AsObservableList__2_DynamicData_IObservableCache___0___1__">ChangeSetExtensions.AsObservableList&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ContainsKey.html#PoeShared_Scaffolding_ChangeSetExtensions_ContainsKey__2_DynamicData_IObservableCache___0___1____1_">ChangeSetExtensions.ContainsKey&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;, TKey)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.GetOrDefault.html#PoeShared_Scaffolding_ChangeSetExtensions_GetOrDefault__2_DynamicData_IObservableCache___0___1____1_">ChangeSetExtensions.GetOrDefault&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;, TKey)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ToObservableChangeSet.html#PoeShared_Scaffolding_ChangeSetExtensions_ToObservableChangeSet__2_DynamicData_IObservableCache___0___1__">ChangeSetExtensions.ToObservableChangeSet&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ToSourceListEx.html#PoeShared_Scaffolding_ChangeSetExtensions_ToSourceListEx__2_DynamicData_IObservableCache___0___1__">ChangeSetExtensions.ToSourceListEx&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.TryGetValue.html#PoeShared_Scaffolding_ChangeSetExtensions_TryGetValue__2_DynamicData_IObservableCache___0___1____1___0__">ChangeSetExtensions.TryGetValue&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;, TKey, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.TryGetValue.html#PoeShared_Scaffolding_ChangeSetExtensions_TryGetValue__3_DynamicData_IObservableCache___0___1____1___2__System_Func___0___2__">ChangeSetExtensions.TryGetValue&lt;T, TKey, TResult&gt;(IObservableCache&lt;T, TKey&gt;, TKey, out TResult, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.WatchCurrentValue.html#PoeShared_Scaffolding_ChangeSetExtensions_WatchCurrentValue__2_DynamicData_IObservableCache___0___1____1_">ChangeSetExtensions.WatchCurrentValue&lt;T, TKey&gt;(IObservableCache&lt;T, TKey&gt;, TKey)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.AddOrUpdate.html#PoeShared_Scaffolding_ChangeSetExtensions_AddOrUpdate__2_DynamicData_ISourceCache___0___1____1_System_Func___1___0__System_Func___1___0___0__">ChangeSetExtensions.AddOrUpdate&lt;TValue, TKey&gt;(ISourceCache&lt;TValue, TKey&gt;, TKey, Func&lt;TKey, TValue&gt;, Func&lt;TKey, TValue, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.AddOrUpdate.html#PoeShared_Scaffolding_ChangeSetExtensions_AddOrUpdate__2_DynamicData_ISourceCache___0___1____1_System_Func___0__System_Func___1___0___0__">ChangeSetExtensions.AddOrUpdate&lt;TValue, TKey&gt;(ISourceCache&lt;TValue, TKey&gt;, TKey, Func&lt;TValue&gt;, Func&lt;TKey, TValue, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ComputeIfAbsent.html#PoeShared_Scaffolding_ChangeSetExtensions_ComputeIfAbsent__2_DynamicData_ISourceCache___0___1____1_System_Func___1___0__">ChangeSetExtensions.ComputeIfAbsent&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;, TKey, Func&lt;TKey, T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.EditDiff.html#PoeShared_Scaffolding_ChangeSetExtensions_EditDiff__2_DynamicData_ISourceCache___0___1__System_Collections_Generic_IEnumerable___0__">ChangeSetExtensions.EditDiff&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;, IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.EditDiff.html#PoeShared_Scaffolding_ChangeSetExtensions_EditDiff__2_DynamicData_ISourceCache___0___1____0_">ChangeSetExtensions.EditDiff&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.GetOrAdd.html#PoeShared_Scaffolding_ChangeSetExtensions_GetOrAdd__2_DynamicData_ISourceCache___0___1____1_System_Func___1___0__">ChangeSetExtensions.GetOrAdd&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;, TKey, Func&lt;TKey, T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__3_DynamicData_ISourceCache___0___1__DynamicData_ISourceList___2____">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1&gt;(ISourceCache&lt;T, TKey&gt;, params ISourceList&lt;T1&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__4_DynamicData_ISourceCache___0___1__DynamicData_IObservableList___2__DynamicData_IObservableList___3__">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1, T2&gt;(ISourceCache&lt;T, TKey&gt;, IObservableList&lt;T1&gt;, IObservableList&lt;T2&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__5_DynamicData_ISourceCache___0___1__DynamicData_IObservableList___2__DynamicData_IObservableList___3__DynamicData_IObservableList___4__">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1, T2, T3&gt;(ISourceCache&lt;T, TKey&gt;, IObservableList&lt;T1&gt;, IObservableList&lt;T2&gt;, IObservableList&lt;T3&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__6_DynamicData_ISourceCache___0___1__DynamicData_IObservableList___2__DynamicData_IObservableList___3__DynamicData_IObservableList___4__DynamicData_IObservableList___5__">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1, T2, T3, T4&gt;(ISourceCache&lt;T, TKey&gt;, IObservableList&lt;T1&gt;, IObservableList&lt;T2&gt;, IObservableList&lt;T3&gt;, IObservableList&lt;T4&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__7_DynamicData_ISourceCache___0___1__DynamicData_IObservableList___2__DynamicData_IObservableList___3__DynamicData_IObservableList___4__DynamicData_IObservableList___5__DynamicData_IObservableList___6__">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1, T2, T3, T4, T5&gt;(ISourceCache&lt;T, TKey&gt;, IObservableList&lt;T1&gt;, IObservableList&lt;T2&gt;, IObservableList&lt;T3&gt;, IObservableList&lt;T4&gt;, IObservableList&lt;T5&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.PopulateFrom.html#PoeShared_Scaffolding_ChangeSetExtensions_PopulateFrom__8_DynamicData_ISourceCache___0___1__DynamicData_IObservableList___2__DynamicData_IObservableList___3__DynamicData_IObservableList___4__DynamicData_IObservableList___5__DynamicData_IObservableList___6__DynamicData_IObservableList___7__">ChangeSetExtensions.PopulateFrom&lt;T, TKey, T1, T2, T3, T4, T5, T6&gt;(ISourceCache&lt;T, TKey&gt;, IObservableList&lt;T1&gt;, IObservableList&lt;T2&gt;, IObservableList&lt;T3&gt;, IObservableList&lt;T4&gt;, IObservableList&lt;T5&gt;, IObservableList&lt;T6&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.ToSourceCacheEx.html#PoeShared_Scaffolding_ChangeSetExtensions_ToSourceCacheEx__2_DynamicData_ISourceCache___0___1__">ChangeSetExtensions.ToSourceCacheEx&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ChangeSetExtensions.TryRemove.html#PoeShared_Scaffolding_ChangeSetExtensions_TryRemove__2_DynamicData_ISourceCache___0___1____1___0__">ChangeSetExtensions.TryRemove&lt;T, TKey&gt;(ISourceCache&lt;T, TKey&gt;, TKey, out T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.DisposableExtensions.AssignTo.html#PoeShared_Scaffolding_DisposableExtensions_AssignTo__1___0_System_Reactive_Disposables_SerialDisposable_">DisposableExtensions.AssignTo&lt;T&gt;(T, SerialDisposable)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.GetPropertyName.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_GetPropertyName__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">NotifyPropertyChangedExtensions.GetPropertyName&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.TryWaitForValue.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_TryWaitForValue__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Predicate___1__System_TimeSpan_">NotifyPropertyChangedExtensions.TryWaitForValue&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Predicate&lt;T1&gt;, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WaitForValueAsync.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WaitForValueAsync__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Predicate___1__System_TimeSpan_">NotifyPropertyChangedExtensions.WaitForValueAsync&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Predicate&lt;T1&gt;, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WaitForValue.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WaitForValue__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Predicate___1__System_TimeSpan_">NotifyPropertyChangedExtensions.WaitForValue&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Predicate&lt;T1&gt;, TimeSpan)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__1___0_System_String___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject&gt;(TObject, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject, T1&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject, T1, T2&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Expression&lt;Func&lt;TObject, T2&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject, T1, T2, T3&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Expression&lt;Func&lt;TObject, T2&gt;&gt;, Expression&lt;Func&lt;TObject, T3&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject, T1, T2, T3, T4&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Expression&lt;Func&lt;TObject, T2&gt;&gt;, Expression&lt;Func&lt;TObject, T3&gt;&gt;, Expression&lt;Func&lt;TObject, T4&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.NotifyPropertyChangedExtensions.WhenAnyProperty.html#PoeShared_Scaffolding_NotifyPropertyChangedExtensions_WhenAnyProperty__6___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___System_Linq_Expressions_Expression_System_Func___0___5___">NotifyPropertyChangedExtensions.WhenAnyProperty&lt;TObject, T1, T2, T3, T4, T5&gt;(TObject, Expression&lt;Func&lt;TObject, T1&gt;&gt;, Expression&lt;Func&lt;TObject, T2&gt;&gt;, Expression&lt;Func&lt;TObject, T3&gt;&gt;, Expression&lt;Func&lt;TObject, T4&gt;&gt;, Expression&lt;Func&lt;TObject, T5&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ICollection&lt;TCollection&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CloneJson.html#PoeShared_Scaffolding_ObjectExtensions_CloneJson__1___0_">ObjectExtensions.CloneJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToText.html#PoeShared_Scaffolding_ObjectExtensions_DumpToText__1___0_">ObjectExtensions.DumpToText&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Dump.html#PoeShared_Scaffolding_ObjectExtensions_Dump__1___0_">ObjectExtensions.Dump&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.EvalOrDefault.html#PoeShared_Scaffolding_ObjectExtensions_EvalOrDefault__2___0_System_Func___0___1____1_">ObjectExtensions.EvalOrDefault&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;, TValue)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.Eval.html#PoeShared_Scaffolding_ObjectExtensions_Eval__2___0_System_Func___0___1__">ObjectExtensions.Eval&lt;T, TValue&gt;(T, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ObjectExtensions.GetPropertyAccessor&lt;TSource, TValue&gt;(TSource, Expression&lt;Func&lt;TSource, TValue&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.BindPropertyTo.html#PoeShared_Scaffolding_ReactiveObjectExtensions_BindPropertyTo__4___1_System_Linq_Expressions_Expression_System_Func___1___3_____0_System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.BindPropertyTo&lt;TSource, TTarget, TSourceProperty, TTargetProperty&gt;(TTarget, Expression&lt;Func&lt;TTarget, TTargetProperty&gt;&gt;, TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.BindPropertyTo.html#PoeShared_Scaffolding_ReactiveObjectExtensions_BindPropertyTo__4___1_System_Linq_Expressions_Expression_System_Func___1___3_____0_System_Linq_Expressions_Expression_System_Func___0___2___System_Reactive_Concurrency_IScheduler_">ReactiveObjectExtensions.BindPropertyTo&lt;TSource, TTarget, TSourceProperty, TTargetProperty&gt;(TTarget, Expression&lt;Func&lt;TTarget, TTargetProperty&gt;&gt;, TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IScheduler)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.LinkObjectProperties.html#PoeShared_Scaffolding_ReactiveObjectExtensions_LinkObjectProperties__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.LinkObjectProperties&lt;TSource, TSourceProperty, TTargetProperty&gt;(TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, Expression&lt;Func&lt;TSource, TTargetProperty&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.RaiseIfChanged.html#PoeShared_Scaffolding_ReactiveObjectExtensions_RaiseIfChanged__2___0_System_String___1___1_">ReactiveObjectExtensions.RaiseIfChanged&lt;TSource, TSourceProperty&gt;(TSource, string, TSourceProperty, TSourceProperty)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.RaiseWhenSourceValue.html#PoeShared_Scaffolding_ReactiveObjectExtensions_RaiseWhenSourceValue__4___1_System_Linq_Expressions_Expression_System_Func___1___3_____0_System_Linq_Expressions_Expression_System_Func___0___2___System_Reactive_Concurrency_IScheduler_">ReactiveObjectExtensions.RaiseWhenSourceValue&lt;TSource, TTarget, TSourceProperty, TTargetProperty&gt;(TTarget, Expression&lt;Func&lt;TTarget, TTargetProperty&gt;&gt;, TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IScheduler)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.ToPropertyHelper.html#PoeShared_Scaffolding_ReactiveObjectExtensions_ToPropertyHelper__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_IObservable___1__System_Reactive_Concurrency_IScheduler_">ReactiveObjectExtensions.ToPropertyHelper&lt;TSource, TSourceProperty&gt;(TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IObservable&lt;TSourceProperty&gt;, IScheduler)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ReactiveObjectExtensions.ToProperty.html#PoeShared_Scaffolding_ReactiveObjectExtensions_ToProperty__2___0_System_Linq_Expressions_Expression_System_Func___0___1___System_IObservable___1____1_System_Boolean_System_Reactive_Concurrency_IScheduler_">ReactiveObjectExtensions.ToProperty&lt;TSource, TSourceProperty&gt;(TSource, Expression&lt;Func&lt;TSource, TSourceProperty&gt;&gt;, IObservable&lt;TSourceProperty&gt;, TSourceProperty, bool, IScheduler)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.DisposableExtensions.ToObservable.html#PoeShared_Scaffolding_DisposableExtensions_ToObservable_System_IDisposable_">DisposableExtensions.ToObservable(IDisposable)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.GetPropertyAccessor.html#PoeShared_Scaffolding_ObjectExtensions_GetPropertyAccessor__1_System_Object_System_String_">ObjectExtensions.GetPropertyAccessor&lt;TValue&gt;(object, string)</a>
   </div>
   <div>
@@ -181,7 +388,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

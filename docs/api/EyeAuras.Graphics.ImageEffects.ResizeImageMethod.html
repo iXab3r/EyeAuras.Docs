@@ -110,7 +110,8 @@
   <h6><strong>Assembly</strong>: EyeAuras.Graphics.dll</h6>
   <h5 id="EyeAuras_Graphics_ImageEffects_ResizeImageMethod_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum ResizeImageMethod</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(StringEnumConverter))]
+public enum ResizeImageMethod</code></pre>
   </div>
   <h3 id="fields">Fields
 </h3>
@@ -138,7 +139,7 @@
   </thead></thead></table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="EyeAuras.Graphics.Scaffolding.OpenCvExtensions.CalculateTransformation.html#EyeAuras_Graphics_Scaffolding_OpenCvExtensions_CalculateTransformation_EyeAuras_Graphics_ImageEffects_ResizeImageMethod_System_Drawing_Size_System_Drawing_Size_">OpenCvExtensions.CalculateTransformation(ResizeImageMethod, Size, Size)</a>
+      <a class="xref" href="EyeAuras.Graphics.Scaffolding.ResizeImageMethodExtensions.CalculateTransformation.html#EyeAuras_Graphics_Scaffolding_ResizeImageMethodExtensions_CalculateTransformation_EyeAuras_Graphics_ImageEffects_ResizeImageMethod_System_Drawing_Size_System_Drawing_Size_">ResizeImageMethodExtensions.CalculateTransformation(ResizeImageMethod, Size, Size)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;ResizeImageMethod, TCollection&gt;(ResizeImageMethod, ISourceList&lt;TCollection&gt;)</a>
@@ -151,6 +152,9 @@
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;ResizeImageMethod, TTarget&gt;(ResizeImageMethod, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;ResizeImageMethod&gt;(ResizeImageMethod)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;ResizeImageMethod&gt;(ResizeImageMethod)</a>
@@ -168,7 +172,7 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;ResizeImageMethod, TCollection&gt;(ResizeImageMethod, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;ResizeImageMethod&gt;(ResizeImageMethod)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;ResizeImageMethod&gt;(ResizeImageMethod, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;ResizeImageMethod&gt;(ResizeImageMethod)</a>
@@ -177,13 +181,16 @@
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;ResizeImageMethod, TTarget&gt;(ResizeImageMethod, TTarget, params string[])</a>
   </div>
   <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;ResizeImageMethod, T1&gt;(ResizeImageMethod, Func&lt;ResizeImageMethod, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
+  </div>
+  <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;ResizeImageMethod&gt;(ResizeImageMethod, XContainer)</a>
   </div>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

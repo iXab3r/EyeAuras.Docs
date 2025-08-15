@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>IBlazorWindow | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="IBlazorWindow | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../styles/config.css">
+      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../index.html">
+              <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../index.html">
+                          <img src="../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+
+
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// Defines the contract for a Blazor window with configurable UI properties, event-driven lifecycle, and window state operations.
+/// &lt;/summary&gt;
+public interface IBlazorWindow : IBlazorWindowController, IDisposableReactiveObject, IBlazorWindowNativeController
+{
+    /// &lt;summary&gt;
+    /// Gets or sets type of View which will be displayed within the window.
+    /// &lt;/summary&gt;
+    Type ViewType { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets type of View which will be displayed inside title bar
+    /// &lt;/summary&gt;
+    Type ViewTypeForTitleBar { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets the data context which will be assigned to View.
+    /// This property is a legacy one, will be removed in future versions and is replaced with DataContext
+    /// &lt;/summary&gt;
+    object DataContext { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets the data context which will be assigned to View.
+    /// &lt;/summary&gt;
+    [Obsolete($&quot;Replaced with {nameof(DataContext)} - to be removed in future versions&quot;)]
+    [Browsable(false)]
+    object ViewDataContext { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets container which will be used by window to resolve the View
+    /// &lt;/summary&gt;
+    IUnityContainer Container { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets list of additional files which will be included into browser
+    /// &lt;/summary&gt;
+    ImmutableArray&lt;IFileInfo&gt; AdditionalFiles { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the startup location of the window.
+    /// &lt;/summary&gt;
+    WindowStartupLocation WindowStartupLocation { get; set; }
+        
+    /// &lt;summary&gt;
+    /// Gets or sets additional file provider which will be used by Blazor
+    /// &lt;/summary&gt;
+    IFileProvider AdditionalFileProvider { get; set; }
+
+    /// &lt;summary&gt;
+    /// Adds additional file provider which will be used by Blazor. Added to the end of the list.
+    /// Removed on disposal
+    /// &lt;/summary&gt;
+    IDisposable RegisterFileProvider(IFileProvider fileProvider);
+
+    /// &lt;summary&gt;
+    /// Shows Chromium DevTools
+    /// &lt;/summary&gt;
+    void ShowDevTools();
+}
+
+/// &lt;summary&gt;
+/// Defines the contract for a Blazor window with configurable UI properties, event-driven lifecycle, and window state operations.
+/// &lt;/summary&gt;
+public interface IBlazorWindowController
+{
+    /// &lt;summary&gt;
+    /// Gets logger which could be used to produce messages on behalf of the window
+    /// &lt;/summary&gt;
+    IFluentLog Log { get; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets the window resize mode, defining how the user can resize the window.
+    /// &lt;/summary&gt;
+    ResizeMode ResizeMode { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the title bar is visible and how it is displayed. 
+    /// &lt;/summary&gt;
+    TitleBarDisplayMode TitleBarDisplayMode { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should appear in the taskbar.
+    /// &lt;/summary&gt;
+    bool ShowInTaskbar { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the padding around the window content.
+    /// &lt;/summary&gt;
+    Thickness Padding { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should be click-through (i.e., not interactable).
+    /// &lt;/summary&gt;
+    bool IsClickThrough { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window is in debug mode.
+    /// &lt;/summary&gt;
+    bool IsDebugMode { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window is visible
+    /// &lt;/summary&gt;
+    bool IsVisible { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the opacity of the window.
+    /// &lt;/summary&gt;
+    double Opacity { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the title text of the window.
+    /// &lt;/summary&gt;
+    string Title { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should remain on top of other windows.
+    /// &lt;/summary&gt;
+    bool Topmost { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should NOT be activated when clicked
+    /// &lt;/summary&gt;
+    bool NoActivate { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should have close button.
+    /// &lt;/summary&gt;
+    bool ShowCloseButton { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should have minimize button.
+    /// &lt;/summary&gt;
+    bool ShowMinButton { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets a value indicating whether the window should have maximize button.
+    /// &lt;/summary&gt;
+    bool ShowMaxButton { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the horizontal position of the window.
+    /// &lt;/summary&gt;
+    int Left { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the vertical position of the window.
+    /// &lt;/summary&gt;
+    int Top { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the width of the window.
+    /// &lt;/summary&gt;
+    int Width { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the height of the window.
+    /// &lt;/summary&gt;
+    int Height { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the minimum width of the window.
+    /// &lt;/summary&gt;
+    int MinWidth { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the minimum height of the window.
+    /// &lt;/summary&gt;
+    int MinHeight { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the maximum width of the window.
+    /// &lt;/summary&gt;
+    int MaxWidth { get; set; }
+
+    /// &lt;summary&gt;
+    /// Gets or sets the maximum height of the window.
+    /// &lt;/summary&gt;
+    int MaxHeight { get; set; }  
+    
+    /// &lt;summary&gt;
+    /// Gets or sets background color of the window. Can use transparent to hide bg entirely.
+    /// &lt;/summary&gt;
+    Color BackgroundColor { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets border color of the window. 
+    /// &lt;/summary&gt;
+    Color BorderColor { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets border thickness of the window. 
+    /// &lt;/summary&gt;
+    Thickness BorderThickness { get; set; }
+    
+    /// &lt;summary&gt;
+    /// Gets or sets state of the window - minimized/maximized/normal. 
+    /// &lt;/summary&gt;
+    WindowState WindowState { get; set; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a key is pressed while the window has focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;KeyEventArgs&gt; WhenKeyDown { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a key is released while the window has focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;KeyEventArgs&gt; WhenKeyUp { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a key is pressed before other event handlers process the input.
+    /// &lt;/summary&gt;
+    IObservable&lt;KeyEventArgs&gt; WhenPreviewKeyDown { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a key is released before other event handlers process the input.
+    /// &lt;/summary&gt;
+    IObservable&lt;KeyEventArgs&gt; WhenPreviewKeyUp { get; }
+    
+    /// &lt;summary&gt;
+    /// Observable sequence for when a mouse button is pressed while the window has focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseButtonEventArgs&gt; WhenMouseDown { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a mouse button is released while the window has focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseButtonEventArgs&gt; WhenMouseUp { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a mouse button is pressed before other event handlers process the input.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseButtonEventArgs&gt; WhenPreviewMouseDown { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when a mouse button is released before other event handlers process the input.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseButtonEventArgs&gt; WhenPreviewMouseUp { get; }
+    
+    /// &lt;summary&gt;
+    /// Observable sequence for when mouse is moved and the window is in focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseEventArgs&gt; WhenMouseMove { get; }
+    
+    /// &lt;summary&gt;
+    /// Observable before any other events for when mouse is moved and the window is in focus.
+    /// &lt;/summary&gt;
+    IObservable&lt;MouseEventArgs&gt; WhenPreviewMouseMove { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is fully loaded and rendered.
+    /// &lt;/summary&gt;
+    IObservable&lt;EventArgs&gt; WhenLoaded { get; }
+    
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is unloaded
+    /// &lt;/summary&gt;
+    IObservable&lt;EventArgs&gt; WhenUnloaded { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is closed.
+    /// &lt;/summary&gt;
+    IObservable&lt;EventArgs&gt; WhenClosed { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is about to close, allowing cancellation.
+    /// &lt;/summary&gt;
+    IObservable&lt;CancelEventArgs&gt; WhenClosing { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is activated.
+    /// &lt;/summary&gt;
+    IObservable&lt;EventArgs&gt; WhenActivated { get; }
+
+    /// &lt;summary&gt;
+    /// Observable sequence for when the window is deactivated.
+    /// &lt;/summary&gt;
+    IObservable&lt;EventArgs&gt; WhenDeactivated { get; }
+
+    /// &lt;summary&gt;
+    /// Occurs when a key is pressed while the window has focus.
+    /// &lt;/summary&gt;
+    event KeyEventHandler KeyDown;
+
+    /// &lt;summary&gt;
+    /// Occurs when a key is released while the window has focus.
+    /// &lt;/summary&gt;
+    event KeyEventHandler KeyUp;
+
+    /// &lt;summary&gt;
+    /// Occurs before any other event handlers for a key-down event.
+    /// &lt;/summary&gt;
+    event KeyEventHandler PreviewKeyDown;
+
+    /// &lt;summary&gt;
+    /// Occurs before any other event handlers for a key-up event.
+    /// &lt;/summary&gt;
+    event KeyEventHandler PreviewKeyUp;
+    
+    /// &lt;summary&gt;
+    /// Occurs when a mouse button is pressed while the window has focus.
+    /// &lt;/summary&gt;
+    event MouseButtonEventHandler MouseDown;
+
+    /// &lt;summary&gt;
+    /// Occurs when a mouse button is released while the window has focus.
+    /// &lt;/summary&gt;
+    event MouseButtonEventHandler MouseUp;
+    
+    /// &lt;summary&gt;
+    /// Occurs when mouse is moved and the window is in focus.
+    /// &lt;/summary&gt;
+    event MouseEventHandler MouseMove;
+
+    /// &lt;summary&gt;
+    /// Occurs before any other event handlers for a mouse-down event.
+    /// &lt;/summary&gt;
+    event MouseButtonEventHandler PreviewMouseDown;
+
+    /// &lt;summary&gt;
+    /// Occurs before any other event handlers for a mouse-up event.
+    /// &lt;/summary&gt;
+    event MouseButtonEventHandler PreviewMouseUp;
+    
+    /// &lt;summary&gt;
+    /// Occurs  before any other event handlers when mouse is moved and the window is in focus.
+    /// &lt;/summary&gt;
+    event MouseEventHandler PreviewMouseMove;
+
+    /// &lt;summary&gt;
+    /// Occurs when the window is about to close, providing the option to cancel.
+    /// &lt;/summary&gt;
+    event CancelEventHandler Closing;
+
+    /// &lt;summary&gt;
+    /// Occurs when the window is activated.
+    /// &lt;/summary&gt;
+    event EventHandler Activated;
+
+    /// &lt;summary&gt;
+    /// Occurs when the window is deactivated.
+    /// &lt;/summary&gt;
+    event EventHandler Deactivated;
+
+    /// &lt;summary&gt;
+    /// Occurs when the window is fully loaded and rendered.
+    /// &lt;/summary&gt;
+    event EventHandler Loaded;
+
+    /// &lt;summary&gt;
+    /// Occurs when the window is closed.
+    /// &lt;/summary&gt;
+    event EventHandler Closed;
+
+    /// &lt;summary&gt;
+    /// Schedules specific operation for execution as a part of Window message processing
+    /// &lt;/summary&gt;
+    void BeginInvoke(Action action);
+
+    /// &lt;summary&gt;
+    /// Waits until all Window messages are processed
+    /// &lt;/summary&gt;
+    void WaitForIdle(TimeSpan timeout = default);
+    
+    /// &lt;summary&gt;
+    /// Minimizes the window
+    /// &lt;/summary&gt;
+    void Minimize();
+    
+    /// &lt;summary&gt;
+    /// Maximizes the window
+    /// &lt;/summary&gt;
+    void Maximize();
+    
+    /// &lt;summary&gt;
+    /// Restores the window from Maximized state to Normal
+    /// &lt;/summary&gt;
+    void Restore();
+
+    /// &lt;summary&gt;
+    /// Hides the window, making it invisible without closing it.
+    /// &lt;/summary&gt;
+    void Hide();
+
+    /// &lt;summary&gt;
+    /// Shows the window, making it visible.
+    /// &lt;/summary&gt;
+    void Show();
+    
+    /// &lt;summary&gt;
+    /// Activates the window, bringing it to front and giving focus.
+    /// &lt;/summary&gt;
+    void Activate();
+
+    /// &lt;summary&gt;
+    /// Shows the window as a modal dialog, blocking other interactions until closed.
+    /// &lt;/summary&gt;
+    void ShowDialog(CancellationToken cancellationToken = default);
+
+    /// &lt;summary&gt;
+    /// Closes the window, releasing all associated resources.
+    /// &lt;/summary&gt;
+    void Close();
+
+    /// &lt;summary&gt;
+    /// Enables the ability to drag the current window using the mouse.
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// - When this method is called, the window captures the mouse input.
+    /// - As the mouse moves, the window's position updates, effectively dragging the window.
+    /// - The drag operation stops when:
+    ///   1. The left mouse button is released.
+    ///   2. The returned &lt;see cref=&quot;IDisposable&quot;/&gt; is disposed.
+    /// 
+    /// This method is useful for implementing custom window dragging behavior, such as for frameless windows or 
+    /// custom title bars that do not use the default window drag functionality.
+    /// &lt;/remarks&gt;
+    /// &lt;returns&gt;
+    /// An &lt;see cref=&quot;IDisposable&quot;/&gt; instance that can be used to programmatically stop the dragging operation. 
+    /// Disposing this object will immediately stop the drag operation and release mouse capture.
+    /// &lt;/returns&gt;
+    /// &lt;example&gt;
+    /// Example usage:
+    /// &lt;code&gt;
+    /// var dragDisposable = window.EnableDragMove();
+    /// // Dragging will continue until:
+    /// // 1. The left mouse button is released.
+    /// // 2. dragDisposable.Dispose() is called.
+    /// &lt;/code&gt;
+    /// &lt;/example&gt;
+    IDisposable EnableDragMove();
+}
+
+/// &lt;summary&gt;
+/// Defines a contract for managing native window properties and operations within the Blazor environment,
+/// providing direct control over window positioning, sizing, and retrieval of window handles.
+/// &lt;/summary&gt;
+public interface IBlazorWindowNativeController
+{
+    /// &lt;summary&gt;
+    /// Retrieves the handle (HWND) of the native window associated with this Blazor window instance.
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;An &lt;see cref=&quot;IntPtr&quot;/&gt; representing the native window handle.&lt;/returns&gt;
+    IntPtr GetWindowHandle();
+
+    /// &lt;summary&gt;
+    /// Gets the rectangular bounds of the native window, including position and size.
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    System.Drawing.Rectangle GetWindowRect();
+    
+    /// &lt;summary&gt;
+    /// Sets the rectangular bounds of the native window, including position and size.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;windowRect&quot;&gt;A &lt;see cref=&quot;System.Drawing.Rectangle&quot;/&gt; specifying the new position and size of the window.&lt;/param&gt;
+    void SetWindowRect(System.Drawing.Rectangle windowRect);
+
+    /// &lt;summary&gt;
+    /// Sets the size dimensions of the native window without altering its current position.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;windowSize&quot;&gt;A &lt;see cref=&quot;System.Drawing.Size&quot;/&gt; specifying the new width and height of the window.&lt;/param&gt;
+    void SetWindowSize(System.Drawing.Size windowSize);
+
+    /// &lt;summary&gt;
+    /// Updates the position of the native window without changing its size.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;windowPos&quot;&gt;A &lt;see cref=&quot;System.Drawing.Point&quot;/&gt; specifying the new top-left corner position of the window.&lt;/param&gt;
+    void SetWindowPos(System.Drawing.Point windowPos);
+}
+
+/// &lt;summary&gt;
+/// This interface could be used to access current Blazor Window from inside its context
+/// &lt;/summary&gt;
+public interface IBlazorWindowAccessor
+{
+    IBlazorWindow Window { get; }
+}
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../styles/singulink.js"></script>    </body>
+</html>

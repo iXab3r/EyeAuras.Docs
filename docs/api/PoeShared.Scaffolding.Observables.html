@@ -158,6 +158,78 @@
 </td>
       </tr>
       <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">FromAsyncSafe(Func&lt;CancellationToken, Task&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_">FromAsyncSafe(Func&lt;CancellationToken, Task&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe(System.Func{System.Threading.Tasks.Task})">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_Tasks_Task__">FromAsyncSafe(Func&lt;Task&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe(System.Func{System.Threading.Tasks.Task},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe_System_Func_System_Threading_Tasks_Task__System_Reactive_Concurrency_IScheduler_">FromAsyncSafe(Func&lt;Task&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}})">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___">FromAsyncSafe&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous function into an observable sequence. Each subscription to the resulting sequence causes the function to be started.
+The CancellationToken passed to the asynchronous function is tied to the observable sequence's subscription that triggered the function's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___System_Reactive_Concurrency_IScheduler_">FromAsyncSafe&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous function into an observable sequence. Each subscription to the resulting sequence causes the function to be started.
+The CancellationToken passed to the asynchronous function is tied to the observable sequence's subscription that triggered the function's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_Tasks_Task___0___" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe``1(System.Func{System.Threading.Tasks.Task{``0}})">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_Tasks_Task___0___">FromAsyncSafe&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_Tasks_Task___0___System_Reactive_Concurrency_IScheduler_" data-uid="PoeShared.Scaffolding.Observables.FromAsyncSafe``1(System.Func{System.Threading.Tasks.Task{``0}},System.Reactive.Concurrency.IScheduler)">
+          <a class="xref" href="PoeShared.Scaffolding.Observables.FromAsyncSafe.html#PoeShared_Scaffolding_Observables_FromAsyncSafe__1_System_Func_System_Threading_Tasks_Task___0___System_Reactive_Concurrency_IScheduler_">FromAsyncSafe&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt;, IScheduler)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Converts an asynchronous action into an observable sequence. Each subscription to the resulting sequence causes the action to be started.
+The CancellationToken passed to the asynchronous action is tied to the observable sequence's subscription that triggered the action's invocation and can be used for best-effort cancellation.
+Sets ignoreExceptionsAfterUnsubscribe to true to ignore post-unsub exceptions which tend to be propagated to app domain and crash the app</p>
+</td>
+      </tr>
+      <tr>
         <td id="PoeShared_Scaffolding_Observables_PeriodicAsync_System_TimeSpan_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__" data-uid="PoeShared.Scaffolding.Observables.PeriodicAsync(System.TimeSpan,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task})">
           <a class="xref" href="PoeShared.Scaffolding.Observables.PeriodicAsync.html#PoeShared_Scaffolding_Observables_PeriodicAsync_System_TimeSpan_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__">PeriodicAsync(TimeSpan, Func&lt;CancellationToken, Task&gt;)</a>
         </td>
@@ -188,7 +260,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

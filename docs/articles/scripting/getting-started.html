@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting Started | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting Started | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../index.html">
+              <img src="../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../index.html">
+                          <img src="../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="what-are-scripts">What are scripts?</h1>
+
+<p>Since its inception, the program has had the ability to write custom code in <strong>C#</strong>. In the early versions (around spring 2021), it was very painful and inconvenient, but still possible. The second version was released in spring 2023 and introduced features such as the ability to use an external IDE for writing programs and significantly enhanced scripting capabilities, for example, creating a full-fledged <a href="/en/overlays/custom-ui">custom user interface</a> using <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor</a>. Essentially, this unlocked the potential to write powerful scripts, although there were still many obstacles and &quot;peculiarities.&quot;</p>
+<p>And now, in spring 2024, a new version of scripts is gradually emerging. In this third generation, the scripting system's capabilities are enormous - almost everything the program itself can do is accessible, with the ability to connect external NuGet packages, protection against crashes and common errors, and much more. The entry barrier has also been significantly lowered - new APIs have been added, diagnostics improved, and so on.</p>
+<h1 id="under-the-hood">Under the Hood</h1>
+<p>The program is built on the <a href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview"><strong>.NET</strong></a> platform. It is a rapidly evolving platform that is highly flexible and efficient. The scripting language used is <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C# 12</a>.</p>
+<p>Every script you write will be compiled using <a href="https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/">Roslyn</a>. Most of the headaches related to how to include files, what can be done, and what cannot, have already been solved within the program itself. This leaves you to focus solely on working with the script.</p>
+<p>![](<a href="https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg">https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg</a> =x100) ![](<a href="https://devblogs.microsoft.com/aspnet/wp-content/uploads/sites/16/2019/04/BrandBlazor_nohalo_1000x.png">https://devblogs.microsoft.com/aspnet/wp-content/uploads/sites/16/2019/04/BrandBlazor_nohalo_1000x.png</a> =x100) ![](<a href="https://upload.wikimedia.org/wikipedia/commons/2/2a/Roslyn.png">https://upload.wikimedia.org/wikipedia/commons/2/2a/Roslyn.png</a> =x100)</p>
+<h1 id="getting-started-with-scripting">Getting Started with Scripting</h1>
+<p>There are three ways in the program to run your code, all of which will be executed within a <a href="/ru/scripting/sandbox">sandbox</a>.</p>
+<h3 id="1-c-action">1. C# Action</h3>
+<p>The simplest option. You just need to add a &quot;<strong>C# Script</strong>&quot; action. It follows the same rules as any other action, so to run it, you need to add a trigger. For example, you can add <a href="https://wiki.eyeauras.net/en/triggers/hotkey-is-active">Hotkey Is Active</a>, assign it to a button, and activate the script on press/hold.</p>
+<h3 id="2-c-trigger">2. C# Trigger</h3>
+<p>A more complex option - your script will be executed at specific time intervals. It is expected that somewhere in the code, you will return true/false or null, which will activate or deactivate the trigger. Then you can attach actions to the trigger, including script actions. The increased complexity lies in the fact that your script runs continuously and is controlled only by <a href="/ru/docs/enablingconditions">Enabling Conditions</a>. Therefore, you need to write code more carefully; otherwise, you may find yourself in a situation where a script error constantly takes control of the mouse/keyboard or consumes all available memory on the computer.</p>
+<h3 id="3-webui-overlay">3. WebUI Overlay</h3>
+<p>The most advanced scripting option. In addition to everything available in actions/triggers, WebUI allows you to create a custom user interface with buttons, switches, and input fields. The UI technology used for rendering is called <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor</a>, and as of 2024, it is the best infrastructure that <strong>.NET</strong> can offer. While the technology itself has some issues since perfection doesn't exist, EyeAuras provides solutions that smooth out these problems, ultimately limiting your possibilities only by your imagination. Below are some examples of different forms assembled on <strong>WebUI</strong>.</p>
+<p>![](<a href="https://i.imgur.com/iaKm2Br.png">https://i.imgur.com/iaKm2Br.png</a> =x500) ![](<a href="https://cdn.discordapp.com/attachments/1170312651621023755/1197134740906577981/image.png?ex=65ba299b&amp;is=65a7b49b&amp;hm=40f31b17035b500a9973b6bbc5e6e25a882a9a7fd76961cd26e730481bd0c28a&amp;">https://cdn.discordapp.com/attachments/1170312651621023755/1197134740906577981/image.png?ex=65ba299b&amp;is=65a7b49b&amp;hm=40f31b17035b500a9973b6bbc5e6e25a882a9a7fd76961cd26e730481bd0c28a&amp;</a> =x300) ![](<a href="https://telegra.ph/file/d83bcbeeac554d2e9b939.png">https://telegra.ph/file/d83bcbeeac554d2e9b939.png</a> =x300)</p>
+<p>![](<a href="https://cdn.discordapp.com/attachments/846848467795836969/1168590651798069379/image.png?ex=655251da&amp;is=653fdcda&amp;hm=260bde6f1673493c9ec42573c205716289afdd032c2cc710ba8146fbec1e2793">https://cdn.discordapp.com/attachments/846848467795836969/1168590651798069379/image.png?ex=655251da&amp;is=653fdcda&amp;hm=260bde6f1673493c9ec42573c205716289afdd032c2cc710ba8146fbec1e2793</a> =x200) ![](<a href="https://i.imgur.com/D7Nxmv7.png">https://i.imgur.com/D7Nxmv7.png</a> =x200)</p>
+<blockquote>
+<p>February 20, 2024
+At the time of writing this article, WebUI still uses an older version of scripts, which will be updated in the coming weeks.
+{.is-warning}</p>
+</blockquote>
+<h1 id="services">Services</h1>
+<p>Both the program and API are built on something called <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a>. In simple terms, the program is divided into small pieces, each responsible for its own task. Just like in a big house where someone cooks porridge, someone sews socks, and someone doesn't know how to do anything but still exists.</p>
+<hr>
+<p>Each entity in this house has a name. For example, if you want to move the mouse, you need to refer to <a href="https://docs.eyeauras.net/api/EyeAuras.Roxy.Api.ISendInputUnstableScriptingApi.html">ISendInputUnstableScriptingApi</a> and call <a href="https://docs.eyeauras.net/api/EyeAuras.Roxy.Api.ISendInputUnstableScriptingApi.MouseMoveTo.html#EyeAuras_Roxy_Api_ISendInputUnstableScriptingApi_MouseMoveTo_System_Int32_System_Int32_">MouseMoveTo</a>. If you want to play a sound, you would go to <a href="https://docs.eyeauras.net/api/EyeAuras.DefaultAuras.Scripting.IPlaySoundScriptingApi.html">IPlaySoundScriptingApi</a>. Responsibilities vary, and just like in life, knowing the correct names is crucial for success. This documentation will list the main and most useful services, but there is no point in listing the full spectrum - the <strong>NuGet</strong> package <strong>EyeAuras.SDK</strong> lists everything that can be used and available to your scripts.</p>
+<h1 id="external-dependencies">External Dependencies</h1>
+<p><a href="https://www.nuget.org/">![](https://learn.microsoft.com/de-de/dotnet/standard/library-guidance/media/nuget/nuget-logo.png =x100)</a></p>
+<p>If every programmer started from scratch, we would still collectively reinvent the wheel. Therefore, scripts fully support external packages. In the <strong>.NET</strong> infrastructure, almost everything is stored in <a href="https://www.nuget.org/">NuGet</a>, including official and unofficial libraries. There are dozens of lists of useful packages; you can start with <a href="https://github.com/quozd/awesome-dotnet">this one</a>. You can connect almost any of them in scripts. There are currently some exceptions, but I am working on resolving them.</p>
+<blockquote>
+<p>February 20, 2024
+Currently, external library support is only enabled for alpha testers. Once this functionality stabilizes, it will be available to everyone else. I expect these restrictions to be lifted in early to mid-March.
+{.is-warning}</p>
+</blockquote>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>    </body>
+</html>

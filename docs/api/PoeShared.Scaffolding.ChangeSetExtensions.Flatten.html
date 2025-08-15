@@ -114,7 +114,7 @@
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">[Obsolete(&quot;Contains some bug, do not use with further testing&quot;)]
+  <pre><code class="lang-csharp hljs">[Obsolete(&quot;Contains some bug, do not use without further testing&quot;)]
 public static IObservable&lt;IChangeSet&lt;TObject&gt;&gt; Flatten&lt;TObject&gt;(this IObservable&lt;IChangeSet&lt;TObject&gt;&gt; source, Func&lt;TObject, IObservable&lt;IChangeSet&lt;TObject&gt;&gt;&gt; childrenAccessor)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -169,11 +169,82 @@ public static IObservable&lt;IChangeSet&lt;TObject&gt;&gt; Flatten&lt;TObject&gt
     </tr>
   </tbody>
 </table>
+
+
+<a id="PoeShared_Scaffolding_ChangeSetExtensions_Flatten_" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.Flatten*"></a>
+<h4 id="PoeShared_Scaffolding_ChangeSetExtensions_Flatten__2_System_IObservable_DynamicData_IChangeSet___0___1___System_Func___0_System_IObservable_DynamicData_IChangeSet___0___1____System_Func___0___1__" data-uid="PoeShared.Scaffolding.ChangeSetExtensions.Flatten``2(System.IObservable{DynamicData.IChangeSet{``0,``1}},System.Func{``0,System.IObservable{DynamicData.IChangeSet{``0,``1}}},System.Func{``0,``1})">Flatten&lt;TObject, TKey&gt;(IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;, Func&lt;TObject, IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;&gt;, Func&lt;TObject, TKey&gt;)</h4>
+<div class="markdown level1 summary"></div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt; Flatten&lt;TObject, TKey&gt;(this IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt; source, Func&lt;TObject, IObservable&lt;IChangeSet&lt;TObject, TKey&gt;&gt;&gt; childrenAccessor, Func&lt;TObject, TKey&gt; keySelector)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TKey&gt;&gt;</td>
+      <td><span class="parametername">source</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TObject, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TKey&gt;&gt;&gt;</td>
+      <td><span class="parametername">childrenAccessor</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TObject, TKey&gt;</td>
+      <td><span class="parametername">keySelector</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">IObservable</a>&lt;<span class="xref">IChangeSet</span>&lt;TObject, TKey&gt;&gt;</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TObject</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TKey</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

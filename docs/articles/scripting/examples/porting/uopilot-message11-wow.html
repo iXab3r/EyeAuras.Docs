@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>UOPilot | EyeAuras Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="UOPilot | EyeAuras Docs ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../../../../images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../../../styles/config.css">
+      <link rel="stylesheet" href="../../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../styles/singulink.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <link rel="stylesheet" href="../../../../styles/eyeauras.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+  
+  <meta property="docfx:rel" content="../../../../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../../../../index.html">
+              <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+              <span class="brand-title">EyeAuras Docs</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../../../../index.html">
+                          <img src="../../../../images/logo.png" alt="EyeAuras Docs" class="logomark">
+                          <span class="brand-title">EyeAuras Docs</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  
+  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="uo-pilot">UO Pilot</h1>
+
+<pre><code class="lang-js">set #win findwindow (1Wow.exe)
+set workwindow #win
+set linedelay 50
+set ShowScriptProcessing 1
+set EmptyLineDelay 0
+wait 150 + random ( 1000 ) /// Async char
+
+// Init Timers
+if #tFetch = null
+    set #tFetch 0
+end_if
+
+if #tDejunk = null
+    set #tDejunk 0
+end_if
+
+if #tHeal = null
+    set #tHeal 0
+end_if
+
+if #Buff = null
+    set #Buff 0
+end_if
+
+if #tPet = null
+    set #tPet 0
+end_if
+
+if #Rapidfire = null
+    set #Rapidfire 0
+end_if
+
+:while
+while 1 = 1
+//////////////LOOP/////////////////
+
+Repeat 350    ////// REPEAT
+
+//Reloger
+set #blz findcolor (146 231 153 242 1 1 (12083459) %arr workwindow() -1 3)
+set #disc findcolor (146 122 165 126 1 1 (14408) %arr workwindow() -1 15)
+set #world1 FindImage(69 237 85 253 (\GWYN\Image\world.bmp) %arr workwindow() 90 2 5)
+set #d2 FindImage(310 243 319 253 (\GWYN\Image\vopros.bmp) %arr workwindow() 90 2 5)
+set #ring FindImage(2 171 11 183 (\GWYN\Image\ring.bmp) %arr workwindow() 90 2 5)
+set #login findcolor (193 121 198 126 1 1 (50678) %arr workwindow() -1 15)
+
+
+//State #1
+if #blz &gt; 4 and #disc &gt; 10 and #ring = 0
+    goto reloger
+end_if
+
+//State #2
+if #world1 &gt; 90 and #d2 = 0 and #ring = 0
+    goto reloger
+end_if
+
+//State #3
+if #d2 = 0 and #ring = 0 and #login &gt; 3
+    goto reloger
+end_if
+
+wait 150 + random ( 100 )
+Send_down 1
+wait 50 + random ( 50 )
+Send_up 1
+
+wait 159 + random ( 100 )
+Send_down 1
+wait 50 + random ( 50 )
+Send_up 1
+
+wait 150 + random ( 100 )
+Send_down 1
+wait 50 + random ( 50 )
+Send_up 1
+
+wait 150 + random ( 100 )
+Send_down 1
+wait 50 + random ( 50 )
+Send_up 1
+
+//Rapifire
+if #Rapidfire &lt; timer
+        wait 175 + random ( 300 )
+        Send_down 2
+        wait 50 + random ( 50 )
+        Send_up 2
+		set #Rapidfire timer + 500 + random ( 100 )
+end_if
+
+//Buff
+if #Buff &lt; timer
+        wait 175 + random ( 300 )
+        Send_down 4
+        wait 50 + random ( 50 )
+        Send_up 4
+		set #Buff timer + 600000 + random ( 100 )
+end_if
+
+// Trueshot
+if #tDejunk &lt; timer
+        wait 175 + random ( 300 )
+        Send_down {F4}
+        wait 50 + random ( 50 )
+        Send_up {F4}
+		set #tDejunk timer + 120000 + random ( 1000 )
+end_if
+
+//Fetch
+if #tFetch &lt; timer
+        wait 150 + random ( 150 )
+        Send_down {F5}
+        wait 150 + random (150)
+        Send_up {F5}
+        wait 150 + random ( 150 )
+        Send_down {F5}
+        wait 150 + random (150)
+        Send_up {F5}
+		set #tfetch timer + 5000 + random ( 5000 ) // Fetch Timer
+end_if
+
+// Volley
+if #tHeal &lt; timer
+        wait 150 + random (150)
+        Send_down {F7}
+        wait 150 + random (150)
+        Send_up {F7}
+        wait 150 + random (150)
+		set #tHeal timer + 45000 + random ( 5000 )
+end_if
+
+// Pet Res or Call
+if #tPet &lt; timer
+        wait 175 + random ( 300 )
+        Send_down 5
+        wait 50 + random ( 50 )
+        Send_up 5
+        wait 175 + random ( 300 )
+        Send_down {F3}
+        wait 50 + random ( 50 )
+        Send_up {F3}
+		set #tPet timer + 85000 + random ( 1000 )
+end_if
+
+End_Repeat    /////////// END REPEAT
+
+
+wait 250 + random ( 300 )
+Send_down {F6}
+wait 1 + random ( 10 )
+Send_up {F6}
+wait 100 + random ( 10000 )
+send_down {F8}
+wait 1 + random ( 10 )
+Send_up {F8}
+wait 3000 + random ( 400 )
+Send_down 0
+wait 1 + random ( 10 )
+Send_up 0
+wait 3000 + random ( 400 )
+Send_down 8
+wait 1 + random ( 10 )
+Send_up 8
+wait 300 + random ( 400 )
+Send_down 7
+wait 1 + random ( 10 )
+Send_up 7
+wait 3000 + random ( 5000 )
+send_down {F3}
+wait 1 + random ( 10 )
+Send_up {F3}
+
+//////////////END LOOP/////////////////
+
+end_while
+
+/// RELOGER FUNCTION
+:reloger
+// Ban
+set #blz findcolor (146 231 153 242 1 1 (12083459) %arr workwindow() -1 3)
+set #ban FindImage(196 122 210 125 (\GWYN\Image\ban.bmp) %arr workwindow() 85 2 5)
+if #ban  &gt; 90 and #blz &gt; 4
+    stop_script
+end_if
+
+// Disconnected
+set #login findcolor (193 121 198 126 1 1 (50678) %arr workwindow() -1 15)
+if #login &gt; 3 or #disc &gt; 10 or #world1 &gt; 90
+  if #disc &gt; 10 and #blz &gt; 4
+    send_down {Esc}
+    wait 80 + random ( 150 )
+    send_up {Esc}
+    goto login
+  end_if
+
+  // Login screen
+  :login
+  set #ring FindImage(2 171 11 183 (\GWYN\Image\ring.bmp) %arr workwindow() 90 2 5)
+  set #login findcolor (193 121 198 126 1 1 (50678) %arr workwindow() -1 15)
+  if #login &gt; 3 and #blz &gt; 4 and #ring = 0
+    set #text findcolor (113 141 117 144 1 1 (6710886) %arr workwindow() -1 15)
+    if #text &gt; 0
+      send_down {End}
+      wait 80 + random ( 150 )
+      send_up {End}
+      wait 100
+      send_down {Backspace}
+      wait 5000
+      send_up {Backspace}
+      goto login
+    else
+      say Dctvgbpltw228         ///// YOUR PASSWORD
+      wait 500 + random ( 5000 )
+      send_down {Enter}
+      wait 80 + random ( 150 )
+      send_up {Enter}
+      wait 15000 + random(100)
+      goto world
+    end_if
+  end_if
+
+  // Enter World
+  :world
+  set #ring FindImage(2 171 11 183 (\GWYN\Image\ring.bmp) %arr workwindow() 90 2 5)
+  set #world FindImage(69 237 85 253 (\GWYN\Image\world.bmp) %arr workwindow() 90 2 5)
+  set #d2 FindImage(310 243 319 253 (\GWYN\Image\vopros.bmp) %arr workwindow() 90 2 5)
+  if #world &gt; 90 and #d2 = 0 and #ring = 0
+    wait 180 + random ( 5000 )
+    send_down {Enter}
+    wait 80 + random ( 150 )
+    send_up {Enter}
+    wait 5000
+    goto while
+  end_if
+end_if
+</code></pre>
+<h1 id="eyeauras-c-script">EyeAuras C# Script</h1>
+<pre><code class="lang-csharp">ISendInputScriptingApi SendInput { get; init; }
+
+ISendInputScriptingApi SendInputWindow { get; init; }
+
+IComputerVisionExperimentalScriptingApi ComputerVision { get; init; }
+
+IRandomNumberGenerator Rng { get; init; }
+
+IClock Clock { get; init; }
+
+string ScriptDirectoryPath { get; init; } = AppDomain.CurrentDomain.BaseDirectory;
+
+int blz, disc, login, ban;
+Rectangle world1, d2, ring;
+
+DateTimeOffset Rapidfire, tPet, tHeal, tFetch, tDejunk, Buff;
+
+int random(int max) =&gt; Rng.Next(max);
+
+//------------------------------------------------------
+
+SerialDisposable timerAnchor;
+
+Log.Info($&quot;Running the script from {ScriptDirectoryPath}&quot;);
+
+var window = GetService&lt;IWindowSelector&gt;().GetWindow(&quot;1Wow.exe&quot;);
+
+var cv = ComputerVision
+    .ForWindow(window) //работать будем с окном
+    .EnableOsd(10); //включаем встроенный OSD
+
+SendInputWindow.TargetWindow = window; //этот SendInput будет работать с окном
+
+mainLoop:
+while (true)
+{
+    for (var i = 0; i &lt; 350; i++)
+    {
+
+        if (blz &gt; 4 &amp;&amp; disc &gt; 10 &amp;&amp; ring.IsEmpty)
+        {
+            goto reloger;
+        }
+
+        if (!world1.IsEmpty &amp;&amp; d2.IsEmpty &amp;&amp; ring.IsEmpty)
+        {
+            goto reloger;
+        }
+
+
+        //State #3
+        if (d2.IsEmpty &amp;&amp; ring.IsEmpty &amp;&amp; login &gt; 3)
+        {
+            goto reloger;
+        }
+
+        Sleep(150 + random(250));
+        SendInput.KeyDown(Key.D1);
+        Sleep(50 + random(100));
+        SendInput.KeyUp(Key.D1);
+
+        Sleep(159 + random(250));
+        SendInput.KeyDown(Key.D1);
+        Sleep(50 + random(100));
+        SendInput.KeyUp(Key.D1);
+
+        Sleep(150 + random(250));
+        SendInput.KeyDown(Key.D1);
+        Sleep(50 + random(100));
+        SendInput.KeyUp(Key.D1);
+
+        Sleep(150 + random(250));
+        SendInput.KeyDown(Key.D1);
+        Sleep(50 + random(100));
+        SendInput.KeyUp(Key.D1);
+
+        //Rapifire
+        if (Rapidfire &lt; Clock.Now)
+        {
+            Sleep(175 + random(475));
+            SendInput.KeyDown(Key.D2);
+            Sleep(50 + random(100));
+            SendInput.KeyUp(Key.D2);
+            Rapidfire = Clock.Now + TimeSpan.FromMilliseconds(500 + random(100));
+        }
+
+        // Buff
+        if (Buff &lt; Clock.Now)
+        {
+            Sleep(175 + random(300));
+            SendInput.KeyDown(Key.D4);
+            Sleep(50 + random(50));
+            SendInput.KeyUp(Key.D4);
+            Buff = Clock.Now + TimeSpan.FromMilliseconds(600000 + random(100));
+        }
+
+        // Trueshot
+        if (tDejunk &lt; Clock.Now)
+        {
+            Sleep(175 + random(300));
+            SendInput.KeyDown(Key.F4);
+            Sleep(50 + random(50));
+            SendInput.KeyUp(Key.F4);
+            tDejunk = Clock.Now + TimeSpan.FromMilliseconds(120000 + random(1000));
+        }
+
+        // Fetch
+        if (tFetch &lt; Clock.Now)
+        {
+            Sleep(150 + random(150));
+            SendInput.KeyDown(Key.F5);
+            Sleep(150 + random(150));
+            SendInput.KeyUp(Key.F5);
+            Sleep(150 + random(150));
+            SendInput.KeyDown(Key.F5);
+            Sleep(150 + random(150));
+            SendInput.KeyUp(Key.F5);
+            tFetch = Clock.Now + TimeSpan.FromMilliseconds(5000 + random(5000));
+        }
+
+        // Volley
+        if (tHeal &lt; Clock.Now)
+        {
+            Sleep(150 + random(150));
+            SendInput.KeyDown(Key.F7);
+            Sleep(150 + random(150));
+            SendInput.KeyUp(Key.F7);
+            Sleep(150 + random(150));
+            tHeal = Clock.Now + TimeSpan.FromMilliseconds(45000 + random(5000));
+        }
+
+        // Pet Res or Call
+        if (tPet &lt; Clock.Now)
+        {
+            Sleep(175 + random(300));
+            SendInput.KeyDown(Key.D5);
+            Sleep(50 + random(50));
+            SendInput.KeyUp(Key.D5);
+            Sleep(175 + random(300));
+            SendInput.KeyDown(Key.F3);
+            Sleep(50 + random(50));
+            SendInput.KeyUp(Key.F3);
+            tPet = Clock.Now + TimeSpan.FromMilliseconds(85000 + random(1000));
+        }
+    }
+
+    Sleep(250 + random(300));
+    SendInput.KeyDown(Key.F6);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.F6);
+    Sleep(100 + random(10000));
+    SendInput.KeyDown(Key.F8);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.F8);
+    Sleep(3000 + random(300));
+    SendInput.KeyDown(Key.D0);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.D0);
+    Sleep(3000 + random(400));
+    SendInput.KeyDown(Key.D8);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.D8);
+    Sleep(300 + random(400));
+    SendInput.KeyDown(Key.D7);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.D7);
+    Sleep(3000 + random(5000));
+    SendInput.KeyDown(Key.F3);
+    Sleep(1 + random(10));
+    SendInput.KeyUp(Key.F3);
+}
+
+reloger:
+{
+    blz = cv.CountPixels(12083459, 97, 146, 231, 153, 242);
+
+    var ban = cv.ImageSearchRaw(@&quot;\GWYN\Image\ban.bmp&quot;, 85, 196, 122, 210, 125);
+    if (ban.Detected.Similarity &gt; 90 &amp;&amp; blz &gt; 4)
+    {
+        return; //stop
+    }
+}
+
+login = cv.CountPixels(50678, 193, 121, 198, 126);
+// Disconnected
+if (login &gt; 3 || disc &gt; 10 || !world1.IsEmpty)
+{
+    if (disc &gt; 10 &amp;&amp; blz &gt; 4)
+    {
+        SendInput.KeyDown(Key.Escape);
+        Sleep(80 + random(150));
+        SendInput.KeyUp(Key.Escape);
+        goto login;
+    }
+
+// Login screen
+login:
+    ring = cv.ImageSearch(@&quot;\GWYN\Image\ring.bmp&quot;, 90, 2, 171, 11, 183);
+    login = cv.CountPixels(50678, 193, 121, 198, 126);
+
+    if (login &gt; 3 &amp;&amp; blz &gt; 4 &amp;&amp; ring.IsEmpty)
+    {
+        var text = cv.CountPixels(6710886, 113, 141, 117, 144);
+        if (text &gt; 0)
+        {
+            SendInput.KeyDown(Key.End);
+            Sleep(80 + random(150));
+            SendInput.KeyUp(Key.End);
+            Sleep(100);
+            SendInput.KeyDown(Key.Back);
+            Sleep(5000);
+            SendInput.KeyUp(Key.Back);
+
+        }
+        else
+        {
+            SendInput.Text(&quot;password&quot;);  ///// YOUR PASSWORD
+            Sleep(500 + random(5000));
+            SendInput.KeyDown(Key.Enter);
+            Sleep(80 + random(150));
+            SendInput.KeyUp(Key.Enter);
+            Sleep(15000 + random(100));
+            goto world;
+        }
+    }
+
+// Enter World
+world:
+    ring = cv.ImageSearch(@&quot;\GWYN\Image\ring.bmp&quot;, 90, 2, 171, 11, 183);
+    var world = cv.ImageSearchRaw(@&quot;\GWYN\Image\world.bmp&quot;, 90, 69, 237, 85, 253);
+    d2 = cv.ImageSearch(@&quot;\GWYN\Image\vopros.bmp&quot;, 90, 310, 243, 319, 253);
+
+    if (world.Detected.Similarity &gt; 90 &amp;&amp; d2.IsEmpty &amp;&amp; ring.IsEmpty)
+    {
+        Sleep(180 + random(5000));
+        SendInput.KeyDown(Key.Enter);
+        Sleep(80 + random(150));
+        SendInput.KeyUp(Key.Enter);
+        Sleep(5000);
+        goto mainLoop;
+    }
+}
+</code></pre>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../../../styles/main.js"></script>
+        <script type="text/javascript" src="../../../../styles/singulink.js"></script>    </body>
+</html>

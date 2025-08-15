@@ -114,6 +114,10 @@ status without ticking the child. Once the cooldown period is over, the Cooldown
 </section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.CooldownNodeProperties.html">CooldownNodeProperties</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.DebounceNode.html">DebounceNode</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.DebounceNodeProperties.html">DebounceNodeProperties</a></h5>
+      <section></section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.ForceFailureNode.html">ForceFailureNode</a></h5>
       <section><p>This node will always return Failure, irrespective of the actual execution status of its child node.</p>
 </section>
@@ -123,6 +127,13 @@ status without ticking the child. Once the cooldown period is over, the Cooldown
       <section><p>This node will always return Success, irrespective of the actual execution status of its child node.</p>
 </section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.ForceSuccessNodeProperties.html">ForceSuccessNodeProperties</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.InterrupterNode.html">InterrupterNode</a></h5>
+      <section><p>The Interruptor node is assigned a Condition Task. If the condition is or becomes true,
+the child node is interrupted if it is running, and the Interruptor returns Failure.
+Otherwise, the Interruptor returns the same status as the child node.</p>
+</section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.InterrupterNodeProperties.html">InterrupterNodeProperties</a></h5>
       <section></section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.InverterNode.html">InverterNode</a></h5>
       <section><p>This class represents an Inverter node in a behavior tree.
@@ -137,6 +148,10 @@ It fails if its child node fails, but succeeds if it finishes all repetitions su
 </section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.RepeatNodeProperties.html">RepeatNodeProperties</a></h5>
       <section></section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.TimeoutNode.html">TimeoutNode</a></h5>
+      <section></section>
+      <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.TimeoutNodeProperties.html">TimeoutNodeProperties</a></h5>
+      <section></section>
       <h5><a class="xref" href="EyeAuras.BehaviorTree.Nodes.Decorators.UntilSuccessNode.html">UntilSuccessNode</a></h5>
       <section><p>This class represents an UntilSuccess node in a behavior tree.
 An UntilSuccess node is a type of DecoratorNode that continuously runs its child node until it succeeds.</p>
@@ -149,7 +164,7 @@ An UntilSuccess node is a type of DecoratorNode that continuously runs its child
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

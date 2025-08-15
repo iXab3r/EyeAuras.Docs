@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Shared_IEyeSharedServices_FindBehaviorTreeByPath_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindBehaviorTreeByPath*"></a>
 <h4 id="EyeAuras_Shared_IEyeSharedServices_FindBehaviorTreeByPath_System_String_System_String_" data-uid="EyeAuras.Shared.IEyeSharedServices.FindBehaviorTreeByPath(System.String,System.String)">FindBehaviorTreeByPath(string, string)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Finds a behavior tree by its path relative to a root path.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -129,12 +130,14 @@
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">rootPath</span></td>
-      <td></td>
+      <td><p>The base directory path to start the search from.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
       <td><span class="parametername">path</span></td>
-      <td></td>
+      <td><p>The relative path to the target behavior tree.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -149,15 +152,23 @@
   <tbody>
     <tr>
       <td><a class="xref" href="EyeAuras.Shared.IBehaviorTree.html">IBehaviorTree</a></td>
-      <td></td>
+      <td><p>The found behavior tree or null if not found.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Shared_IEyeSharedServices_FindBehaviorTreeByPath_System_String_System_String__examples">Examples</h5>
+<pre><code class="lang-csharp">// Find tree in root folder
+var tree = eyeServices.FindBehaviorTreeByPath(".", "MainLogic");
+
+// Find tree in nested folder
+var tree = eyeServices.FindBehaviorTreeByPath("Trees", "Combat/DPS");</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

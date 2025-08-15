@@ -124,7 +124,7 @@
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
     <div><a class="xref" href="PoeShared.Blazor.IRefreshableComponent.html">IRefreshableComponent</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
-    <div><a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.ICodeEditorContext.html">ICodeEditorContext</a></div>
+    <div><a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.ICEContext.html">ICEContext</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -147,13 +147,22 @@
       <a class="xref" href="PoeShared.Blazor.BlazorReactiveComponentBase.Style.html#PoeShared_Blazor_BlazorReactiveComponentBase_Style">BlazorReactiveComponentBase.Style</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Blazor.BlazorReactiveComponentBase.WhenChanged.html#PoeShared_Blazor_BlazorReactiveComponentBase_WhenChanged">BlazorReactiveComponentBase.WhenChanged</a>
+      <a class="xref" href="PoeShared.Blazor.BlazorReactiveComponentBase.ElementRef.html#PoeShared_Blazor_BlazorReactiveComponentBase_ElementRef">BlazorReactiveComponentBase.ElementRef</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.BlazorReactiveComponentBase.ChangeTrackers.html#PoeShared_Blazor_BlazorReactiveComponentBase_ChangeTrackers">BlazorReactiveComponentBase.ChangeTrackers</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Dispose.html#PoeShared_Blazor_ReactiveComponentBase_Dispose">ReactiveComponentBase.Dispose()</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.DisposeAsync.html#PoeShared_Blazor_ReactiveComponentBase_DisposeAsync">ReactiveComponentBase.DisposeAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.AddAfterRenderValueTask.html#PoeShared_Blazor_ReactiveComponentBase_AddAfterRenderValueTask_System_Func_System_Threading_Tasks_ValueTask__">ReactiveComponentBase.AddAfterRenderValueTask(Func&lt;ValueTask&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.AddAfterRenderTask.html#PoeShared_Blazor_ReactiveComponentBase_AddAfterRenderTask_System_Func_System_Threading_Tasks_Task__">ReactiveComponentBase.AddAfterRenderTask(Func&lt;Task&gt;)</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.PrepareLogger.html#PoeShared_Blazor_ReactiveComponentBase_PrepareLogger">ReactiveComponentBase.PrepareLogger()</a>
@@ -168,10 +177,10 @@
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnAfterRender.html#PoeShared_Blazor_ReactiveComponentBase_OnAfterRender_System_Boolean_">ReactiveComponentBase.OnAfterRender(bool)</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnAfterRenderAsync.html#PoeShared_Blazor_ReactiveComponentBase_OnAfterRenderAsync_System_Boolean_">ReactiveComponentBase.OnAfterRenderAsync(bool)</a>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnAfterFirstRender.html#PoeShared_Blazor_ReactiveComponentBase_OnAfterFirstRender">ReactiveComponentBase.OnAfterFirstRender()</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnInitialized.html#PoeShared_Blazor_ReactiveComponentBase_OnInitialized">ReactiveComponentBase.OnInitialized()</a>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnAfterRenderAsync.html#PoeShared_Blazor_ReactiveComponentBase_OnAfterRenderAsync_System_Boolean_">ReactiveComponentBase.OnAfterRenderAsync(bool)</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.OnInitializedAsync.html#PoeShared_Blazor_ReactiveComponentBase_OnInitializedAsync">ReactiveComponentBase.OnInitializedAsync()</a>
@@ -207,19 +216,31 @@
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RefreshCount.html#PoeShared_Blazor_ReactiveComponentBase_RefreshCount">ReactiveComponentBase.RefreshCount</a>
     </div>
     <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.ShouldRenderCount.html#PoeShared_Blazor_ReactiveComponentBase_ShouldRenderCount">ReactiveComponentBase.ShouldRenderCount</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RenderCount.html#PoeShared_Blazor_ReactiveComponentBase_RenderCount">ReactiveComponentBase.RenderCount</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RefreshRequestCount.html#PoeShared_Blazor_ReactiveComponentBase_RefreshRequestCount">ReactiveComponentBase.RefreshRequestCount</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Name.html#PoeShared_Blazor_ReactiveComponentBase_Name">ReactiveComponentBase.Name</a>
     </div>
     <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.RenderOnlyWhenChanged.html#PoeShared_Blazor_ReactiveComponentBase_RenderOnlyWhenChanged">ReactiveComponentBase.RenderOnlyWhenChanged</a>
+    </div>
+    <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.Anchors.html#PoeShared_Blazor_ReactiveComponentBase_Anchors">ReactiveComponentBase.Anchors</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsLoaded.html#PoeShared_Blazor_ReactiveComponentBase_IsLoaded">ReactiveComponentBase.IsLoaded</a>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsComponentInitialized.html#PoeShared_Blazor_ReactiveComponentBase_IsComponentInitialized">ReactiveComponentBase.IsComponentInitialized</a>
     </div>
     <div>
-      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsRendered.html#PoeShared_Blazor_ReactiveComponentBase_IsRendered">ReactiveComponentBase.IsRendered</a>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsComponentLoaded.html#PoeShared_Blazor_ReactiveComponentBase_IsComponentLoaded">ReactiveComponentBase.IsComponentLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.IsComponentRendered.html#PoeShared_Blazor_ReactiveComponentBase_IsComponentRendered">ReactiveComponentBase.IsComponentRendered</a>
     </div>
     <div>
       <a class="xref" href="PoeShared.Blazor.ReactiveComponentBase.PropertyChanged.html">ReactiveComponentBase.PropertyChanged</a>
@@ -232,6 +253,9 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))">ComponentBase.InvokeAsync(Func&lt;Task&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync">ComponentBase.DispatchExceptionAsync(Exception)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -259,7 +283,7 @@
   <h6><strong>Assembly</strong>: EyeAuras.Blazor.Shared.dll</h6>
   <h5 id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CsharpCodeEditor : BlazorReactiveComponent, IComponent, IHandleEvent, IHandleAfterRender, IReactiveComponent, IDisposable, INotifyPropertyChanged, IRefreshableComponent, IAsyncDisposable, ICodeEditorContext</code></pre>
+    <pre><code class="lang-csharp hljs">public class CsharpCodeEditor : BlazorReactiveComponent, IComponent, IHandleEvent, IHandleAfterRender, IReactiveComponent, IDisposable, INotifyPropertyChanged, IRefreshableComponent, IAsyncDisposable, ICEContext</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -274,6 +298,24 @@
       <tr>
         <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor__ctor" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.#ctor">
           <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.-ctor.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor__ctor">CsharpCodeEditor()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_EditorContextName" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.EditorContextName">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.EditorContextName.html">EditorContextName</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -296,8 +338,8 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_AdditionalProjectIds" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.AdditionalProjectIds">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.AdditionalProjectIds.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_AdditionalProjectIds">AdditionalProjectIds</a>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_CanShowStatusPanel" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.CanShowStatusPanel">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.CanShowStatusPanel.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_CanShowStatusPanel">CanShowStatusPanel</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -314,8 +356,26 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_EditorId" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.EditorId">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.EditorId.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_EditorId">EditorId</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_FileTemplates" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.FileTemplates">
           <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.FileTemplates.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_FileTemplates">FileTemplates</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_FileTreeMode" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.FileTreeMode">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.FileTreeMode.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_FileTreeMode">FileTreeMode</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_HideFilesByNameRegex" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.HideFilesByNameRegex">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.HideFilesByNameRegex.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_HideFilesByNameRegex">HideFilesByNameRegex</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -326,8 +386,32 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_IsReadOnly" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.IsReadOnly">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.IsReadOnly.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_IsReadOnly">IsReadOnly</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Items" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Items">
           <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Items.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Items">Items</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ItemsById" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ItemsById">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ItemsById.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ItemsById">ItemsById</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ModalService" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ModalService">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ModalService.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ModalService">ModalService</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_MonacoInterop" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.MonacoInterop">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.MonacoInterop.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_MonacoInterop">MonacoInterop</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -338,26 +422,44 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ProjectToCompile" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ProjectToCompile">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ProjectToCompile.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ProjectToCompile">ProjectToCompile</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ProjectToEdit" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ProjectToEdit">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ProjectToEdit.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ProjectToEdit">ProjectToEdit</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-      <tr>
         <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RemoveItemCommand" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RemoveItemCommand">
           <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RemoveItemCommand.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RemoveItemCommand">RemoveItemCommand</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCompletionProviderController" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCompletionProviderController">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCompletionProviderController.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCompletionProviderController">RoslynCompletionProviderController</a>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RenameItemCommand" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RenameItemCommand">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RenameItemCommand.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RenameItemCommand">RenameItemCommand</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCodeActionProvider" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCodeActionProvider">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCodeActionProvider.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCodeActionProvider">RoslynCodeActionProvider</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCompletionProvider" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCompletionProvider">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynCompletionProvider.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynCompletionProvider">RoslynCompletionProvider</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynHoverProvider" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynHoverProvider">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynHoverProvider.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynHoverProvider">RoslynHoverProvider</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynSignatureHelpProvider" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynSignatureHelpProvider">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.RoslynSignatureHelpProvider.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_RoslynSignatureHelpProvider">RoslynSignatureHelpProvider</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Script" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Script">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Script.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Script">Script</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -380,14 +482,26 @@
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowFileTree" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowFileTree">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowFileTree.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowFileTree">ShowFileTree</a>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowReadOnly" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowReadOnly">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowReadOnly.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowReadOnly">ShowReadOnly</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
       <tr>
-        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Workspace" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Workspace">
-          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.Workspace.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_Workspace">Workspace</a>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowStatusPanel" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowStatusPanel">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowStatusPanel.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowStatusPanel">ShowStatusPanel</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowStatusPanelChanged" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowStatusPanelChanged">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowStatusPanelChanged.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowStatusPanelChanged">ShowStatusPanelChanged</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowToolbar" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowToolbar">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.ShowToolbar.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_ShowToolbar">ShowToolbar</a>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
@@ -419,6 +533,12 @@ that would cause an infinite render loop.</p>
 </td>
       </tr>
       <tr>
+        <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_OnInitialized" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.OnInitialized">
+          <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.OnInitialized.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_OnInitialized">OnInitialized()</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
         <td id="EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_OnParametersSetAsync" data-uid="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.OnParametersSetAsync">
           <a class="xref" href="EyeAuras.Blazor.Shared.CodeEditor.CsharpCodeEditor.OnParametersSetAsync.html#EyeAuras_Blazor_Shared_CodeEditor_CsharpCodeEditor_OnParametersSetAsync">OnParametersSetAsync()</a>
         </td>
@@ -427,21 +547,6 @@ that would cause an infinite render loop.</p>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0_DynamicData_IObservableList___1____">ReactiveObjectExtensions.Listen&lt;TContext, TItem&gt;(TContext, Expression&lt;Func&lt;TContext, IObservableList&lt;TItem&gt;&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">ReactiveObjectExtensions.Listen&lt;TContext, TOut&gt;(TContext, Expression&lt;Func&lt;TContext, TOut&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__3___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__4___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="PoeShared.Blazor.Scaffolding.ReactiveObjectExtensions.Listen.html#PoeShared_Blazor_Scaffolding_ReactiveObjectExtensions_Listen__5___0_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___0___2___System_Linq_Expressions_Expression_System_Func___0___3___System_Linq_Expressions_Expression_System_Func___0___4___">ReactiveObjectExtensions.Listen&lt;TContext, TOut1, TOut2, TOut3, TOut4&gt;(TContext, Expression&lt;Func&lt;TContext, TOut1&gt;&gt;, Expression&lt;Func&lt;TContext, TOut2&gt;&gt;, Expression&lt;Func&lt;TContext, TOut3&gt;&gt;, Expression&lt;Func&lt;TContext, TOut4&gt;&gt;)</a>
-  </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.AddTo.html#PoeShared_Scaffolding_ObjectExtensions_AddTo__2___0_DynamicData_ISourceList___1__">ObjectExtensions.AddTo&lt;TItem, TCollection&gt;(TItem, ISourceList&lt;TCollection&gt;)</a>
   </div>
@@ -453,6 +558,9 @@ that would cause an infinite render loop.</p>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.CopyPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_CopyPropertiesTo__2___0___1_">ObjectExtensions.CopyPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget)</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToJson.html#PoeShared_Scaffolding_ObjectExtensions_DumpToJson__1___0_">ObjectExtensions.DumpToJson&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.DumpToTextRaw.html#PoeShared_Scaffolding_ObjectExtensions_DumpToTextRaw__1___0_">ObjectExtensions.DumpToTextRaw&lt;T&gt;(T)</a>
@@ -476,13 +584,16 @@ that would cause an infinite render loop.</p>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.InsertTo.html#PoeShared_Scaffolding_ObjectExtensions_InsertTo__2___0_System_Collections_Generic_IList___1__System_Int32_">ObjectExtensions.InsertTo&lt;TItem, TCollection&gt;(TItem, IList&lt;TCollection&gt;, int)</a>
   </div>
   <div>
-      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_">ObjectExtensions.ToJson&lt;T&gt;(T)</a>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToJson.html#PoeShared_Scaffolding_ObjectExtensions_ToJson__1___0_Newtonsoft_Json_Formatting_">ObjectExtensions.ToJson&lt;T&gt;(T, Formatting)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.ToStringSafe.html#PoeShared_Scaffolding_ObjectExtensions_ToStringSafe__1___0_">ObjectExtensions.ToStringSafe&lt;T&gt;(T)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.TransferPropertiesTo.html#PoeShared_Scaffolding_ObjectExtensions_TransferPropertiesTo__2___0___1_System_String___">ObjectExtensions.TransferPropertiesTo&lt;TSource, TTarget&gt;(TSource, TTarget, params string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="PoeShared.Scaffolding.ObjectExtensions.WaitForAsync.html#PoeShared_Scaffolding_ObjectExtensions_WaitForAsync__2___0_System_Func___0___1__System_Predicate___1__System_TimeSpan_System_Int32_">ObjectExtensions.WaitForAsync&lt;TObject, T1&gt;(TObject, Func&lt;TObject, T1&gt;, Predicate&lt;T1&gt;, TimeSpan, int)</a>
   </div>
   <div>
       <a class="xref" href="PoeShared.Scaffolding.XDocumentExtensions.AddTo.html#PoeShared_Scaffolding_XDocumentExtensions_AddTo__1___0_System_Xml_Linq_XContainer_">XDocumentExtensions.AddTo&lt;T&gt;(T, XContainer)</a>
@@ -504,7 +615,7 @@ that would cause an infinite render loop.</p>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

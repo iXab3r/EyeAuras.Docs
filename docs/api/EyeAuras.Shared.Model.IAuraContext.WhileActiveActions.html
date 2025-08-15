@@ -110,7 +110,8 @@
 
 <a id="EyeAuras_Shared_Model_IAuraContext_WhileActiveActions_" data-uid="EyeAuras.Shared.Model.IAuraContext.WhileActiveActions*"></a>
 <h4 id="EyeAuras_Shared_Model_IAuraContext_WhileActiveActions" data-uid="EyeAuras.Shared.Model.IAuraContext.WhileActiveActions">WhileActiveActions</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Gets actions executed continuously while the aura remains active.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -131,11 +132,21 @@
     </tr>
   </tbody>
 </table>
+<h5 id="EyeAuras_Shared_Model_IAuraContext_WhileActiveActions_remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>These actions run repeatedly as long as IsActive remains true.</p>
+</div>
+<h5 id="EyeAuras_Shared_Model_IAuraContext_WhileActiveActions_examples">Examples</h5>
+<pre><code class="lang-csharp">// Execute all enabled actions
+foreach(var action in context.WhileActiveActions.Items.Where(a =&gt; a.IsEnabled))
+{
+    await action.Execute();
+}</code></pre>
+
 </article>
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>

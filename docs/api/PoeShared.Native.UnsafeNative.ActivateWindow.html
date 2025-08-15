@@ -137,7 +137,8 @@
 
 <a id="PoeShared_Native_UnsafeNative_ActivateWindow_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow*"></a>
 <h4 id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle)">ActivateWindow(IWindowHandle)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Activates the specified window by bringing it to the foreground.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -156,44 +157,24 @@
     <tr>
       <td><a class="xref" href="PoeShared.Native.IWindowHandle.html">IWindowHandle</a></td>
       <td><span class="parametername">window</span></td>
-      <td></td>
+      <td><p>The window handle to activate.</p>
+</td>
     </tr>
   </tbody>
 </table>
-
-
-<a id="PoeShared_Native_UnsafeNative_ActivateWindow_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow*"></a>
-<h4 id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_PoeShared_Logging_IFluentLog_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle,System.TimeSpan,PoeShared.Logging.IFluentLog)">ActivateWindow(IWindowHandle, TimeSpan, IFluentLog)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="declaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static void ActivateWindow(IWindowHandle window, TimeSpan timeout, IFluentLog log)</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
+<h5 class="exceptions">Exceptions</h5>
 <table class="table table-bordered table-condensed">
   <thead>
     <tr>
       <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Condition</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="PoeShared.Native.IWindowHandle.html">IWindowHandle</a></td>
-      <td><span class="parametername">window</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
-      <td><span class="parametername">timeout</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="PoeShared.Logging.IFluentLog.html">IFluentLog</a></td>
-      <td><span class="parametername">log</span></td>
-      <td></td>
+      <td><a class="xref" href="PoeShared.Scaffolding.InvalidStateException.html">InvalidStateException</a></td>
+      <td><p>Thrown if the window fails to become the foreground window within the specified timeout.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -201,7 +182,8 @@
 
 <a id="PoeShared_Native_UnsafeNative_ActivateWindow_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow*"></a>
 <h4 id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle,System.TimeSpan)">ActivateWindow(IWindowHandle, TimeSpan)</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Activates the specified window by bringing it to the foreground.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="declaration">Declaration</h5>
 <div class="codewrapper">
@@ -220,12 +202,87 @@
     <tr>
       <td><a class="xref" href="PoeShared.Native.IWindowHandle.html">IWindowHandle</a></td>
       <td><span class="parametername">window</span></td>
-      <td></td>
+      <td><p>The window handle to activate.</p>
+</td>
     </tr>
     <tr>
       <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
       <td><span class="parametername">timeout</span></td>
-      <td></td>
+      <td><p>The maximum time allowed for the activation attempt.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="PoeShared.Scaffolding.InvalidStateException.html">InvalidStateException</a></td>
+      <td><p>Thrown if the window fails to become the foreground window within the specified timeout.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<a id="PoeShared_Native_UnsafeNative_ActivateWindow_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow*"></a>
+<h4 id="PoeShared_Native_UnsafeNative_ActivateWindow_PoeShared_Native_IWindowHandle_System_TimeSpan_PoeShared_Logging_IFluentLog_" data-uid="PoeShared.Native.UnsafeNative.ActivateWindow(PoeShared.Native.IWindowHandle,System.TimeSpan,PoeShared.Logging.IFluentLog)">ActivateWindow(IWindowHandle, TimeSpan, IFluentLog)</h4>
+<div class="markdown level1 summary"><p>Activates the specified window by bringing it to the foreground.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="declaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static void ActivateWindow(IWindowHandle window, TimeSpan timeout, IFluentLog log)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="PoeShared.Native.IWindowHandle.html">IWindowHandle</a></td>
+      <td><span class="parametername">window</span></td>
+      <td><p>The window handle to activate.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+      <td><span class="parametername">timeout</span></td>
+      <td><p>The maximum time allowed for the activation attempt.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="PoeShared.Logging.IFluentLog.html">IFluentLog</a></td>
+      <td><span class="parametername">log</span></td>
+      <td><p>The logger for capturing diagnostic information.</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="exceptions">Exceptions</h5>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="PoeShared.Scaffolding.InvalidStateException.html">InvalidStateException</a></td>
+      <td><p>Thrown if the window fails to become the foreground window within the specified timeout.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -233,7 +290,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Xab3r. All rights reserved.</span>
+                    <span>2025 &#169; Xab3r. All rights reserved.</span>
                 </div>
             </main>
         </div>
